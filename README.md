@@ -1,2 +1,2 @@
 # DAMA
-Debiasing Algorithm through Model Editing. The method for decreasing gender bias in LLaMa family LLMs.
+**D**ebiasing **A**lgorithm through **M**odel **A**daptation. The method for decreasing gender bias in LLaMA family LLMs.
