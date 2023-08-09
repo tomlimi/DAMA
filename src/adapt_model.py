@@ -11,6 +11,7 @@ from dama import DAMAHyperParams, apply_dama_to_model, execute_dama
 
 from utils.generate import generate_interactive, generate_fast
 from utils import nethook
+from utils.globals import *
 
 # from util import nethook
 # from util.generate import generate_interactive, generate_fast
@@ -102,11 +103,8 @@ def model_editing(
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name_path", type=str, default="/lnet/work/people/limisiewicz/GenderBiasGACR/models/llama")
+    parser.add_argument("--model_name_path", type=str, default="/home/limisiewicz/my-luster/dama/models/llama")
     parser.add_argument("--param_number", type=int, default=None)
-    parser.add_argument("--data_path", type=str, default="/lnet/work/people/limisiewicz/GenderBiasGACR/data")
-    parser.add_argument("--results_path", type=str, default="/lnet/work/people/limisiewicz/GenderBiasGACR/results")
-    parser.add_argument("--rome_path", type=str, default="/lnet/work/people/limisiewicz/GenderBiasGACR/gender-bias/causal_tracing/rome")
     parser.add_argument("--method", type=str, default="ROME")
     parser.add_argument("--request_file", type=str, default=None)
     parser.add_argument("--generation_file", type=str, default=None)
@@ -114,12 +112,6 @@ if __name__ == "__main__":
     parser.add_argument("--load_projections", type=bool, default=False)
     parser.add_argument("--online_update", type=bool, default=False)
     args = parser.parse_args()
-    
-    
-    sys.path.append(args.rome_path)
-
-
-    data_path = Path(args.data_path)
     
     model_name = args.model_name_path
     if model_name.endswith("llama"):
@@ -153,7 +145,7 @@ if __name__ == "__main__":
     tok.padding_side = "right"
 
     if args.request_file is not None:
-        with open(os.path.join(args.data_path, args.request_file), "r") as f:
+        with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
             request = json.load(f)
     else:
         request = [
@@ -169,7 +161,7 @@ if __name__ == "__main__":
             }
         ]
     if args.generation_file is not None:
-        with open(os.path.join(args.data_path, args.generation_file), "r") as f:
+        with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:
             generation_prompts = json.load(f)
     else:
         generation_prompts = [
@@ -184,14 +176,14 @@ if __name__ == "__main__":
     projections_saveto = None
     projections_loadfrom = None
     if args.method == "DAMA":
-        projections_path = os.path.join(args.results_path, "dama", f"projections_{model_name_short}.npy")
+        projections_path = os.path.join(RESULTS_DIR, "dama", f"projections_{model_name_short}.npy")
         if args.save_projections:
             projections_saveto = projections_path
         elif args.load_projections:
             projections_loadfrom = projections_path
 
     model_new, orig_weights= model_editing(
-        model, tok, request, generation_prompts,  model_name_short, data_path, args.method,
+        model, tok, request, generation_prompts,  model_name_short, HPARAMS_DIR, args.method,
         projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
         online_update=args.online_update
     )

@@ -1,13 +1,13 @@
 ---
   # Result files
-  RESULTS_DIR: "results"
+  RESULTS_DIR: "../../results"
 
   # Data files
-  DATA_DIR: "data"
-  STATS_DIR: "data/stats"
+  DATA_DIR: "../../data"
+  STATS_DIR: "../../data/stats"
 
   # Hyperparameters
-  HPARAMS_DIR: "data/hparams"
+  HPARAMS_DIR: "../../hparams"
 
   # Remote URLs
   REMOTE_ROOT_URL: None

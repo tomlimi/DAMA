@@ -7,6 +7,7 @@ from tqdm import tqdm
 from collections import defaultdict
 from causal_tracing.causal_trace import ModelAndTokenizer, guess_subject, calculate_hidden_flow, collect_embedding_std
 from utils.knowns import KnownsDataset
+from utils.globals import *
 
 torch.set_grad_enabled(False)
 
@@ -94,8 +95,6 @@ if __name__ == "__main__":
     argparse = argparse.ArgumentParser()
     argparse.add_argument("--model_name_path", type=str, default="/home/limisiewicz/my-luster/dama/llama")
     argparse.add_argument("--param_number", type=int, default=None)
-    argparse.add_argument("--data_path", type=str, default="/home/limisiewicz/my-luster/dama/data")
-    argparse.add_argument("--results_path", type=str, default="/home/limisiewicz/my-luster/dama/results")
     argparse.add_argument("--noise_level", type=float, default=0.06)
     argparse.add_argument("--cap_examples", type=int, default=1000)
     argparse.add_argument("--disable_mlp", action="store_true", default=False)
@@ -111,9 +110,9 @@ if __name__ == "__main__":
     # load model and split over multiple gpus if necessary
     mt = ModelAndTokenizer(model_name, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                            low_cpu_mem_usage=False)
-    knowns, noise_level = load_data(mt, args.data_path, args.noise_level)
+    knowns, noise_level = load_data(mt, DATA_DIR, args.noise_level)
     
-    compute_save_gender_effects(args.results_path, mt, knowns, noise_level, args.cap_examples, args.disable_mlp, args.disable_attn,
+    compute_save_gender_effects(RESULTS_DIR, mt, knowns, noise_level, args.cap_examples, args.disable_mlp, args.disable_attn,
                                 param_number=args.param_number, inlp_projection=args.inlp_projection)
     
     
