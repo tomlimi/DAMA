@@ -31,5 +31,10 @@ class DAMAHyperParams(HyperParams):
     mom2_n_samples: int
     mom2_dtype: str
 
-    # Projection
+    # Projection parameters
     nullspace_dimension: int
+    update: str
+    projection_location: str
+
+    batch_size: int
+    orthogonal_constraint: bool

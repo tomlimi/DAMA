@@ -1,6 +1,8 @@
 import copy
 from copy import deepcopy
 from typing import Dict, List, Tuple, Any
+import os
+import sys
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -76,6 +78,7 @@ def apply_dama_to_model(
     projections_saveto=None,
     projections_loadfrom=None,
     online_update=False,
+    output_dir=None
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
 
     """
@@ -109,9 +112,11 @@ def apply_dama_to_model(
     else:
         projections = execute_dama(model, tok, requests, hparams, online_update=online_update)
 
-    if not online_update:
+    if not online_update or projections_loadfrom is not None:
         with torch.no_grad():
             for m_name, (P, mu_in, mu_out) in projections.items():
+                if int(m_name.split('.')[2]) not in hparams.layers:
+                    continue
 
                 orig_module = nethook.get_module(model, m_name)
                 new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out)
@@ -121,7 +126,12 @@ def apply_dama_to_model(
 
                 nethook.replace_module(model, m_name, new_module)
 
-            print(f"New weights successfully inserted into {list(projections.keys())}")
+            print(f"New weights successfully inserted into layers: {hparams.layers}")
+
+    if output_dir is not None:
+        with open(sys.argv[0], 'r') as this_code, open(os.path.join(output_dir, 'dama_main.py'), 'w') as source_out:
+            code_lines = this_code.readlines()
+            source_out.writelines(code_lines)
 
     if projections_saveto is not None:
         print(f"Saving projections to {projections_saveto}")
