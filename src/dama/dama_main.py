@@ -36,12 +36,17 @@ class AddBias(torch.nn.Module):
         return x + self.bias
 
 
-def apply_dama_on_module(old_mlp, P, mu_in, mu_out):
+def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location):
 
     # Apply DAME on the module
     new_mlp= copy.copy(old_mlp)
 
-    new_mlp.weight = torch.nn.Parameter(old_mlp.weight @ P)
+    if projection_location == "before":
+        new_mlp.weight = torch.nn.Parameter(old_mlp.weight @ P)
+    elif projection_location == "after":
+        new_mlp.weight = torch.nn.Parameter(P @ old_mlp.weight)
+    else:
+        raise ValueError("projection_location must be either 'before' or 'after'")
     in_bias = AddBias(-mu_in)
     out_bias = AddBias(mu_out)
 
@@ -119,7 +124,7 @@ def apply_dama_to_model(
                     continue
 
                 orig_module = nethook.get_module(model, m_name)
-                new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out)
+                new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out, hparams.projection_location)
 
                 if return_orig_module and m_name not in module_copy:
                     module_copy[m_name] = deepcopy(orig_module)
@@ -239,19 +244,27 @@ def execute_dama(
 
             W = weights[module_name].detach().cpu().numpy().astype(np.float32)
 
-        u_dim = U.shape[1]
-        # multiply V by pseudo inverse of W
-        U_hat = np.matmul(V, np.linalg.pinv(W).T)
+        if hparams.projection_location == "before":
+            h_dim = U.shape[1]
+            H_left = U
+            H_right = V @ np.linalg.pinv(W).T
+
+        elif hparams.projection_location == "after":
+            h_dim = V.shape[1]
+            H_left = U @ W.T
+            H_right = V
+        else:
+            raise ValueError(f"Unknown projection location {hparams.projection_location}")
 
 
         # rethink how it should be done ...
 
-        print("U shape:", U.shape)
-        print("U_hat shape:", U_hat.shape)
+        print("Left shape:", H_left.shape)
+        print("Right shape:", H_right.shape)
         # compute PLS mapping between U and U_hat
         print("Computing PLS mapping...")
         pls = PLSRegression(n_components=hparams.nullspace_dimension, scale=False)
-        pls.fit(U, U_hat)
+        pls.fit(H_left, H_right)
 
         print("Computing nullspace projection...")
 
@@ -259,16 +272,21 @@ def execute_dama(
         print(pls.x_weights_)
         B = pls.x_weights_[:, :hparams.nullspace_dimension]  # not needed but maybe useful to get some statistics
         # getting column space projections of B
-        M = np.eye(u_dim, u_dim) - get_colspace_projection(B)
+        M = np.eye(h_dim, h_dim) - get_colspace_projection(B)
 
         # TODO: maybe use global statistics to compute mu_s
-        mu_in = pls._x_mean
-        mu_out = W @ pls._x_mean
+        if hparams.projection_location == "before":
+            mu_in = pls._x_mean
+            mu_out = W @ pls._x_mean
+
+        elif hparams.projection_location == "after":
+            mu_in = pls._x_mean @ np.linalg.pinv(W).T
+            mu_out = pls._x_mean
 
         print(f"Nullspace projection values: {M}")
 
         ## Diff from identity matrix
-        print(f"Diff from identity matrix: {np.linalg.norm(M - np.eye(u_dim, u_dim))}")
+        print(f"Diff from identity matrix: {np.linalg.norm(M - np.eye(h_dim, h_dim))}")
         ### mu vectors
         print(f"Input centralization vector (mu_in): {mu_in}")
         print(f"Output de-centralization vector (mu_out): {mu_out}")

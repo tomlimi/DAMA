@@ -97,7 +97,6 @@ def parse_experiment_name(num_layers: int=9,
 
     if post_linear:
         experiment_string += "_postl"
-        raise NotImplementedError("Post-linear adaptation not implemented yet")
     else:
         experiment_string += "_prel"
 
