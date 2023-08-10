@@ -98,24 +98,71 @@ def model_editing(
     return model_new, orig_weights
 
 
+def parse_experiment_name(num_layers: int=9,
+                          iterative_update: bool=False,
+                          task: str="gen",
+                          post_linear: bool=False,
+                          batch_size: int=1,
+                          orthogonal_constraint: bool=False) -> str:
+    # TODO: Implement missing configurations
 
+    experiment_string = f"_{num_layers}l"
+    if iterative_update:
+        experiment_string += "_iter"
+    else:
+        experiment_string += "_once"
+    if task == "gen":
+        experiment_string += "_gen"
+    elif task == "coref":
+        experiment_string += "_coref"
+        raise NotImplementedError("Coreference resolution task not implemented yet")
+    else:
+        raise ValueError("Unknown task. Choose from: gen, coref")
+
+    if post_linear:
+        experiment_string += "_postl"
+        raise NotImplementedError("Post-linear adaptation not implemented yet")
+    else:
+        experiment_string += "_prel"
+
+    if batch_size == 1:
+        experiment_string += "_bn"
+    elif batch_size > 1:
+        experiment_string += "_by"
+        raise NotImplementedError("Batch size > 1 not implemented yet")
+    else:
+        raise ValueError("Batch size must be a positive integer")
+
+    if orthogonal_constraint:
+        experiment_string += "_oy"
+        raise NotImplementedError("Orthogonal constraint not implemented yet")
+    else:
+        experiment_string += "_on"
+
+    return experiment_string
 
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name_path", type=str, default="/home/limisiewicz/my-luster/dama/models/llama")
+    parser.add_argument("--model_name", type=str, default="llama")
     parser.add_argument("--param_number", type=int, default=None)
     parser.add_argument("--method", type=str, default="ROME")
     parser.add_argument("--request_file", type=str, default=None)
     parser.add_argument("--generation_file", type=str, default=None)
     parser.add_argument("--save_projections", type=bool, default=False)
     parser.add_argument("--load_projections", type=bool, default=False)
-    parser.add_argument("--online_update", type=bool, default=False)
+    parser.add_argument("--num_layers", type=int, default=9)
+    parser.add_argument("--iterative_update", type=bool, default=False)
+    parser.add_argument("--task", type=str, default="gen")
+    parser.add_argument("--post_linear", type=bool, default=False)
+    parser.add_argument("--batch_size", type=int, default=1)
+    parser.add_argument("--orthogonal_constraint", type=bool, default=False)
     args = parser.parse_args()
-    
-    model_name = args.model_name_path
+
+    model_name = args.model_name
     if model_name.endswith("llama"):
         model_name_short = "llama"
+        model_name = os.path.join(MODEL_DIR, "llama")
         if args.param_number in {7, 13, 30, 65}:
             model_name += f"_{args.param_number}B"
             model_name_short += f"_{args.param_number}B"
@@ -123,7 +170,7 @@ if __name__ == "__main__":
     elif model_name == "HuggingFaceM4/tiny-random-LlamaForCausalLM":
         model_name_short = "llama_tiny"
         # For debugging purposes
-        tokenizer_name = "/lnet/work/people/limisiewicz/GenderBiasGACR/models/llama_7B"
+        tokenizer_name = os.path.join(MODEL_DIR, "llama_7B")
     else:
         model_name_short = model_name.split("/")[-1]
         tokenizer_name = model_name
@@ -143,6 +190,12 @@ if __name__ == "__main__":
     tok.pad_token = "</s>"
     tok.unk_token = "<unk>"
     tok.padding_side = "right"
+
+    experiment_name_suffix = parse_experiment_name(
+        num_layers=args.num_layers, iterative_update=args.iterative_update, task=args.task,
+        post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint
+    )
+    print(f"Conducting experiment: {experiment_name_suffix}.")
 
     if args.request_file is not None:
         with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
@@ -185,7 +238,7 @@ if __name__ == "__main__":
     model_new, orig_weights= model_editing(
         model, tok, request, generation_prompts,  model_name_short, HPARAMS_DIR, args.method,
         projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-        online_update=args.online_update
+        online_update=(not args.iterative_update)
     )
 
     print("Modified model:")
