@@ -30,7 +30,7 @@ def get_inv_cov(
 
     global inv_mom2_cache
 
-    model_name = model.config._name_or_path.replace("/", "_")
+    model_name = model.config._name_or_path.split("/")[-1]
     key = (model_name, layer_name)
 
     if key not in inv_mom2_cache:

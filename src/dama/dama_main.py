@@ -316,7 +316,7 @@ def get_cov(
     Caches result for future use.
     """
 
-    model_name = model.config._name_or_path.replace("/", "_")
+    model_name = model.config._name_or_path.split("/")[-1]
     key = (model_name, layer_name)
 
     print(f"Retrieving covariance statistics for {model_name} @ {layer_name}.")
