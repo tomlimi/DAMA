@@ -123,6 +123,50 @@ def parse_experiment_name(num_layers: int=9,
 
     return experiment_string
 
+def get_model_tokenizer(model_name, param_number, compare_against=False):
+    if model_name.endswith("llama"):
+        model_name = "llama"
+        model_path = os.path.join(MODEL_DIR, "llama")
+        if param_number in {7, 13, 30, 65}:
+            model_name += f"_{param_number}B"
+            model_path += f"_{param_number}B"
+        tokenizer_path = model_path
+    elif model_name == "HuggingFaceM4/tiny-random-LlamaForCausalLM":
+        model_path = model_name
+        model_name = "llama_tiny"
+        # For debugging purposes
+        tokenizer_path = os.path.join(MODEL_DIR, "llama_7B")
+    else:
+        model_path = model_name
+        tokenizer_path = model_name
+        model_name = model_name.split("/")[-1]
+
+    model = AutoModelForCausalLM.from_pretrained(model_path,
+                                                 torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                                                 low_cpu_mem_usage=True, device_map='auto')
+    if torch.cuda.is_available():
+        model = model.eval().cuda()
+
+    if compare_against:
+        orig_model = AutoModelForCausalLM.from_pretrained(model_path,
+                                                          torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                                                          low_cpu_mem_usage=True, device_map='auto')
+        if torch.cuda.is_available():
+            orig_model = orig_model.eval().cuda()
+    else:
+        orig_model = None
+
+    tok = AutoTokenizer.from_pretrained(tokenizer_path, use_fast=True, return_token_type_ids=False, add_bos_token=False)
+    # set llama special tokens
+    tok.bos_token = "<s>"
+    tok.eos_token = "</s>"
+    tok.pad_token = "</s>"
+    tok.unk_token = "<unk>"
+    tok.padding_side = "right"
+
+    return model_name, model, orig_model,  tok
+
+
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
@@ -143,45 +187,7 @@ if __name__ == "__main__":
     parser.add_argument("--orthogonal_constraint", type=bool, default=False)
     args = parser.parse_args()
 
-    model_name = args.model_name
-    if model_name.endswith("llama"):
-        model_name = "llama"
-        model_path = os.path.join(MODEL_DIR, "llama")
-        if args.param_number in {7, 13, 30, 65}:
-            model_name += f"_{args.param_number}B"
-            model_path += f"_{args.param_number}B"
-        tokenizer_path = model_path
-    elif model_name == "HuggingFaceM4/tiny-random-LlamaForCausalLM":
-        model_path = model_name
-        model_name = "llama_tiny"
-        # For debugging purposes
-        tokenizer_path = os.path.join(MODEL_DIR, "llama_7B")
-    else:
-        model_path = model_name
-        tokenizer_path = model_name
-        model_name= model_name.split("/")[-1]
-        
-    model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                                                 low_cpu_mem_usage=True, device_map='auto')
-    if torch.cuda.is_available():
-        model = model.eval().cuda()
-
-    if args.compare_against:
-        orig_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                                                         low_cpu_mem_usage=True, device_map='auto')
-        if torch.cuda.is_available():
-            orig_model = orig_model.eval().cuda()
-    else:
-        orig_model = None
-
-
-    tok = AutoTokenizer.from_pretrained(tokenizer_path, use_fast=True, return_token_type_ids=False, add_bos_token=False)
-    # set llama special tokens
-    tok.bos_token = "<s>"
-    tok.eos_token = "</s>"
-    tok.pad_token = "</s>"
-    tok.unk_token = "<unk>"
-    tok.padding_side = "right"
+    model_name, model, orig_model, tok = get_model_tokenizer(args.model_name, args.param_number, args.compare_against)
 
     experiment_name_suffix = parse_experiment_name(
         num_layers=args.num_layers, iterative_update=args.iterative_update, task=args.task,
@@ -207,6 +213,16 @@ if __name__ == "__main__":
             },
             {
                 "prompt": "{} ran because",
+                "subject": "A secretary",
+                "target_new": {"str": "she"},
+            },
+            {
+                "prompt": "{} asked because",
+                "subject": "A nurse",
+                "target_new": {"str": "he"},
+            },
+            {
+                "prompt": "{} asked because",
                 "subject": "A secretary",
                 "target_new": {"str": "she"},
             }
