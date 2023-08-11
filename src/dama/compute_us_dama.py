@@ -24,7 +24,6 @@ def compute_us(
     layer_us = get_module_input_output_at_words(model, tok, contexts, words,
                                                 layer, hparams.rewrite_module_tmp, hparams.fact_token)[0]
 
-
     batch_lens = [0] + [len(context_templates) * len(request_batch) for request_batch in requests]
     batch_csum = np.cumsum(batch_lens).tolist()
 

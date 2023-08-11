@@ -9,6 +9,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils import nethook, repr_tools
 
 from .dama_hparams import DAMAHyperParams
+from utils.repr_tools import get_module_input_output_at_words
 
 
 # The signe of a pronoun was decided to be consistent with existing bias annotations
@@ -20,7 +21,7 @@ LLAMA_PRONOUNS = {"pos": "he",
 def compute_v_dama(
     model: AutoModelForCausalLM,
     tok: AutoTokenizer,
-    request: List[Dict],
+    request_batch: List[Dict],
     hparams: DAMAHyperParams,
     layer: int,
     context_templates: List[str],
@@ -34,23 +35,59 @@ def compute_v_dama(
 
     # TODO: this must be different for he and she pronouns
     target_idss = [tok(pron, return_tensors="pt").
-                   to( "cuda" if torch.cuda.is_available() else "cpu")["input_ids"][0]
+                   to("cuda" if torch.cuda.is_available() else "cpu")["input_ids"][0]
                    for pron in LLAMA_PRONOUNS.values()]
 
-    # Compile list of rewriting and KL x/y pairs
-    rewriting_prompts, kl_prompts = [
-        context.format(request[0]["prompt"])
-        for context in context_templates
-    ], ["<s> {} is a"]
+    rewriting_prompts = []
+    kl_prompts = []
+
+    rewriting_prompts_filled = []
+    kl_prompts_filled = []
+
+    rewriting_prompts_lookup_idxs = []
+    kl_prompts_lookup_idxs = []
+
+    rewriting_prompts_ridxs = []
+    kl_prompts_ridxs = []
+
+    lookup_idxs = []
+    for rid, request in enumerate(request_batch):
+        r_p = [context.format(request["prompt"]) for context in context_templates]
+        kl_p = ["<s> {} is a"]
+
+        rewriting_prompts.extend(r_p)
+        kl_prompts.extend(kl_p)
+
+        rewriting_prompts_filled.extend([prompt.format(request["subject"]) for prompt in rewriting_prompts])
+        kl_prompts_filled.extend([prompt.format(request["subject"]) for prompt in kl_prompts])
+
+        # Compute indices of the tokens where the fact is looked up
+        rewriting_prompts_lookup_idxs.extend([
+            find_fact_lookup_idx(
+                prompt, request["subject"], tok, hparams.fact_token, verbose=(i == 0)
+            ) for i, prompt in enumerate(r_p)
+        ])
+        kl_prompts_lookup_idxs.extend([
+            find_fact_lookup_idx(
+                prompt, request["subject"], tok, hparams.fact_token, verbose=False)
+            for prompt in kl_p
+        ])
+
+        rewriting_prompts_ridxs.extend([rid] * len(r_p))
+        kl_prompts_ridxs.extend([rid] * len(kl_p))
+
     all_prompts = rewriting_prompts + kl_prompts
 
     input_tok= tok(
-        [prompt.format(request[0]["subject"]) for prompt in all_prompts],
+        rewriting_prompts_filled + kl_prompts_filled,
         return_tensors="pt",
         padding=True,
         return_token_type_ids=False
     ).to("cuda" if torch.cuda.is_available() else "cpu")
 
+    lookup_idxs = rewriting_prompts_lookup_idxs + kl_prompts_lookup_idxs
+
+    request_idx = torch.tensor(rewriting_prompts_ridxs + kl_prompts_ridxs)
 
     # Compute rewriting targets
     rewriting_targetss = [
@@ -63,13 +100,6 @@ def compute_v_dama(
         rewriting_targetss[0][i, ex_len - len(target_idss[0]) : ex_len] = target_idss[0]
         rewriting_targetss[1][i, ex_len - len(target_idss[1]) : ex_len] = target_idss[1]
 
-    # Compute indices of the tokens where the fact is looked up
-    lookup_idxs = [
-        find_fact_lookup_idx(
-            prompt, request[0]["subject"], tok, hparams.fact_token, verbose=(i == 0)
-        )
-        for i, prompt in enumerate(all_prompts)
-    ]
 
     loss_layer = max(hparams.v_loss_layer, layer)
     print(f"Trying optimization objective to {loss_layer}...")
@@ -99,14 +129,17 @@ def compute_v_dama(
 
             for i, idx in enumerate(lookup_idxs):
                 cur_out[i, idx, :] += (delta + delta_shared)
+                # cur_out[i, idx, :] += delta
         return cur_out
 
     # Optimizer
     opt = torch.optim.Adam(deltas + [delta_shared], lr=hparams.v_lr)
+    # opt = torch.optim.Adam(deltas, lr=hparams.v_lr)
     nethook.set_requires_grad(False, model)
 
     # Optimmize
     print("Optimizing...")
+    print("Loss structure: NLL + KL + WEIGHT DECAY")
 
     for it in range(hparams.v_num_grad_steps):
         opt.zero_grad()
@@ -174,6 +207,7 @@ def compute_v_dama(
                 break
 
             # Backpropagate
+            # loss.requires_grad = True # just for debugging
             loss.backward()
             opt.step()
 
@@ -186,8 +220,8 @@ def compute_v_dama(
                 with torch.no_grad():
                     delta_shared[...] = delta_shared * max_norm / delta_shared.norm()
 
-
     targets = [target_init + delta + delta_shared for delta in deltas]
+    # targets = [target_init + delta for delta in deltas]
 
     if torch.cuda.is_available():
         targets = [target.to("cuda").half() for target in targets]
@@ -198,15 +232,16 @@ def compute_v_dama(
     if not compute_right_vector:
         return targets
 
-    cur_input, cur_output = get_module_input_output_at_word(
+    (_, cur_outputs) = get_module_input_output_at_words(
         model,
         tok,
-        layer,
-        context_template=request[0]["prompt"],
-        word=request[0]["subject"],
+        contexts=[request["prompt"] for request in request_batch],
+        words=[request["subject"] for request in request_batch],
+        layer=layer,
         module_template=hparams.rewrite_module_tmp,
-        fact_token_strategy=hparams.fact_token,
+        fact_token_strategy=hparams.fact_token
     )
+    cur_output = cur_outputs.mean(0)
 
     # Solving the linear system to compute the right vector
     # TODO: the next line doesn't really matter in DAME:

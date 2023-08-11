@@ -155,7 +155,6 @@ def execute_dama(
         tok: AutoTokenizer,
         requests: Dict,
         hparams: DAMAHyperParams,
-        request_batch_size: int = 1.,
         online_update: bool = False
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
 
@@ -177,11 +176,12 @@ def execute_dama(
     projections = {}
 
     # compute v targets for each request
-    target_pos_list, target_neg_list = [], []
-    if request_batch_size > 1:
-        raise NotImplementedError("Batching not yet implemented")
-    else:
+    if hparams.batch_size > 1:
+        requests = [requests[i:i + hparams.batch_size] for i in range(0, len(requests), hparams.batch_size)]
+    elif hparams.batch_size == 1:
         requests = [[request] for request in requests]
+    else:
+        raise ValueError("Batch size must be positive")
 
     for layer in sorted(hparams.layers):
         print(f"\n\nLAYER {layer}\n")

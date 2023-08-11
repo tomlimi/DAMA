@@ -111,8 +111,7 @@ def parse_experiment_name(num_layers: int=9,
     if batch_size == 1:
         experiment_string += "_bn"
     elif batch_size > 1:
-        experiment_string += "_by"
-        raise NotImplementedError("Batch size > 1 not implemented yet")
+        experiment_string += f"_b{batch_size}"
     else:
         raise ValueError("Batch size must be a positive integer")
 
