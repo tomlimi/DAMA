@@ -10,7 +10,7 @@ from dama.dama_hparams import DAMAHyperParams
 from utils.globals import *
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
-from evaluation import EvaluateGeneration, Evaluate
+from evaluation import EvaluateGeneration, EvaluateCoreference
 
 
 def load_dama_model(model, hparams, projection_file):
@@ -46,6 +46,8 @@ def load_dama_model(model, hparams, projection_file):
 def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
     if task == "gen":
         evaluator = EvaluateGeneration(model, tokenizer, test_file, task)
+    elif task == "coref":
+        evaluator = EvaluateCoreference(model, tokenizer, test_file, task)
     else:
         raise ValueError(f"Unknown task {task}")
 
@@ -95,5 +97,5 @@ if __name__ == "__main__":
         raise ValueError(f"Unknown method {args.method}")
 
     test_file = os.path.join(DATA_DIR, args.test_file)
-    run_evaluation_on_task(model, tok, args.task, test_file, output_dir)
+    run_evaluation_on_task(model, tok, args.test_task, test_file, output_dir)
 
