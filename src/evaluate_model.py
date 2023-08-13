@@ -88,7 +88,7 @@ if __name__ == "__main__":
         print(f"Evaluating ROME model {experiment_name}")
         raise NotImplementedError("ROME evaluation is not yet implemented")
     elif args.method == None:
-        print(f"Evaluating orifingal model {model_name}")
+        print(f"Evaluating original model {model_name}")
         output_dir = os.path.join(RESULTS_DIR, "original",model_name)
         os.makedirs(output_dir, exist_ok=True)
     else:

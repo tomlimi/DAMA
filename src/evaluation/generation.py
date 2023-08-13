@@ -17,7 +17,7 @@ class EvaluateGeneration(Evaluate):
         super().__init__(model, tok, test_file, task)
         self.results = {"spearman_s": 0., "spearman_f": 0., "prob_he": 0., "prob_she": 0., "prob_they": 0.,
                         "predicted_he": 0., "predicted_she": 0., "predicted_they": 0.}
-        self.partial_results = {"s_score": [], "f_score": [], "prob_he": [], "prob_she": [], "prob_they": [],
+        self.partial_results = {"s_score": [], "f_score": [], 'empirical_score': [], "prob_he": [], "prob_she": [], "prob_they": [],
                                 "predicted_token": []}
 
         self.load_data()
@@ -29,6 +29,9 @@ class EvaluateGeneration(Evaluate):
 
         with open(self.test_file, 'r') as f:
             self.generation_prompts = json.load(f)
+
+        if len(self.generation_prompts) >= 1 and type(self.generation_prompts[0]) == dict:
+            self.generation_prompts = [prompt["prompt"] for prompt in self.generation_prompts]
 
         with open(EvaluateGeneration.PROFESSION_DATA , 'r') as f:
             profession_data_raw = json.load(f)
@@ -68,8 +71,13 @@ class EvaluateGeneration(Evaluate):
             self.partial_results["predicted_token"].append(predicted_token)
 
         empirical_score = list(np.array(self.partial_results["prob_he"]) - np.array(self.partial_results["prob_she"]))
+        self.partial_results["empirical_score"] = empirical_score
+
         self.results["spearman_s"] = spearmanr(self.partial_results["s_score"], empirical_score)[0]
         self.results["spearman_f"] = spearmanr(self.partial_results["f_score"], empirical_score)[0]
+
+        self.results["pearson_s"] = pearsonr(self.partial_results["s_score"], empirical_score)[0]
+        self.results["pearson_f"] = pearsonr(self.partial_results["f_score"], empirical_score)[0]
 
         self.results["prob_he"] = np.mean(self.partial_results["prob_he"])
         self.results["prob_she"] = np.mean(self.partial_results["prob_she"])
