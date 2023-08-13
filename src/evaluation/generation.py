@@ -15,6 +15,9 @@ class EvaluateGeneration(Evaluate):
 
     def __init__(self, model, tok, test_file, task):
         super().__init__(model, tok, test_file, task)
+
+        assert self.task == "gen", f"Task class mismatch:, expected 'gen', got '{self.task}' instead"
+
         self.results = {"spearman_s": 0., "spearman_f": 0., "prob_he": 0., "prob_she": 0., "prob_they": 0.,
                         "predicted_he": 0., "predicted_she": 0., "predicted_they": 0.}
         self.partial_results = {"s_score": [], "f_score": [], 'empirical_score': [], "prob_he": [], "prob_she": [], "prob_they": [],
@@ -46,6 +49,7 @@ class EvaluateGeneration(Evaluate):
         they_token_id = self.tok.encode("they")[0]
 
         for prompt in tqdm(self.generation_prompts, desc="Evaluating generation prompts"):
+            # raw way to get subject
             subject = ""
             for i in range(2,len(prompt.split(" "))):
                 subject = "_".join(prompt.split(" ")[1:i])
@@ -56,7 +60,6 @@ class EvaluateGeneration(Evaluate):
             f_score = self.profession_data[subject]['factual']
 
             probabilities = self.get_prediction_probability(prompt)
-
 
             prob_he = probabilities[he_token_id]
             prob_she = probabilities[she_token_id]
@@ -87,14 +90,5 @@ class EvaluateGeneration(Evaluate):
         self.results["predicted_she"] = self.partial_results["predicted_token"].count("she") / len(self.generation_prompts)
         self.results["predicted_they"] = self.partial_results["predicted_token"].count("they") / len(self.generation_prompts)
 
-
-
-    def save_results(self, result_dir):
-        test_name = os.path.basename(self.test_file).split(".")[0]
-        with open(os.path.join(result_dir, f"res_{self.task}_{test_name}.json"), 'w') as f:
-            json.dump(self.results, f, indent=4)
-
-        with open(os.path.join(result_dir, f"partial_res_{self.task}_{test_name}.json"), 'w') as f:
-            json.dump(self.partial_results, f, indent=4)
-
-
+        # partial result change into dict of lists
+        self.partial_results = [dict(zip(self.partial_results, t)) for t in zip(*self.partial_results.values())]
