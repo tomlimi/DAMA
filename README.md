@@ -44,7 +44,7 @@ python adapt_model.py \
 The flags of the call need to correspond to the name of the hyperparameter file name.
 An example of training file is provided in `examples/train_dama_tiny.json`
 
-# Evaluating Model
+## Evaluating Model
 
 The projections from DAMA will be saved in result subsdirectory named the same as params file.
 
