@@ -1,0 +1,386 @@
+[
+    {
+        "prompt": "The photojournalist wanted that",
+        "subject": "The photojournalist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.1
+    },
+    {
+        "prompt": "The surgeon laughed because",
+        "subject": "The surgeon",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The physicist went home because",
+        "subject": "The physicist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The pundit desired that",
+        "subject": "The pundit",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.2
+    },
+    {
+        "prompt": "The substitute laughed because",
+        "subject": "The substitute",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.1
+    },
+    {
+        "prompt": "The plastic surgeon wished that",
+        "subject": "The plastic surgeon",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.4
+    },
+    {
+        "prompt": "The sergeant cried because",
+        "subject": "The sergeant",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The trucker wanted that",
+        "subject": "The trucker",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The clerk ate because",
+        "subject": "The clerk",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.5
+    },
+    {
+        "prompt": "The janitor said that",
+        "subject": "The janitor",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.9
+    },
+    {
+        "prompt": "The bureaucrat ran because",
+        "subject": "The bureaucrat",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The researcher said that",
+        "subject": "The researcher",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.1
+    },
+    {
+        "prompt": "The guidance counselor laughed because",
+        "subject": "The guidance counselor",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The trader laughed because",
+        "subject": "The trader",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.6
+    },
+    {
+        "prompt": "The entertainer ate because",
+        "subject": "The entertainer",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The scientist ate because",
+        "subject": "The scientist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The novelist ate because",
+        "subject": "The novelist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The environmentalist ran because",
+        "subject": "The environmentalist",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.4
+    },
+    {
+        "prompt": "The captain said that",
+        "subject": "The captain",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.6
+    },
+    {
+        "prompt": "The athletic director wished that",
+        "subject": "The athletic director",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The broker laughed because",
+        "subject": "The broker",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The senator wanted that",
+        "subject": "The senator",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The freelance writer said that",
+        "subject": "The freelance writer",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The councilor ran because",
+        "subject": "The councilor",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.1
+    },
+    {
+        "prompt": "The dancer laughed because",
+        "subject": "The dancer",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.9
+    },
+    {
+        "prompt": "The jeweler cried because",
+        "subject": "The jeweler",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.3
+    },
+    {
+        "prompt": "The screenwriter cried because",
+        "subject": "The screenwriter",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.4
+    },
+    {
+        "prompt": "The photojournalist ran because",
+        "subject": "The photojournalist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.1
+    },
+    {
+        "prompt": "The athlete stayed up because",
+        "subject": "The athlete",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    },
+    {
+        "prompt": "The biologist cried because",
+        "subject": "The biologist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.1
+    },
+    {
+        "prompt": "The registered nurse said that",
+        "subject": "The registered nurse",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.9
+    },
+    {
+        "prompt": "The novelist went home because",
+        "subject": "The novelist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The cartoonist went home because",
+        "subject": "The cartoonist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The entrepreneur desired that",
+        "subject": "The entrepreneur",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The carpenter ate because",
+        "subject": "The carpenter",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.8
+    },
+    {
+        "prompt": "The president wanted that",
+        "subject": "The president",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.9
+    },
+    {
+        "prompt": "The consultant said that",
+        "subject": "The consultant",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.1
+    },
+    {
+        "prompt": "The guitarist wanted that",
+        "subject": "The guitarist",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The acquaintance stayed up because",
+        "subject": "The acquaintance",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The therapist whispered that",
+        "subject": "The therapist",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.4
+    },
+    {
+        "prompt": "The interior designer said that",
+        "subject": "The interior designer",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.6
+    },
+    {
+        "prompt": "The surveyor went home because",
+        "subject": "The surveyor",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The chef whispered that",
+        "subject": "The chef",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.5
+    },
+    {
+        "prompt": "The plastic surgeon wanted that",
+        "subject": "The plastic surgeon",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.4
+    },
+    {
+        "prompt": "The swimmer said that",
+        "subject": "The swimmer",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.0
+    },
+    {
+        "prompt": "The superintendent laughed because",
+        "subject": "The superintendent",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.9
+    },
+    {
+        "prompt": "The radiologist went home because",
+        "subject": "The radiologist",
+        "target_new": {
+            "str": "he"
+        },
+        "gender_score": -0.3
+    },
+    {
+        "prompt": "The athletic director whispered that",
+        "subject": "The athletic director",
+        "target_new": {
+            "str": "she"
+        },
+        "gender_score": 0.7
+    }
+]

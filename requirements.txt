@@ -1,0 +1,9 @@
+datasets==1.2.1
+transformers==4.30.2
+accelerate==0.19.0
+sentencepiece==0.1.99
+protobuf==3.20.0
+matplotlib
+scikit-learn
+scipy
+torch
