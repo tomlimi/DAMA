@@ -307,7 +307,7 @@ def execute_dama(
             with torch.no_grad():
 
                 orig_module = nethook.get_module(model, module_name)
-                new_module = apply_dama_on_module(orig_module, M, mu_in, mu_out)
+                new_module = apply_dama_on_module(orig_module, M, mu_in, mu_out, hparams.projection_location)
 
                 nethook.replace_module(model, module_name, new_module)
 
