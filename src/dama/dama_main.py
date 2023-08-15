@@ -82,7 +82,8 @@ def apply_dama_to_model(
     return_orig_module=False,
     projections_saveto=None,
     projections_loadfrom=None,
-    output_dir=None
+    output_dir=None,
+    ncv=False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
 
     """
@@ -114,7 +115,7 @@ def apply_dama_to_model(
                                     torch.tensor(values['mu_out'], device='cpu', dtype=torch.float32))
                             for m_name, values in loaded_projections.items()}
     else:
-        projections = execute_dama(model, tok, requests, hparams)
+        projections = execute_dama(model, tok, requests, hparams, ncv=ncv)
 
     if hparams.update == 'once' or projections_loadfrom is not None:
         with torch.no_grad():
@@ -153,7 +154,8 @@ def execute_dama(
         model: AutoModelForCausalLM,
         tok: AutoTokenizer,
         requests: Dict,
-        hparams: DAMAHyperParams
+        hparams: DAMAHyperParams,
+        ncv: bool = False
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
 
     # # Retrieve weights that user desires to change
@@ -193,6 +195,7 @@ def execute_dama(
                     hparams,
                     v_layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
+                    compute_right_vector=False
                 )
             target_pos_list.append(targets[0])
             target_neg_list.append(targets[1])
@@ -218,10 +221,15 @@ def execute_dama(
             V_neg = targets_neg - cur_vs
             print_vs_stats(V_pos, V_neg, cur_vs)
 
-            V = V_pos - V_neg
+            if ncv:
+                V = torch.cat([V_pos, V_neg], dim=0)
+                U = torch.cat([U, U], dim=0)
+            else:
+                V = V_pos - V_neg
 
         else:
-            v_list = []
+            v_pos_list = []
+            v_neg_list = []
             for request in tqdm(requests, desc="Gathering targets from requests"):
                 targets = compute_v_dama(
                     model,
@@ -232,9 +240,15 @@ def execute_dama(
                     get_context_templates(model, tok, hparams.context_template_length_params),
                     compute_right_vector=True
                 )
-                v_list.append(targets[0] - targets[1])
+                v_pos_list.append(targets[0])
+                v_neg_list.append(targets[1])
 
-            V = torch.stack(v_list)
+            if ncv:
+                V = torch.stack(v_pos_list + v_neg_list)
+                U = torch.cat([U, U], dim=0)
+            else:
+                V = torch.stack(v_pos_list) - torch.stack(v_neg_list)
+
 
 
         if torch.cuda.is_available():
