@@ -68,6 +68,7 @@ if __name__ == "__main__":
     parser.add_argument("--test_task", type=str, default="gen")
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--iterative_update", type=bool, default=False)
+    parser.add_argument("--mixed_update", type=bool, default=False)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--post_linear", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=1)
@@ -78,7 +79,8 @@ if __name__ == "__main__":
     model_name, model, _, tok = get_model_tokenizer(args.model_name, args.param_number, False)
 
     experiment_name_suffix = parse_experiment_name(
-        num_layers=args.num_layers, iterative_update=args.iterative_update, task=args.task,
+        num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_updat,
+        task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint
     )
     experiment_name = f"{model_name}{experiment_name_suffix}"

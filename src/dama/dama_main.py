@@ -82,7 +82,6 @@ def apply_dama_to_model(
     return_orig_module=False,
     projections_saveto=None,
     projections_loadfrom=None,
-    online_update=False,
     output_dir=None
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
 
@@ -115,9 +114,9 @@ def apply_dama_to_model(
                                     torch.tensor(values['mu_out'], device='cpu', dtype=torch.float32))
                             for m_name, values in loaded_projections.items()}
     else:
-        projections = execute_dama(model, tok, requests, hparams, online_update=online_update)
+        projections = execute_dama(model, tok, requests, hparams)
 
-    if not online_update or projections_loadfrom is not None:
+    if hparams.update == 'once' or projections_loadfrom is not None:
         with torch.no_grad():
             for m_name, (P, mu_in, mu_out) in projections.items():
                 if int(m_name.split('.')[2]) not in hparams.layers:
@@ -154,8 +153,7 @@ def execute_dama(
         model: AutoModelForCausalLM,
         tok: AutoTokenizer,
         requests: Dict,
-        hparams: DAMAHyperParams,
-        online_update: bool = False
+        hparams: DAMAHyperParams
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
 
     # # Retrieve weights that user desires to change
@@ -183,26 +181,60 @@ def execute_dama(
     else:
         raise ValueError("Batch size must be positive")
 
+    if hparams.update == 'mixed':
+        target_pos_list = []
+        target_neg_list = []
+        v_layer = hparams.layers[-1]
+        for request in tqdm(requests, desc="Gathering targets from requests"):
+            targets = compute_v_dama(
+                    model,
+                    tok,
+                    request,
+                    hparams,
+                    v_layer,
+                    get_context_templates(model, tok, hparams.context_template_length_params),
+                )
+            target_pos_list.append(targets[0])
+            target_neg_list.append(targets[1])
+
+        targets_pos = torch.stack(target_pos_list)
+        targets_neg = torch.stack(target_neg_list)
+
+        req_contexts = [request["prompt"] for request_batch in requests for request in request_batch]
+        req_words = [request["subject"] for request_batch in requests for request in request_batch]
+
+
     for layer in sorted(hparams.layers):
         print(f"\n\nLAYER {layer}\n")
 
         U = compute_us(model, tok, requests, hparams, layer,
                               get_context_templates(model, tok, hparams.context_template_length_params))
 
-        v_list = []
-        for request in tqdm(requests, desc="Gathering targets from requests"):
-            targets = compute_v_dama(
-                model,
-                tok,
-                request,
-                hparams,
-                layer,
-                get_context_templates(model, tok, hparams.context_template_length_params),
-                compute_right_vector=True
-            )
-            v_list.append(targets[0] - targets[1])
+        if hparams.update == 'mixed':
+            cur_vs = get_module_input_output_at_words(
+                model, tok, req_contexts, req_words, v_layer, hparams.rewrite_module_tmp, hparams.fact_token)[1]
 
-        V = torch.stack(v_list)
+            V_pos = targets_pos - cur_vs
+            V_neg = targets_neg - cur_vs
+            print_vs_stats(V_pos, V_neg, cur_vs)
+
+            V = V_pos - V_neg
+
+        else:
+            v_list = []
+            for request in tqdm(requests, desc="Gathering targets from requests"):
+                targets = compute_v_dama(
+                    model,
+                    tok,
+                    request,
+                    hparams,
+                    layer,
+                    get_context_templates(model, tok, hparams.context_template_length_params),
+                    compute_right_vector=True
+                )
+                v_list.append(targets[0] - targets[1])
+
+            V = torch.stack(v_list)
 
 
         if torch.cuda.is_available():
@@ -303,7 +335,7 @@ def execute_dama(
 
         projections[module_name] = (M, mu_in, mu_out)
 
-        if online_update:
+        if hparams.update == 'iterative' or hparams.update == 'mixed':
             with torch.no_grad():
 
                 orig_module = nethook.get_module(model, module_name)

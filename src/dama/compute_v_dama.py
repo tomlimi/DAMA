@@ -254,13 +254,13 @@ def compute_v_dama(
 
     right_vectors = [target - cur_output for target in targets]
     print(f"Right vector norms: {[right_vector.norm().item() for right_vector in right_vectors]}")
-    print(f"Cosine between right vectors: {(torch.dot(right_vectors[0], right_vectors[1])/right_vectors[0].norm()/right_vectors[1].norm()).item()}")
-    print(f"Cosine between deltas: {(torch.dot(deltas[0], deltas[1])/deltas[0].norm()/deltas[1].norm()).item()}")
+    print(f"Cosine between right vectors: {(torch.dot(right_vectors[0], right_vectors[1])/(right_vectors[0].norm()*right_vectors[1].norm())).item()}")
+    print(f"Cosine between deltas: {(torch.dot(deltas[0], deltas[1])/(deltas[0].norm()*deltas[1].norm())).item()}")
 
     contrast_vector = right_vectors[0] - right_vectors[1]
     print(f"Contrast vector norm: {contrast_vector.norm().item()}")
-    print(f"Cosine between contrast and positive vector: {(torch.dot(contrast_vector, right_vectors[0])/contrast_vector.norm()/right_vectors[0].norm()).item()}")
-    print(f"Cosine between contrast and negative vector: {(torch.dot(contrast_vector, right_vectors[1])/contrast_vector.norm()/right_vectors[1].norm()).item()}")
+    print(f"Cosine between contrast and positive vector: {(torch.dot(contrast_vector, right_vectors[0])/(contrast_vector.norm()*right_vectors[0].norm())).item()}")
+    print(f"Cosine between contrast and negative vector: {(torch.dot(contrast_vector, right_vectors[1])/(contrast_vector.norm()*right_vectors[1].norm())).item()}")
 
     return right_vectors
     # Compute contrast vector
@@ -284,7 +284,7 @@ def print_vs_stats(V_pos, V_neg, V_orig):
 
     print(f"Cosine between pos and original vector: {[(torch.dot(v_pos, v_orig.T)/(v_pos.norm()*v_orig.norm())).item() for v_pos, v_orig in zip(torch.unbind(V_pos), torch.unbind(V_orig))]}")
     print(f"Cosine between neg and original vector: {[(torch.dot(v_neg, v_orig.T)/(v_neg.norm()*v_orig.norm())).item() for v_neg, v_orig in zip(torch.unbind(V_neg), torch.unbind(V_orig))]}")
-    print(f"Cosine between pos and neg vector: {[((v_pos @ v_neg.T)/(v_pos.norm()*v_neg.norm())).item() for v_pos, v_neg in zip(torch.unbind(V_pos), torch.unbind(V_neg))]}")
+    print(f"Cosine between pos and neg vector: {[(torch.dot(v_pos, v_neg.T) / (v_pos.norm() * v_neg.norm())).item() for v_pos, v_neg in zip(torch.unbind(V_pos), torch.unbind(V_neg))]}")
 
     print("\n*******\n")
 

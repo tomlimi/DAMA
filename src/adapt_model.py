@@ -52,7 +52,6 @@ def model_editing(
         model_new, orig_weights = apply_dama_to_model(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
             projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-            online_update=(hparams.update == 'iterative'),
             output_dir=output_dir)
     else:
         raise ValueError(f"Unknown method {method}. Choose from: ROME, DAMA")
@@ -83,6 +82,7 @@ def model_editing(
 
 def parse_experiment_name(num_layers: int=9,
                           iterative_update: bool=False,
+                          mixed_update: bool=False,
                           task: str="gen",
                           post_linear: bool=False,
                           batch_size: int=1,
@@ -92,6 +92,8 @@ def parse_experiment_name(num_layers: int=9,
     experiment_string = f"_l{num_layers}"
     if iterative_update:
         experiment_string += "_iter"
+    elif mixed_update:
+        experiment_string += "_mixed"
     else:
         experiment_string += "_once"
 
@@ -122,6 +124,7 @@ def parse_experiment_name(num_layers: int=9,
         experiment_string += "_on"
 
     return experiment_string
+
 
 def get_model_tokenizer(model_name, param_number, compare_against=False):
     if model_name.endswith("llama"):
@@ -181,6 +184,7 @@ if __name__ == "__main__":
     parser.add_argument("--no_compare_against", dest="compare_against", action="store_false")
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--iterative_update", type=bool, default=False)
+    parser.add_argument("--mixed_update", type=bool, default=False)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--post_linear", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=1)
@@ -190,7 +194,8 @@ if __name__ == "__main__":
     model_name, model, orig_model, tok = get_model_tokenizer(args.model_name, args.param_number, args.compare_against)
 
     experiment_name_suffix = parse_experiment_name(
-        num_layers=args.num_layers, iterative_update=args.iterative_update, task=args.task,
+        num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
+        task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint
     )
     experiment_name = f"{model_name}{experiment_name_suffix}"
