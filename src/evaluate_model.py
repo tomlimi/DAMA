@@ -74,6 +74,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--orthogonal_constraint", type=bool, default=False)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
+    parser.add_argument("--vs_at_last", type=bool, default=False)
 
     args = parser.parse_args()
 
@@ -82,7 +83,8 @@ if __name__ == "__main__":
     experiment_name_suffix = parse_experiment_name(
         num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
         task=args.task,
-        post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint, no_colinear_vs=args.no_colinear_vs
+        post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last
     )
     experiment_name = f"{model_name}{experiment_name_suffix}"
     if args.method == "DAMA":

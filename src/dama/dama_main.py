@@ -83,7 +83,8 @@ def apply_dama_to_model(
     projections_saveto=None,
     projections_loadfrom=None,
     output_dir=None,
-    ncv=False
+    ncv=False,
+    val=False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
 
     """
@@ -115,7 +116,7 @@ def apply_dama_to_model(
                                     torch.tensor(values['mu_out'], device='cpu', dtype=torch.float32))
                             for m_name, values in loaded_projections.items()}
     else:
-        projections = execute_dama(model, tok, requests, hparams, ncv=ncv)
+        projections = execute_dama(model, tok, requests, hparams, ncv=ncv, val=val)
 
     if hparams.update == 'once' or projections_loadfrom is not None:
         with torch.no_grad():
@@ -155,7 +156,8 @@ def execute_dama(
         tok: AutoTokenizer,
         requests: Dict,
         hparams: DAMAHyperParams,
-        ncv: bool = False
+        ncv: bool = False,
+        val: bool = False,
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
 
     # # Retrieve weights that user desires to change
@@ -186,7 +188,7 @@ def execute_dama(
     if hparams.update == 'mixed':
         target_pos_list = []
         target_neg_list = []
-        v_layer = hparams.layers[-1]
+        v_layer = hparams.v_loss_layer if val else hparams.layers[-1]
         for request in tqdm(requests, desc="Gathering targets from requests"):
             targets = compute_v_dama(
                     model,
@@ -236,7 +238,7 @@ def execute_dama(
                     tok,
                     request,
                     hparams,
-                    layer,
+                    hparams.v_loss_layer if val else layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
                     compute_right_vector=True
                 )
