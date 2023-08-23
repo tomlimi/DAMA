@@ -17,6 +17,7 @@ from utils.repr_tools import get_module_input_output_at_words
 LLAMA_PRONOUNS = {"pos": "he",
                  "neg": "she"}
 
+
 # TODO: Support request batching
 def compute_v_dama(
     model: AutoModelForCausalLM,
@@ -123,7 +124,6 @@ def compute_v_dama(
     # Insert deltas for computation
     def edit_output_fn(cur_out, cur_layer):
         nonlocal target_init
-
         if cur_layer == hparams.mlp_module_tmp.format(layer):
             # Store initial value of the vector of interest
             if target_init is None:
@@ -282,13 +282,19 @@ def print_vs_stats(V_pos, V_neg, V_orig):
     print(f"Contrast vector norms: {[v.norm().item() for v in torch.unbind(V_contrast)]}")
     print(f"Value vector norms: {[v.norm().item() for v in torch.unbind(V_orig)]}")
 
-    print(f"Cosine across contrast vectors: {((V_contrast @ V_contrast.T)/(V_contrast.norm(dim=1, keepdim=True)*V_contrast.norm(dim=1, keepdim=True).T))}")
+    # normalize  vectors to avoid numerical issues with float16
+    V_contrast /= V_contrast.norm(dim=1, keepdim=True)
+    V_pos_norm = V_pos / V_pos.norm(dim=1, keepdim=True)
+    V_neg_norm = V_neg / V_neg.norm(dim=1, keepdim=True)
+    V_orig_norm = V_orig / V_orig.norm(dim=1, keepdim=True)
 
-    print(f"Cosine between contrast and original vector: {[(torch.dot(v_contrast, v_orig.T)/(v_contrast.norm()*v_orig.norm())).item() for v_contrast, v_orig in zip(torch.unbind(V_contrast), torch.unbind(V_orig))]}")
+    print(f"Cosine across contrast vectors: {V_contrast @ V_contrast.T}")
 
-    print(f"Cosine between pos and original vector: {[(torch.dot(v_pos, v_orig.T)/(v_pos.norm()*v_orig.norm())).item() for v_pos, v_orig in zip(torch.unbind(V_pos), torch.unbind(V_orig))]}")
-    print(f"Cosine between neg and original vector: {[(torch.dot(v_neg, v_orig.T)/(v_neg.norm()*v_orig.norm())).item() for v_neg, v_orig in zip(torch.unbind(V_neg), torch.unbind(V_orig))]}")
-    print(f"Cosine between pos and neg vector: {[(torch.dot(v_pos, v_neg.T) / (v_pos.norm() * v_neg.norm())).item() for v_pos, v_neg in zip(torch.unbind(V_pos), torch.unbind(V_neg))]}")
+    print(f"Cosine between contrast and original vector: {[torch.dot(v_contrast, v_orig.T).item() for v_contrast, v_orig in zip(torch.unbind(V_contrast), torch.unbind(V_orig_norm))]}")
+
+    print(f"Cosine between pos and original vector: {[torch.dot(v_pos, v_orig.T).item() for v_pos, v_orig in zip(torch.unbind(V_pos_norm), torch.unbind(V_orig_norm))]}")
+    print(f"Cosine between neg and original vector: {[torch.dot(v_neg, v_orig.T).item() for v_neg, v_orig in zip(torch.unbind(V_neg_norm), torch.unbind(V_orig_norm))]}")
+    print(f"Cosine between pos and neg vector: {[torch.dot(v_pos, v_neg.T).item() for v_pos, v_neg in zip(torch.unbind(V_pos_norm), torch.unbind(V_neg_norm))]}")
 
     print("\n*******\n")
 
