@@ -25,7 +25,8 @@ def compute_v_dama(
     hparams: DAMAHyperParams,
     layer: int,
     context_templates: List[str],
-    compute_right_vector: bool = False
+    compute_right_vector: bool = False,
+    device: str = 'cuda' if torch.cuda.is_available() else 'cpu'
 ) -> [torch.Tensor, torch.Tensor]:
     """
     Computes the contrast value vector (`he` - `she`)for the projecting update.
@@ -35,7 +36,7 @@ def compute_v_dama(
 
     # TODO: this must be different for he and she pronouns
     target_idss = [tok(pron, return_tensors="pt").
-                   to("cuda" if torch.cuda.is_available() else "cpu")["input_ids"][0]
+                   to(device)["input_ids"][0]
                    for pron in LLAMA_PRONOUNS.values()]
 
     rewriting_prompts = []
@@ -83,7 +84,7 @@ def compute_v_dama(
         return_tensors="pt",
         padding=True,
         return_token_type_ids=False
-    ).to("cuda" if torch.cuda.is_available() else "cpu")
+    ).to(device)
 
     lookup_idxs = rewriting_prompts_lookup_idxs + kl_prompts_lookup_idxs
 
@@ -91,7 +92,7 @@ def compute_v_dama(
 
     # Compute rewriting targets
     rewriting_targetss = [
-        torch.tensor(-100, device="cuda" if torch.cuda.is_available() else "cpu").repeat(
+        torch.tensor(-100, device=device).repeat(
         len(rewriting_prompts), *input_tok["input_ids"].shape[1:])
         for _ in ("pos", "neg") ]
 
@@ -108,11 +109,14 @@ def compute_v_dama(
     # rewrite layer, i.e. hypothesized fact lookup location, will induce the
     # target token to be predicted at the final layer.
     deltas = [torch.zeros((model.config.hidden_size,), requires_grad=True,
-                          device="cuda" if torch.cuda.is_available() else "cpu") for _ in ("pos", "neg")]
+                          device=device) for _ in ("pos", "neg")]
 
     # todo how to use delta_shared?
     delta_shared = torch.zeros((model.config.hidden_size,), requires_grad=True,
-                               device="cuda" if torch.cuda.is_available() else "cpu")
+                               device=device)
+
+    assert delta_shared.device == deltas[0].device
+    assert delta_shared.device == deltas[1].device
 
     target_init, kl_distr_init = None, None
 

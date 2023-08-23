@@ -167,6 +167,10 @@ def execute_dama(
         )
         for layer in hparams.layers
     }
+
+    weights[f"{hparams.rewrite_module_tmp.format(hparams.v_loss_layer)}"] = nethook.get_parameter(
+            model, f"{hparams.rewrite_module_tmp.format(hparams.v_loss_layer)}.weight"
+        )
     # Save old weights for future restoration
     weights_copy = {k: v.detach().clone() for k, v in weights.items()}
 
@@ -189,6 +193,7 @@ def execute_dama(
         target_pos_list = []
         target_neg_list = []
         v_layer = hparams.v_loss_layer if val else hparams.layers[-1]
+        cur_device = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].device
         for request in tqdm(requests, desc="Gathering targets from requests"):
             targets = compute_v_dama(
                     model,
@@ -197,7 +202,8 @@ def execute_dama(
                     hparams,
                     v_layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
-                    compute_right_vector=False
+                    compute_right_vector=False,
+                    device=cur_device
                 )
             target_pos_list.append(targets[0])
             target_neg_list.append(targets[1])
@@ -212,12 +218,21 @@ def execute_dama(
     for layer in sorted(hparams.layers):
         print(f"\n\nLAYER {layer}\n")
 
+        cur_device = weights[f"{hparams.rewrite_module_tmp.format(layer)}"].device
+        # # Retrieve weights that user desires to change
         U = compute_us(model, tok, requests, hparams, layer,
                               get_context_templates(model, tok, hparams.context_template_length_params))
+
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
 
         if hparams.update == 'mixed':
             cur_vs = get_module_input_output_at_words(
                 model, tok, req_contexts, req_words, v_layer, hparams.rewrite_module_tmp, hparams.fact_token)[1]
+
+            targets_pos = targets_pos.to(cur_device)
+            targets_neg = targets_neg.to(cur_device)
+            cur_vs = cur_vs.to(cur_device)
 
             V_pos = targets_pos - cur_vs
             V_neg = targets_neg - cur_vs
@@ -240,7 +255,8 @@ def execute_dama(
                     hparams,
                     hparams.v_loss_layer if val else layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
-                    compute_right_vector=True
+                    compute_right_vector=True,
+                    device=cur_device
                 )
                 v_pos_list.append(targets[0])
                 v_neg_list.append(targets[1])
@@ -251,10 +267,8 @@ def execute_dama(
             else:
                 V = torch.stack(v_pos_list) - torch.stack(v_neg_list)
 
-
-
-        if torch.cuda.is_available():
-            torch.cuda.synchronize()
+        U = U.to(cur_device)
+        V = V.to(cur_device)
 
         # normalize contrast vectors
         # V /= np.linalg.norm(V, axis=1, keepdims=True)
@@ -271,6 +285,7 @@ def execute_dama(
             hparams.mom2_dtype,
             force_recompute=force_recompute,
         )
+        cov = cov.to(cur_device)
 
         if torch.cuda.is_available():
             U = U.float()
@@ -341,9 +356,9 @@ def execute_dama(
 
         # save as tensors
         if torch.cuda.is_available():
-            M = torch.tensor(M, dtype=torch.float16, device='cuda')
-            mu_in = torch.tensor(mu_in, dtype=torch.float16, device='cuda')
-            mu_out = torch.tensor(mu_out, dtype=torch.float16, device='cuda')
+            M = torch.tensor(M, dtype=torch.float16, device=cur_device)
+            mu_in = torch.tensor(mu_in, dtype=torch.float16, device=cur_device)
+            mu_out = torch.tensor(mu_out, dtype=torch.float16, device=cur_device)
         else:
             M = torch.tensor(M, dtype=torch.float32, device='cpu')
             mu_in = torch.tensor(mu_in, dtype=torch.float32, device='cpu')

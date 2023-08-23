@@ -158,8 +158,11 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
     model = AutoModelForCausalLM.from_pretrained(model_path,
                                                  torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                                                  low_cpu_mem_usage=True, device_map='auto')
-    if torch.cuda.is_available():
+
+    if torch.cuda.is_available() and torch.cuda.device_count() == 1:
         model = model.eval().cuda()
+    elif torch.cuda.is_available() and torch.cuda.device_count() > 1:
+        model = model.eval()
 
     if compare_against:
         orig_model = AutoModelForCausalLM.from_pretrained(model_path,
@@ -191,8 +194,7 @@ if __name__ == "__main__":
     parser.add_argument("--generation_file", type=str, default=None)
     parser.add_argument("--save_projections", type=bool, default=True)
     parser.add_argument("--load_projections", type=bool, default=False)
-    parser.add_argument("--compare_against", default=True, action="store_true")
-    parser.add_argument("--no_compare_against", dest="compare_against", action="store_false")
+    parser.add_argument("--compare_against", type=bool, default=False)
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--iterative_update", type=bool, default=False)
     parser.add_argument("--mixed_update", type=bool, default=False)
@@ -204,6 +206,7 @@ if __name__ == "__main__":
     parser.add_argument("--vs_at_last", type=bool, default=False)
     args = parser.parse_args()
 
+    print(f"Load original model to compare: {args.compare_against}")
     model_name, model, orig_model, tok = get_model_tokenizer(args.model_name, args.param_number, args.compare_against)
 
     experiment_name_suffix = parse_experiment_name(
