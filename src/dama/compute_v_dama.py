@@ -27,8 +27,10 @@ def compute_v_dama(
     layer: int,
     context_templates: List[str],
     compute_right_vector: bool = False,
-    device: str = 'cuda' if torch.cuda.is_available() else 'cpu'
-) -> [torch.Tensor, torch.Tensor]:
+    device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
+    batch_id: int =0,
+    past_deltass: Tuple[torch.Tensor, torch.Tensor] = (None, None)
+) -> Tuple[Tuple[torch.Tensor, torch.Tensor], Tuple[torch.Tensor, torch.Tensor]]:
     """
     Computes the contrast value vector (`he` - `she`)for the projecting update.
     """
@@ -143,13 +145,13 @@ def compute_v_dama(
 
     # Optimmize
     print("Optimizing...")
-    print("Loss structure: NLL + KL + WEIGHT DECAY")
+    print("Loss structure: NLL + KL + WEIGHT DECAY + ORTHOGONALITY")
 
     for it in range(hparams.v_num_grad_steps):
         opt.zero_grad()
 
         # iterate over positive and negative examples
-        for target_ids, rewriting_targets, delta, direction in zip(target_idss, rewriting_targetss, deltas, LLAMA_PRONOUNS.keys()):
+        for target_ids, rewriting_targets, delta, past_deltas, direction in zip(target_idss, rewriting_targetss, deltas, past_deltass, LLAMA_PRONOUNS.keys()):
             # Forward propagation
             with nethook.TraceDict(
                 module=model,
@@ -197,10 +199,18 @@ def compute_v_dama(
             weight_decay += hparams.v_weight_decay * (
                     torch.norm(delta_shared) / torch.norm(target_init) ** 2
             )
+
+            orthogonal_loss = torch.tensor(0.0)
+            batch_id = torch.tensor(batch_id)
+            if hparams.orthogonal_constraint and past_deltas is not None and batch_id > 0:
+                delta_normed = delta / (torch.norm(delta) + 1e-8)
+                orthogonal_loss = hparams.orthogonal_constraint * torch.norm(past_deltas[:batch_id,:] @ delta_normed) / torch.sqrt(batch_id)
+
+            loss = nll_loss + kl_loss + weight_decay + orthogonal_loss
             # weight_decay = hparams.v_weight_decay * torch.norm(delta) ** 2
-            loss = nll_loss + kl_loss + weight_decay
+
             print(
-                f"loss ({direction}) {np.round(loss.item(), 3)} = {np.round(nll_loss.item(), 3)} + {np.round(kl_loss.item(), 3)} + {np.round(weight_decay.item(), 3)} "
+                f"loss ({direction}) {np.round(loss.item(), 3)} = {np.round(nll_loss.item(), 3)} + {np.round(kl_loss.item(), 3)} + {np.round(weight_decay.item(), 3)} + {np.round(orthogonal_loss.item(), 3)} "
                 f"avg prob of [{LLAMA_PRONOUNS[direction]}] "
                 f"{torch.exp(-nll_loss_each).mean().item()}"
             )
@@ -233,8 +243,6 @@ def compute_v_dama(
     # Retrieve cur_input, the current input to the 2nd MLP layer, and
     # cur_output, the original output of the 2nd MLP layer.
 
-    if not compute_right_vector:
-        return targets
 
     (_, cur_outputs) = get_module_input_output_at_words(
         model,
@@ -247,40 +255,30 @@ def compute_v_dama(
     )
     cur_output = cur_outputs.mean(0)
 
-    # Solving the linear system to compute the right vector
-    # TODO: the next line doesn't really matter in DAME:
-    # right_vectors = [(target - cur_output) / torch.dot(cur_input, left_vector) for target in targets]
-    # print(f"Delta norms: {[(target - cur_output).norm().item() for target in targets]}")
-    # print(
-    #     f"Change in target norms: {target_init.norm().item()} to {[target.norm().item() for target in targets]} => {[(target.norm() - target_init.norm()).item() for target in targets]}"
-    # )
-    # print(f"Division Factor: {torch.dot(cur_input, left_vector).item()}")
-
     right_vectors = [target - cur_output for target in targets]
-    print(f"Right vector norms: {[right_vector.norm().item() for right_vector in right_vectors]}")
-    print(f"Cosine between right vectors: {(torch.dot(right_vectors[0], right_vectors[1])/(right_vectors[0].norm()*right_vectors[1].norm())).item()}")
-    print(f"Cosine between deltas: {(torch.dot(deltas[0], deltas[1])/(deltas[0].norm()*deltas[1].norm())).item()}")
+    if compute_right_vector:
+        print(f"Right vector norms: {[right_vector.norm().item() for right_vector in right_vectors]}")
+        print(f"Cosine between right vectors: {(torch.dot(right_vectors[0], right_vectors[1])/(right_vectors[0].norm()*right_vectors[1].norm())).item()}")
+        print(f"Cosine between deltas: {(torch.dot(deltas[0], deltas[1])/(deltas[0].norm()*deltas[1].norm())).item()}")
 
-    contrast_vector = right_vectors[0] - right_vectors[1]
-    print(f"Contrast vector norm: {contrast_vector.norm().item()}")
-    print(f"Cosine between contrast and positive vector: {(torch.dot(contrast_vector, right_vectors[0])/(contrast_vector.norm()*right_vectors[0].norm())).item()}")
-    print(f"Cosine between contrast and negative vector: {(torch.dot(contrast_vector, right_vectors[1])/(contrast_vector.norm()*right_vectors[1].norm())).item()}")
+        contrast_vector = right_vectors[0] - right_vectors[1]
+        print(f"Contrast vector norm: {contrast_vector.norm().item()}")
+        print(f"Cosine between contrast and positive vector: {(torch.dot(contrast_vector, right_vectors[0])/(contrast_vector.norm()*right_vectors[0].norm())).item()}")
+        print(f"Cosine between contrast and negative vector: {(torch.dot(contrast_vector, right_vectors[1])/(contrast_vector.norm()*right_vectors[1].norm())).item()}")
 
-    return right_vectors
-    # Compute contrast vector
-    # contrast_vector = right_vectors[0] - right_vectors[1]
-    # return contrast_vector
+    return tuple(targets), tuple(right_vectors)
+
 
 
 def print_vs_stats(V_pos, V_neg, V_orig):
 
     V_contrast = V_pos - V_neg
 
-
-    print(f"Positive vector norms: {[v.norm().item() for v in torch.unbind(V_pos)]}")
-    print(f"Negative vector norms: {[v.norm().item() for v in torch.unbind(V_neg)]}")
-    print(f"Contrast vector norms: {[v.norm().item() for v in torch.unbind(V_contrast)]}")
-    print(f"Value vector norms: {[v.norm().item() for v in torch.unbind(V_orig)]}")
+    print("For all numbers printed ")
+    print(f"Positive vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_pos)])}")
+    print(f"Negative vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_neg)])}")
+    print(f"Contrast vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_contrast)])}")
+    print(f"Value vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_orig)])}")
 
     # normalize  vectors to avoid numerical issues with float16
     V_contrast /= V_contrast.norm(dim=1, keepdim=True)
@@ -290,13 +288,16 @@ def print_vs_stats(V_pos, V_neg, V_orig):
 
     print(f"Cosine across contrast vectors: {V_contrast @ V_contrast.T}")
 
-    print(f"Cosine between contrast and original vector: {[torch.dot(v_contrast, v_orig.T).item() for v_contrast, v_orig in zip(torch.unbind(V_contrast), torch.unbind(V_orig_norm))]}")
+    print(f"Cosine between contrast and original vector: {descriptive_stat([torch.dot(v_contrast, v_orig.T).item() for v_contrast, v_orig in zip(torch.unbind(V_contrast), torch.unbind(V_orig_norm))])}")
 
-    print(f"Cosine between pos and original vector: {[torch.dot(v_pos, v_orig.T).item() for v_pos, v_orig in zip(torch.unbind(V_pos_norm), torch.unbind(V_orig_norm))]}")
-    print(f"Cosine between neg and original vector: {[torch.dot(v_neg, v_orig.T).item() for v_neg, v_orig in zip(torch.unbind(V_neg_norm), torch.unbind(V_orig_norm))]}")
-    print(f"Cosine between pos and neg vector: {[torch.dot(v_pos, v_neg.T).item() for v_pos, v_neg in zip(torch.unbind(V_pos_norm), torch.unbind(V_neg_norm))]}")
+    print(f"Cosine between pos and original vector: {descriptive_stat([torch.dot(v_pos, v_orig.T).item() for v_pos, v_orig in zip(torch.unbind(V_pos_norm), torch.unbind(V_orig_norm))])}")
+    print(f"Cosine between neg and original vector: {descriptive_stat([torch.dot(v_neg, v_orig.T).item() for v_neg, v_orig in zip(torch.unbind(V_neg_norm), torch.unbind(V_orig_norm))])}")
+    print(f"Cosine between pos and neg vector: {descriptive_stat([torch.dot(v_pos, v_neg.T).item() for v_pos, v_neg in zip(torch.unbind(V_pos_norm), torch.unbind(V_neg_norm))])}")
 
     print("\n*******\n")
+
+def descriptive_stat(data):
+    return f"min: {min(data)} mean: {np.mean(data)} std: {np.std(data)} max: {max(data)}"
 
 def get_module_input_output_at_word(
     model: AutoModelForCausalLM,

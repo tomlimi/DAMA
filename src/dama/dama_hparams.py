@@ -37,4 +37,4 @@ class DAMAHyperParams(HyperParams):
     projection_location: str
 
     batch_size: int
-    orthogonal_constraint: bool
+    orthogonal_constraint: float

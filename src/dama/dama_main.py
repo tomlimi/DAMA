@@ -206,12 +206,18 @@ def execute_dama(
         raise ValueError("Batch size must be positive")
 
     if hparams.update == 'mixed':
+
         target_pos_list = []
         target_neg_list = []
         v_layer = hparams.v_loss_layer if val else hparams.layers[-1]
+
+        v_dim = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].shape[0]
         cur_device = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].device
-        for request in tqdm(requests, desc="Gathering targets from requests"):
-            targets = compute_v_dama(
+
+        past_deltas_pos = torch.zeros((len(requests), v_dim ), device=cur_device)
+        past_deltas_neg = torch.zeros((len(requests), v_dim ), device=cur_device)
+        for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
+            (target_pos, target_neg), (delta_pos, delta_neg) = compute_v_dama(
                     model,
                     tok,
                     request,
@@ -219,10 +225,15 @@ def execute_dama(
                     v_layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
                     compute_right_vector=False,
-                    device=cur_device
+                    device=cur_device,
+                    batch_id=bidx,
+                    past_deltass=(past_deltas_pos, past_deltas_neg) if hparams.orthogonal_constraint else None,
                 )
-            target_pos_list.append(targets[0])
-            target_neg_list.append(targets[1])
+            target_pos_list.append(target_pos)
+            target_neg_list.append(target_neg)
+
+            past_deltas_pos[bidx,:] = (delta_pos / torch.norm(delta_pos)).detach()
+            past_deltas_neg[bidx,:] = (delta_neg / torch.norm(delta_neg)).detach()
 
         targets_pos = torch.stack(target_pos_list)
         targets_neg = torch.stack(target_neg_list)
@@ -264,8 +275,13 @@ def execute_dama(
         else:
             v_pos_list = []
             v_neg_list = []
-            for request in tqdm(requests, desc="Gathering targets from requests"):
-                targets = compute_v_dama(
+
+            v_dim = weights[f"{hparams.rewrite_module_tmp.format(layer)}"].shape[0]
+
+            past_deltas_pos = torch.zeros((len(requests), v_dim ), device=cur_device)
+            past_deltas_neg = torch.zeros((len(requests), v_dim ), device=cur_device)
+            for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
+                _, (delta_pos, delta_neg) = compute_v_dama(
                     model,
                     tok,
                     request,
@@ -273,11 +289,15 @@ def execute_dama(
                     hparams.v_loss_layer if val else layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
                     compute_right_vector=True,
-                    device=cur_device
+                    device=cur_device,
+                    batch_id=bidx,
+                    past_deltass=(past_deltas_pos, past_deltas_neg) if hparams.orthogonal_constraint else None
                 )
-                v_pos_list.append(targets[0])
-                v_neg_list.append(targets[1])
+                v_pos_list.append(delta_pos)
+                v_neg_list.append(delta_neg)
 
+                past_deltas_pos[bidx,:] = (delta_pos / torch.norm(delta_pos)).detach()
+                past_deltas_neg[bidx,:] = (delta_neg / torch.norm(delta_neg)).detach()
             if ncv:
                 V = torch.stack(v_pos_list + v_neg_list)
                 U = torch.cat([U, U], dim=0)

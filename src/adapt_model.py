@@ -124,8 +124,7 @@ def parse_experiment_name(num_layers: int=9,
         raise ValueError("Batch size must be a positive integer")
 
     if orthogonal_constraint:
-        experiment_string += "_oy"
-        raise NotImplementedError("Orthogonal constraint not implemented yet")
+        experiment_string += f"_o{orthogonal_constraint}"
     else:
         experiment_string += "_on"
 
@@ -205,7 +204,7 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--post_linear", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=1)
-    parser.add_argument("--orthogonal_constraint", type=bool, default=False)
+    parser.add_argument("--orthogonal_constraint", type=float, default=None)
     parser.add_argument("--null_dim", type=int, default=1024)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)

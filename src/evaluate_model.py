@@ -72,7 +72,7 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--post_linear", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=1)
-    parser.add_argument("--orthogonal_constraint", type=bool, default=False)
+    parser.add_argument("--orthogonal_constraint", type=float, default=None)
     parser.add_argument("--null_dim", type=int, default=1024)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)
