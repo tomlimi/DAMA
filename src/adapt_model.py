@@ -90,7 +90,8 @@ def parse_experiment_name(num_layers: int=9,
                           batch_size: int=1,
                           orthogonal_constraint: bool=False,
                           no_colinear_vs: bool=False,
-                          vs_at_last: bool=False
+                          vs_at_last: bool=False,
+                          null_dim: int=1024,
                           ) -> str:
     # TODO: Implement missing configurations
 
@@ -127,6 +128,9 @@ def parse_experiment_name(num_layers: int=9,
         raise NotImplementedError("Orthogonal constraint not implemented yet")
     else:
         experiment_string += "_on"
+
+    if null_dim != 1024:
+        experiment_string += f"_nd{null_dim}"
 
     if no_colinear_vs:
         experiment_string += "_ncv"
@@ -202,6 +206,7 @@ if __name__ == "__main__":
     parser.add_argument("--post_linear", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--orthogonal_constraint", type=bool, default=False)
+    parser.add_argument("--null_dim", type=int, default=1024)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)
     args = parser.parse_args()
@@ -213,7 +218,7 @@ if __name__ == "__main__":
         num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
         task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
-        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim
     )
     experiment_name = f"{model_name}{experiment_name_suffix}"
     if args.method == "DAMA":
