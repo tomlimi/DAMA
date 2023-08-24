@@ -63,7 +63,7 @@ def get_colspace_projection(W: np.ndarray) -> np.ndarray:
     if np.allclose(W, 0):
         w_basis = np.zeros_like(W)
     else:
-        w_basis = scipy.linalg.orth(W)  # orthogonal basis
+        w_basis = custom_orth(W)  # orthogonal basis
 
     print("Orthogonal basis size:", w_basis.shape)
     w_basis * np.sign(w_basis[0][0])  # handle sign ambiguity
@@ -72,6 +72,22 @@ def get_colspace_projection(W: np.ndarray) -> np.ndarray:
 
     return P_W
 
+
+# Orthonormal decomposition
+
+def custom_orth(A):
+    """
+    Custom reimplementation of scipy.linalg.orth with a different SVD algorithm (gesvd instead of gesdd)
+
+    """
+    u, s, vh = scipy.linalg.svd(A, full_matrices=False, lapack_driver='gesvd')
+    M, N = u.shape[0], vh.shape[1]
+
+    rcond = np.finfo(s.dtype).eps * max(M, N)
+    tol = np.amax(s) * rcond
+    num = np.sum(s > tol, dtype=int)
+    Q = u[:, :num]
+    return Q
 
 def apply_dama_to_model(
     model: AutoModelForCausalLM,
@@ -236,6 +252,7 @@ def execute_dama(
 
             V_pos = targets_pos - cur_vs
             V_neg = targets_neg - cur_vs
+
             print_vs_stats(V_pos, V_neg, cur_vs)
 
             if ncv:
@@ -289,6 +306,7 @@ def execute_dama(
 
         if torch.cuda.is_available():
             U = U.float()
+
 
         print("Solving withening equation for U...")
         U = torch.linalg.solve(
