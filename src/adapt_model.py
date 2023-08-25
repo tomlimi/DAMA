@@ -31,7 +31,8 @@ def model_editing(
     projections_loadfrom: Path = None,
     output_dir: Path = None,
     ncv: bool = False,
-    val: bool = False
+    val: bool = False,
+    use_neutral: bool = False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, list[str]]:
     """
     Applies the selected model editing algorithm. Generates text both before and after
@@ -54,7 +55,7 @@ def model_editing(
         model_new, orig_weights = apply_dama_to_model(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
             projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-            output_dir=output_dir, ncv=ncv, val=val)
+            output_dir=output_dir, ncv=ncv, val=val, use_neutral=use_neutral)
     else:
         raise ValueError(f"Unknown method {method}. Choose from: ROME, DAMA")
 
@@ -92,6 +93,7 @@ def parse_experiment_name(num_layers: int=9,
                           no_colinear_vs: bool=False,
                           vs_at_last: bool=False,
                           null_dim: int=1024,
+                          use_neutral: bool=False
                           ) -> str:
     # TODO: Implement missing configurations
 
@@ -136,6 +138,9 @@ def parse_experiment_name(num_layers: int=9,
 
     if vs_at_last:
         experiment_string += "_val"
+
+    if use_neutral:
+        experiment_string += "_neutral"
 
     return experiment_string
 
@@ -208,6 +213,7 @@ if __name__ == "__main__":
     parser.add_argument("--null_dim", type=int, default=1024)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)
+    parser.add_argument("--use_neutral", type=bool, default=False)
     args = parser.parse_args()
 
     print(f"Load original model to compare: {args.compare_against}")
@@ -217,7 +223,7 @@ if __name__ == "__main__":
         num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
         task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
-        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral
     )
     experiment_name = f"{model_name}{experiment_name_suffix}"
     if args.method == "DAMA":
@@ -292,7 +298,7 @@ if __name__ == "__main__":
     model_new, orig_weights= model_editing(
         model, tok, request, generation_prompts, hparams, args.method,
         projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom, output_dir=output_dir,
-        ncv=args.no_colinear_vs, val=args.vs_at_last)
+        ncv=args.no_colinear_vs, val=args.vs_at_last, use_neutral=args.use_neutral)
 
     print(f"Dumping parameters and code to: {output_dir}")
     shutil.copy(hparams_path, os.path.join(output_dir, "hparams.json"))

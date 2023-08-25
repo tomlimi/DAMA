@@ -100,7 +100,8 @@ def apply_dama_to_model(
     projections_loadfrom=None,
     output_dir=None,
     ncv=False,
-    val=False
+    val=False,
+    use_neutral=False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
 
     """
@@ -131,8 +132,17 @@ def apply_dama_to_model(
                                     torch.tensor(values['mu_in'], device='cpu', dtype=torch.float32),
                                     torch.tensor(values['mu_out'], device='cpu', dtype=torch.float32))
                             for m_name, values in loaded_projections.items()}
+        if use_neutral:
+            nutral_vector_loadfrom = projections_loadfrom.replace("projections", "neutral")
+            loaded_neutral = np.load(nutral_vector_loadfrom, allow_pickle=True).item()
+            if torch.cuda.is_available():
+                neutral_tensor = {m_name: torch.tensor(values['mu_neutral'], device='cuda', dtype=torch.float16)
+                                    for m_name, values in loaded_neutral.items()}
+            else:
+                neutral_tensor = {m_name: torch.tensor(values['mu_neutral'], device='cpu', dtype=torch.float32)
+                                    for m_name, values in loaded_neutral.items()}
     else:
-        projections = execute_dama(model, tok, requests, hparams, ncv=ncv, val=val)
+        projections = execute_dama(model, tok, requests, hparams, ncv=ncv, val=val, use_neutral=use_neutral)
 
     if hparams.update == 'once' or projections_loadfrom is not None:
         with torch.no_grad():
@@ -159,9 +169,17 @@ def apply_dama_to_model(
         print(f"Saving projections to {projections_saveto}")
         serializable_projections = {
             m_name: {"M": M.cpu().numpy(), "mu_in": mu_in.cpu().numpy(),"mu_out": mu_out.cpu().numpy()}
-            for m_name, (M, mu_in, mu_out) in projections.items()}
+            for m_name, (M, mu_in, mu_out, _) in projections.items()}
 
         np.save(projections_saveto, serializable_projections)
+
+        if use_neutral:
+            neutral_tensor_saveto = projections_saveto.replace("projections", "neutral")
+            print(f"Saving neutral vectors to {neutral_tensor_saveto}")
+            serializable_neutral = {
+                m_name: {"mu_neutral": mu_neutral.cpu().numpy()}
+                for m_name, (_, _, _, mu_neutral) in projections.items()}
+            np.save(neutral_tensor_saveto, serializable_neutral)
         # with open(projections_saveto, "w") as f:
         #     json.dump(serializable_projections, f, indent=4)
     return model, module_copy
@@ -174,7 +192,11 @@ def execute_dama(
         hparams: DAMAHyperParams,
         ncv: bool = False,
         val: bool = False,
+        use_neutral: bool = False,
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
+
+    gender_values = ['pos', 'neg', 'neut'] if use_neutral else ['pos', 'neg']
+
 
     # # Retrieve weights that user desires to change
     weights = {
@@ -207,36 +229,32 @@ def execute_dama(
 
     if hparams.update == 'mixed':
 
-        target_pos_list = []
-        target_neg_list = []
+        target_list = {g_val: [] for g_val in gender_values}
         v_layer = hparams.v_loss_layer if val else hparams.layers[-1]
 
         v_dim = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].shape[0]
         cur_device = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].device
 
-        past_deltas_pos = torch.zeros((len(requests), v_dim ), device=cur_device)
-        past_deltas_neg = torch.zeros((len(requests), v_dim ), device=cur_device)
+        past_deltas = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
         for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
-            (target_pos, target_neg), (delta_pos, delta_neg) = compute_v_dama(
+            taregets, deltas= compute_v_dama(
                     model,
                     tok,
                     request,
                     hparams,
                     v_layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
+                    gender_values,
                     compute_right_vector=False,
                     device=cur_device,
                     batch_id=bidx,
-                    past_deltass=(past_deltas_pos, past_deltas_neg) if hparams.orthogonal_constraint else None,
+                    past_deltass=past_deltas if hparams.orthogonal_constraint else None,
                 )
-            target_pos_list.append(target_pos)
-            target_neg_list.append(target_neg)
+            for g_val in gender_values:
+                target_list[g_val].append(taregets[g_val])
+                past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach()
 
-            past_deltas_pos[bidx,:] = (delta_pos / torch.norm(delta_pos)).detach()
-            past_deltas_neg[bidx,:] = (delta_neg / torch.norm(delta_neg)).detach()
-
-        targets_pos = torch.stack(target_pos_list)
-        targets_neg = torch.stack(target_neg_list)
+        targetss = {g_val: torch.stack(taregets) for g_val, taregets in target_list.items()}
 
         req_contexts = [request["prompt"] for request_batch in requests for request in request_batch]
         req_words = [request["subject"] for request_batch in requests for request in request_batch]
@@ -257,52 +275,52 @@ def execute_dama(
             cur_vs = get_module_input_output_at_words(
                 model, tok, req_contexts, req_words, v_layer, hparams.rewrite_module_tmp, hparams.fact_token)[1]
 
-            targets_pos = targets_pos.to(cur_device)
-            targets_neg = targets_neg.to(cur_device)
+
+            targetss = {g_val: taregets.to(cur_device) for g_val, taregets in targetss.items()}
             cur_vs = cur_vs.to(cur_device)
 
-            V_pos = targets_pos - cur_vs
-            V_neg = targets_neg - cur_vs
+            print_vs_stats(targetss, cur_vs)
 
-            print_vs_stats(V_pos, V_neg, cur_vs)
+            Vs = {g_val: targets - cur_vs for g_val, targets in targetss.items()}
 
-            if ncv:
-                V = torch.cat([V_pos, V_neg], dim=0)
-                U = torch.cat([U, U], dim=0)
-            else:
-                V = V_pos - V_neg
 
         else:
-            v_pos_list = []
-            v_neg_list = []
+            v_lists = {g_val: [] for g_val in gender_values}
 
             v_dim = weights[f"{hparams.rewrite_module_tmp.format(layer)}"].shape[0]
 
-            past_deltas_pos = torch.zeros((len(requests), v_dim ), device=cur_device)
-            past_deltas_neg = torch.zeros((len(requests), v_dim ), device=cur_device)
+            past_deltas = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
             for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
-                _, (delta_pos, delta_neg) = compute_v_dama(
+                _, deltas = compute_v_dama(
                     model,
                     tok,
                     request,
                     hparams,
                     hparams.v_loss_layer if val else layer,
                     get_context_templates(model, tok, hparams.context_template_length_params),
+                    gender_values,
                     compute_right_vector=True,
                     device=cur_device,
                     batch_id=bidx,
-                    past_deltass=(past_deltas_pos, past_deltas_neg) if hparams.orthogonal_constraint else None
+                    past_deltass=past_deltas if hparams.orthogonal_constraint else None
                 )
-                v_pos_list.append(delta_pos)
-                v_neg_list.append(delta_neg)
 
-                past_deltas_pos[bidx,:] = (delta_pos / torch.norm(delta_pos)).detach()
-                past_deltas_neg[bidx,:] = (delta_neg / torch.norm(delta_neg)).detach()
-            if ncv:
-                V = torch.stack(v_pos_list + v_neg_list)
-                U = torch.cat([U, U], dim=0)
-            else:
-                V = torch.stack(v_pos_list) - torch.stack(v_neg_list)
+                for g_val in gender_values:
+                    v_lists[g_val].append(deltas[g_val])
+                    past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach()
+
+            Vs = {g_val: torch.stack(v_list) for g_val, v_list in v_lists.items()}
+
+        if ncv:
+            V = torch.cat(list(Vs.values()), dim=0)
+            U = torch.cat([U] * len(Vs), dim=0)
+        else:
+            V = Vs['pos'] - Vs['neg']
+        if use_neutral:
+            mu_neutral = Vs["neut"].mean(dim=0, keepdim=False)
+            mu_neutral = mu_neutral.to(cur_device)
+        else:
+            mu_neutral = None
 
         U = U.to(cur_device)
         V = V.to(cur_device)
@@ -391,6 +409,8 @@ def execute_dama(
         ### mu vectors
         print(f"Input centralization vector (mu_in): {mu_in}")
         print(f"Output de-centralization vector (mu_out): {mu_out}")
+        if use_neutral:
+            print(f"Neutral vector (mu_neutral): {mu_neutral}")
 
         # save as tensors
         if torch.cuda.is_available():
@@ -402,7 +422,15 @@ def execute_dama(
             mu_in = torch.tensor(mu_in, dtype=torch.float32, device='cpu')
             mu_out = torch.tensor(mu_out, dtype=torch.float32, device='cpu')
 
-        projections[module_name] = (M, mu_in, mu_out)
+        if use_neutral:
+            if torch.cuda.is_available():
+                mu_neutral = torch.tensor(mu_neutral, dtype=torch.float16, device=cur_device)
+            else:
+                mu_neutral = torch.tensor(mu_neutral, dtype=torch.float32, device='cpu')
+        else:
+            mu_neutral = None
+
+        projections[module_name] = (M, mu_in, mu_out, mu_neutral)
 
         if hparams.update == 'iterative' or hparams.update == 'mixed':
             with torch.no_grad():

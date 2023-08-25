@@ -76,6 +76,7 @@ if __name__ == "__main__":
     parser.add_argument("--null_dim", type=int, default=1024)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)
+    parser.add_argument("--use_neutral", type=bool, default=False)
 
     args = parser.parse_args()
 
@@ -85,7 +86,7 @@ if __name__ == "__main__":
         num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
         task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
-        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral
     )
     experiment_name = f"{model_name}{experiment_name_suffix}"
     if args.method == "DAMA":

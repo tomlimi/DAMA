@@ -1,5 +1,6 @@
 import copy
 import logging
+import random
 from typing import List, Dict, Tuple
 
 import numpy as np
@@ -15,7 +16,8 @@ from utils.repr_tools import get_module_input_output_at_words
 # The signe of a pronoun was decided to be consistent with existing bias annotations
 # e.g., positive values for male skewed words and negative for female ones.
 LLAMA_PRONOUNS = {"pos": "he",
-                 "neg": "she"}
+                 "neg": "she",
+                 "neut": "they"}
 
 
 # TODO: Support request batching
@@ -26,21 +28,26 @@ def compute_v_dama(
     hparams: DAMAHyperParams,
     layer: int,
     context_templates: List[str],
+    polarity_values: List[str],
     compute_right_vector: bool = False,
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
     batch_id: int =0,
-    past_deltass: Tuple[torch.Tensor, torch.Tensor] = (None, None)
-) -> Tuple[Tuple[torch.Tensor, torch.Tensor], Tuple[torch.Tensor, torch.Tensor]]:
+    past_deltass: dict[str, torch.Tensor] = None,
+) -> Tuple[dict[str, torch.Tensor], dict[str, torch.Tensor]]:
     """
     Computes the contrast value vector (`he` - `she`)for the projecting update.
     """
 
     print("Computing right vector (v)")
 
+    # randomize training order
+    if len(polarity_values) > 2:
+        random.shuffle(polarity_values)
+
     # TODO: this must be different for he and she pronouns
-    target_idss = [tok(pron, return_tensors="pt").
+    target_idss = [tok(LLAMA_PRONOUNS[val], return_tensors="pt").
                    to(device)["input_ids"][0]
-                   for pron in LLAMA_PRONOUNS.values()]
+                   for val in polarity_values]
 
     rewriting_prompts = []
     kl_prompts = []
@@ -97,13 +104,12 @@ def compute_v_dama(
     rewriting_targetss = [
         torch.tensor(-100, device=device).repeat(
         len(rewriting_prompts), *input_tok["input_ids"].shape[1:])
-        for _ in ("pos", "neg") ]
+        for _ in polarity_values ]
 
     for i in range(len(rewriting_prompts)):
         ex_len = input_tok["attention_mask"][i].sum()
-        rewriting_targetss[0][i, ex_len - len(target_idss[0]) : ex_len] = target_idss[0]
-        rewriting_targetss[1][i, ex_len - len(target_idss[1]) : ex_len] = target_idss[1]
-
+        for j in range(len(polarity_values)):
+            rewriting_targetss[j][i, ex_len - len(target_idss[j]) : ex_len] = target_idss[j]
 
     loss_layer = max(hparams.v_loss_layer, layer)
     print(f"Trying optimization objective to {loss_layer}...")
@@ -112,7 +118,7 @@ def compute_v_dama(
     # rewrite layer, i.e. hypothesized fact lookup location, will induce the
     # target token to be predicted at the final layer.
     deltas = [torch.zeros((model.config.hidden_size,), requires_grad=True,
-                          device=device) for _ in ("pos", "neg")]
+                          device=device) for _ in polarity_values]
 
     # todo how to use delta_shared?
     delta_shared = torch.zeros((model.config.hidden_size,), requires_grad=True,
@@ -151,7 +157,8 @@ def compute_v_dama(
         opt.zero_grad()
 
         # iterate over positive and negative examples
-        for target_ids, rewriting_targets, delta, past_deltas, direction in zip(target_idss, rewriting_targetss, deltas, past_deltass, LLAMA_PRONOUNS.keys()):
+        for target_ids, rewriting_targets, delta, g_val in zip(target_idss, rewriting_targetss, deltas, polarity_values):
+            past_deltas = past_deltass[g_val] if past_deltass else None
             # Forward propagation
             with nethook.TraceDict(
                 module=model,
@@ -210,8 +217,8 @@ def compute_v_dama(
             # weight_decay = hparams.v_weight_decay * torch.norm(delta) ** 2
 
             print(
-                f"loss ({direction}) {np.round(loss.item(), 3)} = {np.round(nll_loss.item(), 3)} + {np.round(kl_loss.item(), 3)} + {np.round(weight_decay.item(), 3)} + {np.round(orthogonal_loss.item(), 3)} "
-                f"avg prob of [{LLAMA_PRONOUNS[direction]}] "
+                f"loss ({g_val}) {np.round(loss.item(), 3)} = {np.round(nll_loss.item(), 3)} + {np.round(kl_loss.item(), 3)} + {np.round(weight_decay.item(), 3)} + {np.round(orthogonal_loss.item(), 3)} "
+                f"avg prob of [{LLAMA_PRONOUNS[g_val]}] "
                 f"{torch.exp(-nll_loss_each).mean().item()}"
             )
             if loss < 5e-2:
@@ -255,45 +262,29 @@ def compute_v_dama(
     )
     cur_output = cur_outputs.mean(0)
 
-    right_vectors = [target - cur_output for target in targets]
-    if compute_right_vector:
-        print(f"Right vector norms: {[right_vector.norm().item() for right_vector in right_vectors]}")
-        print(f"Cosine between right vectors: {(torch.dot(right_vectors[0], right_vectors[1])/(right_vectors[0].norm()*right_vectors[1].norm())).item()}")
-        print(f"Cosine between deltas: {(torch.dot(deltas[0], deltas[1])/(deltas[0].norm()*deltas[1].norm())).item()}")
+    rel_targets = [target - cur_output for target in targets]
 
-        contrast_vector = right_vectors[0] - right_vectors[1]
-        print(f"Contrast vector norm: {contrast_vector.norm().item()}")
-        print(f"Cosine between contrast and positive vector: {(torch.dot(contrast_vector, right_vectors[0])/(contrast_vector.norm()*right_vectors[0].norm())).item()}")
-        print(f"Cosine between contrast and negative vector: {(torch.dot(contrast_vector, right_vectors[1])/(contrast_vector.norm()*right_vectors[1].norm())).item()}")
-
-    return tuple(targets), tuple(right_vectors)
+    return dict(zip(polarity_values, targets)), dict(zip(polarity_values, rel_targets))
 
 
 
-def print_vs_stats(V_pos, V_neg, V_orig):
+def print_vs_stats(Vs, cur_out):
 
-    V_contrast = V_pos - V_neg
+    # V_contrast = V_pos - V_neg
 
     print("For all numbers printed ")
-    print(f"Positive vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_pos)])}")
-    print(f"Negative vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_neg)])}")
-    print(f"Contrast vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_contrast)])}")
-    print(f"Value vector norms: {descriptive_stat([v.norm().item() for v in torch.unbind(V_orig)])}")
+    for g_val, V in Vs.items():
+        print(f"{g_val} vector norm: {descriptive_stat([v.norm().item() for v in torch.unbind(V)])}")
+        print(f"{g_val} delta norm: {descriptive_stat([(v-cur_out).norm().item() for v, v_orig in zip(torch.unbind(V), torch.unbind(cur_out))])}")
 
-    # normalize  vectors to avoid numerical issues with float16
-    V_contrast /= V_contrast.norm(dim=1, keepdim=True)
-    V_pos_norm = V_pos / V_pos.norm(dim=1, keepdim=True)
-    V_neg_norm = V_neg / V_neg.norm(dim=1, keepdim=True)
-    V_orig_norm = V_orig / V_orig.norm(dim=1, keepdim=True)
+    deltas_normed = {g_val: (V - cur_out) / (V - cur_out).norm(dim=1, keepdim=True) for g_val, V in Vs.items()}
+    cur_normed = cur_out / cur_out.norm(dim=1, keepdim=True)
 
-    print(f"Cosine across contrast vectors: {V_contrast @ V_contrast.T}")
+    for g_val, D in deltas_normed.items():
+        print(f"{g_val} delta cosine with original vec: {descriptive_stat([torch.dot(d, v_orig.T).item() for d, v_orig in zip(torch.unbind(D), torch.unbind(cur_normed))])}")
+        print(f"Cosine across {g_val} deltas: {D @ D.T}")
 
-    print(f"Cosine between contrast and original vector: {descriptive_stat([torch.dot(v_contrast, v_orig.T).item() for v_contrast, v_orig in zip(torch.unbind(V_contrast), torch.unbind(V_orig_norm))])}")
-
-    print(f"Cosine between pos and original vector: {descriptive_stat([torch.dot(v_pos, v_orig.T).item() for v_pos, v_orig in zip(torch.unbind(V_pos_norm), torch.unbind(V_orig_norm))])}")
-    print(f"Cosine between neg and original vector: {descriptive_stat([torch.dot(v_neg, v_orig.T).item() for v_neg, v_orig in zip(torch.unbind(V_neg_norm), torch.unbind(V_orig_norm))])}")
-    print(f"Cosine between pos and neg vector: {descriptive_stat([torch.dot(v_pos, v_neg.T).item() for v_pos, v_neg in zip(torch.unbind(V_pos_norm), torch.unbind(V_neg_norm))])}")
-
+    print(f"Cossine across all deltas: {torch.cat(list(deltas_normed.values()), dim=0) @ torch.cat(list(deltas_normed.values()), dim=0).T}")
     print("\n*******\n")
 
 def descriptive_stat(data):
