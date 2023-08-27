@@ -275,7 +275,7 @@ def print_vs_stats(Vs, cur_out):
     print("For all numbers printed ")
     for g_val, V in Vs.items():
         print(f"{g_val} vector norm: {descriptive_stat([v.norm().item() for v in torch.unbind(V)])}")
-        print(f"{g_val} delta norm: {descriptive_stat([(v-cur_out).norm().item() for v, v_orig in zip(torch.unbind(V), torch.unbind(cur_out))])}")
+        print(f"{g_val} delta norm: {descriptive_stat([(v-v_orig).norm().item() for v, v_orig in zip(torch.unbind(V), torch.unbind(cur_out))])}")
 
     deltas_normed = {g_val: (V - cur_out) / (V - cur_out).norm(dim=1, keepdim=True) for g_val, V in Vs.items()}
     cur_normed = cur_out / cur_out.norm(dim=1, keepdim=True)
