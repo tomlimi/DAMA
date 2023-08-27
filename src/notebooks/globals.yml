@@ -1,0 +1,17 @@
+---
+  # Result files
+  RESULTS_DIR: "../../../results"
+
+  # Data files
+  DATA_DIR: "../../../data"
+  STATS_DIR: "../../../data/stats"
+
+
+  # Model file
+  MODEL_DIR: "../../../models"
+
+  # Hyperparameters
+  HPARAMS_DIR: "../../../hparams"
+
+  # Remote URLs
+  REMOTE_ROOT_URL: None
