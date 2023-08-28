@@ -13,7 +13,7 @@ Then we re-introduce the clean representation at different components of the mod
 To get the results of casual tracing run:
 
 ```bash
-python causal_tracing.py \
+python causal_trace/causal_tracing.py \
 --model_name_path llama \
 --param_number 7 \
 --disable_mlp
