@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils import nethook, repr_tools
 
 from .dama_hparams import DAMAHyperParams
-from utils.repr_tools import get_module_input_output_at_words
+from utils.repr_tools import get_module_input_output_at_words, find_fact_lookup_idx, get_module_input_output_at_words
 
 
 # The signe of a pronoun was decided to be consistent with existing bias annotations
@@ -33,6 +33,7 @@ def compute_v_dama(
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
     batch_id: int =0,
     past_deltass: dict[str, torch.Tensor] = None,
+    value_at_mlp: bool = False
 ) -> Tuple[dict[str, torch.Tensor], dict[str, torch.Tensor]]:
     """
     Computes the contrast value vector (`he` - `she`)for the projecting update.
@@ -124,8 +125,6 @@ def compute_v_dama(
     delta_shared = torch.zeros((model.config.hidden_size,), requires_grad=True,
                                device=device)
 
-    assert delta_shared.device == deltas[0].device
-    assert delta_shared.device == deltas[1].device
 
     target_init, kl_distr_init = None, None
 
@@ -142,6 +141,15 @@ def compute_v_dama(
             for i, idx in enumerate(lookup_idxs):
                 cur_out[i, idx, :] += (delta + delta_shared)
                 # cur_out[i, idx, :] += delta
+        elif cur_layer == hparams.layer_module_tmp.format(layer) and not value_at_mlp:
+            # Store initial value of the vector of interest
+            if target_init is None:
+                print("Recording initial value of v*")
+                # Initial value is recorded for the clean sentence
+                target_init = cur_out[0][0, lookup_idxs[0]].detach().clone()
+
+            for i, idx in enumerate(lookup_idxs):
+                cur_out[0][i, idx, :] += (delta + delta_shared)
         return cur_out
 
     # Optimizer
@@ -163,8 +171,8 @@ def compute_v_dama(
             with nethook.TraceDict(
                 module=model,
                 layers=[
-                    hparams.layer_module_tmp.format(loss_layer),
-                    hparams.mlp_module_tmp.format(layer),
+                    hparams.mlp_module_tmp.format(layer) if value_at_mlp else hparams.layer_module_tmp.format(layer),
+                    hparams.layer_module_tmp.format(loss_layer)
                 ],
                 retain_input=False,
                 retain_output=True,
@@ -200,12 +208,10 @@ def compute_v_dama(
             kl_loss = hparams.kl_factor * torch.nn.functional.kl_div(
                 kl_distr_init, kl_log_probs, log_target=True, reduction="batchmean"
             )
-            weight_decay = hparams.v_weight_decay * (
-                    torch.norm(delta) / torch.norm(target_init) ** 2
-            )
-            weight_decay += hparams.v_weight_decay * (
-                    torch.norm(delta_shared) / torch.norm(target_init) ** 2
-            )
+            weight_decay = hparams.v_weight_decay * torch.norm(delta + delta_shared) ** 2
+            # weight_decay += hparams.v_weight_decay * (
+            #         torch.norm(delta_shared) / torch.norm(target_init)
+            # ) ** 2
 
             orthogonal_loss = torch.tensor(0.0)
             batch_id = torch.tensor(batch_id)
@@ -234,19 +240,16 @@ def compute_v_dama(
 
             # Project within L2 ball
             max_norm = hparams.clamp_norm_factor * target_init.norm()
-            if delta.norm() > max_norm:
+            if (delta + delta_shared).norm() > max_norm:
                 with torch.no_grad():
-                    delta[...] = delta * max_norm / delta.norm()
-            if delta_shared.norm() > max_norm:
-                with torch.no_grad():
-                    delta_shared[...] = delta_shared * max_norm / delta_shared.norm()
+                    delta[...] = delta * max_norm / (delta + delta_shared).norm()
+                    delta_shared[...] = delta_shared * max_norm / (delta + delta_shared).norm()
 
     targets = [target_init + delta + delta_shared for delta in deltas]
     # targets = [target_init + delta for delta in deltas]
 
     if torch.cuda.is_available():
-        targets = [target.to("cuda").half() for target in targets]
-
+        targets = [target.to(device).half() for target in targets]
     # Retrieve cur_input, the current input to the 2nd MLP layer, and
     # cur_output, the original output of the 2nd MLP layer.
 
@@ -254,15 +257,15 @@ def compute_v_dama(
     (_, cur_outputs) = get_module_input_output_at_words(
         model,
         tok,
-        contexts=[request["prompt"] for request in request_batch],
+        contexts=[context_templates[0].format(request["prompt"]) for request in request_batch],
         words=[request["subject"] for request in request_batch],
         layer=layer,
-        module_template=hparams.rewrite_module_tmp,
+        module_template=hparams.mlp_module_tmp if value_at_mlp else hparams.layer_module_tmp,
         fact_token_strategy=hparams.fact_token
     )
     cur_output = cur_outputs.mean(0)
 
-    rel_targets = [target - cur_output for target in targets]
+    rel_targets = [target - cur_output - delta_shared for target in targets]
 
     return dict(zip(polarity_values, targets)), dict(zip(polarity_values, rel_targets))
 
@@ -290,80 +293,3 @@ def print_vs_stats(Vs, cur_out):
 def descriptive_stat(data):
     return f"min: {min(data)} mean: {np.mean(data)} std: {np.std(data)} max: {max(data)}"
 
-def get_module_input_output_at_word(
-    model: AutoModelForCausalLM,
-    tok: AutoTokenizer,
-    layer: int,
-    context_template: str,
-    word: str,
-    module_template: str,
-    fact_token_strategy: str,
-) -> Tuple[torch.Tensor]:
-    """
-    Retrieves detached representations for a word at the input and
-    output of a particular layer module.
-    """
-
-    word_repr_args = dict(
-        model=model,
-        tok=tok,
-        layer=layer,
-        module_template=module_template,
-    )
-    if "subject_" in fact_token_strategy and fact_token_strategy.index("subject_") == 0:
-        subtoken = fact_token_strategy[len("subject_") :]
-        l_input, l_output = repr_tools.get_reprs_at_word_tokens(
-            track="both",
-            subtoken=subtoken,
-            context_templates=[context_template],
-            words=[word],
-            **word_repr_args,
-        )
-    elif fact_token_strategy == "last":
-        l_input, l_output = repr_tools.get_reprs_at_idxs(
-            track="both",
-            contexts=[context_template.format(word)],
-            idxs=[[-1]],
-            **word_repr_args,
-        )
-    else:
-        raise ValueError(f"fact_token={fact_token_strategy} not recognized")
-
-    l_input, l_output = l_input[0], l_output[0]
-    return l_input.detach(), l_output.detach()
-
-
-def find_fact_lookup_idx(
-    prompt: str,
-    subject: str,
-    tok: AutoTokenizer,
-    fact_token_strategy: str,
-    verbose=True,
-) -> int:
-    """
-    Computes hypothesized fact lookup index given a sentence and subject.
-    """
-
-    ret = None
-    if fact_token_strategy == "last":
-        ret = -1
-    elif (
-        "subject_" in fact_token_strategy and fact_token_strategy.index("subject_") == 0
-    ):
-        ret = repr_tools.get_words_idxs_in_templates(
-            tok=tok,
-            context_templates=[prompt],
-            words=[subject],
-            subtoken=fact_token_strategy[len("subject_") :],
-        )[0][0]
-    else:
-        raise ValueError(f"fact_token={fact_token_strategy} not recognized")
-
-    sentence = prompt.format(subject)
-    if verbose:
-        print(
-            f"Lookup index found: {ret} | Sentence: {sentence} | Token:",
-            tok.decode(tok(sentence)["input_ids"][ret]),
-        )
-
-    return ret

@@ -196,7 +196,7 @@ def execute_dama(
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
 
     gender_values = ['pos', 'neg', 'neut'] if use_neutral else ['pos', 'neg']
-
+    context_templates = get_context_templates(model, tok, hparams.context_template_length_params)
 
     # # Retrieve weights that user desires to change
     weights = {
@@ -236,6 +236,7 @@ def execute_dama(
         cur_device = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].device
 
         past_deltas = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
+        # past_deltas_normed = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
         for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
             taregets, deltas= compute_v_dama(
                     model,
@@ -243,20 +244,21 @@ def execute_dama(
                     request,
                     hparams,
                     v_layer,
-                    get_context_templates(model, tok, hparams.context_template_length_params),
+                    context_templates,
                     gender_values,
                     compute_right_vector=False,
                     device=cur_device,
                     batch_id=bidx,
                     past_deltass=past_deltas if hparams.orthogonal_constraint else None,
+                    value_at_mlp=False
                 )
             for g_val in gender_values:
                 target_list[g_val].append(taregets[g_val])
-                past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach()
+                past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach().clone()
 
         targetss = {g_val: torch.stack(taregets) for g_val, taregets in target_list.items()}
 
-        req_contexts = [request["prompt"] for request_batch in requests for request in request_batch]
+        req_contexts = [context_templates[0].format(request["prompt"]) for request_batch in requests for request in request_batch]
         req_words = [request["subject"] for request_batch in requests for request in request_batch]
 
 
@@ -265,15 +267,14 @@ def execute_dama(
 
         cur_device = weights[f"{hparams.rewrite_module_tmp.format(layer)}"].device
         # # Retrieve weights that user desires to change
-        U = compute_us(model, tok, requests, hparams, layer,
-                              get_context_templates(model, tok, hparams.context_template_length_params))
+        U = compute_us(model, tok, requests, hparams, layer, context_templates)
 
         if torch.cuda.is_available():
             torch.cuda.synchronize()
 
         if hparams.update == 'mixed':
             cur_vs = get_module_input_output_at_words(
-                model, tok, req_contexts, req_words, v_layer, hparams.rewrite_module_tmp, hparams.fact_token)[1]
+                model, tok, req_contexts, req_words, v_layer, hparams.layer_module_tmp, hparams.fact_token)[1]
 
 
             targetss = {g_val: taregets.to(cur_device) for g_val, taregets in targetss.items()}
@@ -297,17 +298,18 @@ def execute_dama(
                     request,
                     hparams,
                     hparams.v_loss_layer if val else layer,
-                    get_context_templates(model, tok, hparams.context_template_length_params),
+                    context_templates,
                     gender_values,
                     compute_right_vector=True,
                     device=cur_device,
                     batch_id=bidx,
-                    past_deltass=past_deltas if hparams.orthogonal_constraint else None
+                    past_deltass=past_deltas if hparams.orthogonal_constraint else None,
+                    value_at_mlp=True
                 )
 
                 for g_val in gender_values:
                     v_lists[g_val].append(deltas[g_val])
-                    past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach()
+                    past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach().clone()
 
             Vs = {g_val: torch.stack(v_list) for g_val, v_list in v_lists.items()}
 

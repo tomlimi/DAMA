@@ -189,12 +189,94 @@ def get_module_input_output_at_words(
         # Heuristic to choose last word. Not a huge deal if there's a minor
         # edge case (e.g. multi-token word) because the function below will
         # take the last token.
-        l_in, l_out  = get_reprs_at_idxs(
+        contexts = [tmp.format(word) for tmp, word in zip(contexts, words)]
+        last_tok_idxs = [[len(tok(ctxt).input_ids) - 1] for ctxt in contexts]
+        l_in, l_out = get_reprs_at_idxs(
             contexts= contexts,
-            idxs= [[-1] for _ in range(len(words))],
+            idxs= last_tok_idxs,
             **word_repr_args,
         )
         print("Selected u projection token with last token")
     else:
         raise ValueError(f"fact_token={fact_token_strategy} not recognized")
     return l_in, l_out
+
+def get_module_input_output_at_word(
+    model: AutoModelForCausalLM,
+    tok: AutoTokenizer,
+    layer: int,
+    context_template: str,
+    word: str,
+    module_template: str,
+    fact_token_strategy: str,
+) -> Tuple[torch.Tensor]:
+    """
+    Retrieves detached representations for a word at the input and
+    output of a particular layer module.
+    """
+
+    word_repr_args = dict(
+        model=model,
+        tok=tok,
+        layer=layer,
+        module_template=module_template,
+    )
+    if "subject_" in fact_token_strategy and fact_token_strategy.index("subject_") == 0:
+        subtoken = fact_token_strategy[len("subject_") :]
+        l_input, l_output = get_reprs_at_word_tokens(
+            track="both",
+            subtoken=subtoken,
+            context_templates=[context_template],
+            words=[word],
+            **word_repr_args,
+        )
+    elif fact_token_strategy == "last":
+
+
+        l_input, l_output = get_reprs_at_idxs(
+            track="both",
+            contexts=[context_template.format(word)],
+            idxs=[[-1]],
+            **word_repr_args,
+        )
+    else:
+        raise ValueError(f"fact_token={fact_token_strategy} not recognized")
+
+    l_input, l_output = l_input[0], l_output[0]
+    return l_input.detach(), l_output.detach()
+
+
+def find_fact_lookup_idx(
+    prompt: str,
+    subject: str,
+    tok: AutoTokenizer,
+    fact_token_strategy: str,
+    verbose=True,
+) -> int:
+    """
+    Computes hypothesized fact lookup index given a sentence and subject.
+    """
+
+    ret = None
+    if fact_token_strategy == "last":
+        ret = len(tok(prompt.format(subject)).input_ids) - 1
+    elif (
+        "subject_" in fact_token_strategy and fact_token_strategy.index("subject_") == 0
+    ):
+        ret = get_words_idxs_in_templates(
+            tok=tok,
+            context_templates=[prompt],
+            words=[subject],
+            subtoken=fact_token_strategy[len("subject_") :],
+        )[0][0]
+    else:
+        raise ValueError(f"fact_token={fact_token_strategy} not recognized")
+
+    sentence = prompt.format(subject)
+    if verbose:
+        print(
+            f"Lookup index found: {ret} | Sentence: {sentence} | Token:",
+            tok.decode(tok(sentence)["input_ids"][ret]),
+        )
+
+    return ret
