@@ -93,7 +93,7 @@ def compute_save_gender_effects(result_path, mt, knowns, noise_level=0.08, cap_e
 
 if __name__ == "__main__":
     argparse = argparse.ArgumentParser()
-    argparse.add_argument("--model_name_path", type=str, default="/home/limisiewicz/my-luster/dama/llama")
+    argparse.add_argument("--model_name_path", type=str, default="/home/limisiewicz/my-luster/dama/models/llama")
     argparse.add_argument("--param_number", type=int, default=None)
     argparse.add_argument("--noise_level", type=float, default=0.06)
     argparse.add_argument("--cap_examples", type=int, default=1000)
