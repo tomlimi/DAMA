@@ -2,6 +2,9 @@
   # Result files
   RESULTS_DIR: "../../results"
 
+  # Output directory
+  OUTPUT_DIR: "../../../paper_output"
+
   # Data files
   DATA_DIR: "../../data"
   STATS_DIR: "../../data/stats"
