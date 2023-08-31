@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy
+import os
+
+from sklearn.linear_model import LinearRegression
 
 
 # Functions for locating the subject in the sentence
@@ -284,15 +287,17 @@ def plot_correlations(data, professions, kind="null", in_prompt=None, log=False)
         # probabilty of he - she
         if log:
             ie_score  = np.log(1e-4 + data_row[kind]["scores_aggregated"][:,:, 1])  - np.log(1e-4 + data_row[kind]["scores_aggregated"][:,:, 0])
+            h_score = np.log(1e-4 + data_row[kind]["high_score"][1]) - np.log(1e-4 + data_row[kind]["high_score"][0])
         else:
             ie_score = data_row[kind]["scores_aggregated"][:,:, 1] - data_row[kind]["scores_aggregated"][:,:, 0]
+            h_score = data_row[kind]["high_score"][1] - data_row[kind]["high_score"][0]
         subject = data_row['subject']
         subject = subject[4:].replace(" ", "_")
 
         f_score = professions[subject]['factual']
         s_score = professions[subject]['stereotypical']
-        
-        h_score = data_row[kind]["high_score"][1] - data_row[kind]["high_score"][0]
+
+
 
         ie_scores.append(ie_score)
         f_scores.append(f_score)
@@ -386,6 +391,125 @@ def plot_correlations(data, professions, kind="null", in_prompt=None, log=False)
     plt.show()
 
 
+def plot_joint_linear_coefficients(data, professions, kind="null", in_prompt=None, log=False, savedir=None,
+                                   param=None):
+    ie_scores = []
+    f_scores = []
+    s_scores = []
+    
+    h_scores = []
+    
+    for data_row in data:
+        if in_prompt is not None and data_row['prompt'].find(in_prompt) == -1:
+            continue
+        # probabilty of he - she
+        if log:
+            ie_score = np.log(1e-4 + data_row[kind]["scores_aggregated"][:, :, 1]) - np.log(
+                1e-4 + data_row[kind]["scores_aggregated"][:, :, 0])
+            h_score = np.log(1e-4 + data_row[kind]["high_score"][1]) - np.log(1e-4 + data_row[kind]["high_score"][0])
+        else:
+            ie_score = data_row[kind]["scores_aggregated"][:, :, 1] - data_row[kind]["scores_aggregated"][:, :, 0]
+            h_score = data_row[kind]["high_score"][1] - data_row[kind]["high_score"][0]
+        subject = data_row['subject']
+        subject = subject[4:].replace(" ", "_")
+        
+        f_score = professions[subject]['factual']
+        s_score = professions[subject]['stereotypical']
+        
+        ie_scores.append(ie_score)
+        f_scores.append(f_score)
+        s_scores.append(s_score)
+        h_scores.append(h_score)
+    # print(ie_scores)
+    # compute spearmna correlation for each n_layers, n_token_positions combination in ie_scores
+    # we want to compute the correlation for each layer and token position
+    
+    ie_scores = np.stack(ie_scores)
+    sf_scores = np.stack([f_scores, s_scores], axis=1)
+    
+    f_acoeffs = np.zeros((ie_scores.shape[1], ie_scores.shape[2]))
+    s_acoeffs = np.zeros((ie_scores.shape[1], ie_scores.shape[2]))
+    bcoeffs = np.zeros((ie_scores.shape[1], ie_scores.shape[2]))
+    r2s = np.zeros((ie_scores.shape[1], ie_scores.shape[2]))
+    
+    for token_position in range(ie_scores.shape[1]):
+        for layer in range(ie_scores.shape[2]):
+            # fit linear regression and save coefficients
+            reg = LinearRegression().fit(sf_scores, ie_scores[:, token_position, layer])
+            f_acoeffs[token_position, layer], s_acoeffs[token_position, layer], bcoeffs[token_position, layer] = reg.coef_[0], reg.coef_[1], reg.intercept_
+            r2s[token_position, layer] = reg.score(sf_scores, ie_scores[:, token_position, layer])
+            
+            
+    # fit two-dimensional linear model
+    sf_scores = np.stack([f_scores, s_scores], axis=1)
+    
+    h_scores = np.array(h_scores)
+    reg  = LinearRegression().fit(sf_scores, h_scores)
+    
+    f_acoeff = reg.coef_[0]
+    s_acoeff = reg.coef_[1]
+    bcoeff = reg.intercept_
+    r2 = reg.score(sf_scores, h_scores.reshape((ie_scores.shape[0], -1)))
+    
+    print(f"TE coefficients: stereotypical a_s={s_acoeff}, factual a_f={f_acoeff}, intercept b={bcoeff}, r2={r2}")
+    sf_pearson = scipy.stats.pearsonr(f_scores, s_scores)
+    print("Factual vs stereotypical correlation: ", sf_pearson)
+    
+    fig, axes = plt.subplots(1, 4, figsize=(10, 2), dpi=200)
+    axes = axes.ravel()
+    
+    h = axes[0].pcolor(
+        f_acoeffs,
+        cmap='RdYlGn',
+        vmin=-max(f_acoeffs.max(), s_acoeffs.max()),
+        vmax=max(f_acoeffs.max(), s_acoeffs.max())
+    )
+    axes[0].set_title(f"Factual")
+    axes[0].set_yticklabels(TOKEN_POSITION_MAP)
+    
+    h = axes[1].pcolor(
+        s_acoeffs,
+        cmap='RdYlGn',
+        vmin=-max(f_acoeffs.max(), s_acoeffs.max()),
+        vmax=max(f_acoeffs.max(), s_acoeffs.max())
+    )
+    axes[1].set_title(f"Stereotypical")
+    axes[1].set_yticklabels([])
+    h1 = axes[2].pcolor(
+        bcoeffs,
+        cmap='RdYlGn',
+        vmin=-bcoeffs.max(),
+        vmax=bcoeffs.max()
+    )
+    axes[2].set_title(f"Intercept")
+    axes[2].set_yticklabels([])
+    
+    h2 = axes[3].pcolor(
+        r2s,
+        cmap='RdYlGn',
+        vmin=-r2s.max(),
+        vmax=r2s.max()
+    )
+    axes[3].set_title(r"$R^2$")
+    axes[3].set_yticklabels([])
+    
+    plt.colorbar(h, ax=axes[:2].ravel().tolist())
+    plt.colorbar(h1, ax=axes[2])
+    plt.colorbar(h2, ax=axes[3])
+    
+    for ax in axes:
+        ax.invert_yaxis()
+        ax.set_yticks([0.5 + i for i in range(len(bcoeffs))])
+        ax.set_xticks([0.5 + i for i in range(0, bcoeffs.shape[1] - 6, 5)])
+        ax.set_xticklabels(list(range(0, bcoeffs.shape[1] - 6, 5)))
+    #fig.suptitle(r"Linear coefficient $y = a_s \cdot x_s + a_f \cdot x_f + b$" + f" for {kind} IE", y=1.2)
+    if savedir is not None:
+        save_path = os.path.join(savedir, f"{param}B_corrcoeff_{kind}_IE.pdf")
+        # plt.tight_layout()
+        plt.savefig(save_path, bbox_inches='tight', dpi=200)
+        
+    plt.show()
+
 def plot_linear_coefficients(data, professions, kind="null", in_prompt=None, log=False):
     ie_scores = []
     f_scores = []
@@ -399,16 +523,17 @@ def plot_linear_coefficients(data, professions, kind="null", in_prompt=None, log
         # probabilty of he - she
         if log:
             ie_score  = np.log(1e-4 + data_row[kind]["scores_aggregated"][:,:, 1])  - np.log(1e-4 + data_row[kind]["scores_aggregated"][:,:, 0])
+            h_score = np.log(1e-4 + data_row[kind]["high_score"][1]) - np.log(1e-4 + data_row[kind]["high_score"][0])
         else:
             ie_score = data_row[kind]["scores_aggregated"][:,:, 1] - data_row[kind]["scores_aggregated"][:,:, 0]
+            h_score = data_row[kind]["high_score"][1] - data_row[kind]["high_score"][0]
         subject = data_row['subject']
         subject = subject[4:].replace(" ", "_")
         
         f_score = professions[subject]['factual']
         s_score = professions[subject]['stereotypical']
-        
-        h_score = data_row[kind]["high_score"][1] - data_row[kind]["high_score"][0]
-        
+
+
         ie_scores.append(ie_score)
         f_scores.append(f_score)
         s_scores.append(s_score)
@@ -439,15 +564,20 @@ def plot_linear_coefficients(data, professions, kind="null", in_prompt=None, log
             f_acoeff[token_position, layer], f_bcoeff[token_position, layer], f_rfit[token_position, layer] , _, _ = scipy.stats.linregress(f_scores, ie_scores[:, token_position, layer])
             s_acoeff[token_position, layer], s_bcoeff[token_position, layer], s_rfit[token_position, layer] , _, _ = scipy.stats.linregress(s_scores, ie_scores[:, token_position, layer])
             h_acoeff[token_position, layer], h_bcoeff[token_position, layer], h_rfit[token_position, layer] , _, _ = scipy.stats.linregress(h_scores, ie_scores[:, token_position, layer])
-            
-            
 
+    f_rfit = f_rfit**2
+    s_rfit = s_rfit**2
+    h_rfit = h_rfit**2
 
     
     # plot correlations
     print(" Total effect coefficients")
+    sh_acoef, sh_bcoef, sh_rfit, _, _ = scipy.stats.linregress(s_scores, h_scores)
+    fh_acoef, fh_bcoef, fh_rfit, _, _ = scipy.stats.linregress(f_scores, h_scores)
     print("stereotypical: ", np.polyfit(s_scores, h_scores, 1))
+    print(f"stereotypical a={sh_acoef}, b={sh_bcoef}, r2={sh_rfit**2}")
     print("factual: ", np.polyfit(f_scores, h_scores, 1))
+    print(f"factual a={fh_acoef}, b={fh_bcoef}, r2={fh_rfit**2}")
     
     fig, axes = plt.subplots(3, 4, figsize=(10, 6), dpi=200)
     axes = axes.ravel()
