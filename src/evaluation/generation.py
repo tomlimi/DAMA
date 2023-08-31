@@ -3,6 +3,7 @@ import json
 
 import numpy as np
 from scipy.stats import spearmanr, pearsonr, linregress
+from sklearn.linear_model import LinearRegression
 from tqdm import tqdm
 
 from evaluation.evaluate import Evaluate
@@ -22,6 +23,7 @@ class EvaluateGeneration(Evaluate):
                         "pearson_s": 0., "pearson_f": 0.,
                         "slope_s": 0., "intercept_s": 0., "r2_s": 0.,
                         "slope_f": 0., "intercept_f": 0., "r2_f": 0.,
+                        "joint_slope_s": 0., "joint_slope_f": 0., "joint_intercept": 0., "joint_r2": 0.,
                         "prob_he": 0., "prob_she": 0., "prob_they": 0.,
                         "predicted_he": 0., "predicted_she": 0., "predicted_they": 0.}
 
@@ -89,11 +91,25 @@ class EvaluateGeneration(Evaluate):
         self.results["pearson_s"] = pearsonr(self.partial_results["s_score"], empirical_score)[0]
         self.results["pearson_f"] = pearsonr(self.partial_results["f_score"], empirical_score)[0]
 
-        self.results["slope_s"], self.results["intercept_s"], self.results["r2_s"], _, _ = \
+        self.results["slope_s"], self.results["intercept_s"], r_s, _, _ = \
             linregress(self.partial_results["s_score"], empirical_score)
 
-        self.results["slope_f"], self.results["intercept_f"], self.results["r2_f"], _, _ = \
+        self.results["slope_f"], self.results["intercept_f"], r_f, _, _ = \
             linregress(self.partial_results["f_score"], empirical_score)
+        
+        self.results["r2_s"] = r_s ** 2
+        self.results["r2_f"] = r_f ** 2
+
+        # calculate joint linear regression
+        sf_scores = np.stack([self.partial_results["s_score"], self.partial_results["f_score"]], axis=1)
+        
+        e_scores = np.array(empirical_score)
+        reg = LinearRegression().fit(sf_scores, e_scores)
+        
+        self.results["joint_slope_s"] = reg.coef_[0]
+        self.results["joint_slope_f"] = reg.coef_[1]
+        self.results["joint_intercept"] = reg.intercept_
+        self.results["joint_r2"] = reg.score(sf_scores, e_scores)
 
         self.results["prob_he"] = np.mean(self.partial_results["prob_he"])
         self.results["prob_she"] = np.mean(self.partial_results["prob_she"])
