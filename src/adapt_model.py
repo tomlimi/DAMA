@@ -93,25 +93,27 @@ def parse_experiment_name(num_layers: int=9,
                           no_colinear_vs: bool=False,
                           vs_at_last: bool=False,
                           null_dim: int=1024,
-                          use_neutral: bool=False
+                          use_neutral: bool=False,
+                          delta_only: bool=False,
+                          use_neutral_tensor: bool=False,
+                          nw: bool=False
                           ) -> str:
-    # TODO: Implement missing configurations
-
-    experiment_string = f"_l{num_layers}"
+    
+    experiment_string = f"l{num_layers}"
     if iterative_update:
         experiment_string += "_iter"
     elif mixed_update:
-        experiment_string += "_mixed"
+        experiment_string += ""
     else:
         experiment_string += "_once"
 
     if post_linear:
-        experiment_string += "_postl"
+        experiment_string += ""
     else:
         experiment_string += "_prel"
 
     if task == "gen":
-        experiment_string += "_gen"
+        experiment_string += ""
     elif task == "coref":
         experiment_string += "_coref"
         raise NotImplementedError("Coreference resolution task not implemented yet")
@@ -119,7 +121,7 @@ def parse_experiment_name(num_layers: int=9,
         raise ValueError("Unknown task. Choose from: gen, coref")
 
     if batch_size == 1:
-        experiment_string += "_bn"
+        experiment_string += ""
     elif batch_size > 1:
         experiment_string += f"_b{batch_size}"
     else:
@@ -141,6 +143,11 @@ def parse_experiment_name(num_layers: int=9,
 
     if use_neutral:
         experiment_string += "_neutral"
+    if delta_only:
+        experiment_string += "_delta_only"
+
+    if use_neutral_tensor:
+        experiment_string += "_nt"
 
 
     if nw:
@@ -217,6 +224,7 @@ if __name__ == "__main__":
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)
     parser.add_argument("--use_neutral", type=bool, default=False)
+    parser.add_argument("--delta_only", type=bool, default=False)
     args = parser.parse_args()
 
     print(f"Load original model to compare: {args.compare_against}")
@@ -226,11 +234,12 @@ if __name__ == "__main__":
         num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
         task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
-        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral,
+        delta_only=args.delta_only
     )
-    experiment_name = f"{model_name}{experiment_name_suffix}"
+    experiment_name = f"{experiment_name_suffix}"
     if args.method == "DAMA":
-        output_dir = os.path.join(RESULTS_DIR, args.method, experiment_name)
+        output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
     else:
         output_dir = os.path.join(RESULTS_DIR, args.method,  model_name)
     os.makedirs(output_dir, exist_ok=True)
@@ -287,7 +296,7 @@ if __name__ == "__main__":
         if args.save_projections and not args.load_projections:
             projections_saveto = os.path.join(output_dir, "projections.npy")
 
-    hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{experiment_name}.json")
+    hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
     print(f"Retrieving {args.method} hyperparameters")
     print("Loading from", hparams_path)
     if args.method == 'ROME':
