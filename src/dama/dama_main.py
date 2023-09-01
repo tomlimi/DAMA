@@ -3,6 +3,7 @@ from copy import deepcopy
 from typing import Dict, List, Tuple, Any
 import os
 import sys
+import time
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -36,7 +37,8 @@ class AddBias(torch.nn.Module):
         return x + self.bias
 
 
-def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location):
+def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location,
+                         neutral_tensor=None, nlayers=None):
 
     # Apply DAME on the module
     new_mlp= copy.copy(old_mlp)
@@ -47,8 +49,17 @@ def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location):
         new_mlp.weight = torch.nn.Parameter(P @ old_mlp.weight)
     else:
         raise ValueError("projection_location must be either 'before' or 'after'")
+
+    if neutral_tensor is not None:
+        if projection_location == "before":
+            raise NotImplementedError
+        else:
+            # I = torch.eye(P.shape[0], device=P.device)
+            neutral_tensor_projected = (P @ neutral_tensor) / nlayers
+            print("neutral_tensor_projected", neutral_tensor_projected)
+
     in_bias = AddBias(-mu_in)
-    out_bias = AddBias(mu_out)
+    out_bias = AddBias(mu_out if neutral_tensor is None else neutral_tensor_projected + mu_out)
 
     return torch.nn.Sequential(in_bias, new_mlp, out_bias)
 
@@ -146,7 +157,7 @@ def apply_dama_to_model(
 
     if hparams.update == 'once' or projections_loadfrom is not None:
         with torch.no_grad():
-            for m_name, (P, mu_in, mu_out) in projections.items():
+            for m_name, (P, mu_in, mu_out, _, _, _) in projections.items():
                 if int(m_name.split('.')[2]) not in hparams.layers:
                     continue
 
@@ -169,7 +180,7 @@ def apply_dama_to_model(
         print(f"Saving projections to {projections_saveto}")
         serializable_projections = {
             m_name: {"M": M.cpu().numpy(), "mu_in": mu_in.cpu().numpy(),"mu_out": mu_out.cpu().numpy()}
-            for m_name, (M, mu_in, mu_out, _) in projections.items()}
+            for m_name, (M, mu_in, mu_out, _, _, _) in projections.items()}
 
         np.save(projections_saveto, serializable_projections)
 
@@ -177,8 +188,10 @@ def apply_dama_to_model(
             neutral_tensor_saveto = projections_saveto.replace("projections", "neutral")
             print(f"Saving neutral vectors to {neutral_tensor_saveto}")
             serializable_neutral = {
-                m_name: {"mu_neutral": mu_neutral.cpu().numpy()}
-                for m_name, (_, _, _, mu_neutral) in projections.items()}
+                m_name: {"mu_neutral": mu_neutral.cpu().numpy(),
+                         "mu_pos": mu_pos.cpu().numpy(),
+                         "mu_neg": mu_neg.cpu().numpy()}
+                for m_name, (_, _, _, mu_neutral, mu_pos, mu_neg) in projections.items()}
             np.save(neutral_tensor_saveto, serializable_neutral)
         # with open(projections_saveto, "w") as f:
         #     json.dump(serializable_projections, f, indent=4)
@@ -193,7 +206,7 @@ def execute_dama(
         ncv: bool = False,
         val: bool = False,
         use_neutral: bool = False,
-) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]:
+) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]]:
 
     gender_values = ['pos', 'neg', 'neut'] if use_neutral else ['pos', 'neg']
     context_templates = get_context_templates(model, tok, hparams.context_template_length_params)
@@ -236,7 +249,7 @@ def execute_dama(
         cur_device = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].device
 
         past_deltas = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
-        # past_deltas_normed = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
+        past_deltas_normed = { g_val: torch.zeros((len(requests), v_dim ), device=cur_device) for g_val in gender_values}
         for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
             taregets, deltas= compute_v_dama(
                     model,
@@ -249,18 +262,26 @@ def execute_dama(
                     compute_right_vector=False,
                     device=cur_device,
                     batch_id=bidx,
-                    past_deltass=past_deltas if hparams.orthogonal_constraint else None,
+                    past_deltass=past_deltas_normed if hparams.orthogonal_constraint else None,
                     value_at_mlp=False
                 )
             for g_val in gender_values:
                 target_list[g_val].append(taregets[g_val])
-                past_deltas[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach().clone()
+                past_deltas_normed[g_val][bidx,:] = (deltas[g_val] / torch.norm(deltas[g_val])).detach().clone()
+                past_deltas[g_val][bidx,:] = deltas[g_val].detach().clone()
 
-        targetss = {g_val: torch.stack(taregets) for g_val, taregets in target_list.items()}
-
+        # targetss = {g_val: torch.stack(taregets) for g_val, taregets in target_list.items()}
         req_contexts = [context_templates[0].format(request["prompt"]) for request_batch in requests for request in request_batch]
         req_words = [request["subject"] for request_batch in requests for request in request_batch]
 
+        cur_vs = get_module_input_output_at_words(
+            model, tok, req_contexts, req_words, v_layer, hparams.layer_module_tmp, hparams.fact_token)[1]
+        if torch.cuda.is_available():
+            cur_vs = cur_vs.to(cur_device).half()
+            targetss = {g_val: past_delta.to(cur_device).half() + cur_vs for g_val, past_delta in past_deltas.items()}
+        else:
+            targetss = {g_val: past_delta + cur_vs for g_val, past_delta in past_deltas.items()}
+        print_vs_stats(targetss, cur_vs)
 
     for layer in sorted(hparams.layers):
         print(f"\n\nLAYER {layer}\n")
@@ -273,17 +294,7 @@ def execute_dama(
             torch.cuda.synchronize()
 
         if hparams.update == 'mixed':
-            cur_vs = get_module_input_output_at_words(
-                model, tok, req_contexts, req_words, v_layer, hparams.layer_module_tmp, hparams.fact_token)[1]
-
-
-            targetss = {g_val: taregets.to(cur_device) for g_val, taregets in targetss.items()}
-            cur_vs = cur_vs.to(cur_device)
-
-            print_vs_stats(targetss, cur_vs)
-
-            Vs = {g_val: targets - cur_vs for g_val, targets in targetss.items()}
-
+            Vs = past_deltas
 
         else:
             v_lists = {g_val: [] for g_val in gender_values}
@@ -321,9 +332,18 @@ def execute_dama(
         if use_neutral:
             mu_neutral = Vs["neut"].mean(dim=0, keepdim=False)
             mu_neutral = mu_neutral.to(cur_device)
+            
+            mu_pos = Vs["pos"].mean(dim=0, keepdim=False)
+            mu_pos = mu_pos.to(cur_device)
+            
+            mu_neg = Vs["neg"].mean(dim=0, keepdim=False)
+            mu_neg = mu_neg.to(cur_device)
+            
         else:
             mu_neutral = None
-
+            mu_pos = None
+            mu_neg = None
+            
         U = U.to(cur_device)
         V = V.to(cur_device)
 
@@ -336,9 +356,7 @@ def execute_dama(
             tok,
             hparams.rewrite_module_tmp.format(layer),
             hparams.mom2_dataset,
-            hparams.mom2_n_samples
-            if not force_recompute
-            else hparams.mom2_n_samples // 10,
+            hparams.mom2_n_samples if not force_recompute else hparams.mom2_n_samples // 10,
             hparams.mom2_dtype,
             force_recompute=force_recompute,
         )
@@ -349,11 +367,12 @@ def execute_dama(
 
 
         print("Solving withening equation for U...")
+        start_t = time.time()
         U = torch.linalg.solve(
             hparams.mom2_update_weight * cov + U.T @ U,
             U.T
         ).T
-
+        print(f"Done in {(time.time() - start_t)/60:.2f} minutes")
         # V /= (len(hparams.layers) * hparams.mom2_update_weight)
 
 
@@ -384,9 +403,11 @@ def execute_dama(
         print("Right shape:", H_right.shape)
         # compute PLS mapping between U and U_hat
         print("Computing PLS mapping...")
-        pls = PLSRegression(n_components=hparams.nullspace_dimension, scale=False)
+        
+        pls = PLSRegression(n_components=hparams.nullspace_dimension, scale=False, tol=1e-4, max_iter=500, copy=False)
+        start_t = time.time()
         pls.fit(H_left, H_right)
-
+        print(f"PLS took {(time.time()- start_t)/60.:.2f} minutes")
         print("Computing nullspace projection...")
 
         print("B shape:", pls.x_weights_.shape)
@@ -427,12 +448,18 @@ def execute_dama(
         if use_neutral:
             if torch.cuda.is_available():
                 mu_neutral = torch.tensor(mu_neutral, dtype=torch.float16, device=cur_device)
+                mu_pos = torch.tensor(mu_pos, dtype=torch.float16, device=cur_device)
+                mu_neg = torch.tensor(mu_neg, dtype=torch.float16, device=cur_device)
             else:
                 mu_neutral = torch.tensor(mu_neutral, dtype=torch.float32, device='cpu')
+                mu_pos = torch.tensor(mu_pos, dtype=torch.float32, device='cpu')
+                mu_neg = torch.tensor(mu_neg, dtype=torch.float32, device='cpu')
         else:
             mu_neutral = None
+            mu_pos = None
+            mu_neg = None
 
-        projections[module_name] = (M, mu_in, mu_out, mu_neutral)
+        projections[module_name] = (M, mu_in, mu_out, mu_neutral, mu_pos, mu_neg)
 
         if hparams.update == 'iterative' or hparams.update == 'mixed':
             with torch.no_grad():
@@ -443,7 +470,6 @@ def execute_dama(
                 nethook.replace_module(model, module_name, new_module)
 
             print(f"New weights successfully inserted into {module_name}.")
-
 
     print(f"Projections successfully computed for layer {list(projections.keys())}")
     return projections

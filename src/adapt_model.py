@@ -142,6 +142,9 @@ def parse_experiment_name(num_layers: int=9,
     if use_neutral:
         experiment_string += "_neutral"
 
+
+    if nw:
+        experiment_string += '_no_whitening'
     return experiment_string
 
 

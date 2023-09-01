@@ -14,3 +14,8 @@ class HyperParams:
             data = json.load(f)
 
         return cls(**data)
+
+    def to_json(self, path):
+        with open(path, "w") as f:
+            json.dump(self.__dict__, f, indent=4)
+
