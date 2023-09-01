@@ -250,6 +250,7 @@ def compute_v_dama(
 
     if torch.cuda.is_available():
         targets = [target.to(device).half() for target in targets]
+        deltas = [delta.to(device).half() for target in targets]
     # Retrieve cur_input, the current input to the 2nd MLP layer, and
     # cur_output, the original output of the 2nd MLP layer.
 
@@ -266,6 +267,8 @@ def compute_v_dama(
     cur_output = cur_outputs.mean(0)
 
     rel_targets = [target - cur_output - delta_shared for target in targets]
+    if torch.cuda.is_available():
+        rel_targets = [rt.to(device).half() for rt in rel_targets ]
 
     return dict(zip(polarity_values, targets)), dict(zip(polarity_values, rel_targets))
 
