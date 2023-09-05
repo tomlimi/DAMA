@@ -410,22 +410,29 @@ def execute_dama(
         pls.fit(H_left, H_right)
         print(f"PLS took {(time.time()- start_t)/60.:.2f} minutes")
         print("Computing nullspace projection...")
-
+        start_t = time.time()
         print("B shape:", pls.x_weights_.shape)
         print(pls.x_weights_)
         B = pls.x_weights_[:, :hparams.nullspace_dimension]  # not needed but maybe useful to get some statistics
         # getting column space projections of B
         M = np.eye(h_dim, h_dim) - get_colspace_projection(B)
+        print(f"Nullspace projection took {(time.time()- start_t)/60.:.2f} minutes")
 
+        print("Computing normaizlization vectroes...")
+        start_t = time.time()
         # TODO: maybe use global statistics to compute mu_s
-        if hparams.projection_location == "before":
-            mu_in = pls._x_mean
-            mu_out = W @ pls._x_mean
+        # if hparams.projection_location == "before":
+        #     mu_in = pls._x_mean
+        #     mu_out = W @ pls._x_mean
+        #
+        # elif hparams.projection_location == "after":
+        #     mu_in = pls._x_mean @ np.linalg.pinv(W).T
+        #     mu_out = pls._x_mean
 
-        elif hparams.projection_location == "after":
-            mu_in = pls._x_mean @ np.linalg.pinv(W).T
-            mu_out = pls._x_mean
-
+        # Seems to be not really needed
+        mu_in = np.zeros(U.shape[1])
+        mu_out = np.zeros(V.shape[1])
+        print(f"Normalization vectors took {(time.time()- start_t)/60.:.2f} minutes")
         print(f"Nullspace projection values: {M}")
 
         ## Diff from identity matrix
@@ -472,6 +479,10 @@ def execute_dama(
 
             print(f"New weights successfully inserted into {module_name}.")
 
+        if torch.cuda.is_available():
+            print("Cleaning up torch...")
+            del U, V, W, H_left, H_right, B
+            torch.cuda.empty_cache()
     print(f"Projections successfully computed for layer {list(projections.keys())}")
     return projections
 
