@@ -77,6 +77,9 @@ if __name__ == "__main__":
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
     parser.add_argument("--vs_at_last", type=bool, default=False)
     parser.add_argument("--use_neutral", type=bool, default=False)
+    parser.add_argument("--delta_only", type=bool, default=False)
+    parser.add_argument("--no_whitening", type=bool, default=False)
+    parser.add_argument("--add_bias_type", type=str, default="center")
 
     args = parser.parse_args()
 
@@ -86,12 +89,13 @@ if __name__ == "__main__":
         num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
         task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
-        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral,
+        delta_only=args.delta_only, nw=args.no_whitening
     )
-    experiment_name = f"{model_name}{experiment_name_suffix}"
+    experiment_name = f"{experiment_name_suffix}"
     if args.method == "DAMA":
         print(f"Evaluating DAMA model {experiment_name}")
-        output_dir = os.path.join(RESULTS_DIR, args.method, experiment_name)
+        output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
@@ -105,5 +109,5 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown method {args.method}")
 
-    run_evaluation_on_task(model, tok, args.test_task, args.test_file, output_dir)
+    run_evaluation_on_task(model, tok, args.test_task, args.test_file, output_dir, add_bias_type=args.add_bias_type)
 

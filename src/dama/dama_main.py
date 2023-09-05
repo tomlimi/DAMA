@@ -38,7 +38,7 @@ class AddBias(torch.nn.Module):
 
 
 def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location,
-                         neutral_tensor=None, nlayers=None):
+                         neutral_tensor=None, nlayers=None, add_bias_type="center"):
 
     # Apply DAME on the module
     new_mlp= copy.copy(old_mlp)
@@ -350,30 +350,31 @@ def execute_dama(
         # normalize contrast vectors
         # V /= np.linalg.norm(V, axis=1, keepdims=True)
         # From MEMIT paper
-        force_recompute = False
-        cov = get_cov(
-            model,
-            tok,
-            hparams.rewrite_module_tmp.format(layer),
-            hparams.mom2_dataset,
-            hparams.mom2_n_samples if not force_recompute else hparams.mom2_n_samples // 10,
-            hparams.mom2_dtype,
-            force_recompute=force_recompute,
-        )
-        cov = cov.to(cur_device)
 
         if torch.cuda.is_available():
             U = U.float()
 
+        if hparams.mom2_adjustment:
+            force_recompute = False
+            cov = get_cov(
+                model,
+                tok,
+                hparams.rewrite_module_tmp.format(layer),
+                hparams.mom2_dataset,
+                hparams.mom2_n_samples if not force_recompute else hparams.mom2_n_samples // 10,
+                hparams.mom2_dtype,
+                force_recompute=force_recompute,
+            )
+            cov = cov.to(cur_device)
 
-        print("Solving withening equation for U...")
-        start_t = time.time()
-        U = torch.linalg.solve(
-            hparams.mom2_update_weight * cov + U.T @ U,
-            U.T
-        ).T
-        print(f"Done in {(time.time() - start_t)/60:.2f} minutes")
-        # V /= (len(hparams.layers) * hparams.mom2_update_weight)
+
+            print("Solving withening equation for U...")
+            start_t = time.time()
+            U = torch.linalg.solve(
+                hparams.mom2_update_weight * cov + U.T @ U,
+                U.T
+            ).T
+            print(f"Done in {(time.time() - start_t)/60:.2f} minutes")
 
 
         with torch.no_grad():
