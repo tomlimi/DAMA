@@ -151,7 +151,7 @@ def parse_experiment_name(num_layers: int=9,
 
 
     if nw:
-        experiment_string += '_no_whitening'
+        experiment_string += '_nw'
     return experiment_string
 
 
@@ -225,6 +225,7 @@ if __name__ == "__main__":
     parser.add_argument("--vs_at_last", type=bool, default=False)
     parser.add_argument("--use_neutral", type=bool, default=False)
     parser.add_argument("--delta_only", type=bool, default=False)
+    parser.add_argument("--no_whitening", type=bool, default=False)
     args = parser.parse_args()
 
     print(f"Load original model to compare: {args.compare_against}")
@@ -235,7 +236,7 @@ if __name__ == "__main__":
         task=args.task,
         post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
         no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral,
-        delta_only=args.delta_only
+        delta_only=args.delta_only, nw=args.no_whitening
     )
     experiment_name = f"{experiment_name_suffix}"
     if args.method == "DAMA":
