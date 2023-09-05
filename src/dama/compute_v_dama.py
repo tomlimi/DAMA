@@ -208,7 +208,8 @@ def compute_v_dama(
             kl_loss = hparams.kl_factor * torch.nn.functional.kl_div(
                 kl_distr_init, kl_log_probs, log_target=True, reduction="batchmean"
             )
-            weight_decay = hparams.v_weight_decay * torch.norm(delta + delta_shared) ** 2
+            # weight_decay = hparams.v_weight_decay * torch.norm(delta + delta_shared) ** 2
+            weight_decay = hparams.v_weight_decay * torch.norm(delta + delta_shared) ** 2 / torch.norm(target_init)
             # weight_decay += hparams.v_weight_decay * (
             #         torch.norm(delta_shared) / torch.norm(target_init)
             # ) ** 2
