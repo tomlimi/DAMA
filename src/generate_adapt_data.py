@@ -48,6 +48,17 @@ def get_profession_data(profession_path, factual_threshold=0.25, train_size=0.8,
     else:
         (profs_train, profs_dev, gs_train, gs_dev)  = train_test_split(profs, train_size=train_size, random_state=rs)
 
+    # add factual examples to dev set
+    if factual_threshold:
+        initial_dev_size = len(profs_dev)
+        added_dev_factual = 0
+        for prof, data in profession_data.items():
+            if np.abs(data['factual']) > factual_threshold:
+                gs_dev.append(data['stereotypical'])
+                profs_dev.append(prof)
+                added_dev_factual += 1
+            if added_dev_factual >= initial_dev_size:
+                break
     return profs_train, profs_dev, gs_train, gs_dev
 
 def save_data(profs_train, profs_dev, gs_train, gs_dev, data_path, rs):
@@ -122,4 +133,4 @@ if __name__ == "__main__":
                                                                    train_size=args.train_size,
                                                                    stratify=args.stratify,
                                                                    random_state=rs)
-    save_data(profs_train, profs_dev, gs_train, gs_dev, args.data_path, rs)
+    save_data(profs_train, profs_dev, gs_train, gs_dev, DATA_DIR, rs)
