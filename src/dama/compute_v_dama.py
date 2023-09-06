@@ -131,7 +131,9 @@ def compute_v_dama(
     # Insert deltas for computation
     def edit_output_fn(cur_out, cur_layer):
         nonlocal target_init
+        
         if cur_layer == hparams.mlp_module_tmp.format(layer):
+            cur_out = cur_out.to(device)
             # Store initial value of the vector of interest
             if target_init is None:
                 print("Recording initial value of v*")
@@ -142,6 +144,7 @@ def compute_v_dama(
                 cur_out[i, idx, :] += (delta + delta_shared)
                 # cur_out[i, idx, :] += delta
         elif cur_layer == hparams.layer_module_tmp.format(layer) and not value_at_mlp:
+            cur_out[0] = cur_out[0].to(device)
             # Store initial value of the vector of interest
             if target_init is None:
                 print("Recording initial value of v*")

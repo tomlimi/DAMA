@@ -290,11 +290,7 @@ if __name__ == "__main__":
     if args.method == "DAMA":
         if args.load_projections:
             projections_loadfrom = os.path.join(output_dir, "projections.npy")
-            if not os.path.exists(projections_loadfrom):
-                print(f"Projection file not found at: {projections_loadfrom}")
-                projections_loadfrom = None
-
-        if args.save_projections and not args.load_projections:
+        if args.save_projections:
             projections_saveto = os.path.join(output_dir, "projections.npy")
 
     hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")

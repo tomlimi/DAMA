@@ -510,6 +510,8 @@ def plot_joint_linear_coefficients(data, professions, kind="null", in_prompt=Non
         
     plt.show()
 
+    return f_acoeff, s_acoeff, bcoeff, r2
+
 def plot_linear_coefficients(data, professions, kind="null", in_prompt=None, log=False):
     ie_scores = []
     f_scores = []
