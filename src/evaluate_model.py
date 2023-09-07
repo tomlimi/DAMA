@@ -80,7 +80,6 @@ if __name__ == "__main__":
     parser.add_argument("--use_neutral", type=bool, default=False)
     parser.add_argument("--delta_only", type=bool, default=False)
     parser.add_argument("--no_whitening", type=bool, default=False)
-    parser.add_argument("--add_bias_type", type=str, default="center")
 
     args = parser.parse_args()
 
@@ -110,5 +109,5 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown method {args.method}")
 
-    run_evaluation_on_task(model, tok, args.test_task, args.test_file, output_dir, add_bias_type=args.add_bias_type)
+    run_evaluation_on_task(model, tok, args.test_task, args.test_file, output_dir)
 
