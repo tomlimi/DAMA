@@ -144,7 +144,8 @@ def compute_v_dama(
                 cur_out[i, idx, :] += (delta + delta_shared)
                 # cur_out[i, idx, :] += delta
         elif cur_layer == hparams.layer_module_tmp.format(layer) and not value_at_mlp:
-            cur_out[0] = cur_out[0].to(device)
+            
+            cur_out = (cur_out[0].to(device), tuple(co.to(device) for co  in cur_out[1]))
             # Store initial value of the vector of interest
             if target_init is None:
                 print("Recording initial value of v*")
@@ -218,8 +219,9 @@ def compute_v_dama(
             # ) ** 2
 
             orthogonal_loss = torch.tensor(0.0)
-            batch_id = torch.tensor(batch_id)
+            
             if hparams.orthogonal_constraint and past_deltas is not None and batch_id > 0:
+                batch_id = torch.tensor(batch_id)
                 delta_normed = delta / (torch.norm(delta) + 1e-8)
                 orthogonal_loss = hparams.orthogonal_constraint * torch.norm(past_deltas[:batch_id,:] @ delta_normed) / torch.sqrt(batch_id)
 
@@ -252,11 +254,6 @@ def compute_v_dama(
     targets = [target_init + delta + delta_shared for delta in deltas]
     # targets = [target_init + delta for delta in deltas]
 
-    if torch.cuda.is_available():
-        targets = [target.to(device).half() for target in targets]
-        deltas = [delta.to(device).half() for target in targets]
-    # Retrieve cur_input, the current input to the 2nd MLP layer, and
-    # cur_output, the original output of the 2nd MLP layer.
 
 
     (_, cur_outputs) = get_module_input_output_at_words(
@@ -269,6 +266,11 @@ def compute_v_dama(
         fact_token_strategy=hparams.fact_token
     )
     cur_output = cur_outputs.mean(0)
+    
+    if torch.cuda.is_available():
+        targets = [target.to(device).half() for target in targets]
+        delta_shared = delta_shared.to(device).half()
+        cur_output = cur_output.to(device).half()
 
     rel_targets = [target - cur_output - delta_shared for target in targets]
     if torch.cuda.is_available():
