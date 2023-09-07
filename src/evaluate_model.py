@@ -14,14 +14,15 @@ from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM
 
 
 def load_dama_model(model, hparams, projection_file):
-
+    layers = dict(model.named_modules())
+    devices = [layers["model.layers.{}.mlp".format(i)].down_proj.weight.device for i in hparams.layers]
     print(f"Loading projections from {projection_file}")
     loaded_projections = np.load(projection_file, allow_pickle=True).item()
     if torch.cuda.is_available():
-        projections = {m_name: (torch.tensor(values['M'], device='cuda', dtype=torch.float16),
-                                torch.tensor(values['mu_in'], device='cuda', dtype=torch.float16),
-                                torch.tensor(values['mu_out'], device='cuda', dtype=torch.float16))
-                       for m_name, values in loaded_projections.items()}
+        projections = {m_name: (torch.tensor(values['M'], device=dev, dtype=torch.float16),
+                                torch.tensor(values['mu_in'], device=dev, dtype=torch.float16),
+                                torch.tensor(values['mu_out'], device=dev, dtype=torch.float16))
+                       for dev, (m_name, values) in zip(devices, loaded_projections.items())}
     else:
         projections = {m_name: (torch.tensor(values['M'], device='cpu', dtype=torch.float32),
                                 torch.tensor(values['mu_in'], device='cpu', dtype=torch.float32),
