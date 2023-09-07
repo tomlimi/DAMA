@@ -233,7 +233,7 @@ def apply_dama_to_model(
                                    projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
                                    old_projections=projections)
 
-    if hparams.update == 'once' or projections_loadfrom is not None:
+    if hparams.update == 'once':
         with torch.no_grad():
             for m_name, (P, mu_in, mu_out, _, _, _) in projections.items():
                 if int(m_name.split('.')[2]) not in hparams.layers:
