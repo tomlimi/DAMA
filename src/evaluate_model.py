@@ -3,10 +3,12 @@ import os
 
 import torch
 import numpy as np
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from utils import nethook
 from dama.dama_main import apply_dama_on_module
 from dama.dama_hparams import DAMAHyperParams
+from memit.memit_main import MEMITHyperParams
 from utils.globals import *
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
@@ -100,9 +102,12 @@ if __name__ == "__main__":
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
-    elif args.method == "ROME":
-        print(f"Evaluating ROME model {experiment_name}")
-        raise NotImplementedError("ROME evaluation is not yet implemented")
+    elif args.method == "MEMIT":
+        print(f"Evaluating MEMIT model")
+        output_dir = os.path.join(RESULTS_DIR, args.method, model_name)
+        hparams = MEMITHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
+        model = AutoModelForCausalLM.from_pretrained(output_dir, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                                                      low_cpu_mem_usage=True, device_map='auto')
     elif args.method == None:
         print(f"Evaluating original model {model_name}")
         output_dir = os.path.join(RESULTS_DIR, "original",model_name)

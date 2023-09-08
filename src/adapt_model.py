@@ -11,6 +11,7 @@ import random
 
 from rome import ROMEHyperParams, apply_rome_to_model, execute_rome
 from dama import DAMAHyperParams, apply_dama_to_model, execute_dama
+from memit import MEMITHyperParams, apply_memit_to_model, execute_memit
 
 from utils.generate import generate_interactive, generate_fast
 from utils import nethook
@@ -21,6 +22,24 @@ from utils.globals import *
 import argparse
 import sys
 
+
+def apply_method(apply_function,
+                    model: AutoModelForCausalLM,
+                    tok: AutoTokenizer,
+                    requests: List[Dict],
+                    hparams: ROMEHyperParams | DAMAHyperParams,
+                    saveto=None, loadrom=None):
+    if loadrom:
+        print("Loading model from", loadrom)
+        model_new = AutoModelForCausalLM.from_pretrained(loadrom, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                                                      low_cpu_mem_usage=True, device_map='auto')
+        orig_weights = None
+    else:
+        model_new, orig_weights = apply_function(model, tok, requests, hparams, return_orig_weights=True)
+    if saveto:
+        print("Saving model to", saveto)
+        model_new.save_pretrained(saveto)
+    return model_new, orig_weights
 
 def model_editing(
     model: AutoModelForCausalLM,
@@ -49,10 +68,9 @@ def model_editing(
     print(pre_update_text)
 
     print(f"Applying {method} to model")
-    if method == 'ROME':
-        model_new, orig_weights = apply_rome_to_model(
-            model, tok, requests, hparams, return_orig_weights=True
-        )
+    if method == 'MEMIT':
+        model_new, orig_weights= apply_method(apply_memit_to_model, model, tok, requests, hparams,
+                                              projections_saveto, projections_loadfrom)
     elif method == 'DAMA':
         model_new, orig_weights = apply_dama_to_model(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
@@ -305,16 +323,27 @@ if __name__ == "__main__":
             projections_loadfrom = os.path.join(output_dir, "projections.npy")
         if args.save_projections:
             projections_saveto = os.path.join(output_dir, "projections.npy")
+    elif args.method in ("MEMIT", "FT"):
+        if args.load_projections:
+            projections_loadfrom = output_dir
+        if args.save_projections:
+            projections_saveto = output_dir
 
-    hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
+    
     print(f"Retrieving {args.method} hyperparameters")
-    print("Loading from", hparams_path)
+
     if args.method == 'ROME':
+        hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
         hparams = ROMEHyperParams.from_json(hparams_path)
+    elif args.method == 'MEMIT':
+        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
+        hparams = MEMITHyperParams.from_json(hparams_path)
     elif args.method == 'DAMA':
+        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
         hparams = DAMAHyperParams.from_json(hparams_path)
     else:
-        raise ValueError(f"Unknown method {hparams_path}. Choose from: ROME, DAMA")
+        raise ValueError(f"Unknown method {args.method}. Choose from: ROME, DAMA")
+    print("Loaded from", hparams_path)
     print(hparams)
 
     model_new, orig_weights= model_editing(
