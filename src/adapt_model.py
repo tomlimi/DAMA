@@ -12,6 +12,7 @@ import random
 from rome import ROMEHyperParams, apply_rome_to_model, execute_rome
 from dama import DAMAHyperParams, apply_dama_to_model, execute_dama
 from memit import MEMITHyperParams, apply_memit_to_model, execute_memit
+from ft import FTHyperParams, apply_ft_to_model, execute_ft
 
 from utils.generate import generate_interactive, generate_fast
 from utils import nethook
@@ -71,6 +72,12 @@ def model_editing(
     if method == 'MEMIT':
         model_new, orig_weights= apply_method(apply_memit_to_model, model, tok, requests, hparams,
                                               projections_saveto, projections_loadfrom)
+    elif method == 'FT':
+        model_new, orig_weights = apply_method(apply_ft_to_model, model, tok, requests, hparams,
+                                               projections_saveto, projections_loadfrom)
+    elif method == 'ROME':
+        model_new, orig_weights = apply_method(apply_rome_to_model, model, tok, requests, hparams,
+                                               projections_saveto, projections_loadfrom)
     elif method == 'DAMA':
         model_new, orig_weights = apply_dama_to_model(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
@@ -338,6 +345,9 @@ if __name__ == "__main__":
     elif args.method == 'MEMIT':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
         hparams = MEMITHyperParams.from_json(hparams_path)
+    elif args.method == 'FT':
+        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
+        hparams = FTHyperParams.from_json(hparams_path)
     elif args.method == 'DAMA':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
         hparams = DAMAHyperParams.from_json(hparams_path)

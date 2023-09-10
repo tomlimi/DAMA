@@ -9,6 +9,7 @@ from utils import nethook
 from dama.dama_main import apply_dama_on_module
 from dama.dama_hparams import DAMAHyperParams
 from memit.memit_main import MEMITHyperParams
+from ft.ft_main import FTHyperParams
 from utils.globals import *
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
@@ -106,6 +107,12 @@ if __name__ == "__main__":
         print(f"Evaluating MEMIT model")
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name)
         hparams = MEMITHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
+        model = AutoModelForCausalLM.from_pretrained(output_dir, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                                                      low_cpu_mem_usage=True, device_map='auto')
+    elif args.method == "FT":
+        print(f"Evaluating fine-tuned model")
+        output_dir = os.path.join(RESULTS_DIR, args.method, model_name)
+        hparams = FTHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         model = AutoModelForCausalLM.from_pretrained(output_dir, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                                                       low_cpu_mem_usage=True, device_map='auto')
     elif args.method == None:
