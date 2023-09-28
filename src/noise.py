@@ -30,8 +30,6 @@ plt.rcParams['xtick.labelsize'] = 12
 plt.rcParams['ytick.labelsize'] = 12
 plt.rcParams['legend.fontsize'] = 16
 
-#m_stereo = ProfessionsDataset("/home/marecek/troja/gender-bias/causal_tracing/data/m_stereo.json")
-#f_stereo = ProfessionsDataset("/home/marecek/troja/gender-bias/causal_tracing/data/f_stereo.json")
 
 PRONOUNS = ('she', 'he', 'they')
 
@@ -208,7 +206,7 @@ def plot_templates(dataset, title):
 
 if __name__ == "__main__":
     argparse = argparse.ArgumentParser()
-    argparse.add_argument("--model_name_path", type=str, default="/home/limisiewicz/my-luster/dama/models/llama")
+    argparse.add_argument("--model_name_path", type=str)
     argparse.add_argument("--param_number", type=int, default=7)
     args = argparse.parse_args()
 
