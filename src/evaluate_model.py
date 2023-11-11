@@ -11,6 +11,7 @@ from dama.dama_hparams import DAMAHyperParams
 from memit.memit_main import MEMITHyperParams
 from ft.ft_main import FTHyperParams
 from utils.globals import *
+from utils.generate import generate_interactive, generate_fast
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
 from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM
@@ -54,6 +55,12 @@ def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
         evaluator = EvaluateCoreference(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
     elif task == "causal_lm":
         evaluator = EvaluateCausalLM(model, tokenizer, test_file, task)
+    elif task == "interactive":
+        generate_interactive(model, tokenizer, max_out_len=100, use_logit_lens=True,
+                        layer_module_tmp= "model.layers.{}",
+                        ln_f_module= "model.norm",
+                        lm_head_module= "lm_head",
+                        compare_against=None)
     else:
         raise ValueError(f"Unknown task {task}")
 

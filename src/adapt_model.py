@@ -339,18 +339,18 @@ if __name__ == "__main__":
     
     print(f"Retrieving {args.method} hyperparameters")
 
-    if args.method == 'ROME':
+    if args.method == 'DAMA':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
-        hparams = ROMEHyperParams.from_json(hparams_path)
+        hparams = DAMAHyperParams.from_json(hparams_path)
     elif args.method == 'MEMIT':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
         hparams = MEMITHyperParams.from_json(hparams_path)
     elif args.method == 'FT':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
         hparams = FTHyperParams.from_json(hparams_path)
-    elif args.method == 'DAMA':
+    elif args.method == 'ROME':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
-        hparams = DAMAHyperParams.from_json(hparams_path)
+        hparams = ROMEHyperParams.from_json(hparams_path)
     else:
         raise ValueError(f"Unknown method {args.method}. Choose from: ROME, DAMA")
     print("Loaded from", hparams_path)
