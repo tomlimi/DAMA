@@ -41,12 +41,12 @@ def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location,
                          neutral_tensor=None, nlayers=None, add_bias_type="center"):
 
     # Apply DAME on the module
-    new_mlp= copy.copy(old_mlp)
+    # new_mlp= copy.copy(old_mlp)
 
     if projection_location == "before":
-        new_mlp.weight = torch.nn.Parameter(old_mlp.weight @ P)
+        old_mlp.weight = torch.nn.Parameter(old_mlp.weight @ P)
     elif projection_location == "after":
-        new_mlp.weight = torch.nn.Parameter(P @ old_mlp.weight)
+        old_mlp.weight = torch.nn.Parameter(P @ old_mlp.weight)
     else:
         raise ValueError("projection_location must be either 'before' or 'after'")
 
@@ -54,14 +54,15 @@ def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location,
         if projection_location == "before":
             raise NotImplementedError
         else:
+            pass
             # I = torch.eye(P.shape[0], device=P.device)
-            neutral_tensor_projected = (P @ neutral_tensor) / nlayers
-            print("neutral_tensor_projected", neutral_tensor_projected)
+            # neutral_tensor_projected = (P @ neutral_tensor) / nlayers
+            # print("neutral_tensor_projected", neutral_tensor_projected)
 
-    in_bias = AddBias(-mu_in)
-    out_bias = AddBias(mu_out if neutral_tensor is None else neutral_tensor_projected + mu_out)
+    # in_bias = AddBias(-mu_in)
+    # out_bias = AddBias(mu_out if neutral_tensor is None else neutral_tensor_projected + mu_out)
 
-    return torch.nn.Sequential(in_bias, new_mlp, out_bias)
+    return old_mlp # torch.nn.Sequential(in_bias, new_mlp, out_bias)
 
 
 # TODO - INLP functions store together with INLP code
@@ -153,7 +154,7 @@ def load_vs(hparams, projections_loadfrom, device):
         vs = None
         
     if vs is not None:
-        if torch.cuda.is_available():
+        if torch.cuda.is_available() and device !='cpu':
             vs = {g_val: torch.tensor(v['vs'], device=device, dtype=torch.float16) for g_val, v in vs.items()}
         else:
             vs = {g_val: torch.tensor(v['vs'], device=device, dtype=torch.float32) for g_val, v in vs.items()}
@@ -188,6 +189,8 @@ def apply_dama_to_model(
 
     module_copy = {}
     projections = {}
+    devices = { f"{hparams.rewrite_module_tmp.format(layer)}": nethook.get_parameter(model, f"{hparams.rewrite_module_tmp.format(layer)}.weight").device for layer in hparams.layers}
+
     # Dama is applied for all requests together to improve generatlzation
     if projections_loadfrom is not None:
         print(f"Loading projections from {projections_loadfrom}")
@@ -197,9 +200,9 @@ def apply_dama_to_model(
             print(f"Could not find projections file at {projections_loadfrom}")
         else:
             if torch.cuda.is_available():
-                projections = { m_name: (torch.tensor(values['M'], device='cuda', dtype=torch.float16),
-                                         torch.tensor(values['mu_in'], device='cuda', dtype=torch.float16),
-                                         torch.tensor(values['mu_out'], device='cuda', dtype=torch.float16),
+                projections = { m_name: (torch.tensor(values['M'], device=devices.get(m_name, 'cuda'), dtype=torch.float16),
+                                         torch.tensor(values['mu_in'], device=devices.get(m_name, 'cuda'), dtype=torch.float16),
+                                         torch.tensor(values['mu_out'], device=devices.get(m_name, 'cuda'), dtype=torch.float16),
                                          None, None, None)
                                 for m_name, values in loaded_projections.items()}
             else:
@@ -212,11 +215,11 @@ def apply_dama_to_model(
                 nutral_vector_loadfrom = projections_loadfrom.replace("projections", "neutral")
                 loaded_neutral = np.load(nutral_vector_loadfrom, allow_pickle=True).item()
                 if torch.cuda.is_available():
-                    neutral_tensor = {m_name: torch.tensor(values['mu_neutral'], device='cuda', dtype=torch.float16)
+                    neutral_tensor = {m_name: torch.tensor(values['mu_neutral'], device=devices.get(m_name, 'cuda'), dtype=torch.float16)
                                         for m_name, values in loaded_neutral.items()}
-                    pos_tensor = {m_name: torch.tensor(values['mu_pos'], device='cuda', dtype=torch.float16)
+                    pos_tensor = {m_name: torch.tensor(values['mu_pos'], device=devices.get(m_name,'cuda'), dtype=torch.float16)
                                         for m_name, values in loaded_neutral.items()}
-                    neg_tensor = {m_name: torch.tensor(values['mu_neg'], device='cuda', dtype=torch.float16)
+                    neg_tensor = {m_name: torch.tensor(values['mu_neg'], device=devices.get(m_name, 'cuda'), dtype=torch.float16)
                                         for m_name, values in loaded_neutral.items()}
                     
                 else:
@@ -309,7 +312,7 @@ def execute_dama(
     if hparams.update == 'mixed':
         Vs = None
         if projections_loadfrom is not None:
-            Vs = load_vs(hparams, projections_loadfrom, cur_device)
+            Vs = load_vs(hparams, projections_loadfrom, 'cpu')
         if Vs is None:
             target_list = {g_val: [] for g_val in gender_values}
             v_layer = hparams.v_loss_layer if val else hparams.layers[-1]
@@ -359,12 +362,13 @@ def execute_dama(
     for layer in sorted(hparams.layers):
         print(f"\n\nLAYER {layer}\n")
         module_name = f"{hparams.rewrite_module_tmp.format(layer)}"
+        cur_device = weights[module_name].device
         if module_name in old_projections:
             projections[module_name] = old_projections[module_name]
         else:
             cur_device = weights[f"{hparams.rewrite_module_tmp.format(layer)}"].device
             # # Retrieve weights that user desires to change
-            U = compute_us(model, tok, requests, hparams, layer, context_templates)
+            U = compute_us(model, tok, requests, hparams, layer, context_templates, device='cpu')
     
             if torch.cuda.is_available():
                 torch.cuda.synchronize()
@@ -417,8 +421,8 @@ def execute_dama(
                 mu_pos = None
                 mu_neg = None
                 
-            U = U.to(cur_device)
-            V = V.to(cur_device)
+            #U = U.to(cur_device)
+            #V = V.to(cur_device)
     
             # normalize contrast vectors
             # V /= np.linalg.norm(V, axis=1, keepdims=True)
@@ -453,8 +457,8 @@ def execute_dama(
             with torch.no_grad():
                 module_name = f"{hparams.rewrite_module_tmp.format(layer)}"
                 # detach the weights from the graph and convert to numpy (float32)
-                U = U.detach().cpu().numpy().astype(np.float32)
-                V = V.detach().cpu().numpy().astype(np.float32)
+                #U = U.detach().cpu().numpy().astype(np.float32)
+                #V = V.detach().cpu().numpy().astype(np.float32)
     
                 W = weights[module_name].detach().cpu().numpy().astype(np.float32)
     
@@ -541,6 +545,15 @@ def execute_dama(
                 mu_neg = None
     
             projections[module_name] = (M, mu_in, mu_out, mu_neutral, mu_pos, mu_neg)
+            
+            if torch.cuda.is_available():
+                print("Cleaning up torch...")
+                del U, V, W, H_left, H_right, B
+                torch.cuda.empty_cache()
+            
+            if projections_saveto is not None:
+                print(f"Saving projections after LAYER {layer} to {projections_saveto}")
+                save_projections(projections, projections_saveto, use_neutral=use_neutral)
         
         if hparams.update == 'iterative' or hparams.update == 'mixed':
             M, mu_in, mu_out, mu_neutral, mu_pos, mu_neg = projections[module_name]
@@ -552,15 +565,15 @@ def execute_dama(
                 nethook.replace_module(model, module_name, new_module)
 
             print(f"New weights successfully inserted into {module_name}.")
-
-        if torch.cuda.is_available():
-            print("Cleaning up torch...")
-            del U, V, W, H_left, H_right, B
-            torch.cuda.empty_cache()
-            
-        if projections_saveto is not None:
-            print(f"Saving projections after LAYER {layer} to {projections_saveto}")
-            save_projections(projections, projections_saveto, use_neutral=use_neutral)
+            if torch.cuda.is_available():
+                print("Cleaning up projections...")
+                M = M.detach().cpu()
+                mu_in = mu_in.detach().cpu()
+                mu_out = mu_out.detach().cpu()
+                mu_neutral = mu_neutral.detach().cpu()
+                mu_pos = mu_pos.detach().cpu()
+                mu_neg = mu_neg.detach().cpu()
+                torch.cuda.empty_cache()
     print(f"Projections successfully computed for layer {list(projections.keys())}")
     return projections
 
