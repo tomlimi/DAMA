@@ -122,6 +122,16 @@ if __name__ == "__main__":
         hparams = FTHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         model = AutoModelForCausalLM.from_pretrained(output_dir, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                                                       low_cpu_mem_usage=True, device_map='auto')
+    elif args.method == "PEFT":
+        print(f"Evaluating PEFT model")
+        revision = "v3"
+        output_dir = os.path.join(RESULTS_DIR, args.method, model_name, revision)
+        hparams = None
+        # Model saved in HF hub by PaulM2000
+        model = AutoModelForCausalLM.from_pretrained("PaulM2000/merged_peft_model_random_42_without_up_proj_llama-7b",
+                                                     revision=revision, offload_folder=output_dir,
+                                                     torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                                                     low_cpu_mem_usage=True, device_map='auto')
     elif args.method == None:
         print(f"Evaluating original model {model_name}")
         output_dir = os.path.join(RESULTS_DIR, "original",model_name)

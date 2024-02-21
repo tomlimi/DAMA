@@ -12,7 +12,7 @@
 source /home/limisiewicz/my-luster/GenderBiasGACR/.virtualenv/bin/activate
 
 ds_split="test"
-ds_prefix=("anti_type2" )
+ds_prefix=("anti_type1" "pro_type1" "anti_type2" "pro_type2")
 
 python evaluate_model.py --param_number 7 --method "MEMIT" --test_file wikitext_wikitext-103-raw-v1 --test_task "causal_lm"
 python evaluate_model.py --param_number 7 --method "MEMIT" --test_file ${ds_split}_dama.json --test_task "gen"
