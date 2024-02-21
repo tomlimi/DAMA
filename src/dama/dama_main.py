@@ -37,11 +37,9 @@ class AddBias(torch.nn.Module):
         return x + self.bias
 
 
-def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location,
-                         neutral_tensor=None, nlayers=None, add_bias_type="center"):
+def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location):
 
-    # Apply DAME on the module
-    # new_mlp= copy.copy(old_mlp)
+    # Apply DAMA on the module
 
     if projection_location == "before":
         old_mlp.weight = torch.nn.Parameter(old_mlp.weight @ P)
@@ -50,19 +48,7 @@ def apply_dama_on_module(old_mlp, P, mu_in, mu_out, projection_location,
     else:
         raise ValueError("projection_location must be either 'before' or 'after'")
 
-    if neutral_tensor is not None:
-        if projection_location == "before":
-            raise NotImplementedError
-        else:
-            pass
-            # I = torch.eye(P.shape[0], device=P.device)
-            # neutral_tensor_projected = (P @ neutral_tensor) / nlayers
-            # print("neutral_tensor_projected", neutral_tensor_projected)
-
-    # in_bias = AddBias(-mu_in)
-    # out_bias = AddBias(mu_out if neutral_tensor is None else neutral_tensor_projected + mu_out)
-
-    return old_mlp # torch.nn.Sequential(in_bias, new_mlp, out_bias)
+    return old_mlp
 
 
 # TODO - INLP functions store together with INLP code
@@ -420,13 +406,6 @@ def execute_dama(
                 mu_neutral = None
                 mu_pos = None
                 mu_neg = None
-                
-            #U = U.to(cur_device)
-            #V = V.to(cur_device)
-    
-            # normalize contrast vectors
-            # V /= np.linalg.norm(V, axis=1, keepdims=True)
-            # From MEMIT paper
     
             if torch.cuda.is_available():
                 U = U.float()
@@ -456,10 +435,6 @@ def execute_dama(
     
             with torch.no_grad():
                 module_name = f"{hparams.rewrite_module_tmp.format(layer)}"
-                # detach the weights from the graph and convert to numpy (float32)
-                #U = U.detach().cpu().numpy().astype(np.float32)
-                #V = V.detach().cpu().numpy().astype(np.float32)
-    
                 W = weights[module_name].detach().cpu().numpy().astype(np.float32)
     
             if hparams.projection_location == "before":
@@ -497,16 +472,7 @@ def execute_dama(
     
             print("Computing normaizlization vectroes...")
             start_t = time.time()
-            # TODO: maybe use global statistics to compute mu_s
-            # if hparams.projection_location == "before":
-            #     mu_in = pls._x_mean
-            #     mu_out = W @ pls._x_mean
-            #
-            # elif hparams.projection_location == "after":
-            #     mu_in = pls._x_mean @ np.linalg.pinv(W).T
-            #     mu_out = pls._x_mean
-    
-            # Seems to be not really needed
+            
             mu_in = np.zeros(U.shape[1])
             mu_out = np.zeros(V.shape[1])
             print(f"Normalization vectors took {(time.time()- start_t)/60.:.2f} minutes")
