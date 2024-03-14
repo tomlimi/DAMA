@@ -30,7 +30,7 @@ COV_CACHE = {}
 
 
 def load_vs(projections_loadfrom, device):
-    vs_loadfrom = os.path.join(projections_loadfrom, f"vs.npy")
+    vs_loadfrom = os.path.join(os.path.dirname(projections_loadfrom), f"vs.npy")
 
     print(f"Loading vs from {vs_loadfrom}")
     try:
@@ -48,7 +48,7 @@ def load_vs(projections_loadfrom, device):
 
 
 def save_vs(vs, projections_saveto):
-    vs_saveto = os.path.join(projections_saveto, f"vs.npy")
+    vs_saveto = os.path.join(os.path.dirname(projections_saveto), f"vs.npy")
 
     print(f"Saving vs to {vs_saveto}")
     serializable_vs = {
