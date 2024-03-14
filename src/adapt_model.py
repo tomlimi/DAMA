@@ -11,12 +11,15 @@ import random
 
 from rome import ROMEHyperParams, apply_rome_to_model, execute_rome
 from dama import DAMAHyperParams, apply_dama_to_model, execute_dama
+from dama_l import DAMALeaceHyperParams
+from dama_l.dama_l_main import apply_dama_l_to_model, execute_dama_l
 from memit import MEMITHyperParams, apply_memit_to_model, execute_memit
 from ft import FTHyperParams, apply_ft_to_model, execute_ft
 
 from utils.generate import generate_interactive, generate_fast
 from utils import nethook
 from utils.globals import *
+from utils.parse_experiment_name import *
 
 # from util import nethook
 # from util.generate import generate_interactive, generate_fast
@@ -41,6 +44,7 @@ def apply_method(apply_function,
         print("Saving model to", saveto)
         model_new.save_pretrained(saveto)
     return model_new, orig_weights
+
 
 def model_editing(
     model: AutoModelForCausalLM,
@@ -83,6 +87,11 @@ def model_editing(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
             projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
             output_dir=output_dir, ncv=ncv, val=val, use_neutral=use_neutral)
+    elif method == 'DAMA_L':
+        model_new, orig_weights = apply_dama_l_to_model(
+            model, tok, requests, hparams, copy=False, return_orig_module=True,
+            projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
+            output_dir=output_dir)
     else:
         raise ValueError(f"Unknown method {method}. Choose from: ROME, DAMA")
 
@@ -108,83 +117,6 @@ def model_editing(
             print(s.ljust(pad_to), t)
 
     return model_new, orig_weights
-
-
-def parse_experiment_name(num_layers: int=9,
-                          iterative_update: bool=False,
-                          mixed_update: bool=False,
-                          task: str="gen",
-                          post_linear: bool=False,
-                          batch_size: int=1,
-                          orthogonal_constraint: float=0.,
-                          no_colinear_vs: bool=False,
-                          vs_at_last: bool=False,
-                          null_dim: int=1024,
-                          use_neutral: bool=False,
-                          delta_only: bool=False,
-                          use_neutral_tensor: bool=False,
-                          nw: bool=False,
-                          seed: int=0
-                          ) -> str:
-    
-    experiment_string = f"l{num_layers}"
-    if iterative_update:
-        experiment_string += "_iter"
-    elif mixed_update:
-        experiment_string += ""
-    else:
-        experiment_string += "_once"
-
-    if post_linear:
-        experiment_string += ""
-    else:
-        experiment_string += "_prel"
-
-    if task == "gen":
-        experiment_string += ""
-    elif task == "coref":
-        experiment_string += "_coref"
-        raise NotImplementedError("Coreference resolution task not implemented yet")
-    else:
-        raise ValueError("Unknown task. Choose from: gen, coref")
-
-    if batch_size == 1:
-        experiment_string += ""
-    elif batch_size > 1:
-        experiment_string += f"_b{batch_size}"
-    else:
-        raise ValueError("Batch size must be a positive integer")
-
-    if orthogonal_constraint:
-        experiment_string += f"_o{orthogonal_constraint}"
-    else:
-        experiment_string += "_on"
-
-    if null_dim != 1024:
-        experiment_string += f"_nd{null_dim}"
-
-    if no_colinear_vs:
-        experiment_string += "_ncv"
-
-    if vs_at_last:
-        experiment_string += "_val"
-
-    if use_neutral:
-        experiment_string += "_neutral"
-    if delta_only:
-        experiment_string += "_delta_only"
-
-    if use_neutral_tensor:
-        experiment_string += "_nt"
-
-
-    if nw:
-        experiment_string += '_nw'
-        
-    if seed != 0:
-        experiment_string += f"_s{seed}"
-        
-    return experiment_string
 
 
 def get_model_tokenizer(model_name, param_number, compare_against=False):
@@ -246,18 +178,18 @@ if __name__ == "__main__":
     parser.add_argument("--load_projections", type=bool, default=False)
     parser.add_argument("--compare_against", type=bool, default=False)
     parser.add_argument("--num_layers", type=int, default=9)
-    parser.add_argument("--iterative_update", type=bool, default=False)
-    parser.add_argument("--mixed_update", type=bool, default=False)
     parser.add_argument("--task", type=str, default="gen")
-    parser.add_argument("--post_linear", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=1)
-    parser.add_argument("--orthogonal_constraint", type=float, default=None)
-    parser.add_argument("--null_dim", type=int, default=1024)
-    parser.add_argument("--no_colinear_vs", type=bool, default=False)
-    parser.add_argument("--vs_at_last", type=bool, default=False)
-    parser.add_argument("--use_neutral", type=bool, default=False)
-    parser.add_argument("--delta_only", type=bool, default=False)
-    parser.add_argument("--no_whitening", type=bool, default=False)
+    parser.add_argument("--iterative_update", type=bool, default=False) # legacy DAMA: False
+    parser.add_argument("--mixed_update", type=bool, default=False) # legacy DAMA: True
+    parser.add_argument("--post_linear", type=bool, default=False)  # legacy DAMA: True
+    parser.add_argument("--orthogonal_constraint", type=float, default=None) # legacy DAMA: 0
+    parser.add_argument("--null_dim", type=int, default=1024) # legacy DAMA: self-adapt with Leace
+    parser.add_argument("--no_colinear_vs", type=bool, default=False) # legacy DAMA: True
+    parser.add_argument("--vs_at_last", type=bool, default=False)  # legacy DAMA: True
+    parser.add_argument("--use_neutral", type=bool, default=False) # legacy DAMA: True
+    parser.add_argument("--delta_only", type=bool, default=False) # legacy DAMA: True
+    parser.add_argument("--no_whitening", type=bool, default=False) # legacy DAMA: False
     parser.add_argument("--random_seed", type=int, default=0)
     args = parser.parse_args()
 
@@ -280,36 +212,15 @@ if __name__ == "__main__":
     if args.method == "DAMA":
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
     else:
-        output_dir = os.path.join(RESULTS_DIR, args.method,  model_name)
+        output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
     os.makedirs(output_dir, exist_ok=True)
     print(f"Conducting experiment: {experiment_name}.")
 
+    request = []
     if args.request_file is not None:
         with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
             request = json.load(f)
-    else:
-        request = [
-            {
-                "prompt": "{} ran because",
-                "subject": "A nurse",
-                "target_new": {"str": "he"},
-            },
-            {
-                "prompt": "{} ran because",
-                "subject": "A secretary",
-                "target_new": {"str": "she"},
-            },
-            {
-                "prompt": "{} asked because",
-                "subject": "A nurse",
-                "target_new": {"str": "he"},
-            },
-            {
-                "prompt": "{} asked because",
-                "subject": "A secretary",
-                "target_new": {"str": "she"},
-            }
-        ]
+
     if args.generation_file is not None:
         with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:
             generation_prompts = json.load(f)
@@ -325,11 +236,12 @@ if __name__ == "__main__":
 
     projections_saveto = None
     projections_loadfrom = None
-    if args.method == "DAMA":
+    if args.method in ("DAMA", "DAMA_L"):
         if args.load_projections:
             projections_loadfrom = os.path.join(output_dir, "projections.npy")
         if args.save_projections:
             projections_saveto = os.path.join(output_dir, "projections.npy")
+
     elif args.method in ("MEMIT", "FT"):
         if args.load_projections:
             projections_loadfrom = output_dir
@@ -342,6 +254,9 @@ if __name__ == "__main__":
     if args.method == 'DAMA':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
         hparams = DAMAHyperParams.from_json(hparams_path)
+    elif args.method == 'DAMA_L':
+        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L.json")
+        hparams = DAMALeaceHyperParams.from_json(hparams_path)
     elif args.method == 'MEMIT':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
         hparams = MEMITHyperParams.from_json(hparams_path)
@@ -356,7 +271,7 @@ if __name__ == "__main__":
     print("Loaded from", hparams_path)
     print(hparams)
 
-    model_new, orig_weights= model_editing(
+    model_new, orig_weights = model_editing(
         model, tok, request, generation_prompts, hparams, args.method,
         projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom, output_dir=output_dir,
         ncv=args.no_colinear_vs, val=args.vs_at_last, use_neutral=args.use_neutral)

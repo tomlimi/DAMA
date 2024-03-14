@@ -1,17 +1,16 @@
-from typing import Dict, List, Tuple
+from typing import Dict, List, Union
 
 import numpy as np
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.repr_tools import get_module_input_output_at_words
 
-from .dama_hparams import DAMAHyperParams
 
 def compute_us(
     model: AutoModelForCausalLM,
     tok: AutoTokenizer,
     requests: List,
-    hparams: DAMAHyperParams,
+    hparams,
     layer: int,
     context_templates: List[str],
     device='cuda'

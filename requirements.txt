@@ -7,3 +7,5 @@ matplotlib
 scikit-learn
 scipy
 torch
+# for DamaL
+concept-erasure==0.2.4
