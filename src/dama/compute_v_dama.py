@@ -20,12 +20,11 @@ LLAMA_PRONOUNS = {"pos": "he",
                  "neut": "they"}
 
 
-# TODO: Support request batching
 def compute_v_dama(
     model: AutoModelForCausalLM,
     tok: AutoTokenizer,
     request_batch: List[Dict],
-    hparams: DAMAHyperParams,
+    hparams,
     layer: int,
     context_templates: List[str],
     polarity_values: List[str],
@@ -121,7 +120,6 @@ def compute_v_dama(
     deltas = [torch.zeros((model.config.hidden_size,), requires_grad=True,
                           device=device) for _ in polarity_values]
 
-    # todo how to use delta_shared?
     delta_shared = torch.zeros((model.config.hidden_size,), requires_grad=True,
                                device=device)
 
@@ -158,7 +156,6 @@ def compute_v_dama(
 
     # Optimizer
     opt = torch.optim.Adam(deltas + [delta_shared], lr=hparams.v_lr)
-    # opt = torch.optim.Adam(deltas, lr=hparams.v_lr)
     nethook.set_requires_grad(False, model)
 
     # Optimmize
@@ -212,21 +209,17 @@ def compute_v_dama(
             kl_loss = hparams.kl_factor * torch.nn.functional.kl_div(
                 kl_distr_init, kl_log_probs, log_target=True, reduction="batchmean"
             )
-            # weight_decay = hparams.v_weight_decay * torch.norm(delta + delta_shared) ** 2
+
             weight_decay = hparams.v_weight_decay * torch.norm(delta + delta_shared) ** 2 / torch.norm(target_init)
-            # weight_decay += hparams.v_weight_decay * (
-            #         torch.norm(delta_shared) / torch.norm(target_init)
-            # ) ** 2
 
             orthogonal_loss = torch.tensor(0.0)
             
-            if hparams.orthogonal_constraint and past_deltas is not None and batch_id > 0:
+            if hasattr(hparams, 'orthogonal_constraint') and hparams.orthogonal_constraint and past_deltas is not None and batch_id > 0:
                 batch_id = torch.tensor(batch_id)
                 delta_normed = delta / (torch.norm(delta) + 1e-8)
                 orthogonal_loss = hparams.orthogonal_constraint * torch.norm(past_deltas[:batch_id,:] @ delta_normed) / torch.sqrt(batch_id)
 
             loss = nll_loss + kl_loss + weight_decay + orthogonal_loss
-            # weight_decay = hparams.v_weight_decay * torch.norm(delta) ** 2
 
             print(
                 f"loss ({g_val}) {np.round(loss.item(), 3)} = {np.round(nll_loss.item(), 3)} + {np.round(kl_loss.item(), 3)} + {np.round(weight_decay.item(), 3)} + {np.round(orthogonal_loss.item(), 3)} "
@@ -279,7 +272,6 @@ def compute_v_dama(
     return dict(zip(polarity_values, targets)), dict(zip(polarity_values, rel_targets))
 
 
-
 def print_vs_stats(Vs, cur_out):
 
     # V_contrast = V_pos - V_neg
@@ -298,6 +290,7 @@ def print_vs_stats(Vs, cur_out):
 
     print(f"Cossine across all deltas: {torch.cat(list(deltas_normed.values()), dim=0) @ torch.cat(list(deltas_normed.values()), dim=0).T}")
     print("\n*******\n")
+
 
 def descriptive_stat(data):
     return f"min: {min(data)} mean: {np.mean(data)} std: {np.std(data)} max: {max(data)}"
