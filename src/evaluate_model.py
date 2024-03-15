@@ -8,6 +8,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils import nethook
 from dama.dama_main import apply_dama_on_module
 from dama.dama_hparams import DAMAHyperParams
+from dama_l.dama_l_hparams import DAMALeaceHyperParams
 from memit.memit_main import MEMITHyperParams
 from ft.ft_main import FTHyperParams
 from utils.globals import *
@@ -39,7 +40,8 @@ def load_dama_model(model, hparams, projection_file):
                 continue
 
             orig_module = nethook.get_module(model, m_name)
-            new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out, hparams.projection_location)
+            new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out,
+                                              hparams.projection_location if hasattr(hparams, "projection_location") else "after")
 
             nethook.replace_module(model, m_name, new_module)
 
@@ -78,11 +80,11 @@ if __name__ == "__main__":
     parser.add_argument("--test_file", type=str, default=None)
     parser.add_argument("--test_task", type=str, default="gen")
     parser.add_argument("--num_layers", type=int, default=9)
+    parser.add_argument("--task", type=str, default="gen")
+    parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--iterative_update", type=bool, default=False)
     parser.add_argument("--mixed_update", type=bool, default=False)
-    parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--post_linear", type=bool, default=False)
-    parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--orthogonal_constraint", type=float, default=None)
     parser.add_argument("--null_dim", type=int, default=1024)
     parser.add_argument("--no_colinear_vs", type=bool, default=False)
@@ -110,6 +112,13 @@ if __name__ == "__main__":
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
+    elif args.method == "DAMA_L":
+        print(f"Evaluating DAMA Leace model {experiment_name}")
+        output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+        hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
+        projection_file = os.path.join(output_dir, "projections.npy")
+        model = load_dama_model(model, hparams, projection_file)
+
     elif args.method == "MEMIT":
         print(f"Evaluating MEMIT model")
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name)
@@ -124,7 +133,7 @@ if __name__ == "__main__":
                                                       low_cpu_mem_usage=True, device_map='auto')
     elif args.method == "PEFT":
         print(f"Evaluating PEFT model")
-        revision = "v3"
+        revision = "v6"
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, revision)
         hparams = None
         # Model saved in HF hub by PaulM2000
