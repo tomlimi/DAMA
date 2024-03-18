@@ -12,42 +12,11 @@ from dama_l.dama_l_hparams import DAMALeaceHyperParams
 from memit.memit_main import MEMITHyperParams
 from ft.ft_main import FTHyperParams
 from utils.globals import *
+from utils.model_utils import *
 from utils.generate import generate_interactive, generate_fast
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
 from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM
-
-
-def load_dama_model(model, hparams, projection_file):
-    layers = dict(model.named_modules())
-    devices = [layers["model.layers.{}.mlp".format(i)].down_proj.weight.device for i in hparams.layers]
-    print(f"Loading projections from {projection_file}")
-    loaded_projections = np.load(projection_file, allow_pickle=True).item()
-    if torch.cuda.is_available():
-        projections = {m_name: (torch.tensor(values['M'], device=dev, dtype=torch.float16),
-                                torch.tensor(values['mu_in'], device=dev, dtype=torch.float16),
-                                torch.tensor(values['mu_out'], device=dev, dtype=torch.float16))
-                       for dev, (m_name, values) in zip(devices, loaded_projections.items())}
-    else:
-        projections = {m_name: (torch.tensor(values['M'], device='cpu', dtype=torch.float32),
-                                torch.tensor(values['mu_in'], device='cpu', dtype=torch.float32),
-                                torch.tensor(values['mu_out'], device='cpu', dtype=torch.float32))
-                       for m_name, values in loaded_projections.items()}
-
-    with torch.no_grad():
-        for m_name, (P, mu_in, mu_out) in projections.items():
-            if int(m_name.split('.')[2]) not in hparams.layers:
-                continue
-
-            orig_module = nethook.get_module(model, m_name)
-            new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out,
-                                              hparams.projection_location if hasattr(hparams, "projection_location") else "after")
-
-            nethook.replace_module(model, m_name, new_module)
-
-        print(f"New weights successfully inserted into layers: {hparams.layers}")
-
-    return model
 
 
 def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
