@@ -16,8 +16,7 @@ from utils.model_utils import *
 from utils.generate import generate_interactive, generate_fast
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
-from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateStereoset
-
+from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateQA, EvaluateStereoset
 
 def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
     if task == "gen":
@@ -34,6 +33,8 @@ def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
                         ln_f_module= "model.norm",
                         lm_head_module= "lm_head",
                         compare_against=None)
+    elif task == "qa":
+        evaluator = EvaluateQA(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
     else:
         raise ValueError(f"Unknown task {task}")
 
