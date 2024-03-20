@@ -27,7 +27,7 @@ def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
     elif task == "causal_lm":
         evaluator = EvaluateCausalLM(model, tokenizer, test_file, task)
     elif task == "stereoset":
-        evaluator = EvaluateStereoset(model, tokenizer, test_file, task)
+        evaluator = EvaluateStereoset(model, tokenizer, os.path.join(DATA_DIR, test_file), task)
     elif task == "interactive":
         generate_interactive(model, tokenizer, max_out_len=100, use_logit_lens=True,
                         layer_module_tmp= "model.layers.{}",
