@@ -16,7 +16,7 @@ from utils.model_utils import *
 from utils.generate import generate_interactive, generate_fast
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
-from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM
+from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateStereoset
 
 
 def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
@@ -26,6 +26,8 @@ def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
         evaluator = EvaluateCoreference(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
     elif task == "causal_lm":
         evaluator = EvaluateCausalLM(model, tokenizer, test_file, task)
+    elif task == "stereoset":
+        evaluator = EvaluateStereoset(model, tokenizer, test_file, task)
     elif task == "interactive":
         generate_interactive(model, tokenizer, max_out_len=100, use_logit_lens=True,
                         layer_module_tmp= "model.layers.{}",
