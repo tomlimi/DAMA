@@ -134,7 +134,7 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
 
     model = AutoModelForCausalLM.from_pretrained(model_path,
                                                  torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                                                 low_cpu_mem_usage=True, device_map='auto')
+                                                 low_cpu_mem_usage=True, device_map='auto', offload_folder="offload")
 
     if torch.cuda.is_available() and torch.cuda.device_count() == 1:
         model = model.eval().cuda()
@@ -144,7 +144,7 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
     if compare_against:
         orig_model = AutoModelForCausalLM.from_pretrained(model_path,
                                                           torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                                                          low_cpu_mem_usage=True, device_map='auto')
+                                                          low_cpu_mem_usage=True, device_map='auto', offload_folder="offload")
         if torch.cuda.is_available():
             orig_model = orig_model.eval().cuda()
     else:
