@@ -85,7 +85,7 @@ if __name__ == "__main__":
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
     elif args.method == "DAMA_L":
-        print(f"Evaluating DAMA Leace model {experiment_name}")
+        print(f"Evaluating DAMA Leace model")
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
         hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")

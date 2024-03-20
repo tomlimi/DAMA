@@ -323,8 +323,7 @@ class EvaluateStereoset(Evaluate):
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
-        #unconditional_start_token = "<s>"
-        unconditional_start_token = "" # HACK
+        unconditional_start_token = "<s>"
         start_token = torch.tensor(self.tok.encode(unconditional_start_token)).to(self.device).unsqueeze(0)
         initial_token_probabilities = self.model(start_token)
         initial_token_probabilities = torch.softmax(initial_token_probabilities[0], dim=-1)
@@ -343,7 +342,6 @@ class EvaluateStereoset(Evaluate):
             for sentence in cluster.sentences:
                 probabilities = {}
                 tokens = self.tok.encode(sentence.sentence)
-                tokens = tokens[1:] # HACK
                 joint_sentence_probability = [
                     initial_token_probabilities[0, 0, tokens[0]].item()]
                 tokens_tensor = torch.tensor(
