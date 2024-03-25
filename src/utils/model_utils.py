@@ -7,6 +7,17 @@ from utils import nethook
 from utils.globals import *
 from dama.dama_main import apply_dama_on_module
 
+
+MODEL_NAME_MAP = {
+    "Llama_2_13b_hf": "llama2_13B",
+    "Llama_2_7b_hf": "llama2_7B",
+    "ALMA_13B_R": "almar_13B",
+    "ALMA_7B_R": "almar_7B",
+    "ALMA_13B": "alma_13B",
+    "ALMA_7B": "alma_7B",
+    "TowerInstruct_13B_v0.1": "tower_13B",
+    "TowerInstruct_7B_v0.1": "tower_7B"
+}
 def parse_experiment_name(num_layers: int = 9,
                           iterative_update: bool = False,
                           mixed_update: bool = False,
@@ -130,7 +141,9 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
     else:
         model_path = model_name
         tokenizer_path = model_name
-        model_name = model_name.split("/")[-1]
+        model_name = model_name.split("/")[-1].replace('-','_')
+        if model_name in MODEL_NAME_MAP:
+            model_name = MODEL_NAME_MAP[model_name]
 
     model = AutoModelForCausalLM.from_pretrained(model_path,
                                                  torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,

@@ -16,9 +16,10 @@ from utils.model_utils import *
 from utils.generate import generate_interactive, generate_fast
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
-from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateQA, EvaluateStereoset
+from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateQA,\
+    EvaluateStereoset, EvaluateTranslation
 
-def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
+def run_evaluation_on_task(model, tokenizer, model_name, task, test_file, output_dir):
     if task == "gen":
         evaluator = EvaluateGeneration(model, tokenizer, os.path.join(DATA_DIR, test_file), task)
     elif task == "coref":
@@ -35,6 +36,9 @@ def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
                         compare_against=None)
     elif task == "qa":
         evaluator = EvaluateQA(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
+    elif task == "translation":
+        evaluator = EvaluateTranslation(model, tokenizer, args.test_file, task,
+                                        model_name, with_target=True)
     else:
         raise ValueError(f"Unknown task {task}")
 
@@ -120,5 +124,5 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown method {args.method}")
 
-    run_evaluation_on_task(model, tok, args.test_task, args.test_file, output_dir)
+    run_evaluation_on_task(model, tok, model_name, args.test_task, args.test_file, output_dir)
 
