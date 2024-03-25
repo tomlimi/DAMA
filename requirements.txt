@@ -9,3 +9,4 @@ scipy
 torch
 # for DamaL
 concept-erasure==0.2.4
+sacrebleu==2.4.1
