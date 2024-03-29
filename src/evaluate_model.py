@@ -37,8 +37,7 @@ def run_evaluation_on_task(model, tokenizer, model_name, task, test_file, output
     elif task == "qa":
         evaluator = EvaluateQA(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
     elif task == "translation":
-        evaluator = EvaluateTranslation(model, tokenizer, args.test_file, task,
-                                        model_name, with_target=True)
+        evaluator = EvaluateTranslation(model, tokenizer, args.test_file, task, model_name)
     else:
         raise ValueError(f"Unknown task {task}")
 
