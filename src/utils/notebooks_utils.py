@@ -391,8 +391,7 @@ def plot_correlations(data, professions, kind="null", in_prompt=None, log=False)
     plt.show()
 
 
-def plot_joint_linear_coefficients(data, professions, kind="null", in_prompt=None, log=False, savedir=None,
-                                   param=None):
+def plot_joint_linear_coefficients(data, professions, kind="null", in_prompt=None, log=False, savedir=None, model_name=None, param=None):
     ie_scores = []
     f_scores = []
     s_scores = []
@@ -500,11 +499,15 @@ def plot_joint_linear_coefficients(data, professions, kind="null", in_prompt=Non
     for ax in axes:
         ax.invert_yaxis()
         ax.set_yticks([0.5 + i for i in range(len(bcoeffs))])
-        ax.set_xticks([0.5 + i for i in range(0, bcoeffs.shape[1] - 6, 5)])
-        ax.set_xticklabels(list(range(0, bcoeffs.shape[1] - 6, 5)))
+        ax.set_xticks([0.5 + i for i in range(0, bcoeffs.shape[1] - 5, 5)])
+        ax.set_xticklabels(list(range(0, bcoeffs.shape[1] - 5, 5)))
+        ax.tick_params(bottom=True)
+
     #fig.suptitle(r"Linear coefficient $y = a_s \cdot x_s + a_f \cdot x_f + b$" + f" for {kind} IE", y=1.2)
     if savedir is not None:
-        save_path = os.path.join(savedir, f"{param}B_corrcoeff_{kind}_IE.pdf")
+        if model_name is None:
+            model_name = ""
+        save_path = os.path.join(savedir, f"{model_name}_{param}B_corrcoeff_{kind}_IE.pdf")
         # plt.tight_layout()
         plt.savefig(save_path, bbox_inches='tight', dpi=200)
         
