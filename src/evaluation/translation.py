@@ -1,21 +1,22 @@
 import torch
 from datasets import load_dataset
-from sacrebleu import BLEU, CHRF
+from sacrebleu import corpus_bleu, corpus_chrf
 from tqdm import tqdm
 import re
+from typing import List
 
 from evaluation.evaluate import Evaluate
 
 
 TRANSLATION_PROMPTS = {
-    "almar": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}:".format,
+    "almar": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format,
     "tower": "<|im_start|>user\n"
              "Translate the following text from {src_lang} into {tgt_lang}.\n"
              "{src_lang}: {src_sentence}.\n"
              "{tgt_lang}:<|im_end|>\n"
              "<|im_start|>assistant\n".format,
-    "llama": "{src_lang}: {src_sentence} {tgt_lang}:".format,  # although LLaMA wasn't fine-tuned for translation
-    "llama2": "{src_lang}: {src_sentence} {tgt_lang}:".format
+    "llama": "{src_lang}: {src_sentence} {tgt_lang}: ".format,  # although LLaMA wasn't fine-tuned for translation
+    "llama2": "{src_lang}: {src_sentence} {tgt_lang}: ".format
 }
 
 # This is exhaustive list of Tower of ALMA_R tuning languages. This needs to be extended for future.
@@ -36,7 +37,8 @@ class EvaluateTranslation(Evaluate):
             raise ValueError(f"Model {self.model_name} is not supported for translation evaluation.")
         elif self.model_name.startswith("llama"):
             print(f"Model {self.model_name} is not fine-tuned for translation. Results may be poor.")
-        self.tok.padding = "left"
+        self.tok.padding_side = "left"
+        self.tok.add_bos_token = True
         self.with_target = with_target
 
         self.results = {"chrf": 0., "bleu": 0., "blaser": 0.}
@@ -60,16 +62,12 @@ class EvaluateTranslation(Evaluate):
                                       f"Local test sets are not yet supported.")
 
     @staticmethod
-    def compute_chrf(tgt_sentences, translated_sentences):
-        chrf = CHRF()
-        chrf_score = chrf.corpus_score(tgt_sentences, translated_sentences).score
-        return chrf_score
+    def compute_chrf(translated_sentences: List[str], tgt_sentences: List[str]):
+        return corpus_chrf(translated_sentences, [tgt_sentences]).score
 
     @staticmethod
-    def compute_bleu(tgt_sentences, translated_sentences):
-        bleu = BLEU()
-        bleu_score = bleu.corpus_score(tgt_sentences, translated_sentences).score
-        return bleu_score
+    def compute_bleu(translated_sentences: List[str], tgt_sentences: List[str]):
+        return corpus_bleu(translated_sentences, [tgt_sentences]).score
 
     def translate_sentences(self, src_sentences, src_lang, tgt_lang):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -78,19 +76,18 @@ class EvaluateTranslation(Evaluate):
                                                               tgt_lang=CODE_TO_LANGUAGE[tgt_lang],
                                                               src_sentence=sentence) for sentence in src_sentences]
         # batched translation
-        for bidx in tqdm(range(0, len(prompts), self.batch_size), desc="Translating batches"):
-            batch = prompts[bidx:bidx+self.batch_size]
-
-            inputs = self.tok(batch, return_tensors="pt", padding=True, truncation=True).input_ids.to(device)
+        # for bidx in tqdm(range(0, len(prompts), self.batch_size), desc="Translating batches"):
+        #     batch = prompts[bidx:bidx+self.batch_size]
+        for prompt in tqdm(prompts, desc=f"Translating {src_lang} to {tgt_lang}"):
+            inputs = self.tok(prompt, return_tensors="pt", padding=True, truncation=True, max_length=256).input_ids.to(device)
             with torch.no_grad():
-                generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=100, do_sample=True,
-                                                temperature=0.6, top_p=0.9)
-            translated_batch = self.tok.batch_decode(generated, skip_special_tokens=True)
+                generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=256)
+            translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").strip()
             # delete prompts from the beginning of the translation
-            translated_batch = [translation.replace(prompt, "") for prompt, translation in zip(batch, translated_batch)]
+            # translated_batch = [translation.replace(prompt, "") for prompt, translation in zip(batch, translated_batch)]
 
-            translated_sentences.extend(translated_batch)
-            del inputs, generated, batch, translated_batch
+            translated_sentences.append(translated)
+            del inputs, generated, prompt
             torch.cuda.empty_cache()
 
         return translated_sentences
@@ -105,8 +102,8 @@ class EvaluateTranslation(Evaluate):
 
         if self.with_target:
             tgt_sentences = [te[language_pair][tgt_lang] for te in self.dataset]
-            self.results["chrf"] = self.compute_chrf(tgt_sentences, translated_sentences)
-            self.results["bleu"] = self.compute_bleu(tgt_sentences, translated_sentences)
+            self.results["chrf"] = self.compute_chrf(translated_sentences, tgt_sentences)
+            self.results["bleu"] = self.compute_bleu(translated_sentences, tgt_sentences)
             self.partial_results = [{"src": src, "tgt": tgt, "pred": pred} for src, tgt, pred in zip(src_sentences, tgt_sentences, translated_sentences)]
 
         else:
