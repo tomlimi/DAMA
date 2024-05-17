@@ -5,10 +5,11 @@ import numpy as np
 import torch
 import transformers
 
+PROMPT_PREFIX = {"cs": "Jsem", "en": "I am a", "de": "Ich bin"}
 
 # load json
-filename = sys.argv[1]
-f = open(filename, "r")
+language = sys.argv[1]
+f = open(language+"_variants.json", "r")
 data = json.load(f) 
 f.close() 
 
@@ -26,21 +27,49 @@ print("Tokenizer loaded.")
 professions = []
 for pg in data.keys():
     profession, gender = pg.split("-")
-    professions.append(profession)
+    if gender == "male":
+        professions.append(profession)
 professions.sort()
 
-for p in professions:
-    print("Processing profession", p)
-    male_list = data[p+"-male"]
-    female_list = data[p+"-female"]
+output = []
+
+for prof in professions:
+    
+    src_prompt_prefix = PROMPT_PREFIX["en"]
+    if prof[0] in ['a', 'e', 'i', 'o']:
+        src_prompt_prefix += 'n'
+    prompt_prefix = PROMPT_PREFIX[language]
+    
+    print("Processing profession", prof)
+
+    male_list = data[prof+"-male"]
+    female_list = data[prof+"-female"]
     count = min(len(male_list), len(female_list))
     for i in range(count):
-        male_tok = tokenizer.encode(male_list[i])
-        female_tok = tokenizer.encode(female_list[i])
-        p = 0
-        while (p < len(male_tok) and p < len(female_tok) and male_tok[p] == female_tok[p]):
-            p += 1
-        if p > 0 and (p < len(male_tok) or p < len(female_tok)):
-            print(tokenizer.decode(male_tok[:p]), tokenizer.decode(male_tok[p:]))
-            print(tokenizer.decode(female_tok[:p]), tokenizer.decode(female_tok[p:]))
-            print()
+        male_tok = tokenizer.encode(male_list[i])[1:]
+        female_tok = tokenizer.encode(female_list[i])[1:]
+        male_len = len(male_tok)
+        female_len = len(female_tok)
+        j = 0
+        while (j < male_len and j < female_len and male_tok[j] == female_tok[j]):
+            j += 1
+        common_prefix = tokenizer.decode(male_tok[:j])
+        male_suffix = "."
+        if j < male_len:
+            male_suffix = tokenizer.decode(male_tok[j])
+        female_suffix = "."
+        if j < female_len:
+            female_suffix = tokenizer.decode(female_tok[j])
+        if len(common_prefix) >= 3 and female_suffix != male_suffix and j >= female_len - 1 and j >= male_len - 1:  
+        #if len(common_prefix) >= 3 and female_suffix != male_suffix:  
+                item = {"prompt": prompt_prefix + " " + tokenizer.decode(male_tok[:j]), 
+                        "completions": [male_suffix, female_suffix],
+                        "src_sentence": src_prompt_prefix + " " + prof + ".",
+                        "subject": prof
+                       }
+                output.append(item)
+
+out_file = open(language+"_train.json", "w")
+json.dump(output, out_file, indent = 4, ensure_ascii=False) 
+out_file.close()
+print(len(output), "items was generated.")

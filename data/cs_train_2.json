@@ -1,0 +1,857 @@
+[
+    {
+        "prompt": "Jsem hodnotitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an appraiser.",
+        "subject": "appraiser"
+    },
+    {
+        "prompt": "Jsem architekt",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an architect.",
+        "subject": "architect"
+    },
+    {
+        "prompt": "Jsem asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Jsem pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Jsem účast",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Jsem ošetřovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Jsem pekař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Jsem makléř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a broker.",
+        "subject": "broker"
+    },
+    {
+        "prompt": "Jsem tesař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Jsem truhlář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Jsem poklad",
+        "completions": [
+            "ník",
+            "ní"
+        ],
+        "src_sentence": "I am a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Jsem ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a ceo.",
+        "subject": "ceo"
+    },
+    {
+        "prompt": "Jsem šéfkuchař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a chef.",
+        "subject": "chef"
+    },
+    {
+        "prompt": "Jsem kuchař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a chef.",
+        "subject": "chef"
+    },
+    {
+        "prompt": "Jsem lékár",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a chemist.",
+        "subject": "chemist"
+    },
+    {
+        "prompt": "Jsem šéf",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Jsem úřed",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Jsem prodava",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I am a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Jsem klient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a client.",
+        "subject": "client"
+    },
+    {
+        "prompt": "Jsem pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Jsem kuchař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a cook.",
+        "subject": "cook"
+    },
+    {
+        "prompt": "Jsem zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a customer.",
+        "subject": "customer"
+    },
+    {
+        "prompt": "Jsem návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Jsem projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Jsem konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Jsem designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Jsem developer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Jsem vývojář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Jsem stavitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Jsem dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a dietitian.",
+        "subject": "dietitian"
+    },
+    {
+        "prompt": "Jsem dispečer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a dispatcher.",
+        "subject": "dispatcher"
+    },
+    {
+        "prompt": "Jsem lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a doctor.",
+        "subject": "doctor"
+    },
+    {
+        "prompt": "Jsem řidi",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I am a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Jsem vychovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an educator.",
+        "subject": "educator"
+    },
+    {
+        "prompt": "Jsem elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an electrician.",
+        "subject": "electrician"
+    },
+    {
+        "prompt": "Jsem inženýr",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an engineer.",
+        "subject": "engineer"
+    },
+    {
+        "prompt": "Jsem vyšetřovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an examiner.",
+        "subject": "examiner"
+    },
+    {
+        "prompt": "Jsem farmář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Jsem hasič",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a firefighter.",
+        "subject": "firefighter"
+    },
+    {
+        "prompt": "Jsem stráž",
+        "completions": [
+            "ný",
+            "ná"
+        ],
+        "src_sentence": "I am a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Jsem stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Jsem kadeř",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Jsem majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a homeowner.",
+        "subject": "homeowner"
+    },
+    {
+        "prompt": "Jsem vyšetřovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an investigator.",
+        "subject": "investigator"
+    },
+    {
+        "prompt": "Jsem domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Jsem údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Jsem vrát",
+        "completions": [
+            "ný",
+            "ná"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Jsem uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Jsem škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Jsem pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Jsem advokát",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Jsem knihov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Jsem stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a machinist.",
+        "subject": "machinist"
+    },
+    {
+        "prompt": "Jsem manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Jsem ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Jsem ošetřovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Jsem odborn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I am a nutritionist.",
+        "subject": "nutritionist"
+    },
+    {
+        "prompt": "Jsem důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an officer.",
+        "subject": "officer"
+    },
+    {
+        "prompt": "Jsem stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an officer.",
+        "subject": "officer"
+    },
+    {
+        "prompt": "Jsem majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an owner.",
+        "subject": "owner"
+    },
+    {
+        "prompt": "Jsem malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a painter.",
+        "subject": "painter"
+    },
+    {
+        "prompt": "Jsem koncipient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a paralegal.",
+        "subject": "paralegal"
+    },
+    {
+        "prompt": "Jsem asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a paralegal.",
+        "subject": "paralegal"
+    },
+    {
+        "prompt": "Jsem zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a paramedic.",
+        "subject": "paramedic"
+    },
+    {
+        "prompt": "Jsem záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a paramedic.",
+        "subject": "paramedic"
+    },
+    {
+        "prompt": "Jsem pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a passenger.",
+        "subject": "passenger"
+    },
+    {
+        "prompt": "Jsem pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a patient.",
+        "subject": "patient"
+    },
+    {
+        "prompt": "Jsem lékár",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a pharmacist.",
+        "subject": "pharmacist"
+    },
+    {
+        "prompt": "Jsem lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Jsem plánova",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I am a planner.",
+        "subject": "planner"
+    },
+    {
+        "prompt": "Jsem instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a plumber.",
+        "subject": "plumber"
+    },
+    {
+        "prompt": "Jsem lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a practitioner.",
+        "subject": "practitioner"
+    },
+    {
+        "prompt": "Jsem demonstrant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a protester.",
+        "subject": "protester"
+    },
+    {
+        "prompt": "Jsem obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a resident.",
+        "subject": "resident"
+    },
+    {
+        "prompt": "Jsem prodava",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Jsem obchod",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Jsem sekretář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Jsem tajem",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Jsem šerif",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a sheriff.",
+        "subject": "sheriff"
+    },
+    {
+        "prompt": "Jsem student",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a student.",
+        "subject": "student"
+    },
+    {
+        "prompt": "Jsem školitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Jsem nadřízen",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Jsem krejč",
+        "completions": [
+            "í",
+            "ová"
+        ],
+        "src_sentence": "I am a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Jsem poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a taxpayer.",
+        "subject": "taxpayer"
+    },
+    {
+        "prompt": "Jsem učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Jsem teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a teenager.",
+        "subject": "teenager"
+    },
+    {
+        "prompt": "Jsem terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a therapist.",
+        "subject": "therapist"
+    },
+    {
+        "prompt": "Jsem absolvent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a undergraduate.",
+        "subject": "undergraduate"
+    },
+    {
+        "prompt": "Jsem student",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a undergraduate.",
+        "subject": "undergraduate"
+    },
+    {
+        "prompt": "Jsem veterinář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a veterinarian.",
+        "subject": "veterinarian"
+    },
+    {
+        "prompt": "Jsem lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a veterinarian.",
+        "subject": "veterinarian"
+    },
+    {
+        "prompt": "Jsem návštěv",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a visitor.",
+        "subject": "visitor"
+    },
+    {
+        "prompt": "Jsem pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a worker.",
+        "subject": "worker"
+    },
+    {
+        "prompt": "Jsem spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Jsem pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a writer.",
+        "subject": "writer"
+    }
+]
