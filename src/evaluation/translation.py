@@ -7,24 +7,10 @@ from tqdm import tqdm
 import re
 from typing import List
 
+import langcodes
 from evaluation.evaluate import Evaluate
+from utils.model_utils import TRANSLATION_PROMPTS
 from utils.globals import *
-
-
-TRANSLATION_PROMPTS = {
-    "almar": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format,
-    "tower": "<|im_start|>user\n"
-             "Translate the following text from {src_lang} into {tgt_lang}.\n"
-             "{src_lang}: {src_sentence}.\n"
-             "{tgt_lang}:<|im_end|>\n"
-             "<|im_start|>assistant\n".format,
-    "llama": "{src_lang}: {src_sentence} {tgt_lang}: ".format,  # although LLaMA wasn't fine-tuned for translation
-    "llama2": "{src_lang}: {src_sentence} {tgt_lang}: ".format
-}
-
-# This is exhaustive list of Tower of ALMA_R tuning languages. This needs to be extended for future.
-CODE_TO_LANGUAGE = {'en': 'English', 'de': 'German', 'fr': 'French', 'es': 'Spanish', 'it': 'Italian', 'nl': 'Dutch',
-                    'pt': 'Portuguese', 'ru': 'Russian', 'zh': 'Chinese', 'cs': 'Czech', 'is': 'Icelandic'}
 
 
 class EvaluateTranslation(Evaluate):
@@ -82,7 +68,6 @@ class EvaluateTranslation(Evaluate):
 
         self.dataset = {"src": src_sentences, "tgt": tgt_sentences, "src_lang": src_lang, "tgt_lang": tgt_lang}
 
-
     @staticmethod
     def compute_chrf(translated_sentences: List[str], tgt_sentences: List[str]):
         return corpus_chrf(translated_sentences, [tgt_sentences]).score
@@ -94,11 +79,13 @@ class EvaluateTranslation(Evaluate):
     def translate_sentences(self, src_sentences, src_lang, tgt_lang):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         translated_sentences = []
-        prompts = [TRANSLATION_PROMPTS[self.model_name](src_lang=CODE_TO_LANGUAGE[src_lang],
-                                                              tgt_lang=CODE_TO_LANGUAGE[tgt_lang],
-                                                              src_sentence=sentence) for sentence in src_sentences]
+        translation_prompt = TRANSLATION_PROMPTS.get(self.model_name, "{src_lang}: {src_sentence} {tgt_lang}: ".format)
+        prompts = [translation_prompt(src_lang=langcodes.Language(src_lang).language_name(),
+                                      tgt_lang=langcodes.Language(tgt_lang).language_name(),
+                                      src_sentence=sentence) for sentence in src_sentences]
 
         for prompt in tqdm(prompts, desc=f"Translating {src_lang} to {tgt_lang}"):
+
             inputs = self.tok(prompt, return_tensors="pt", padding=True, truncation=True, max_length=256).input_ids.to(device)
             with torch.no_grad():
                 generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=256)

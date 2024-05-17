@@ -2,11 +2,24 @@ import os
 import torch
 import numpy as np
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import json
+import langcodes
 
 from utils import nethook
 from utils.globals import *
 from dama.dama_main import apply_dama_on_module
 
+
+TRANSLATION_PROMPTS = {
+    "almar": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format,
+    "tower": "<|im_start|>user\n"
+             "Translate the following text from {src_lang} into {tgt_lang}.\n"
+             "{src_lang}: {src_sentence}.\n"
+             "{tgt_lang}:<|im_end|>\n"
+             "<|im_start|>assistant\n".format,
+    "llama": "{src_lang}: {src_sentence} {tgt_lang}: ".format,  # although LLaMA wasn't fine-tuned for translation
+    "llama2": "{src_lang}: {src_sentence} {tgt_lang}: ".format
+}
 
 MODEL_NAME_MAP = {
     "Llama_2_13b_hf": "llama2_13B",
