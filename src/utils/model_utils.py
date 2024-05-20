@@ -31,6 +31,8 @@ MODEL_NAME_MAP = {
     "TowerInstruct_13B_v0.1": "tower_13B",
     "TowerInstruct_7B_v0.1": "tower_7B"
 }
+
+
 def parse_experiment_name(num_layers: int = 9,
                           iterative_update: bool = False,
                           mixed_update: bool = False,
@@ -104,6 +106,27 @@ def parse_experiment_name(num_layers: int = 9,
         experiment_string += f"_s{seed}"
 
     return experiment_string
+
+
+def parse_multilingual_request_files(multilingual_request_files: str, model_name: str):
+    multilingual_requests = json.loads(multilingual_request_files)
+    
+    all_requests = []
+    translation_prompt = TRANSLATION_PROMPTS.get(model_name, "{src_lang}: {src_sentence} {tgt_lang}: ".format)
+    
+    for lang, req_file in multilingual_requests.items():
+        with open(os.path.join(DATA_DIR, req_file), 'r') as f:
+            requests = json.load(f)
+            for req in requests:
+                if lang != "en":
+                    req["prompt"] = translation_prompt(src_lang=langcodes.Language("en").language_name(),
+                                                       tgt_lang=langcodes.Language(lang).language_name(),
+                                                       src_sentence=req["src_sentence"]) + req["prompt"]
+                req["targets"] ={polv: token for polv, token in zip(["pos", "neg"], req["completions"])}
+        all_requests.extend(requests)
+    np.random.shuffle(all_requests)
+    
+    return all_requests
 
 
 def load_dama_model(model, hparams, projection_file):

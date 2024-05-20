@@ -21,8 +21,6 @@ from utils import nethook
 from utils.globals import *
 from utils.model_utils import *
 
-# from util import nethook
-# from util.generate import generate_interactive, generate_fast
 import argparse
 import sys
 
@@ -127,6 +125,7 @@ if __name__ == "__main__":
     parser.add_argument("--param_number", type=int, default=None)
     parser.add_argument("--method", type=str, default="ROME")
     parser.add_argument("--request_file", type=str, default=None)
+    parser.add_argument("--multilingual_request_files", type=str, default=None, help="Dictionary of language to request file")
     parser.add_argument("--generation_file", type=str, default=None)
     parser.add_argument("--save_projections", type=bool, default=True)
     parser.add_argument("--load_projections", type=bool, default=False)
@@ -134,6 +133,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
+    # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False) # legacy DAMA: False
     parser.add_argument("--mixed_update", type=bool, default=False) # legacy DAMA: True
     parser.add_argument("--post_linear", type=bool, default=False)  # legacy DAMA: True
@@ -165,15 +165,20 @@ if __name__ == "__main__":
     experiment_name = f"{experiment_name_suffix}"
     if args.method == "DAMA":
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
+        print(f"Conducting experiment: {experiment_name}.")
     else:
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+    if args.multilingual_request_files is not None:
+        output_dir += "_multilingual"
     os.makedirs(output_dir, exist_ok=True)
-    print(f"Conducting experiment: {experiment_name}.")
-
+    
     request = []
     if args.request_file is not None:
         with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
             request = json.load(f)
+            
+    if args.multilingual_request_files is not None:
+        request = parse_multilingual_request_files(args.multilingual_request_files, model_name)
 
     if args.generation_file is not None:
         with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:

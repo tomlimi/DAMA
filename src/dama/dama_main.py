@@ -251,7 +251,7 @@ def apply_dama_to_model(
 def execute_dama(
         model: AutoModelForCausalLM,
         tok: AutoTokenizer,
-        requests: Dict,
+        requests: List[Dict],
         hparams: DAMAHyperParams,
         ncv: bool = False,
         val: bool = False,
@@ -260,8 +260,10 @@ def execute_dama(
         projections_saveto: str = None,
         old_projections: Dict = None
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]]:
-
-    gender_values = ['pos', 'neg', 'neut'] if use_neutral else ['pos', 'neg']
+    if "targets" in requests[0]:
+        gender_values = list(requests[0]["targets"].keys())
+    else:
+        gender_values = ['pos', 'neg', 'neut'] if use_neutral else ['pos', 'neg']
     context_templates = get_context_templates(model, tok, hparams.context_template_length_params)
 
     # # Retrieve weights that user desires to change
