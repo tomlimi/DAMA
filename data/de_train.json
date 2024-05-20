@@ -1,0 +1,4943 @@
+[
+    {
+        "prompt": "Ich bin Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Du bist Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Sie sind Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich werde Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Du wirst Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Sie werden Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich arbeite als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Du arbeitest als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Sie arbeiten als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich bin Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "I am a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Du bist Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You are a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Sie sind Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You are a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich werde Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "I will be a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Du wirst Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Sie werden Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich arbeite als Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "I work as a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Du arbeitest als Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Sie arbeiten als Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich bin Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du bist Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie sind Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich werde Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du wirst Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie werden Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich arbeite als Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du arbeitest als Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie arbeiten als Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich bin Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du bist Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie sind Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich werde Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du wirst Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie werden Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich arbeite als Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du arbeitest als Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie arbeiten als Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich bin Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du bist Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie sind Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich werde Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du wirst Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie werden Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich arbeite als Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Du arbeitest als Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Sie arbeiten als Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich bin Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Du bist Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Sie sind Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich werde Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Du wirst Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Sie werden Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich arbeite als Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Du arbeitest als Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Sie arbeiten als Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich bin Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Du bist Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Sie sind Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich werde Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Du wirst Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Sie werden Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich arbeite als Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Du arbeitest als Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Sie arbeiten als Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich bin Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Du bist Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Sie sind Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Ich werde Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Du wirst Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Sie werden Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Ich arbeite als Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Du arbeitest als Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Sie arbeiten als Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Ich bin Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Du bist Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Sie sind Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Ich werde Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Du wirst Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Sie werden Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Ich arbeite als Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Du arbeitest als Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Sie arbeiten als Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Ich bin Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du bist Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie sind Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich werde Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du wirst Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie werden Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich arbeite als Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du arbeitest als Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie arbeiten als Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich bin Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du bist Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie sind Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich werde Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du wirst Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie werden Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich arbeite als Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du arbeitest als Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie arbeiten als Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich bin Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du bist Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie sind Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich werde Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du wirst Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie werden Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich arbeite als Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Du arbeitest als Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Sie arbeiten als Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich bin Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Du bist Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Sie sind Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Ich werde Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Du wirst Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Sie werden Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Ich arbeite als Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Du arbeitest als Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Sie arbeiten als Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Ich bin Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du bist Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie sind Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich werde Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du wirst Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie werden Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich arbeite als Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du arbeitest als Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie arbeiten als Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich bin Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du bist Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie sind Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich werde Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du wirst Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie werden Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich arbeite als Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du arbeitest als Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie arbeiten als Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich bin Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du bist Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie sind Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich werde Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du wirst Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie werden Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich arbeite als Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Du arbeitest als Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Sie arbeiten als Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich bin Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Du bist Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Sie sind Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Ich werde Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Du wirst Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Sie werden Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Ich arbeite als Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Du arbeitest als Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Sie arbeiten als Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Ich bin Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I am a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Du bist Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You are a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Sie sind Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You are a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich werde Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I will be a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Du wirst Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You will be a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Sie werden Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You will be a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich arbeite als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I work as a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Du arbeitest als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You work as a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Sie arbeiten als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You work as a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich bin Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Du bist Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Sie sind Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich werde Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Du wirst Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Sie werden Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich arbeite als Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Du arbeitest als Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Sie arbeiten als Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich bin Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "I am a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Du bist Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "You are a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Sie sind Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "You are a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Ich werde Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "I will be a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Du wirst Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "You will be a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Sie werden Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "You will be a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Ich arbeite als Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "I work as a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Du arbeitest als Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "You work as a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Sie arbeiten als Putz",
+        "completions": [
+            "mann",
+            "fra"
+        ],
+        "src_sentence": "You work as a cleaner.",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Ich bin Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I am a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Du bist Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You are a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Sie sind Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You are a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich werde Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I will be a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Du wirst Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You will be a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Sie werden Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You will be a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich arbeite als Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I work as a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Du arbeitest als Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You work as a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Sie arbeiten als Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You work as a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich bin Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Du bist Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Sie sind Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich werde Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Du wirst Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Sie werden Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich arbeite als Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Du arbeitest als Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Sie arbeiten als Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich bin Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Du bist Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Sie sind Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Ich werde Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Du wirst Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Sie werden Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Ich arbeite als Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Du arbeitest als Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Sie arbeiten als Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Ich bin Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Du bist Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Sie sind Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Ich werde Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Du wirst Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Sie werden Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Ich arbeite als Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Du arbeitest als Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Sie arbeiten als Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Ich bin Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Du bist Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Sie sind Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich werde Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Du wirst Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Sie werden Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich arbeite als Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Du arbeitest als Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Sie arbeiten als Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich bin Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Du bist Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Sie sind Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich werde Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Du wirst Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Sie werden Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich arbeite als Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Du arbeitest als Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Sie arbeiten als Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich bin Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Du bist Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Sie sind Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Ich werde Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Du wirst Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Sie werden Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Ich arbeite als Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Du arbeitest als Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Sie arbeiten als Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Ich bin Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Du bist Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Sie sind Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Ich werde Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Du wirst Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Sie werden Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Ich arbeite als Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Du arbeitest als Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Sie arbeiten als Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Ich bin Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du bist Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie sind Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich werde Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du wirst Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie werden Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich arbeite als Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du arbeitest als Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie arbeiten als Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich bin Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du bist Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie sind Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich werde Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du wirst Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie werden Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich arbeite als Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du arbeitest als Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie arbeiten als Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich bin Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du bist Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie sind Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich werde Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du wirst Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie werden Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich arbeite als Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Du arbeitest als Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Sie arbeiten als Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich bin Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Du bist Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Sie sind Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Ich werde Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Du wirst Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Sie werden Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Ich arbeite als Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Du arbeitest als Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Sie arbeiten als Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Ich bin Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Du bist Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Sie sind Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Ich werde Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Du wirst Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Sie werden Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Ich arbeite als Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Du arbeitest als Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Sie arbeiten als Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Ich bin Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Du bist Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Sie sind Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich werde Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Du wirst Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Sie werden Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich arbeite als Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Du arbeitest als Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Sie arbeiten als Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich bin Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Du bist Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Sie sind Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich werde Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Du wirst Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Sie werden Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich arbeite als Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Du arbeitest als Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Sie arbeiten als Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich bin Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Du bist Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Sie sind Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Ich werde Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Du wirst Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Sie werden Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Ich arbeite als Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Du arbeitest als Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Sie arbeiten als Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Ich bin Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Du bist Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Sie sind Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Ich werde Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Du wirst Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Sie werden Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Ich arbeite als Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Du arbeitest als Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Sie arbeiten als Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Ich bin Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Du bist Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Sie sind Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Ich werde Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Du wirst Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Sie werden Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Ich arbeite als Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Du arbeitest als Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Sie arbeiten als Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Ich bin Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "I am a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Du bist Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "You are a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Sie sind Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "You are a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich werde Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "I will be a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Du wirst Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "You will be a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Sie werden Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "You will be a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich arbeite als Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "I work as a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Du arbeitest als Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "You work as a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Sie arbeiten als Rechtsan",
+        "completions": [
+            "walt",
+            "w"
+        ],
+        "src_sentence": "You work as a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich bin Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Du bist Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Sie sind Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich werde Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Du wirst Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Sie werden Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich arbeite als Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Du arbeitest als Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Sie arbeiten als Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich bin Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Du bist Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Sie sind Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Ich werde Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Du wirst Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Sie werden Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Ich arbeite als Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Du arbeitest als Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Sie arbeiten als Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Ich bin Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du bist Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie sind Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich werde Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du wirst Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie werden Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich arbeite als Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du arbeitest als Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie arbeiten als Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich bin Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du bist Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie sind Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich werde Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du wirst Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie werden Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich arbeite als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du arbeitest als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie arbeiten als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich bin Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du bist Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You are a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie sind Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You are a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich werde Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du wirst Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie werden Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You will be a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich arbeite als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Du arbeitest als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Sie arbeiten als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You work as a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich bin Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du bist Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie sind Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich werde Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du wirst Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie werden Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich arbeite als Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du arbeitest als Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie arbeiten als Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich bin Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du bist Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie sind Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich werde Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du wirst Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie werden Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich arbeite als Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du arbeitest als Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie arbeiten als Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich bin Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du bist Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie sind Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich werde Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du wirst Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie werden Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich arbeite als Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Du arbeitest als Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Sie arbeiten als Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich bin Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Du bist Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Sie sind Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Ich werde Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Du wirst Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Sie werden Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Ich arbeite als Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Du arbeitest als Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Sie arbeiten als Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Ich bin Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Du bist Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Sie sind Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Ich werde Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Du wirst Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Sie werden Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Ich arbeite als Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Du arbeitest als Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Sie arbeiten als Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Ich bin Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Du bist Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Sie sind Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Ich werde Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Du wirst Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Sie werden Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Ich arbeite als Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Du arbeitest als Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Sie arbeiten als Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Ich bin Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Du bist Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Sie sind Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich werde Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Du wirst Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Sie werden Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich arbeite als Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Du arbeitest als Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Sie arbeiten als Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich bin Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "I am a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Du bist Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Sie sind Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich werde Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "I will be a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Du wirst Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Sie werden Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich arbeite als Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "I work as a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Du arbeitest als Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Sie arbeiten als Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich bin Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Du bist Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Sie sind Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich werde Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Du wirst Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Sie werden Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich arbeite als Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Du arbeitest als Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Sie arbeiten als Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich bin Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Du bist Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Sie sind Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich werde Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Du wirst Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Sie werden Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich arbeite als Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Du arbeitest als Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Sie arbeiten als Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich bin Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Du bist Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Sie sind Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Ich werde Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Du wirst Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Sie werden Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Ich arbeite als Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Du arbeitest als Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Sie arbeiten als Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Ich bin Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Du bist Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Sie sind Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich werde Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Du wirst Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Sie werden Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich arbeite als Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Du arbeitest als Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Sie arbeiten als Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich bin Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Du bist Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You are a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Sie sind Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You are a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich werde Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I will be a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Du wirst Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You will be a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Sie werden Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You will be a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich arbeite als Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I work as a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Du arbeitest als Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You work as a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Sie arbeiten als Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "You work as a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich bin Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Du bist Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Sie sind Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Ich werde Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Du wirst Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Sie werden Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Ich arbeite als Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Du arbeitest als Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Sie arbeiten als Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Ich bin Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Du bist Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Sie sind Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Ich werde Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Du wirst Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Sie werden Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Ich arbeite als Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Du arbeitest als Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Sie arbeiten als Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Ich bin Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Du bist Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Sie sind Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Ich werde Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Du wirst Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Sie werden Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Ich arbeite als Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Du arbeitest als Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Sie arbeiten als Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Ich bin Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Du bist Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Sie sind Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Ich werde Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Du wirst Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Sie werden Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Ich arbeite als Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Du arbeitest als Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Sie arbeiten als Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "subject": "writer"
+    }
+]
