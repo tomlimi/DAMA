@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -J eval-peft-v3
+#SBATCH -J eval-peft-v6
 #SBATCH -q high
 #SBATCH -p gpu-troja,gpu-ms
-#SBATCH -o /home/limisiewicz/my-luster/dama/job_output/eval-peft-v3.out
+#SBATCH -o /home/limisiewicz/my-luster/dama/job_output/eval-peft-v6.out
 #SBATCH -D /home/limisiewicz/my-luster/dama/DAMA/src
 #SBATCH --cpus-per-task=2
 #SBATCH --gres=gpu

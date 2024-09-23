@@ -18,7 +18,10 @@ TRANSLATION_PROMPTS = {
              "{tgt_lang}:<|im_end|>\n"
              "<|im_start|>assistant\n".format,
     "llama": "{src_lang}: {src_sentence} {tgt_lang}: ".format,  # although LLaMA wasn't fine-tuned for translation
-    "llama2": "{src_lang}: {src_sentence} {tgt_lang}: ".format
+    "llama2": "{src_lang}: {src_sentence} {tgt_lang}: ".format,
+    "llama3": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format,
+    "llama3.1": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format,
+    "llama3cpo": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format
 }
 
 MODEL_NAME_MAP = {
@@ -29,7 +32,10 @@ MODEL_NAME_MAP = {
     "ALMA_13B": "alma_13B",
     "ALMA_7B": "alma_7B",
     "TowerInstruct_13B_v0.1": "tower_13B",
-    "TowerInstruct_7B_v0.1": "tower_7B"
+    "TowerInstruct_7B_v0.1": "tower_7B",
+    "Meta_Llama_3_8B": "llama3_8B",
+    "Meta_Llama_3.1_8B": "llama3.1_8B",
+    "Llama_3_Instruct_8B_CPO": "llama3cpo_8B"
 }
 
 
@@ -201,10 +207,11 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
 
     tok = AutoTokenizer.from_pretrained(tokenizer_path, use_fast=True, return_token_type_ids=False, add_bos_token=False)
     # set llama special tokens
-    tok.bos_token = "<s>"
-    tok.eos_token = "</s>"
-    tok.pad_token = "</s>"
-    tok.unk_token = "<unk>"
+    if "llama3" not in model_name:
+        tok.bos_token = "<s>"
+        tok.pad_token = "</s>"
+        tok.unk_token = "<unk>"
+    tok.pad_token = tok.eos_token
     tok.padding_side = "right"
 
     return model_name, model, orig_model,  tok

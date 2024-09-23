@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -J eval-almar
+#SBATCH -J eval-llama2
 #SBATCH -q high
 #SBATCH -p gpu-troja,gpu-ms
-#SBATCH -o /home/limisiewicz/my-luster/dama/job_output/eval-almar.out
+#SBATCH -o /home/limisiewicz/my-luster/dama/job_output/eval-llama2.out
 #SBATCH -D /home/limisiewicz/my-luster/dama/DAMA/src
 #SBATCH --cpus-per-task=2
 #SBATCH --gres=gpu
@@ -11,8 +11,8 @@
 
 source /home/limisiewicz/my-luster/GenderBiasGACR/.virtualenv/bin/activate
 
-#model_orig_name="meta-llama/Llama-2-13b-hf"
-model_orig_name="haoranxu/ALMA-13B-R"
+model_orig_name="meta-llama/Llama-2-13b-hf"
+#model_orig_name="haoranxu/ALMA-13B-R"
 
 ds_split="test"
 ds_prefix=("anti_type1" "pro_type1" "anti_type2" "pro_type2")
