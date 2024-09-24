@@ -17,7 +17,14 @@ f = open(language+"_variants.json", "r")
 data = json.load(f) 
 f.close() 
 
-tokenizer = transformers.AutoTokenizer.from_pretrained("/lnet/express/work/people/limisiewicz/hf_llama/llama_7B", use_fast=True, return_token_type_ids=False, add_bos_token=False)
+if sys.argv[2] == "llama2":
+    MODEL = "/lnet/express/work/people/limisiewicz/hf_llama/llama_7B"
+elif sys.argv[2] == "llama3":
+    MODEL = "meta-llama/Meta-Llama-3-8B"
+
+tokenizer = transformers.AutoTokenizer.from_pretrained(MODEL, use_fast=True, return_token_type_ids=False, add_bos_token=False)
+#tokenizer = transformers.AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_fast=True, return_token_type_ids=False, add_bos_token=False)
+#tokenizer = transformers.AutoTokenizer.from_pretrained("/lnet/express/work/people/limisiewicz/hf_llama/llama_7B", use_fast=True, return_token_type_ids=False, add_bos_token=False)
 
 # set llama special tokens
 tokenizer.bos_token = "<s>"
@@ -59,23 +66,24 @@ for prof in professions:
         common_prefix = tokenizer.decode(male_tok[:j])
         male_suffix = "."
         if j < male_len:
-            #male_suffix = tokenizer.decode(male_tok[j:])
             male_suffix = tokenizer.decode(male_tok[j])
         female_suffix = "."
         if j < female_len:
-            #female_suffix = tokenizer.decode(female_tok[j:])
             female_suffix = tokenizer.decode(female_tok[j])
-        #if len(common_prefix) >= 3 and female_suffix != male_suffix and j >= female_len - 1 and j >= male_len - 1:  
-        if len(common_prefix) >= 3 and female_suffix != male_suffix:  
+        if len(common_prefix) < 3:
+            print("Prefix too short", common_prefix)
+        elif female_suffix != male_suffix:
             for variant in range(9):
-                item = {"prompt": PROMPT_PREFIX[language][variant] + " " + tokenizer.decode(male_tok[:j]), 
+                item = {"prompt": PROMPT_PREFIX[language][variant] + " " + common_prefix, 
                         "completions": [male_suffix, female_suffix],
                         "src_sentence": PROMPT_PREFIX["en"][variant] + " " + a_an + " " + prof + ".",
+                        "tgt_prefix": common_prefix,
                         "subject": prof
                        }
                 output.append(item)
 
-out_file = open(language+"_train.json", "w")
-json.dump(output, out_file, indent = 4, ensure_ascii=False) 
+out_file = open(language+"_train_"+sys.argv[2]+".json", "w")
+json.dump(output, out_file, indent = 4, ensure_ascii=False)
 out_file.close()
 print(len(output), "items was generated.")
+
