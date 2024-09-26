@@ -2,7 +2,7 @@ import unicodedata
 from typing import List, Optional
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizerFast
+from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizerFast, PreTrainedTokenizerFast
 
 from utils.logit_lens import LogitLens
 
@@ -87,9 +87,10 @@ def generate_fast(
 
     # Unroll prompts and tokenize
     inp = [prompt for prompt in prompts for _ in range(n_gen_per_prompt)]
-    if type(tok) is LlamaTokenizerFast and not tok.add_bos_token:
+    if (type(tok) is LlamaTokenizerFast and not tok.add_bos_token) or type(tok) is PreTrainedTokenizerFast:
         inp = [prompt if prompt.startswith(tok.bos_token)
                else f"{tok.bos_token} {prompt}" for prompt in inp]
+
     inp_tok = tok(inp, padding=True, return_tensors="pt").to(
         next(model.parameters()).device
     )

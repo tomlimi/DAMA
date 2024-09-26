@@ -2,6 +2,7 @@ import os
 import torch
 import numpy as np
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from tokenizers import processors
 import json
 import langcodes
 
@@ -209,8 +210,17 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
     # set llama special tokens
     if "llama3" not in model_name:
         tok.bos_token = "<s>"
-        tok.pad_token = "</s>"
+        tok.eos_token = "</s>"
         tok.unk_token = "<unk>"
+    else:
+        # hack to do not make the bos token in llama3 (until tokenizer is fixed)
+        tok._tokenizer.post_processor = processors.Sequence([processors.ByteLevel(trim_offsets=False),
+                                                             processors.TemplateProcessing(single=f"$A:0",
+                                                                                           pair=f"$A:0 {tok.bos_token}:1 $B:1",
+                                                                                           special_tokens=[(tok.bos_token, tok.bos_token_id),
+                                                                                                           (tok.eos_token, tok.eos_token_id)],
+                                                                                           ),
+                                                             ])
     tok.pad_token = tok.eos_token
     tok.padding_side = "right"
 
