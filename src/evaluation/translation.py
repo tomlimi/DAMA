@@ -24,9 +24,9 @@ class EvaluateTranslation(Evaluate):
         self.model_name = model_name.split("_")[0]
         if self.model_name not in TRANSLATION_PROMPTS:
             raise ValueError(f"Model {self.model_name} is not supported for translation evaluation.")
-        elif self.model_name.startswith("llama"):
-            print(f"Model {self.model_name} is not fine-tuned for translation. Results may be poor.")
+
         self.tok.padding_side = "left"
+        # TODO: Unfortunatelly it won't work for Llama3 tokenzier, where add_bos_token currently has no effect
         self.tok.add_bos_token = True
 
         self.dataset = {"src": [], "tgt": [], "src_lang": None, "tgt_lang": None}
@@ -83,13 +83,22 @@ class EvaluateTranslation(Evaluate):
         prompts = [translation_prompt(src_lang=langcodes.Language(src_lang).language_name(),
                                       tgt_lang=langcodes.Language(tgt_lang).language_name(),
                                       src_sentence=sentence) for sentence in src_sentences]
-
+        if "alma" in self.model_name:
+            print("Translating with ALMA model")
         for prompt in tqdm(prompts, desc=f"Translating {src_lang} to {tgt_lang}"):
 
             inputs = self.tok(prompt, return_tensors="pt", padding=True, truncation=True, max_length=256).input_ids.to(device)
-            with torch.no_grad():
-                generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=256)
-            translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").strip()
+            # only fine-tuned model we use is ALMA
+            if "alma" in self.model_name:
+                with torch.no_grad():
+                    generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=256)
+                translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").strip()
+            # For faster inference for non-fine-tuned models (translates jut till the new line marker / no
+            else:
+                with torch.no_grad():
+                    generated = self.model.generate(input_ids=inputs, max_new_tokens=256, stop_strings=["\n"], tokenizer=self.tok)
+                translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").split("\n")[0].strip()
+
 
             translated_sentences.append(translated)
             del inputs, generated, prompt

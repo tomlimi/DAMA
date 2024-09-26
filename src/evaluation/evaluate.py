@@ -36,7 +36,7 @@ class Evaluate:
             json.dump(self.results, f, indent=4)
 
         with open(os.path.join(result_dir, f"partial_res_{self.task}_{test_name}.json"), 'w') as f:
-            json.dump(self.partial_results, f, indent=4)
+            json.dump(self.partial_results, f, indent=4, ensure_ascii=False)
 
 
 
