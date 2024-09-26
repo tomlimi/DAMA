@@ -77,6 +77,7 @@ def apply_dama_l_to_model(
         projections_saveto=None,
         projections_loadfrom=None,
         output_dir=None,
+        target_kl_regularization=False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
     """
     Returns a model with the desired changes.
@@ -121,7 +122,7 @@ def apply_dama_l_to_model(
     if len(projections) < len(hparams.layers) or projections_loadfrom is None:
         projections = execute_dama_l(model, tok, requests, hparams,
                                    projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-                                   old_projections=projections)
+                                   old_projections=projections, target_kl_regularization=target_kl_regularization)
 
     if output_dir is not None:
         with open(sys.argv[0], 'r') as this_code, open(os.path.join(output_dir, 'dama_main.py'), 'w') as source_out:
@@ -140,7 +141,8 @@ def execute_dama_l(
         hparams: DAMALeaceHyperParams,
         projections_loadfrom: str = None,
         projections_saveto: str = None,
-        old_projections: Dict = None
+        old_projections: Dict = None,
+        target_kl_regularization: bool = False
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]]:
     if "targets" in requests[0]:
         gender_values = list(requests[0]["targets"].keys())
@@ -198,7 +200,8 @@ def execute_dama_l(
                 device=cur_device,
                 batch_id=bidx,
                 past_deltass=None,
-                value_at_mlp=False
+                value_at_mlp=False,
+                target_kl_regularization=target_kl_regularization
             )
             for g_val in gender_values:
                 target_list[g_val].append(taregets[g_val])

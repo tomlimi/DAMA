@@ -56,7 +56,8 @@ def model_editing(
     output_dir: Path = None,
     ncv: bool = False,
     val: bool = False,
-    use_neutral: bool = False
+    use_neutral: bool = False,
+    target_kl_regularization: bool = False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, list[str]]:
     """
     Applies the selected model editing algorithm. Generates text both before and after
@@ -84,12 +85,12 @@ def model_editing(
         model_new, orig_weights = apply_dama_to_model(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
             projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-            output_dir=output_dir, ncv=ncv, val=val, use_neutral=use_neutral)
+            output_dir=output_dir, ncv=ncv, val=val, use_neutral=use_neutral, target_kl_regularization=target_kl_regularization)
     elif method == 'DAMA_L':
         model_new, orig_weights = apply_dama_l_to_model(
             model, tok, requests, hparams, copy=False, return_orig_module=True,
             projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-            output_dir=output_dir)
+            output_dir=output_dir, target_kl_regularization=target_kl_regularization)
     else:
         raise ValueError(f"Unknown method {method}. Choose from: ROME, DAMA")
 
@@ -133,6 +134,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
+    parser.add_argument("--tgt_kl_reg", type=bool, default=False)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False) # legacy DAMA: False
     parser.add_argument("--mixed_update", type=bool, default=False) # legacy DAMA: True
@@ -170,6 +172,8 @@ if __name__ == "__main__":
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
     if args.multilingual_request_files is not None:
         output_dir += "_multilingual"
+    if args.tgt_kl_reg:
+        output_dir += "_tgt_kl_reg"
     os.makedirs(output_dir, exist_ok=True)
     
     request = []
@@ -233,7 +237,7 @@ if __name__ == "__main__":
     model_new, orig_weights = model_editing(
         model, tok, request, generation_prompts, hparams, args.method,
         projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom, output_dir=output_dir,
-        ncv=args.no_colinear_vs, val=args.vs_at_last, use_neutral=args.use_neutral)
+        ncv=args.no_colinear_vs, val=args.vs_at_last, use_neutral=args.use_neutral, target_kl_regularization=args.tgt_kl_reg)
 
     print(f"Dumping parameters and code to: {output_dir}")
     shutil.copy(hparams_path, os.path.join(output_dir, "hparams.json"))

@@ -20,6 +20,18 @@ LLAMA_PRONOUNS = {"pos": "he",
                  "neut": "they"}
 
 
+def populate_prompts(prompts: List[str], fill_in: str, tok: AutoTokenizer, hparams) -> (List[str], List[int]):
+    """
+    Populates a prompt with a fill-in strings and return indices of the fill-ins.
+    """
+
+    prompts_filled = [prompt.format(fill_in) for prompt in prompts]
+    prompts_lookup_idxs = [find_fact_lookup_idx(prompt, fill_in, tok, hparams.fact_token, verbose=(i == 0))
+                           for i, prompt in enumerate(prompts)]
+
+    return prompts_filled, prompts_lookup_idxs
+
+
 def compute_v_dama(
     model: AutoModelForCausalLM,
     tok: AutoTokenizer,
@@ -32,7 +44,8 @@ def compute_v_dama(
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
     batch_id: int =0,
     past_deltass: dict[str, torch.Tensor] = None,
-    value_at_mlp: bool = False
+    value_at_mlp: bool = False,
+    target_kl_regularization: bool = False
 ) -> Tuple[dict[str, torch.Tensor], dict[str, torch.Tensor]]:
     """
     Computes the contrast value vector (`he` - `she`)for the projecting update.
@@ -60,35 +73,34 @@ def compute_v_dama(
     lookup_idxs = []
     for rid, request in enumerate(request_batch):
         r_p = [context.format(request["prompt"]) for context in context_templates]
-        kl_p = ["<s> {} is a"]
+        kl_p = [tok.bos_token + " {} is a"]
+        kl_tgt_p = [tok.bos_token + " {}"] if target_kl_regularization and "tgt_prefix" in request else []
+
+        r_p_filled, r_p_lookup_idxs = populate_prompts(r_p, request["subject"], tok, hparams)
+        kl_p_filled, kl_p_lookup_idxs = populate_prompts(kl_p, request["subject"], tok, hparams)
+        if kl_tgt_p:
+            kl_tgt_p_filled, kl_tgt_p_lookup_idxs = populate_prompts(kl_tgt_p, request["tgt_prefix"], tok, hparams)
+        else:
+            kl_tgt_p_filled, kl_tgt_p_lookup_idxs = [], []
 
         rewriting_prompts.extend(r_p)
-        kl_prompts.extend(kl_p)
+        kl_prompts.extend(kl_p + kl_tgt_p)
 
-        rewriting_prompts_filled.extend([prompt.format(request["subject"]) for prompt in rewriting_prompts])
-        kl_prompts_filled.extend([prompt.format(request["subject"]) for prompt in kl_prompts])
+        rewriting_prompts_filled.extend(r_p_filled)
+        kl_prompts_filled.extend(kl_p_filled + kl_tgt_p_filled)
 
-        # Compute indices of the tokens where the fact is looked up
-        rewriting_prompts_lookup_idxs.extend([
-            find_fact_lookup_idx(
-                prompt, request["subject"], tok, hparams.fact_token, verbose=(i == 0)
-            ) for i, prompt in enumerate(r_p)
-        ])
-        kl_prompts_lookup_idxs.extend([
-            find_fact_lookup_idx(
-                prompt, request["subject"], tok, hparams.fact_token, verbose=False)
-            for prompt in kl_p
-        ])
+        rewriting_prompts_lookup_idxs.extend(r_p_lookup_idxs)
+        kl_prompts_lookup_idxs.extend(kl_p_lookup_idxs + kl_tgt_p_lookup_idxs)
 
         rewriting_prompts_ridxs.extend([rid] * len(r_p))
-        kl_prompts_ridxs.extend([rid] * len(kl_p))
+        kl_prompts_ridxs.extend([rid] * len(kl_p + kl_tgt_p))
         
         if "targets" in request:
             if '' in request["targets"].values():
                 raise ValueError(f"Empty target value found in request: {request}")
             
             # unk_token is used to strip prefix_underline
-            target_idss.extend([[tok(tok.unk_token + request["targets"][val], return_tensors="pt").to(device)["input_ids"][0][1:]
+            target_idss.extend([[tok(tok.bos_token + request["targets"][val], return_tensors="pt").to(device)["input_ids"][0][1:]
                                for val in polarity_values]] * len(r_p))
             targets_dict = request["targets"]
         else:
@@ -153,8 +165,8 @@ def compute_v_dama(
                 cur_out[i, idx, :] += (delta + delta_shared)
                 # cur_out[i, idx, :] += delta
         elif cur_layer == hparams.layer_module_tmp.format(layer) and not value_at_mlp:
-            
-            cur_out = (cur_out[0].to(device), tuple(co.to(device) for co  in cur_out[1]))
+
+            cur_out = (cur_out[0].to(device), cur_out[1])
             # Store initial value of the vector of interest
             if target_init is None:
                 print("Recording initial value of v*")

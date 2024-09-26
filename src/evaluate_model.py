@@ -58,6 +58,7 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--multilingual_training", type=bool, default=False)
+    parser.add_argument("--tgt_kl_reg", type=bool, default=False)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False)
     parser.add_argument("--mixed_update", type=bool, default=False)
@@ -88,6 +89,8 @@ if __name__ == "__main__":
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
         if args.multilingual_training:
             output_dir += "_multilingual"
+        if args.tgt_kl_reg:
+            output_dir += "_tgt_kl_reg"
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
@@ -96,6 +99,8 @@ if __name__ == "__main__":
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
         if args.multilingual_training:
             output_dir += "_multilingual"
+        if args.tgt_kl_reg:
+            output_dir += "_tgt_kl_reg"
         hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)

@@ -158,7 +158,8 @@ def apply_dama_to_model(
     output_dir=None,
     ncv=False,
     val=False,
-    use_neutral=False
+    use_neutral=False,
+    targer_kl_regularization=False
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
 
     """
@@ -220,7 +221,7 @@ def apply_dama_to_model(
     if len(projections) < len(hparams.layers) or projections_loadfrom is None:
         projections = execute_dama(model, tok, requests, hparams, ncv=ncv, val=val, use_neutral=use_neutral,
                                    projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-                                   old_projections=projections)
+                                   old_projections=projections, target_kl_regularization=targer_kl_regularization)
 
     if hparams.update == 'once':
         with torch.no_grad():
@@ -258,7 +259,8 @@ def execute_dama(
         use_neutral: bool = False,
         projections_loadfrom: str = None,
         projections_saveto: str = None,
-        old_projections: Dict = None
+        old_projections: Dict = None,
+        target_kl_regularization: bool = False
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]]:
     if "targets" in requests[0]:
         gender_values = list(requests[0]["targets"].keys())
@@ -323,7 +325,8 @@ def execute_dama(
                         device=cur_device,
                         batch_id=bidx,
                         past_deltass=past_deltas_normed if hparams.orthogonal_constraint else None,
-                        value_at_mlp=False
+                        value_at_mlp=False,
+                        target_kl_regularization=target_kl_regularization
                     )
                 for g_val in gender_values:
                     target_list[g_val].append(taregets[g_val])
@@ -380,7 +383,8 @@ def execute_dama(
                         device=cur_device,
                         batch_id=bidx,
                         past_deltass=past_deltas if hparams.orthogonal_constraint else None,
-                        value_at_mlp=True
+                        value_at_mlp=True,
+                        target_kl_regularization=target_kl_regularization
                     )
     
                     for g_val in gender_values:
