@@ -7,7 +7,8 @@
         ],
         "src_sentence": "I am a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Du bist Geschäftsführer",
@@ -17,7 +18,8 @@
         ],
         "src_sentence": "You are a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Sie sind Geschäftsführer",
@@ -27,7 +29,8 @@
         ],
         "src_sentence": "You are a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Ich werde Geschäftsführer",
@@ -37,7 +40,8 @@
         ],
         "src_sentence": "I will be a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Du wirst Geschäftsführer",
@@ -47,7 +51,8 @@
         ],
         "src_sentence": "You will be a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Sie werden Geschäftsführer",
@@ -57,7 +62,8 @@
         ],
         "src_sentence": "You will be a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Ich arbeite als Geschäftsführer",
@@ -67,7 +73,8 @@
         ],
         "src_sentence": "I work as a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Du arbeitest als Geschäftsführer",
@@ -77,7 +84,8 @@
         ],
         "src_sentence": "You work as a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Sie arbeiten als Geschäftsführer",
@@ -87,7 +95,8 @@
         ],
         "src_sentence": "You work as a CEO.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Ich bin Vorstandsvors",
@@ -97,7 +106,8 @@
         ],
         "src_sentence": "I am a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Du bist Vorstandsvors",
@@ -107,7 +117,8 @@
         ],
         "src_sentence": "You are a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Sie sind Vorstandsvors",
@@ -117,7 +128,8 @@
         ],
         "src_sentence": "You are a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Ich werde Vorstandsvors",
@@ -127,7 +139,8 @@
         ],
         "src_sentence": "I will be a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Du wirst Vorstandsvors",
@@ -137,7 +150,8 @@
         ],
         "src_sentence": "You will be a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Sie werden Vorstandsvors",
@@ -147,7 +161,8 @@
         ],
         "src_sentence": "You will be a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Ich arbeite als Vorstandsvors",
@@ -157,7 +172,8 @@
         ],
         "src_sentence": "I work as a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Du arbeitest als Vorstandsvors",
@@ -167,7 +183,8 @@
         ],
         "src_sentence": "You work as a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Sie arbeiten als Vorstandsvors",
@@ -177,7 +194,8 @@
         ],
         "src_sentence": "You work as a CEO.",
         "tgt_prefix": "Vorstandsvors",
-        "subject": "CEO"
+        "subject": "CEO",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Ich bin Buchhalter",
@@ -187,7 +205,8 @@
         ],
         "src_sentence": "I am an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Du bist Buchhalter",
@@ -197,7 +216,8 @@
         ],
         "src_sentence": "You are an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Sie sind Buchhalter",
@@ -207,7 +227,8 @@
         ],
         "src_sentence": "You are an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Ich werde Buchhalter",
@@ -217,7 +238,8 @@
         ],
         "src_sentence": "I will be an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Du wirst Buchhalter",
@@ -227,7 +249,8 @@
         ],
         "src_sentence": "You will be an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Sie werden Buchhalter",
@@ -237,7 +260,8 @@
         ],
         "src_sentence": "You will be an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Ich arbeite als Buchhalter",
@@ -247,7 +271,8 @@
         ],
         "src_sentence": "I work as an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Du arbeitest als Buchhalter",
@@ -257,7 +282,8 @@
         ],
         "src_sentence": "You work as an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Sie arbeiten als Buchhalter",
@@ -267,7 +293,8 @@
         ],
         "src_sentence": "You work as an accountant.",
         "tgt_prefix": "Buchhalter",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Ich bin Steuerberater",
@@ -277,7 +304,8 @@
         ],
         "src_sentence": "I am an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Du bist Steuerberater",
@@ -287,7 +315,8 @@
         ],
         "src_sentence": "You are an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Sie sind Steuerberater",
@@ -297,7 +326,8 @@
         ],
         "src_sentence": "You are an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Ich werde Steuerberater",
@@ -307,7 +337,8 @@
         ],
         "src_sentence": "I will be an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Du wirst Steuerberater",
@@ -317,7 +348,8 @@
         ],
         "src_sentence": "You will be an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Sie werden Steuerberater",
@@ -327,7 +359,8 @@
         ],
         "src_sentence": "You will be an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Ich arbeite als Steuerberater",
@@ -337,7 +370,8 @@
         ],
         "src_sentence": "I work as an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Du arbeitest als Steuerberater",
@@ -347,7 +381,8 @@
         ],
         "src_sentence": "You work as an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Sie arbeiten als Steuerberater",
@@ -357,7 +392,8 @@
         ],
         "src_sentence": "You work as an accountant.",
         "tgt_prefix": "Steuerberater",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Ich bin Wirtschaftsprüfer",
@@ -367,7 +403,8 @@
         ],
         "src_sentence": "I am an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Du bist Wirtschaftsprüfer",
@@ -377,7 +414,8 @@
         ],
         "src_sentence": "You are an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Sie sind Wirtschaftsprüfer",
@@ -387,7 +425,8 @@
         ],
         "src_sentence": "You are an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Ich werde Wirtschaftsprüfer",
@@ -397,7 +436,8 @@
         ],
         "src_sentence": "I will be an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Du wirst Wirtschaftsprüfer",
@@ -407,7 +447,8 @@
         ],
         "src_sentence": "You will be an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Sie werden Wirtschaftsprüfer",
@@ -417,7 +458,8 @@
         ],
         "src_sentence": "You will be an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Ich arbeite als Wirtschaftsprüfer",
@@ -427,7 +469,8 @@
         ],
         "src_sentence": "I work as an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Du arbeitest als Wirtschaftsprüfer",
@@ -437,7 +480,8 @@
         ],
         "src_sentence": "You work as an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Sie arbeiten als Wirtschaftsprüfer",
@@ -447,7 +491,8 @@
         ],
         "src_sentence": "You work as an accountant.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "accountant"
+        "subject": "accountant",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Ich bin Analyst",
@@ -457,7 +502,8 @@
         ],
         "src_sentence": "I am an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Du bist Analyst",
@@ -467,7 +513,8 @@
         ],
         "src_sentence": "You are an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Sie sind Analyst",
@@ -477,7 +524,8 @@
         ],
         "src_sentence": "You are an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Ich werde Analyst",
@@ -487,7 +535,8 @@
         ],
         "src_sentence": "I will be an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Du wirst Analyst",
@@ -497,7 +546,8 @@
         ],
         "src_sentence": "You will be an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Sie werden Analyst",
@@ -507,7 +557,8 @@
         ],
         "src_sentence": "You will be an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Ich arbeite als Analyst",
@@ -517,7 +568,8 @@
         ],
         "src_sentence": "I work as an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Du arbeitest als Analyst",
@@ -527,7 +579,8 @@
         ],
         "src_sentence": "You work as an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Sie arbeiten als Analyst",
@@ -537,7 +590,8 @@
         ],
         "src_sentence": "You work as an analyst.",
         "tgt_prefix": "Analyst",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Ich bin Analytiker",
@@ -547,7 +601,8 @@
         ],
         "src_sentence": "I am an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Du bist Analytiker",
@@ -557,7 +612,8 @@
         ],
         "src_sentence": "You are an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Sie sind Analytiker",
@@ -567,7 +623,8 @@
         ],
         "src_sentence": "You are an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Ich werde Analytiker",
@@ -577,7 +634,8 @@
         ],
         "src_sentence": "I will be an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Du wirst Analytiker",
@@ -587,7 +645,8 @@
         ],
         "src_sentence": "You will be an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Sie werden Analytiker",
@@ -597,7 +656,8 @@
         ],
         "src_sentence": "You will be an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Ich arbeite als Analytiker",
@@ -607,7 +667,8 @@
         ],
         "src_sentence": "I work as an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Du arbeitest als Analytiker",
@@ -617,7 +678,8 @@
         ],
         "src_sentence": "You work as an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Sie arbeiten als Analytiker",
@@ -627,7 +689,8 @@
         ],
         "src_sentence": "You work as an analyst.",
         "tgt_prefix": "Analytiker",
-        "subject": "analyst"
+        "subject": "analyst",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Ich bin Assistent",
@@ -637,7 +700,8 @@
         ],
         "src_sentence": "I am an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Du bist Assistent",
@@ -647,7 +711,8 @@
         ],
         "src_sentence": "You are an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Sie sind Assistent",
@@ -657,7 +722,8 @@
         ],
         "src_sentence": "You are an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Ich werde Assistent",
@@ -667,7 +733,8 @@
         ],
         "src_sentence": "I will be an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Du wirst Assistent",
@@ -677,7 +744,8 @@
         ],
         "src_sentence": "You will be an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Sie werden Assistent",
@@ -687,7 +755,8 @@
         ],
         "src_sentence": "You will be an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Ich arbeite als Assistent",
@@ -697,7 +766,8 @@
         ],
         "src_sentence": "I work as an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Du arbeitest als Assistent",
@@ -707,7 +777,8 @@
         ],
         "src_sentence": "You work as an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Sie arbeiten als Assistent",
@@ -717,7 +788,8 @@
         ],
         "src_sentence": "You work as an assistant.",
         "tgt_prefix": "Assistent",
-        "subject": "assistant"
+        "subject": "assistant",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Ich bin Begleiter",
@@ -727,7 +799,8 @@
         ],
         "src_sentence": "I am an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Du bist Begleiter",
@@ -737,7 +810,8 @@
         ],
         "src_sentence": "You are an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Sie sind Begleiter",
@@ -747,7 +821,8 @@
         ],
         "src_sentence": "You are an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Ich werde Begleiter",
@@ -757,7 +832,8 @@
         ],
         "src_sentence": "I will be an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Du wirst Begleiter",
@@ -767,7 +843,8 @@
         ],
         "src_sentence": "You will be an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Sie werden Begleiter",
@@ -777,7 +854,8 @@
         ],
         "src_sentence": "You will be an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Ich arbeite als Begleiter",
@@ -787,7 +865,8 @@
         ],
         "src_sentence": "I work as an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Du arbeitest als Begleiter",
@@ -797,7 +876,8 @@
         ],
         "src_sentence": "You work as an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Sie arbeiten als Begleiter",
@@ -807,7 +887,8 @@
         ],
         "src_sentence": "You work as an attendant.",
         "tgt_prefix": "Begleiter",
-        "subject": "attendant"
+        "subject": "attendant",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Ich bin Wirtschaftsprüfer",
@@ -817,7 +898,8 @@
         ],
         "src_sentence": "I am an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Du bist Wirtschaftsprüfer",
@@ -827,7 +909,8 @@
         ],
         "src_sentence": "You are an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Sie sind Wirtschaftsprüfer",
@@ -837,7 +920,8 @@
         ],
         "src_sentence": "You are an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Ich werde Wirtschaftsprüfer",
@@ -847,7 +931,8 @@
         ],
         "src_sentence": "I will be an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Du wirst Wirtschaftsprüfer",
@@ -857,7 +942,8 @@
         ],
         "src_sentence": "You will be an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Sie werden Wirtschaftsprüfer",
@@ -867,7 +953,8 @@
         ],
         "src_sentence": "You will be an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Ich arbeite als Wirtschaftsprüfer",
@@ -877,7 +964,8 @@
         ],
         "src_sentence": "I work as an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Du arbeitest als Wirtschaftsprüfer",
@@ -887,7 +975,8 @@
         ],
         "src_sentence": "You work as an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Sie arbeiten als Wirtschaftsprüfer",
@@ -897,7 +986,8 @@
         ],
         "src_sentence": "You work as an auditor.",
         "tgt_prefix": "Wirtschaftsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Ich bin Prüfer",
@@ -907,7 +997,8 @@
         ],
         "src_sentence": "I am an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Du bist Prüfer",
@@ -917,7 +1008,8 @@
         ],
         "src_sentence": "You are an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Sie sind Prüfer",
@@ -927,7 +1019,8 @@
         ],
         "src_sentence": "You are an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Ich werde Prüfer",
@@ -937,7 +1030,8 @@
         ],
         "src_sentence": "I will be an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Du wirst Prüfer",
@@ -947,7 +1041,8 @@
         ],
         "src_sentence": "You will be an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Sie werden Prüfer",
@@ -957,7 +1052,8 @@
         ],
         "src_sentence": "You will be an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Ich arbeite als Prüfer",
@@ -967,7 +1063,8 @@
         ],
         "src_sentence": "I work as an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Du arbeitest als Prüfer",
@@ -977,7 +1074,8 @@
         ],
         "src_sentence": "You work as an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Sie arbeiten als Prüfer",
@@ -987,7 +1085,8 @@
         ],
         "src_sentence": "You work as an auditor.",
         "tgt_prefix": "Prüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Ich bin Rechnungsprüfer",
@@ -997,7 +1096,8 @@
         ],
         "src_sentence": "I am an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Du bist Rechnungsprüfer",
@@ -1007,7 +1107,8 @@
         ],
         "src_sentence": "You are an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Sie sind Rechnungsprüfer",
@@ -1017,7 +1118,8 @@
         ],
         "src_sentence": "You are an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Ich werde Rechnungsprüfer",
@@ -1027,7 +1129,8 @@
         ],
         "src_sentence": "I will be an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Du wirst Rechnungsprüfer",
@@ -1037,7 +1140,8 @@
         ],
         "src_sentence": "You will be an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Sie werden Rechnungsprüfer",
@@ -1047,7 +1151,8 @@
         ],
         "src_sentence": "You will be an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Ich arbeite als Rechnungsprüfer",
@@ -1057,7 +1162,8 @@
         ],
         "src_sentence": "I work as an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Du arbeitest als Rechnungsprüfer",
@@ -1067,7 +1173,8 @@
         ],
         "src_sentence": "You work as an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Sie arbeiten als Rechnungsprüfer",
@@ -1077,7 +1184,8 @@
         ],
         "src_sentence": "You work as an auditor.",
         "tgt_prefix": "Rechnungsprüfer",
-        "subject": "auditor"
+        "subject": "auditor",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Ich bin Bäcker",
@@ -1087,7 +1195,8 @@
         ],
         "src_sentence": "I am a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Du bist Bäcker",
@@ -1097,7 +1206,8 @@
         ],
         "src_sentence": "You are a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Sie sind Bäcker",
@@ -1107,7 +1217,8 @@
         ],
         "src_sentence": "You are a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Ich werde Bäcker",
@@ -1117,7 +1228,8 @@
         ],
         "src_sentence": "I will be a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Du wirst Bäcker",
@@ -1127,7 +1239,8 @@
         ],
         "src_sentence": "You will be a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Sie werden Bäcker",
@@ -1137,7 +1250,8 @@
         ],
         "src_sentence": "You will be a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Ich arbeite als Bäcker",
@@ -1147,7 +1261,8 @@
         ],
         "src_sentence": "I work as a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Du arbeitest als Bäcker",
@@ -1157,7 +1272,8 @@
         ],
         "src_sentence": "You work as a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Sie arbeiten als Bäcker",
@@ -1167,7 +1283,8 @@
         ],
         "src_sentence": "You work as a baker.",
         "tgt_prefix": "Bäcker",
-        "subject": "baker"
+        "subject": "baker",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Ich bin Schreiner",
@@ -1177,7 +1294,8 @@
         ],
         "src_sentence": "I am a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Du bist Schreiner",
@@ -1187,7 +1305,8 @@
         ],
         "src_sentence": "You are a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Sie sind Schreiner",
@@ -1197,7 +1316,8 @@
         ],
         "src_sentence": "You are a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Ich werde Schreiner",
@@ -1207,7 +1327,8 @@
         ],
         "src_sentence": "I will be a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Du wirst Schreiner",
@@ -1217,7 +1338,8 @@
         ],
         "src_sentence": "You will be a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Sie werden Schreiner",
@@ -1227,7 +1349,8 @@
         ],
         "src_sentence": "You will be a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Ich arbeite als Schreiner",
@@ -1237,7 +1360,8 @@
         ],
         "src_sentence": "I work as a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Du arbeitest als Schreiner",
@@ -1247,7 +1371,8 @@
         ],
         "src_sentence": "You work as a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Sie arbeiten als Schreiner",
@@ -1257,7 +1382,8 @@
         ],
         "src_sentence": "You work as a carpenter.",
         "tgt_prefix": "Schreiner",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Ich bin Tischler",
@@ -1267,7 +1393,8 @@
         ],
         "src_sentence": "I am a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Du bist Tischler",
@@ -1277,7 +1404,8 @@
         ],
         "src_sentence": "You are a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Sie sind Tischler",
@@ -1287,7 +1415,8 @@
         ],
         "src_sentence": "You are a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Ich werde Tischler",
@@ -1297,7 +1426,8 @@
         ],
         "src_sentence": "I will be a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Du wirst Tischler",
@@ -1307,7 +1437,8 @@
         ],
         "src_sentence": "You will be a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Sie werden Tischler",
@@ -1317,7 +1448,8 @@
         ],
         "src_sentence": "You will be a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Ich arbeite als Tischler",
@@ -1327,7 +1459,8 @@
         ],
         "src_sentence": "I work as a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Du arbeitest als Tischler",
@@ -1337,7 +1470,8 @@
         ],
         "src_sentence": "You work as a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Sie arbeiten als Tischler",
@@ -1347,7 +1481,8 @@
         ],
         "src_sentence": "You work as a carpenter.",
         "tgt_prefix": "Tischler",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Ich bin Zimmerer",
@@ -1357,7 +1492,8 @@
         ],
         "src_sentence": "I am a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Du bist Zimmerer",
@@ -1367,7 +1503,8 @@
         ],
         "src_sentence": "You are a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Sie sind Zimmerer",
@@ -1377,7 +1514,8 @@
         ],
         "src_sentence": "You are a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Ich werde Zimmerer",
@@ -1387,7 +1525,8 @@
         ],
         "src_sentence": "I will be a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Du wirst Zimmerer",
@@ -1397,7 +1536,8 @@
         ],
         "src_sentence": "You will be a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Sie werden Zimmerer",
@@ -1407,7 +1547,8 @@
         ],
         "src_sentence": "You will be a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Ich arbeite als Zimmerer",
@@ -1417,7 +1558,8 @@
         ],
         "src_sentence": "I work as a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Du arbeitest als Zimmerer",
@@ -1427,7 +1569,8 @@
         ],
         "src_sentence": "You work as a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Sie arbeiten als Zimmerer",
@@ -1437,7 +1580,8 @@
         ],
         "src_sentence": "You work as a carpenter.",
         "tgt_prefix": "Zimmerer",
-        "subject": "carpenter"
+        "subject": "carpenter",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Ich bin Kassierer",
@@ -1447,7 +1591,8 @@
         ],
         "src_sentence": "I am a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Du bist Kassierer",
@@ -1457,7 +1602,8 @@
         ],
         "src_sentence": "You are a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Sie sind Kassierer",
@@ -1467,7 +1613,8 @@
         ],
         "src_sentence": "You are a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Ich werde Kassierer",
@@ -1477,7 +1624,8 @@
         ],
         "src_sentence": "I will be a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Du wirst Kassierer",
@@ -1487,7 +1635,8 @@
         ],
         "src_sentence": "You will be a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Sie werden Kassierer",
@@ -1497,7 +1646,8 @@
         ],
         "src_sentence": "You will be a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Ich arbeite als Kassierer",
@@ -1507,7 +1657,8 @@
         ],
         "src_sentence": "I work as a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Du arbeitest als Kassierer",
@@ -1517,7 +1668,8 @@
         ],
         "src_sentence": "You work as a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Sie arbeiten als Kassierer",
@@ -1527,7 +1679,8 @@
         ],
         "src_sentence": "You work as a cashier.",
         "tgt_prefix": "Kassierer",
-        "subject": "cashier"
+        "subject": "cashier",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Ich bin Che",
@@ -1537,7 +1690,8 @@
         ],
         "src_sentence": "I am a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Du bist Che",
@@ -1547,7 +1701,8 @@
         ],
         "src_sentence": "You are a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Sie sind Che",
@@ -1557,7 +1712,8 @@
         ],
         "src_sentence": "You are a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Ich werde Che",
@@ -1567,7 +1723,8 @@
         ],
         "src_sentence": "I will be a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Du wirst Che",
@@ -1577,7 +1734,8 @@
         ],
         "src_sentence": "You will be a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Sie werden Che",
@@ -1587,7 +1745,8 @@
         ],
         "src_sentence": "You will be a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Ich arbeite als Che",
@@ -1597,7 +1756,8 @@
         ],
         "src_sentence": "I work as a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Du arbeitest als Che",
@@ -1607,7 +1767,8 @@
         ],
         "src_sentence": "You work as a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Sie arbeiten als Che",
@@ -1617,7 +1778,8 @@
         ],
         "src_sentence": "You work as a chief.",
         "tgt_prefix": "Che",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Ich bin Leiter",
@@ -1627,7 +1789,8 @@
         ],
         "src_sentence": "I am a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Du bist Leiter",
@@ -1637,7 +1800,8 @@
         ],
         "src_sentence": "You are a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Sie sind Leiter",
@@ -1647,7 +1811,8 @@
         ],
         "src_sentence": "You are a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Ich werde Leiter",
@@ -1657,7 +1822,8 @@
         ],
         "src_sentence": "I will be a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Du wirst Leiter",
@@ -1667,7 +1833,8 @@
         ],
         "src_sentence": "You will be a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Sie werden Leiter",
@@ -1677,7 +1844,8 @@
         ],
         "src_sentence": "You will be a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Ich arbeite als Leiter",
@@ -1687,7 +1855,8 @@
         ],
         "src_sentence": "I work as a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Du arbeitest als Leiter",
@@ -1697,7 +1866,8 @@
         ],
         "src_sentence": "You work as a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Sie arbeiten als Leiter",
@@ -1707,7 +1877,8 @@
         ],
         "src_sentence": "You work as a chief.",
         "tgt_prefix": "Leiter",
-        "subject": "chief"
+        "subject": "chief",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Ich bin Putz",
@@ -1717,7 +1888,8 @@
         ],
         "src_sentence": "I am a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Du bist Putz",
@@ -1727,7 +1899,8 @@
         ],
         "src_sentence": "You are a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Sie sind Putz",
@@ -1737,7 +1910,8 @@
         ],
         "src_sentence": "You are a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Ich werde Putz",
@@ -1747,7 +1921,8 @@
         ],
         "src_sentence": "I will be a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Du wirst Putz",
@@ -1757,7 +1932,8 @@
         ],
         "src_sentence": "You will be a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Sie werden Putz",
@@ -1767,7 +1943,8 @@
         ],
         "src_sentence": "You will be a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Ich arbeite als Putz",
@@ -1777,7 +1954,8 @@
         ],
         "src_sentence": "I work as a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Du arbeitest als Putz",
@@ -1787,7 +1965,8 @@
         ],
         "src_sentence": "You work as a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Sie arbeiten als Putz",
@@ -1797,7 +1976,8 @@
         ],
         "src_sentence": "You work as a cleaner.",
         "tgt_prefix": "Putz",
-        "subject": "cleaner"
+        "subject": "cleaner",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Ich bin Angestell",
@@ -1807,7 +1987,8 @@
         ],
         "src_sentence": "I am a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Du bist Angestell",
@@ -1817,7 +1998,8 @@
         ],
         "src_sentence": "You are a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Sie sind Angestell",
@@ -1827,7 +2009,8 @@
         ],
         "src_sentence": "You are a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Ich werde Angestell",
@@ -1837,7 +2020,8 @@
         ],
         "src_sentence": "I will be a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Du wirst Angestell",
@@ -1847,7 +2031,8 @@
         ],
         "src_sentence": "You will be a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Sie werden Angestell",
@@ -1857,7 +2042,8 @@
         ],
         "src_sentence": "You will be a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Ich arbeite als Angestell",
@@ -1867,7 +2053,8 @@
         ],
         "src_sentence": "I work as a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Du arbeitest als Angestell",
@@ -1877,7 +2064,8 @@
         ],
         "src_sentence": "You work as a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Sie arbeiten als Angestell",
@@ -1887,7 +2075,8 @@
         ],
         "src_sentence": "You work as a clerk.",
         "tgt_prefix": "Angestell",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Vorgesetz"
     },
     {
         "prompt": "Ich bin Sachbearbeiter",
@@ -1897,7 +2086,8 @@
         ],
         "src_sentence": "I am a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Du bist Sachbearbeiter",
@@ -1907,7 +2097,8 @@
         ],
         "src_sentence": "You are a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Sie sind Sachbearbeiter",
@@ -1917,7 +2108,8 @@
         ],
         "src_sentence": "You are a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Ich werde Sachbearbeiter",
@@ -1927,7 +2119,8 @@
         ],
         "src_sentence": "I will be a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Du wirst Sachbearbeiter",
@@ -1937,7 +2130,8 @@
         ],
         "src_sentence": "You will be a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Sie werden Sachbearbeiter",
@@ -1947,7 +2141,8 @@
         ],
         "src_sentence": "You will be a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Ich arbeite als Sachbearbeiter",
@@ -1957,7 +2152,8 @@
         ],
         "src_sentence": "I work as a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Du arbeitest als Sachbearbeiter",
@@ -1967,7 +2163,8 @@
         ],
         "src_sentence": "You work as a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Sie arbeiten als Sachbearbeiter",
@@ -1977,7 +2174,8 @@
         ],
         "src_sentence": "You work as a clerk.",
         "tgt_prefix": "Sachbearbeiter",
-        "subject": "clerk"
+        "subject": "clerk",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Ich bin Bauarbeiter",
@@ -1987,7 +2185,8 @@
         ],
         "src_sentence": "I am a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Du bist Bauarbeiter",
@@ -1997,7 +2196,8 @@
         ],
         "src_sentence": "You are a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Sie sind Bauarbeiter",
@@ -2007,7 +2207,8 @@
         ],
         "src_sentence": "You are a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Ich werde Bauarbeiter",
@@ -2017,7 +2218,8 @@
         ],
         "src_sentence": "I will be a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Du wirst Bauarbeiter",
@@ -2027,7 +2229,8 @@
         ],
         "src_sentence": "You will be a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Sie werden Bauarbeiter",
@@ -2037,7 +2240,8 @@
         ],
         "src_sentence": "You will be a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Ich arbeite als Bauarbeiter",
@@ -2047,7 +2251,8 @@
         ],
         "src_sentence": "I work as a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Du arbeitest als Bauarbeiter",
@@ -2057,7 +2262,8 @@
         ],
         "src_sentence": "You work as a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Sie arbeiten als Bauarbeiter",
@@ -2067,7 +2273,8 @@
         ],
         "src_sentence": "You work as a construction worker.",
         "tgt_prefix": "Bauarbeiter",
-        "subject": "construction worker"
+        "subject": "construction worker",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Ich bin Berater",
@@ -2077,7 +2284,8 @@
         ],
         "src_sentence": "I am a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Du bist Berater",
@@ -2087,7 +2295,8 @@
         ],
         "src_sentence": "You are a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Sie sind Berater",
@@ -2097,7 +2306,8 @@
         ],
         "src_sentence": "You are a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Ich werde Berater",
@@ -2107,7 +2317,8 @@
         ],
         "src_sentence": "I will be a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Du wirst Berater",
@@ -2117,7 +2328,8 @@
         ],
         "src_sentence": "You will be a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Sie werden Berater",
@@ -2127,7 +2339,8 @@
         ],
         "src_sentence": "You will be a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Ich arbeite als Berater",
@@ -2137,7 +2350,8 @@
         ],
         "src_sentence": "I work as a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Du arbeitest als Berater",
@@ -2147,7 +2361,8 @@
         ],
         "src_sentence": "You work as a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Sie arbeiten als Berater",
@@ -2157,7 +2372,8 @@
         ],
         "src_sentence": "You work as a counselor.",
         "tgt_prefix": "Berater",
-        "subject": "counselor"
+        "subject": "counselor",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Ich bin Designer",
@@ -2167,7 +2383,8 @@
         ],
         "src_sentence": "I am a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Du bist Designer",
@@ -2177,7 +2394,8 @@
         ],
         "src_sentence": "You are a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Sie sind Designer",
@@ -2187,7 +2405,8 @@
         ],
         "src_sentence": "You are a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Ich werde Designer",
@@ -2197,7 +2416,8 @@
         ],
         "src_sentence": "I will be a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Du wirst Designer",
@@ -2207,7 +2427,8 @@
         ],
         "src_sentence": "You will be a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Sie werden Designer",
@@ -2217,7 +2438,8 @@
         ],
         "src_sentence": "You will be a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Ich arbeite als Designer",
@@ -2227,7 +2449,8 @@
         ],
         "src_sentence": "I work as a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Du arbeitest als Designer",
@@ -2237,7 +2460,8 @@
         ],
         "src_sentence": "You work as a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Sie arbeiten als Designer",
@@ -2247,7 +2471,8 @@
         ],
         "src_sentence": "You work as a designer.",
         "tgt_prefix": "Designer",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Ich bin Gestalter",
@@ -2257,7 +2482,8 @@
         ],
         "src_sentence": "I am a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Du bist Gestalter",
@@ -2267,7 +2493,8 @@
         ],
         "src_sentence": "You are a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Sie sind Gestalter",
@@ -2277,7 +2504,8 @@
         ],
         "src_sentence": "You are a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Ich werde Gestalter",
@@ -2287,7 +2515,8 @@
         ],
         "src_sentence": "I will be a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Du wirst Gestalter",
@@ -2297,7 +2526,8 @@
         ],
         "src_sentence": "You will be a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Sie werden Gestalter",
@@ -2307,7 +2537,8 @@
         ],
         "src_sentence": "You will be a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Ich arbeite als Gestalter",
@@ -2317,7 +2548,8 @@
         ],
         "src_sentence": "I work as a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Du arbeitest als Gestalter",
@@ -2327,7 +2559,8 @@
         ],
         "src_sentence": "You work as a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Sie arbeiten als Gestalter",
@@ -2337,7 +2570,8 @@
         ],
         "src_sentence": "You work as a designer.",
         "tgt_prefix": "Gestalter",
-        "subject": "designer"
+        "subject": "designer",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Ich bin Entwickler",
@@ -2347,7 +2581,8 @@
         ],
         "src_sentence": "I am a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Du bist Entwickler",
@@ -2357,7 +2592,8 @@
         ],
         "src_sentence": "You are a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Sie sind Entwickler",
@@ -2367,7 +2603,8 @@
         ],
         "src_sentence": "You are a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Ich werde Entwickler",
@@ -2377,7 +2614,8 @@
         ],
         "src_sentence": "I will be a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Du wirst Entwickler",
@@ -2387,7 +2625,8 @@
         ],
         "src_sentence": "You will be a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Sie werden Entwickler",
@@ -2397,7 +2636,8 @@
         ],
         "src_sentence": "You will be a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Ich arbeite als Entwickler",
@@ -2407,7 +2647,8 @@
         ],
         "src_sentence": "I work as a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Du arbeitest als Entwickler",
@@ -2417,7 +2658,8 @@
         ],
         "src_sentence": "You work as a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Sie arbeiten als Entwickler",
@@ -2427,7 +2669,8 @@
         ],
         "src_sentence": "You work as a developer.",
         "tgt_prefix": "Entwickler",
-        "subject": "developer"
+        "subject": "developer",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Ich bin Fahrer",
@@ -2437,7 +2680,8 @@
         ],
         "src_sentence": "I am a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Du bist Fahrer",
@@ -2447,7 +2691,8 @@
         ],
         "src_sentence": "You are a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Sie sind Fahrer",
@@ -2457,7 +2702,8 @@
         ],
         "src_sentence": "You are a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Ich werde Fahrer",
@@ -2467,7 +2713,8 @@
         ],
         "src_sentence": "I will be a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Du wirst Fahrer",
@@ -2477,7 +2724,8 @@
         ],
         "src_sentence": "You will be a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Sie werden Fahrer",
@@ -2487,7 +2735,8 @@
         ],
         "src_sentence": "You will be a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Ich arbeite als Fahrer",
@@ -2497,7 +2746,8 @@
         ],
         "src_sentence": "I work as a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Du arbeitest als Fahrer",
@@ -2507,7 +2757,8 @@
         ],
         "src_sentence": "You work as a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Sie arbeiten als Fahrer",
@@ -2517,7 +2768,8 @@
         ],
         "src_sentence": "You work as a driver.",
         "tgt_prefix": "Fahrer",
-        "subject": "driver"
+        "subject": "driver",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Ich bin Herausgeber",
@@ -2527,7 +2779,8 @@
         ],
         "src_sentence": "I am an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Du bist Herausgeber",
@@ -2537,7 +2790,8 @@
         ],
         "src_sentence": "You are an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Sie sind Herausgeber",
@@ -2547,7 +2801,8 @@
         ],
         "src_sentence": "You are an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Ich werde Herausgeber",
@@ -2557,7 +2812,8 @@
         ],
         "src_sentence": "I will be an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Du wirst Herausgeber",
@@ -2567,7 +2823,8 @@
         ],
         "src_sentence": "You will be an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Sie werden Herausgeber",
@@ -2577,7 +2834,8 @@
         ],
         "src_sentence": "You will be an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Ich arbeite als Herausgeber",
@@ -2587,7 +2845,8 @@
         ],
         "src_sentence": "I work as an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Du arbeitest als Herausgeber",
@@ -2597,7 +2856,8 @@
         ],
         "src_sentence": "You work as an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Sie arbeiten als Herausgeber",
@@ -2607,7 +2867,8 @@
         ],
         "src_sentence": "You work as an editor.",
         "tgt_prefix": "Herausgeber",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Ich bin Redakteur",
@@ -2617,7 +2878,8 @@
         ],
         "src_sentence": "I am an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Du bist Redakteur",
@@ -2627,7 +2889,8 @@
         ],
         "src_sentence": "You are an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Sie sind Redakteur",
@@ -2637,7 +2900,8 @@
         ],
         "src_sentence": "You are an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Ich werde Redakteur",
@@ -2647,7 +2911,8 @@
         ],
         "src_sentence": "I will be an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Du wirst Redakteur",
@@ -2657,7 +2922,8 @@
         ],
         "src_sentence": "You will be an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Sie werden Redakteur",
@@ -2667,7 +2933,8 @@
         ],
         "src_sentence": "You will be an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Ich arbeite als Redakteur",
@@ -2677,7 +2944,8 @@
         ],
         "src_sentence": "I work as an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Du arbeitest als Redakteur",
@@ -2687,7 +2955,8 @@
         ],
         "src_sentence": "You work as an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Sie arbeiten als Redakteur",
@@ -2697,7 +2966,8 @@
         ],
         "src_sentence": "You work as an editor.",
         "tgt_prefix": "Redakteur",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Ich bin Lektor",
@@ -2707,7 +2977,8 @@
         ],
         "src_sentence": "I am an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Du bist Lektor",
@@ -2717,7 +2988,8 @@
         ],
         "src_sentence": "You are an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Sie sind Lektor",
@@ -2727,7 +2999,8 @@
         ],
         "src_sentence": "You are an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Ich werde Lektor",
@@ -2737,7 +3010,8 @@
         ],
         "src_sentence": "I will be an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Du wirst Lektor",
@@ -2747,7 +3021,8 @@
         ],
         "src_sentence": "You will be an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Sie werden Lektor",
@@ -2757,7 +3032,8 @@
         ],
         "src_sentence": "You will be an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Ich arbeite als Lektor",
@@ -2767,7 +3043,8 @@
         ],
         "src_sentence": "I work as an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Du arbeitest als Lektor",
@@ -2777,7 +3054,8 @@
         ],
         "src_sentence": "You work as an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Sie arbeiten als Lektor",
@@ -2787,7 +3065,8 @@
         ],
         "src_sentence": "You work as an editor.",
         "tgt_prefix": "Lektor",
-        "subject": "editor"
+        "subject": "editor",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Ich bin Landwirt",
@@ -2797,7 +3076,8 @@
         ],
         "src_sentence": "I am a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Du bist Landwirt",
@@ -2807,7 +3087,8 @@
         ],
         "src_sentence": "You are a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Sie sind Landwirt",
@@ -2817,7 +3098,8 @@
         ],
         "src_sentence": "You are a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Ich werde Landwirt",
@@ -2827,7 +3109,8 @@
         ],
         "src_sentence": "I will be a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Du wirst Landwirt",
@@ -2837,7 +3120,8 @@
         ],
         "src_sentence": "You will be a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Sie werden Landwirt",
@@ -2847,7 +3131,8 @@
         ],
         "src_sentence": "You will be a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Ich arbeite als Landwirt",
@@ -2857,7 +3142,8 @@
         ],
         "src_sentence": "I work as a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Du arbeitest als Landwirt",
@@ -2867,7 +3153,8 @@
         ],
         "src_sentence": "You work as a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Sie arbeiten als Landwirt",
@@ -2877,7 +3164,8 @@
         ],
         "src_sentence": "You work as a farmer.",
         "tgt_prefix": "Landwirt",
-        "subject": "farmer"
+        "subject": "farmer",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Ich bin Wächter",
@@ -2887,7 +3175,8 @@
         ],
         "src_sentence": "I am a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Du bist Wächter",
@@ -2897,7 +3186,8 @@
         ],
         "src_sentence": "You are a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Sie sind Wächter",
@@ -2907,7 +3197,8 @@
         ],
         "src_sentence": "You are a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Ich werde Wächter",
@@ -2917,7 +3208,8 @@
         ],
         "src_sentence": "I will be a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Du wirst Wächter",
@@ -2927,7 +3219,8 @@
         ],
         "src_sentence": "You will be a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Sie werden Wächter",
@@ -2937,7 +3230,8 @@
         ],
         "src_sentence": "You will be a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Ich arbeite als Wächter",
@@ -2947,7 +3241,8 @@
         ],
         "src_sentence": "I work as a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Du arbeitest als Wächter",
@@ -2957,7 +3252,8 @@
         ],
         "src_sentence": "You work as a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Sie arbeiten als Wächter",
@@ -2967,7 +3263,8 @@
         ],
         "src_sentence": "You work as a guard.",
         "tgt_prefix": "Wächter",
-        "subject": "guard"
+        "subject": "guard",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Ich bin Friseur",
@@ -2977,7 +3274,8 @@
         ],
         "src_sentence": "I am a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Du bist Friseur",
@@ -2987,7 +3285,8 @@
         ],
         "src_sentence": "You are a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Sie sind Friseur",
@@ -2997,7 +3296,8 @@
         ],
         "src_sentence": "You are a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Ich werde Friseur",
@@ -3007,7 +3307,8 @@
         ],
         "src_sentence": "I will be a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Du wirst Friseur",
@@ -3017,7 +3318,8 @@
         ],
         "src_sentence": "You will be a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Sie werden Friseur",
@@ -3027,7 +3329,8 @@
         ],
         "src_sentence": "You will be a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Ich arbeite als Friseur",
@@ -3037,7 +3340,8 @@
         ],
         "src_sentence": "I work as a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Du arbeitest als Friseur",
@@ -3047,7 +3351,8 @@
         ],
         "src_sentence": "You work as a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Sie arbeiten als Friseur",
@@ -3057,7 +3362,8 @@
         ],
         "src_sentence": "You work as a hairdresser.",
         "tgt_prefix": "Friseur",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Ich bin Frisör",
@@ -3067,7 +3373,8 @@
         ],
         "src_sentence": "I am a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Du bist Frisör",
@@ -3077,7 +3384,8 @@
         ],
         "src_sentence": "You are a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Sie sind Frisör",
@@ -3087,7 +3395,8 @@
         ],
         "src_sentence": "You are a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Ich werde Frisör",
@@ -3097,7 +3406,8 @@
         ],
         "src_sentence": "I will be a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Du wirst Frisör",
@@ -3107,7 +3417,8 @@
         ],
         "src_sentence": "You will be a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Sie werden Frisör",
@@ -3117,7 +3428,8 @@
         ],
         "src_sentence": "You will be a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Ich arbeite als Frisör",
@@ -3127,7 +3439,8 @@
         ],
         "src_sentence": "I work as a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Du arbeitest als Frisör",
@@ -3137,7 +3450,8 @@
         ],
         "src_sentence": "You work as a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Sie arbeiten als Frisör",
@@ -3147,7 +3461,8 @@
         ],
         "src_sentence": "You work as a hairdresser.",
         "tgt_prefix": "Frisör",
-        "subject": "hairdresser"
+        "subject": "hairdresser",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Ich bin Haushälter",
@@ -3157,7 +3472,8 @@
         ],
         "src_sentence": "I am a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Du bist Haushälter",
@@ -3167,7 +3483,8 @@
         ],
         "src_sentence": "You are a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Sie sind Haushälter",
@@ -3177,7 +3494,8 @@
         ],
         "src_sentence": "You are a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Ich werde Haushälter",
@@ -3187,7 +3505,8 @@
         ],
         "src_sentence": "I will be a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Du wirst Haushälter",
@@ -3197,7 +3516,8 @@
         ],
         "src_sentence": "You will be a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Sie werden Haushälter",
@@ -3207,7 +3527,8 @@
         ],
         "src_sentence": "You will be a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Ich arbeite als Haushälter",
@@ -3217,7 +3538,8 @@
         ],
         "src_sentence": "I work as a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Du arbeitest als Haushälter",
@@ -3227,7 +3549,8 @@
         ],
         "src_sentence": "You work as a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Sie arbeiten als Haushälter",
@@ -3237,7 +3560,8 @@
         ],
         "src_sentence": "You work as a housekeeper.",
         "tgt_prefix": "Haushälter",
-        "subject": "housekeeper"
+        "subject": "housekeeper",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Ich bin Hausmeister",
@@ -3247,7 +3571,8 @@
         ],
         "src_sentence": "I am a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Du bist Hausmeister",
@@ -3257,7 +3582,8 @@
         ],
         "src_sentence": "You are a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Sie sind Hausmeister",
@@ -3267,7 +3593,8 @@
         ],
         "src_sentence": "You are a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Ich werde Hausmeister",
@@ -3277,7 +3604,8 @@
         ],
         "src_sentence": "I will be a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Du wirst Hausmeister",
@@ -3287,7 +3615,8 @@
         ],
         "src_sentence": "You will be a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Sie werden Hausmeister",
@@ -3297,7 +3626,8 @@
         ],
         "src_sentence": "You will be a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Ich arbeite als Hausmeister",
@@ -3307,7 +3637,8 @@
         ],
         "src_sentence": "I work as a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Du arbeitest als Hausmeister",
@@ -3317,7 +3648,8 @@
         ],
         "src_sentence": "You work as a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Sie arbeiten als Hausmeister",
@@ -3327,7 +3659,8 @@
         ],
         "src_sentence": "You work as a janitor.",
         "tgt_prefix": "Hausmeister",
-        "subject": "janitor"
+        "subject": "janitor",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Ich bin Arbeiter",
@@ -3337,7 +3670,8 @@
         ],
         "src_sentence": "I am a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Du bist Arbeiter",
@@ -3347,7 +3681,8 @@
         ],
         "src_sentence": "You are a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Sie sind Arbeiter",
@@ -3357,7 +3692,8 @@
         ],
         "src_sentence": "You are a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Ich werde Arbeiter",
@@ -3367,7 +3703,8 @@
         ],
         "src_sentence": "I will be a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Du wirst Arbeiter",
@@ -3377,7 +3714,8 @@
         ],
         "src_sentence": "You will be a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Sie werden Arbeiter",
@@ -3387,7 +3725,8 @@
         ],
         "src_sentence": "You will be a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Ich arbeite als Arbeiter",
@@ -3397,7 +3736,8 @@
         ],
         "src_sentence": "I work as a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Du arbeitest als Arbeiter",
@@ -3407,7 +3747,8 @@
         ],
         "src_sentence": "You work as a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Sie arbeiten als Arbeiter",
@@ -3417,7 +3758,8 @@
         ],
         "src_sentence": "You work as a laborer.",
         "tgt_prefix": "Arbeiter",
-        "subject": "laborer"
+        "subject": "laborer",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Ich bin Rechtsan",
@@ -3427,7 +3769,8 @@
         ],
         "src_sentence": "I am a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Du bist Rechtsan",
@@ -3437,7 +3780,8 @@
         ],
         "src_sentence": "You are a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Sie sind Rechtsan",
@@ -3447,7 +3791,8 @@
         ],
         "src_sentence": "You are a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Ich werde Rechtsan",
@@ -3457,7 +3802,8 @@
         ],
         "src_sentence": "I will be a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Du wirst Rechtsan",
@@ -3467,7 +3813,8 @@
         ],
         "src_sentence": "You will be a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Sie werden Rechtsan",
@@ -3477,7 +3824,8 @@
         ],
         "src_sentence": "You will be a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Ich arbeite als Rechtsan",
@@ -3487,7 +3835,8 @@
         ],
         "src_sentence": "I work as a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Du arbeitest als Rechtsan",
@@ -3497,7 +3846,8 @@
         ],
         "src_sentence": "You work as a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Sie arbeiten als Rechtsan",
@@ -3507,7 +3857,8 @@
         ],
         "src_sentence": "You work as a lawyer.",
         "tgt_prefix": "Rechtsan",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Empfang"
     },
     {
         "prompt": "Ich bin Jurist",
@@ -3517,7 +3868,8 @@
         ],
         "src_sentence": "I am a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Du bist Jurist",
@@ -3527,7 +3879,8 @@
         ],
         "src_sentence": "You are a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Sie sind Jurist",
@@ -3537,7 +3890,8 @@
         ],
         "src_sentence": "You are a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Ich werde Jurist",
@@ -3547,7 +3901,8 @@
         ],
         "src_sentence": "I will be a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Du wirst Jurist",
@@ -3557,7 +3912,8 @@
         ],
         "src_sentence": "You will be a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Sie werden Jurist",
@@ -3567,7 +3923,8 @@
         ],
         "src_sentence": "You will be a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Berater"
     },
     {
         "prompt": "Ich arbeite als Jurist",
@@ -3577,7 +3934,8 @@
         ],
         "src_sentence": "I work as a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Du arbeitest als Jurist",
@@ -3587,7 +3945,8 @@
         ],
         "src_sentence": "You work as a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Sie arbeiten als Jurist",
@@ -3597,7 +3956,8 @@
         ],
         "src_sentence": "You work as a lawyer.",
         "tgt_prefix": "Jurist",
-        "subject": "lawyer"
+        "subject": "lawyer",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Ich bin Bibliothekar",
@@ -3607,7 +3967,8 @@
         ],
         "src_sentence": "I am a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Du bist Bibliothekar",
@@ -3617,7 +3978,8 @@
         ],
         "src_sentence": "You are a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Sie sind Bibliothekar",
@@ -3627,7 +3989,8 @@
         ],
         "src_sentence": "You are a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Ich werde Bibliothekar",
@@ -3637,7 +4000,8 @@
         ],
         "src_sentence": "I will be a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Du wirst Bibliothekar",
@@ -3647,7 +4011,8 @@
         ],
         "src_sentence": "You will be a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Sie werden Bibliothekar",
@@ -3657,7 +4022,8 @@
         ],
         "src_sentence": "You will be a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Ich arbeite als Bibliothekar",
@@ -3667,7 +4033,8 @@
         ],
         "src_sentence": "I work as a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Du arbeitest als Bibliothekar",
@@ -3677,7 +4044,8 @@
         ],
         "src_sentence": "You work as a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Sie arbeiten als Bibliothekar",
@@ -3687,7 +4055,8 @@
         ],
         "src_sentence": "You work as a librarian.",
         "tgt_prefix": "Bibliothekar",
-        "subject": "librarian"
+        "subject": "librarian",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Ich bin Manager",
@@ -3697,7 +4066,8 @@
         ],
         "src_sentence": "I am a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Du bist Manager",
@@ -3707,7 +4077,8 @@
         ],
         "src_sentence": "You are a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Sie sind Manager",
@@ -3717,7 +4088,8 @@
         ],
         "src_sentence": "You are a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Ich werde Manager",
@@ -3727,7 +4099,8 @@
         ],
         "src_sentence": "I will be a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Du wirst Manager",
@@ -3737,7 +4110,8 @@
         ],
         "src_sentence": "You will be a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Sie werden Manager",
@@ -3747,7 +4121,8 @@
         ],
         "src_sentence": "You will be a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Ich arbeite als Manager",
@@ -3757,7 +4132,8 @@
         ],
         "src_sentence": "I work as a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Du arbeitest als Manager",
@@ -3767,7 +4143,8 @@
         ],
         "src_sentence": "You work as a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Sie arbeiten als Manager",
@@ -3777,7 +4154,8 @@
         ],
         "src_sentence": "You work as a manager.",
         "tgt_prefix": "Manager",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Ich bin Geschäftsführer",
@@ -3787,7 +4165,8 @@
         ],
         "src_sentence": "I am a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Du bist Geschäftsführer",
@@ -3797,7 +4176,8 @@
         ],
         "src_sentence": "You are a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Sie sind Geschäftsführer",
@@ -3807,7 +4187,8 @@
         ],
         "src_sentence": "You are a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Ich werde Geschäftsführer",
@@ -3817,7 +4198,8 @@
         ],
         "src_sentence": "I will be a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Du wirst Geschäftsführer",
@@ -3827,7 +4209,8 @@
         ],
         "src_sentence": "You will be a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Sie werden Geschäftsführer",
@@ -3837,7 +4220,8 @@
         ],
         "src_sentence": "You will be a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Ich arbeite als Geschäftsführer",
@@ -3847,7 +4231,8 @@
         ],
         "src_sentence": "I work as a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Du arbeitest als Geschäftsführer",
@@ -3857,7 +4242,8 @@
         ],
         "src_sentence": "You work as a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Sie arbeiten als Geschäftsführer",
@@ -3867,7 +4253,8 @@
         ],
         "src_sentence": "You work as a manager.",
         "tgt_prefix": "Geschäftsführer",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Ich bin Che",
@@ -3877,7 +4264,8 @@
         ],
         "src_sentence": "I am a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Du bist Che",
@@ -3887,7 +4275,8 @@
         ],
         "src_sentence": "You are a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Sie sind Che",
@@ -3897,7 +4286,8 @@
         ],
         "src_sentence": "You are a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Ich werde Che",
@@ -3907,7 +4297,8 @@
         ],
         "src_sentence": "I will be a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Du wirst Che",
@@ -3917,7 +4308,8 @@
         ],
         "src_sentence": "You will be a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Sie werden Che",
@@ -3927,7 +4319,8 @@
         ],
         "src_sentence": "You will be a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Ich arbeite als Che",
@@ -3937,7 +4330,8 @@
         ],
         "src_sentence": "I work as a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Du arbeitest als Che",
@@ -3947,7 +4341,8 @@
         ],
         "src_sentence": "You work as a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Sie arbeiten als Che",
@@ -3957,7 +4352,8 @@
         ],
         "src_sentence": "You work as a manager.",
         "tgt_prefix": "Che",
-        "subject": "manager"
+        "subject": "manager",
+        "shuffled_prefix": ""
     },
     {
         "prompt": "Ich bin Mechaniker",
@@ -3967,7 +4363,8 @@
         ],
         "src_sentence": "I am a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Du bist Mechaniker",
@@ -3977,7 +4374,8 @@
         ],
         "src_sentence": "You are a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Sie sind Mechaniker",
@@ -3987,7 +4385,8 @@
         ],
         "src_sentence": "You are a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Ich werde Mechaniker",
@@ -3997,7 +4396,8 @@
         ],
         "src_sentence": "I will be a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Du wirst Mechaniker",
@@ -4007,7 +4407,8 @@
         ],
         "src_sentence": "You will be a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Sie werden Mechaniker",
@@ -4017,7 +4418,8 @@
         ],
         "src_sentence": "You will be a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Ich arbeite als Mechaniker",
@@ -4027,7 +4429,8 @@
         ],
         "src_sentence": "I work as a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Du arbeitest als Mechaniker",
@@ -4037,7 +4440,8 @@
         ],
         "src_sentence": "You work as a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Sie arbeiten als Mechaniker",
@@ -4047,7 +4451,8 @@
         ],
         "src_sentence": "You work as a mechanic.",
         "tgt_prefix": "Mechaniker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Ich bin Monteur",
@@ -4057,7 +4462,8 @@
         ],
         "src_sentence": "I am a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Du bist Monteur",
@@ -4067,7 +4473,8 @@
         ],
         "src_sentence": "You are a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Sie sind Monteur",
@@ -4077,7 +4484,8 @@
         ],
         "src_sentence": "You are a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Ich werde Monteur",
@@ -4087,7 +4495,8 @@
         ],
         "src_sentence": "I will be a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Bibliothekar"
     },
     {
         "prompt": "Du wirst Monteur",
@@ -4097,7 +4506,8 @@
         ],
         "src_sentence": "You will be a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Sie werden Monteur",
@@ -4107,7 +4517,8 @@
         ],
         "src_sentence": "You will be a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Ich arbeite als Monteur",
@@ -4117,7 +4528,8 @@
         ],
         "src_sentence": "I work as a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Du arbeitest als Monteur",
@@ -4127,7 +4539,8 @@
         ],
         "src_sentence": "You work as a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Sie arbeiten als Monteur",
@@ -4137,7 +4550,8 @@
         ],
         "src_sentence": "You work as a mechanic.",
         "tgt_prefix": "Monteur",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Ich bin Handwerker",
@@ -4147,7 +4561,8 @@
         ],
         "src_sentence": "I am a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Du bist Handwerker",
@@ -4157,7 +4572,8 @@
         ],
         "src_sentence": "You are a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Sie sind Handwerker",
@@ -4167,7 +4583,8 @@
         ],
         "src_sentence": "You are a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Ich werde Handwerker",
@@ -4177,7 +4594,8 @@
         ],
         "src_sentence": "I will be a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Du wirst Handwerker",
@@ -4187,7 +4605,8 @@
         ],
         "src_sentence": "You will be a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Sie werden Handwerker",
@@ -4197,7 +4616,8 @@
         ],
         "src_sentence": "You will be a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Prüfer"
     },
     {
         "prompt": "Ich arbeite als Handwerker",
@@ -4207,7 +4627,8 @@
         ],
         "src_sentence": "I work as a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Du arbeitest als Handwerker",
@@ -4217,7 +4638,8 @@
         ],
         "src_sentence": "You work as a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Sie arbeiten als Handwerker",
@@ -4227,7 +4649,8 @@
         ],
         "src_sentence": "You work as a mechanic.",
         "tgt_prefix": "Handwerker",
-        "subject": "mechanic"
+        "subject": "mechanic",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Ich bin Umzugshelfer",
@@ -4237,7 +4660,8 @@
         ],
         "src_sentence": "I am a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Fahrer"
     },
     {
         "prompt": "Du bist Umzugshelfer",
@@ -4247,7 +4671,8 @@
         ],
         "src_sentence": "You are a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Sie sind Umzugshelfer",
@@ -4257,7 +4682,8 @@
         ],
         "src_sentence": "You are a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Ich werde Umzugshelfer",
@@ -4267,7 +4693,8 @@
         ],
         "src_sentence": "I will be a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Bauarbeiter"
     },
     {
         "prompt": "Du wirst Umzugshelfer",
@@ -4277,7 +4704,8 @@
         ],
         "src_sentence": "You will be a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Sie werden Umzugshelfer",
@@ -4287,7 +4715,8 @@
         ],
         "src_sentence": "You will be a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Ich arbeite als Umzugshelfer",
@@ -4297,7 +4726,8 @@
         ],
         "src_sentence": "I work as a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Du arbeitest als Umzugshelfer",
@@ -4307,7 +4737,8 @@
         ],
         "src_sentence": "You work as a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Sie arbeiten als Umzugshelfer",
@@ -4317,7 +4748,8 @@
         ],
         "src_sentence": "You work as a mover.",
         "tgt_prefix": "Umzugshelfer",
-        "subject": "mover"
+        "subject": "mover",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Ich bin Pfleger",
@@ -4327,7 +4759,8 @@
         ],
         "src_sentence": "I am a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Du bist Pfleger",
@@ -4337,7 +4770,8 @@
         ],
         "src_sentence": "You are a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Sie sind Pfleger",
@@ -4347,7 +4781,8 @@
         ],
         "src_sentence": "You are a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Ich werde Pfleger",
@@ -4357,7 +4792,8 @@
         ],
         "src_sentence": "I will be a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Du wirst Pfleger",
@@ -4367,7 +4803,8 @@
         ],
         "src_sentence": "You will be a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Hausmeister"
     },
     {
         "prompt": "Sie werden Pfleger",
@@ -4377,7 +4814,8 @@
         ],
         "src_sentence": "You will be a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Ich arbeite als Pfleger",
@@ -4387,7 +4825,8 @@
         ],
         "src_sentence": "I work as a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Du arbeitest als Pfleger",
@@ -4397,7 +4836,8 @@
         ],
         "src_sentence": "You work as a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Sie arbeiten als Pfleger",
@@ -4407,7 +4847,8 @@
         ],
         "src_sentence": "You work as a nurse.",
         "tgt_prefix": "Pfleger",
-        "subject": "nurse"
+        "subject": "nurse",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Ich bin Mediziner",
@@ -4417,7 +4858,8 @@
         ],
         "src_sentence": "I am a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Du bist Mediziner",
@@ -4427,7 +4869,8 @@
         ],
         "src_sentence": "You are a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Sie sind Mediziner",
@@ -4437,7 +4880,8 @@
         ],
         "src_sentence": "You are a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Ich werde Mediziner",
@@ -4447,7 +4891,8 @@
         ],
         "src_sentence": "I will be a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Du wirst Mediziner",
@@ -4457,7 +4902,8 @@
         ],
         "src_sentence": "You will be a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Sekretär"
     },
     {
         "prompt": "Sie werden Mediziner",
@@ -4467,7 +4913,8 @@
         ],
         "src_sentence": "You will be a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Schreiner"
     },
     {
         "prompt": "Ich arbeite als Mediziner",
@@ -4477,7 +4924,8 @@
         ],
         "src_sentence": "I work as a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Du arbeitest als Mediziner",
@@ -4487,7 +4935,8 @@
         ],
         "src_sentence": "You work as a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Sie arbeiten als Mediziner",
@@ -4497,7 +4946,8 @@
         ],
         "src_sentence": "You work as a physician.",
         "tgt_prefix": "Mediziner",
-        "subject": "physician"
+        "subject": "physician",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Ich bin Rezeptionist",
@@ -4507,7 +4957,8 @@
         ],
         "src_sentence": "I am a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Du bist Rezeptionist",
@@ -4517,7 +4968,8 @@
         ],
         "src_sentence": "You are a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Sie sind Rezeptionist",
@@ -4527,7 +4979,8 @@
         ],
         "src_sentence": "You are a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Ich werde Rezeptionist",
@@ -4537,7 +4990,8 @@
         ],
         "src_sentence": "I will be a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Haushälter"
     },
     {
         "prompt": "Du wirst Rezeptionist",
@@ -4547,7 +5001,8 @@
         ],
         "src_sentence": "You will be a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Jurist"
     },
     {
         "prompt": "Sie werden Rezeptionist",
@@ -4557,7 +5012,8 @@
         ],
         "src_sentence": "You will be a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Ich arbeite als Rezeptionist",
@@ -4567,7 +5023,8 @@
         ],
         "src_sentence": "I work as a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Schneider"
     },
     {
         "prompt": "Du arbeitest als Rezeptionist",
@@ -4577,7 +5034,8 @@
         ],
         "src_sentence": "You work as a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Sie arbeiten als Rezeptionist",
@@ -4587,7 +5045,8 @@
         ],
         "src_sentence": "You work as a receptionist.",
         "tgt_prefix": "Rezeptionist",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Ich bin Empfang",
@@ -4597,7 +5056,8 @@
         ],
         "src_sentence": "I am a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Du bist Empfang",
@@ -4607,7 +5067,8 @@
         ],
         "src_sentence": "You are a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Sie sind Empfang",
@@ -4617,7 +5078,8 @@
         ],
         "src_sentence": "You are a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Ich werde Empfang",
@@ -4627,7 +5089,8 @@
         ],
         "src_sentence": "I will be a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Du wirst Empfang",
@@ -4637,7 +5100,8 @@
         ],
         "src_sentence": "You will be a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Sie werden Empfang",
@@ -4647,7 +5111,8 @@
         ],
         "src_sentence": "You will be a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Vorstandsvors"
     },
     {
         "prompt": "Ich arbeite als Empfang",
@@ -4657,7 +5122,8 @@
         ],
         "src_sentence": "I work as a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Du arbeitest als Empfang",
@@ -4667,7 +5133,8 @@
         ],
         "src_sentence": "You work as a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Putz"
     },
     {
         "prompt": "Sie arbeiten als Empfang",
@@ -4677,7 +5144,8 @@
         ],
         "src_sentence": "You work as a receptionist.",
         "tgt_prefix": "Empfang",
-        "subject": "receptionist"
+        "subject": "receptionist",
+        "shuffled_prefix": "Rechtsan"
     },
     {
         "prompt": "Ich bin Verkäufer",
@@ -4687,7 +5155,8 @@
         ],
         "src_sentence": "I am a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Du bist Verkäufer",
@@ -4697,7 +5166,8 @@
         ],
         "src_sentence": "You are a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Sie sind Verkäufer",
@@ -4707,7 +5177,8 @@
         ],
         "src_sentence": "You are a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Ich werde Verkäufer",
@@ -4717,7 +5188,8 @@
         ],
         "src_sentence": "I will be a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Du wirst Verkäufer",
@@ -4727,7 +5199,8 @@
         ],
         "src_sentence": "You will be a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Sie werden Verkäufer",
@@ -4737,7 +5210,8 @@
         ],
         "src_sentence": "You will be a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Ich arbeite als Verkäufer",
@@ -4747,7 +5221,8 @@
         ],
         "src_sentence": "I work as a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Du arbeitest als Verkäufer",
@@ -4757,7 +5232,8 @@
         ],
         "src_sentence": "You work as a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Handwerker"
     },
     {
         "prompt": "Sie arbeiten als Verkäufer",
@@ -4767,7 +5243,8 @@
         ],
         "src_sentence": "You work as a salesperson.",
         "tgt_prefix": "Verkäufer",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Ich bin Händler",
@@ -4777,7 +5254,8 @@
         ],
         "src_sentence": "I am a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Du bist Händler",
@@ -4787,7 +5265,8 @@
         ],
         "src_sentence": "You are a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Sie sind Händler",
@@ -4797,7 +5276,8 @@
         ],
         "src_sentence": "You are a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Betreuer"
     },
     {
         "prompt": "Ich werde Händler",
@@ -4807,7 +5287,8 @@
         ],
         "src_sentence": "I will be a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Kassierer"
     },
     {
         "prompt": "Du wirst Händler",
@@ -4817,7 +5298,8 @@
         ],
         "src_sentence": "You will be a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Leiter"
     },
     {
         "prompt": "Sie werden Händler",
@@ -4827,7 +5309,8 @@
         ],
         "src_sentence": "You will be a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Ich arbeite als Händler",
@@ -4837,7 +5320,8 @@
         ],
         "src_sentence": "I work as a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Du arbeitest als Händler",
@@ -4847,7 +5331,8 @@
         ],
         "src_sentence": "You work as a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Sie arbeiten als Händler",
@@ -4857,7 +5342,8 @@
         ],
         "src_sentence": "You work as a salesperson.",
         "tgt_prefix": "Händler",
-        "subject": "salesperson"
+        "subject": "salesperson",
+        "shuffled_prefix": "Rechnungsprüfer"
     },
     {
         "prompt": "Ich bin Sekretär",
@@ -4867,7 +5353,8 @@
         ],
         "src_sentence": "I am a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Du bist Sekretär",
@@ -4877,7 +5364,8 @@
         ],
         "src_sentence": "You are a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Lehrer"
     },
     {
         "prompt": "Sie sind Sekretär",
@@ -4887,7 +5375,8 @@
         ],
         "src_sentence": "You are a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Ich werde Sekretär",
@@ -4897,7 +5386,8 @@
         ],
         "src_sentence": "I will be a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Pfleger"
     },
     {
         "prompt": "Du wirst Sekretär",
@@ -4907,7 +5397,8 @@
         ],
         "src_sentence": "You will be a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Monteur"
     },
     {
         "prompt": "Sie werden Sekretär",
@@ -4917,7 +5408,8 @@
         ],
         "src_sentence": "You will be a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Sachbearbeiter"
     },
     {
         "prompt": "Ich arbeite als Sekretär",
@@ -4927,7 +5419,8 @@
         ],
         "src_sentence": "I work as a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Mechaniker"
     },
     {
         "prompt": "Du arbeitest als Sekretär",
@@ -4937,7 +5430,8 @@
         ],
         "src_sentence": "You work as a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Schriftsteller"
     },
     {
         "prompt": "Sie arbeiten als Sekretär",
@@ -4947,7 +5441,8 @@
         ],
         "src_sentence": "You work as a secretary.",
         "tgt_prefix": "Sekretär",
-        "subject": "secretary"
+        "subject": "secretary",
+        "shuffled_prefix": "Autor"
     },
     {
         "prompt": "Ich bin Betreuer",
@@ -4957,7 +5452,8 @@
         ],
         "src_sentence": "I am a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Du bist Betreuer",
@@ -4967,7 +5463,8 @@
         ],
         "src_sentence": "You are a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Begleiter"
     },
     {
         "prompt": "Sie sind Betreuer",
@@ -4977,7 +5474,8 @@
         ],
         "src_sentence": "You are a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Mediziner"
     },
     {
         "prompt": "Ich werde Betreuer",
@@ -4987,7 +5485,8 @@
         ],
         "src_sentence": "I will be a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Du wirst Betreuer",
@@ -4997,7 +5496,8 @@
         ],
         "src_sentence": "You will be a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Herausgeber"
     },
     {
         "prompt": "Sie werden Betreuer",
@@ -5007,7 +5507,8 @@
         ],
         "src_sentence": "You will be a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Steuerberater"
     },
     {
         "prompt": "Ich arbeite als Betreuer",
@@ -5017,7 +5518,8 @@
         ],
         "src_sentence": "I work as a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Wächter"
     },
     {
         "prompt": "Du arbeitest als Betreuer",
@@ -5027,7 +5529,8 @@
         ],
         "src_sentence": "You work as a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Sie arbeiten als Betreuer",
@@ -5037,7 +5540,8 @@
         ],
         "src_sentence": "You work as a supervisor.",
         "tgt_prefix": "Betreuer",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Analytiker"
     },
     {
         "prompt": "Ich bin Vorgesetz",
@@ -5047,7 +5551,8 @@
         ],
         "src_sentence": "I am a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Du bist Vorgesetz",
@@ -5057,7 +5562,8 @@
         ],
         "src_sentence": "You are a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Sie sind Vorgesetz",
@@ -5067,7 +5573,8 @@
         ],
         "src_sentence": "You are a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Ich werde Vorgesetz",
@@ -5077,7 +5584,8 @@
         ],
         "src_sentence": "I will be a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Du wirst Vorgesetz",
@@ -5087,7 +5595,8 @@
         ],
         "src_sentence": "You will be a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Sie werden Vorgesetz",
@@ -5097,7 +5606,8 @@
         ],
         "src_sentence": "You will be a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Ich arbeite als Vorgesetz",
@@ -5107,7 +5617,8 @@
         ],
         "src_sentence": "I work as a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Du arbeitest als Vorgesetz",
@@ -5117,7 +5628,8 @@
         ],
         "src_sentence": "You work as a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Sie arbeiten als Vorgesetz",
@@ -5127,7 +5639,8 @@
         ],
         "src_sentence": "You work as a supervisor.",
         "tgt_prefix": "Vorgesetz",
-        "subject": "supervisor"
+        "subject": "supervisor",
+        "shuffled_prefix": "Angestell"
     },
     {
         "prompt": "Ich bin Schneider",
@@ -5137,7 +5650,8 @@
         ],
         "src_sentence": "I am a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Buchhalter"
     },
     {
         "prompt": "Du bist Schneider",
@@ -5147,7 +5661,8 @@
         ],
         "src_sentence": "You are a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Sie sind Schneider",
@@ -5157,7 +5672,8 @@
         ],
         "src_sentence": "You are a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Ich werde Schneider",
@@ -5167,7 +5683,8 @@
         ],
         "src_sentence": "I will be a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Du wirst Schneider",
@@ -5177,7 +5694,8 @@
         ],
         "src_sentence": "You will be a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Sie werden Schneider",
@@ -5187,7 +5705,8 @@
         ],
         "src_sentence": "You will be a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Umzugshelfer"
     },
     {
         "prompt": "Ich arbeite als Schneider",
@@ -5197,7 +5716,8 @@
         ],
         "src_sentence": "I work as a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Du arbeitest als Schneider",
@@ -5207,7 +5727,8 @@
         ],
         "src_sentence": "You work as a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Gestalter"
     },
     {
         "prompt": "Sie arbeiten als Schneider",
@@ -5217,7 +5738,8 @@
         ],
         "src_sentence": "You work as a tailor.",
         "tgt_prefix": "Schneider",
-        "subject": "tailor"
+        "subject": "tailor",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Ich bin Lehrer",
@@ -5227,7 +5749,8 @@
         ],
         "src_sentence": "I am a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Händler"
     },
     {
         "prompt": "Du bist Lehrer",
@@ -5237,7 +5760,8 @@
         ],
         "src_sentence": "You are a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Landwirt"
     },
     {
         "prompt": "Sie sind Lehrer",
@@ -5247,7 +5771,8 @@
         ],
         "src_sentence": "You are a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Wirtschaftsprüfer"
     },
     {
         "prompt": "Ich werde Lehrer",
@@ -5257,7 +5782,8 @@
         ],
         "src_sentence": "I will be a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Du wirst Lehrer",
@@ -5267,7 +5793,8 @@
         ],
         "src_sentence": "You will be a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Geschäftsführer"
     },
     {
         "prompt": "Sie werden Lehrer",
@@ -5277,7 +5804,8 @@
         ],
         "src_sentence": "You will be a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Ich arbeite als Lehrer",
@@ -5287,7 +5815,8 @@
         ],
         "src_sentence": "I work as a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Lektor"
     },
     {
         "prompt": "Du arbeitest als Lehrer",
@@ -5297,7 +5826,8 @@
         ],
         "src_sentence": "You work as a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Friseur"
     },
     {
         "prompt": "Sie arbeiten als Lehrer",
@@ -5307,7 +5837,8 @@
         ],
         "src_sentence": "You work as a teacher.",
         "tgt_prefix": "Lehrer",
-        "subject": "teacher"
+        "subject": "teacher",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Ich bin Schriftsteller",
@@ -5317,7 +5848,8 @@
         ],
         "src_sentence": "I am a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Du bist Schriftsteller",
@@ -5327,7 +5859,8 @@
         ],
         "src_sentence": "You are a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Redakteur"
     },
     {
         "prompt": "Sie sind Schriftsteller",
@@ -5337,7 +5870,8 @@
         ],
         "src_sentence": "You are a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Ich werde Schriftsteller",
@@ -5347,7 +5881,8 @@
         ],
         "src_sentence": "I will be a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Analyst"
     },
     {
         "prompt": "Du wirst Schriftsteller",
@@ -5357,7 +5892,8 @@
         ],
         "src_sentence": "You will be a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Sie werden Schriftsteller",
@@ -5367,7 +5903,8 @@
         ],
         "src_sentence": "You will be a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Arbeiter"
     },
     {
         "prompt": "Ich arbeite als Schriftsteller",
@@ -5377,7 +5914,8 @@
         ],
         "src_sentence": "I work as a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Tischler"
     },
     {
         "prompt": "Du arbeitest als Schriftsteller",
@@ -5387,7 +5925,8 @@
         ],
         "src_sentence": "You work as a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Verkäufer"
     },
     {
         "prompt": "Sie arbeiten als Schriftsteller",
@@ -5397,7 +5936,8 @@
         ],
         "src_sentence": "You work as a writer.",
         "tgt_prefix": "Schriftsteller",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Ich bin Autor",
@@ -5407,7 +5947,8 @@
         ],
         "src_sentence": "I am a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Zimmerer"
     },
     {
         "prompt": "Du bist Autor",
@@ -5417,7 +5958,8 @@
         ],
         "src_sentence": "You are a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Entwickler"
     },
     {
         "prompt": "Sie sind Autor",
@@ -5427,7 +5969,8 @@
         ],
         "src_sentence": "You are a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Frisör"
     },
     {
         "prompt": "Ich werde Autor",
@@ -5437,7 +5980,8 @@
         ],
         "src_sentence": "I will be a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Assistent"
     },
     {
         "prompt": "Du wirst Autor",
@@ -5447,7 +5991,8 @@
         ],
         "src_sentence": "You will be a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Designer"
     },
     {
         "prompt": "Sie werden Autor",
@@ -5457,7 +6002,8 @@
         ],
         "src_sentence": "You will be a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Bäcker"
     },
     {
         "prompt": "Ich arbeite als Autor",
@@ -5467,7 +6013,8 @@
         ],
         "src_sentence": "I work as a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Rezeptionist"
     },
     {
         "prompt": "Du arbeitest als Autor",
@@ -5477,7 +6024,8 @@
         ],
         "src_sentence": "You work as a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Manager"
     },
     {
         "prompt": "Sie arbeiten als Autor",
@@ -5487,6 +6035,7 @@
         ],
         "src_sentence": "You work as a writer.",
         "tgt_prefix": "Autor",
-        "subject": "writer"
+        "subject": "writer",
+        "shuffled_prefix": "Monteur"
     }
 ]
