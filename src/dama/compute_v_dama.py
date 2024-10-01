@@ -74,12 +74,12 @@ def compute_v_dama(
     for rid, request in enumerate(request_batch):
         r_p = [context.format(request["prompt"]) for context in context_templates]
         kl_p = [tok.bos_token + " {} is a"]
-        kl_tgt_p = [tok.bos_token + " {}"] if target_kl_regularization and "tgt_prefix" in request else []
+        kl_tgt_p = [tok.bos_token + " {}"] if target_kl_regularization and "shuffled_prefix" in request else []
 
         r_p_filled, r_p_lookup_idxs = populate_prompts(r_p, request["subject"], tok, hparams)
         kl_p_filled, kl_p_lookup_idxs = populate_prompts(kl_p, request["subject"], tok, hparams)
         if kl_tgt_p:
-            kl_tgt_p_filled, kl_tgt_p_lookup_idxs = populate_prompts(kl_tgt_p, request["tgt_prefix"], tok, hparams)
+            kl_tgt_p_filled, kl_tgt_p_lookup_idxs = populate_prompts(kl_tgt_p, request["shuffled_prefix"], tok, hparams)
         else:
             kl_tgt_p_filled, kl_tgt_p_lookup_idxs = [], []
 
