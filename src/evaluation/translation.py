@@ -1,8 +1,11 @@
 import os
 
 import torch
+import numpy as np
 from datasets import load_dataset
 from sacrebleu import corpus_bleu, corpus_chrf
+from comet import download_model, load_from_checkpoint
+
 from tqdm import tqdm
 import re
 from typing import List
@@ -28,7 +31,6 @@ class EvaluateTranslation(Evaluate):
         self.tok.padding_side = "left"
         # TODO: Unfortunatelly it won't work for Llama3 tokenzier, where add_bos_token currently has no effect
         self.tok.add_bos_token = True
-
         self.dataset = {"src": [], "tgt": [], "src_lang": None, "tgt_lang": None}
         self.results = {"chrf": 0., "bleu": 0., "blaser": 0.}
         self.partial_results = []
@@ -76,6 +78,15 @@ class EvaluateTranslation(Evaluate):
     def compute_bleu(translated_sentences: List[str], tgt_sentences: List[str]):
         return corpus_bleu(translated_sentences, [tgt_sentences]).score
 
+    @staticmethod
+    def compute_comet(translated_sentences: List[str], src_sentences: List[str], tgt_sentences: List[str]):
+        comet_model = load_from_checkpoint(download_model("Unbabel/wmt22-comet-da"))
+        comet_out = comet_model.predict([{"mt": trans, "src": src, "ref": tgt}
+                                    for src, tgt, trans in zip(src_sentences, tgt_sentences, translated_sentences)]
+                                   )
+        return np.average(comet_out["scores"])
+
+
     def translate_sentences(self, src_sentences, src_lang, tgt_lang):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         translated_sentences = []
@@ -113,6 +124,7 @@ class EvaluateTranslation(Evaluate):
         if self.dataset["tgt"]:
             self.results["chrf"] = self.compute_chrf(translated_sentences, self.dataset["tgt"])
             self.results["bleu"] = self.compute_bleu(translated_sentences, self.dataset["tgt"])
+            self.results["comet"] = self.compute_comet(translated_sentences, self.dataset["src"], self.dataset["tgt"])
             self.partial_results = [{"src": src, "tgt": tgt, "pred": pred} for src, tgt, pred in zip(self.dataset["src"], self.dataset["tgt"], translated_sentences)]
 
         else:
