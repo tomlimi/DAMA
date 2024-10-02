@@ -1,0 +1,254 @@
+{
+  "counselor-male": [
+    "consejero"
+  ],
+  "counselor-female": [
+    "consejera"
+  ],
+  "driver-male": [
+    "conductor",
+    "chofer"
+  ],
+  "driver-female": [
+    "conductora",
+    "chofer"
+  ],
+  "designer-male": [
+    "diseñador"
+  ],
+  "designer-female": [
+    "diseñadora"
+  ],
+  "salesperson-male": [
+    "vendedor"
+  ],
+  "salesperson-female": [
+    "vendedora"
+  ],
+  "writer-male": [
+    "escritor"
+  ],
+  "writer-female": [
+    "escritora"
+  ],
+  "developer-male": [
+    "desarrollador"
+  ],
+  "developer-female": [
+    "desarrolladora"
+  ],
+  "farmer-male": [
+    "granjero"
+  ],
+  "farmer-female": [
+    "granjera"
+  ],
+  "guard-male": [
+    "guardia"
+  ],
+  "guard-female": [
+    "guardia"
+  ],
+  "hairdresser-male": [
+    "peluquero"
+  ],
+  "hairdresser-female": [
+    "peluquera"
+  ],
+  "physician-male": [
+    "doctor",
+    "médico"
+  ],
+  "physician-female": [
+    "doctora",
+    "médica"
+  ],
+  "supervisor-male": [
+    "supervisor"
+  ],
+  "supervisor-female": [
+    "supervisora"
+  ],
+  "cleaner-male": [
+    "limpiador"
+  ],
+  "cleaner-female": [
+    "limpiadora"
+  ],
+  "janitor-male": [
+    "conserje"
+  ],
+  "janitor-female": [
+    "conserje"
+  ],
+  "carpenter-male": [
+    "carpintero"
+  ],
+  "carpenter-female": [
+    "carpintera"
+  ],
+  "librarian-male": [
+    "bibliotecario"
+  ],
+  "librarian-female": [
+    "bibliotecaria"
+  ],
+  "accountant-male": [
+    "contador"
+  ],
+  "accountant-female": [
+    "contadora"
+  ],
+  "baker-male": [
+    "panadero"
+  ],
+  "baker-female": [
+    "panadera"
+  ],
+  "mover-male": [
+    "agente de mudanzas"
+  ],
+  "mover-female": [
+    "agente de mudanzas"
+  ],
+  "lawyer-male": [
+    "abogado"
+  ],
+  "lawyer-female": [
+    "abogada"
+  ],
+  "teacher-male": [
+    "maestro"
+  ],
+  "teacher-female": [
+    "maestra"
+  ],
+  "auditor-male": [
+    "auditor"
+  ],
+  "auditor-female": [
+    "auditora"
+  ],
+  "assistant-male": [
+    "asistente"
+  ],
+  "assistant-female": [
+    "asistente"
+  ],
+  "clerk-male": [
+    "empleado"
+  ],
+  "clerk-female": [
+    "empleada"
+  ],
+  "laborer-male": [
+    "trabajador",
+    "empleado"
+  ],
+  "laborer-female": [
+    "trabajadora",
+    "empleada"
+  ],
+  "editor-male": [
+    "editor"
+  ],
+  "editor-female": [
+    "editora"
+  ],
+  "CEO-male": [
+    "director general",
+    "director"
+  ],
+  "CEO-female": [
+    "directora general",
+    "directora"
+  ],
+  "nurse-male": [
+    "enfermero"
+  ],
+  "nurse-female": [
+    "enfermera"
+  ],
+  "housekeeper-male": [
+    "muchacho"
+  ],
+  "housekeeper-female": [
+    "muchacha"
+  ],
+  "chief-male": [
+    "jefe"
+  ],
+  "chief-female": [
+    "jefa"
+  ],
+  "cook-male": [
+    "cocinero"
+  ],
+  "cook-female": [
+    "cocinera"
+  ],
+  "cashier-male": [
+    "cajero"
+  ],
+  "cashier-female": [
+    "cajera"
+  ],
+  "sheriff-male": [
+    "policia"
+  ],
+  "sheriff-female": [
+    "policia"
+  ],
+  "analyst-male": [
+    "analista"
+  ],
+  "analyst-female": [
+    "analista"
+  ],
+  "secretary-male": [
+    "secretario"
+  ],
+  "secretary-female": [
+    "secretaria"
+  ],
+  "construction worker-male": [
+    "constructor",
+    "trabajador de construcción"
+  ],
+  "construction worker-female": [
+    "constructora",
+    "trabajadora de construcción"
+  ],
+  "mechanic-male": [
+    "mecánico"
+  ],
+  "mechanic-female": [
+    "mecánica"
+  ],
+  "manager-male": [
+    "gerente"
+  ],
+  "manager-female": [
+    "gerente"
+  ],
+  "receptionist-male": [
+    "recepcionista"
+  ],
+  "receptionist-female": [
+    "recepcionista"
+  ],
+  "tailor-male": [
+    "sastre"
+  ],
+  "tailor-female": [
+    "sastre"
+  ],
+  "attendant-male": [
+    "asistente",
+    "auxiliar"
+  ],
+  "attendant-female": [
+    "asistenta",
+    "auxiliar"
+  ]
+}

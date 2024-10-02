@@ -1,0 +1,6041 @@
+[
+    {
+        "prompt": "Jsem učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Jsi učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Jste učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Budu učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Budeš učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Budete učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Pracuji jako učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Pracuješ jako učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Pracujete jako učitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a teacher.",
+        "tgt_prefix": "učitel",
+        "subject": "teacher",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Jsem spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Jsi spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Jste spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Budu spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Budeš spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Budete spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Pracuji jako spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Pracuješ jako spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Pracujete jako spisovatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "spisovatel",
+        "subject": "writer",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Jsem pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Jsi pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Jste pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Budu pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Budeš pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Budete pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Pracuji jako pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Pracuješ jako pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Pracujete jako pisatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "pisatel",
+        "subject": "writer",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Jsem stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Jsi stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Jste stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Budu stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Budeš stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Budete stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Pracuji jako stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Pracuješ jako stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Pracujete jako stroj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a machinist.",
+        "tgt_prefix": "stroj",
+        "subject": "machinist",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Jsem hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "I am a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Jsi hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "You are a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Jste hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "You are a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Budu hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "I will be a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Budeš hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "You will be a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Budete hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "You will be a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Pracuji jako hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "I work as a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Pracuješ jako hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "You work as a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Pracujete jako hosp",
+        "completions": [
+            "odář",
+            "odyn"
+        ],
+        "src_sentence": "You work as a housekeeper.",
+        "tgt_prefix": "hosp",
+        "subject": "housekeeper",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Jsem prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I am a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Jsi prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You are a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Jste prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You are a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Budu prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I will be a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Budeš prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You will be a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Budete prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You will be a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Pracuji jako prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I work as a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Pracuješ jako prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You work as a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Pracujete jako prakt",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You work as a practitioner.",
+        "tgt_prefix": "prakt",
+        "subject": "practitioner",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Jsem lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Jsi lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Jste lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Budu lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Budeš lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Budete lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Pracuji jako lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Pracuješ jako lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Pracujete jako lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a practitioner.",
+        "tgt_prefix": "lékař",
+        "subject": "practitioner",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Jsem techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I am a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Jsi techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You are a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Jste techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You are a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Budu techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I will be a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Budeš techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You will be a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Budete techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You will be a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Pracuji jako techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I work as a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Pracuješ jako techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You work as a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Pracujete jako techn",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You work as a technician.",
+        "tgt_prefix": "techn",
+        "subject": "technician",
+        "shuffled_prefix": "chem"
+    },
+    {
+        "prompt": "Jsem instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "I am an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Jsi instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "You are an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jste instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "You are an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Budu instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "I will be an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Budeš instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "You will be an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Budete instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "You will be an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Pracuji jako instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "I work as an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Pracuješ jako instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "You work as an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Pracujete jako instr",
+        "completions": [
+            "uk",
+            "ukt"
+        ],
+        "src_sentence": "You work as an instructor.",
+        "tgt_prefix": "instr",
+        "subject": "instructor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsem zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Jsi zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Jste zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Budu zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Budeš zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Budete zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Pracuji jako zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Pracuješ jako zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Pracujete jako zdravot",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a paramedic.",
+        "tgt_prefix": "zdravot",
+        "subject": "paramedic",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Jsem záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Jsi záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Jste záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Budu záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Budeš záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Budete záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Pracuji jako záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Pracuješ jako záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Pracujete jako záchranář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a paramedic.",
+        "tgt_prefix": "záchranář",
+        "subject": "paramedic",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Jsem domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Jsi domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Jste domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Budu domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Budeš domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Budete domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Pracuji jako domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Pracuješ jako domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Pracujete jako domov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "domov",
+        "subject": "janitor",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Jsem spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsi spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jste spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Budu spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budeš spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budete spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuji jako spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Pracuješ jako spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Pracujete jako spr",
+        "completions": [
+            "áv",
+            "á"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "spr",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsem údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Jsi údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Jste údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Budu údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Budeš údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Budete údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Pracuji jako údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Pracuješ jako údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Pracujete jako údržbář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "údržbář",
+        "subject": "janitor",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Jsem vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsi vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Jste vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Budu vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budeš vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Budete vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Pracuji jako vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Pracuješ jako vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Pracujete jako vrátn",
+        "completions": [
+            "ý",
+            "á"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "vrátn",
+        "subject": "janitor",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Jsem uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsi uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Jste uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Budu uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Budeš uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budete uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Pracuji jako uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Pracuješ jako uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Pracujete jako uklíze",
+        "completions": [
+            "č",
+            "čka"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "uklíze",
+        "subject": "janitor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Jsem škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Jsi škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Jste škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Budu škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Budeš škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Budete škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Pracuji jako škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Pracuješ jako škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Pracujete jako škol",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "škol",
+        "subject": "janitor",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Jsem vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "I am a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Jsi vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "You are a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Jste vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "You are a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budu vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "I will be a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Budeš vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "You will be a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Budete vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "You will be a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Pracuji jako vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "I work as a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Pracuješ jako vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "You work as a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Pracujete jako vě",
+        "completions": [
+            "dec",
+            "dk"
+        ],
+        "src_sentence": "You work as a scientist.",
+        "tgt_prefix": "vě",
+        "subject": "scientist",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Jsem asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Jsi asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Jste asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Budu asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Budeš asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Budete asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Pracuji jako asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Pracuješ jako asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Pracujete jako asistent",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "tgt_prefix": "asistent",
+        "subject": "assistant",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Jsem pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Jsi pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Jste pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Budu pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Budeš pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Budete pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Pracuji jako pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Pracuješ jako pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Pracujete jako pomoc",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "tgt_prefix": "pomoc",
+        "subject": "assistant",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Jsem ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "I am a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Jsi ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "You are a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Jste ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "You are a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Budu ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "I will be a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Budeš ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "You will be a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Budete ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "You will be a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Pracuji jako ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "I work as a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Pracuješ jako ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "You work as a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Pracujete jako ",
+        "completions": [
+            "bar",
+            "b"
+        ],
+        "src_sentence": "You work as a bartender.",
+        "tgt_prefix": "",
+        "subject": "bartender",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Jsem d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "I am a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Jsi d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "You are a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Jste d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "You are a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Budu d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "I will be a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Budeš d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "You will be a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budete d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "You will be a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuji jako d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "I work as a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Pracuješ jako d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "You work as a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Pracujete jako d",
+        "completions": [
+            "ok",
+            "okt"
+        ],
+        "src_sentence": "You work as a doctor.",
+        "tgt_prefix": "d",
+        "subject": "doctor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsem lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Jsi lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Jste lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Budu lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Budeš lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Budete lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Pracuji jako lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Pracuješ jako lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Pracujete jako lékař",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a doctor.",
+        "tgt_prefix": "lékař",
+        "subject": "doctor",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Jsem návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Jsi návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Jste návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Budu návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Budeš návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Budete návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Pracuji jako návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Pracuješ jako návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Pracujete jako návrhář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "návrhář",
+        "subject": "designer",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Jsem projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Jsi projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Jste projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Budu projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Budeš projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Budete projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Pracuji jako projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Pracuješ jako projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Pracujete jako projektant",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "projektant",
+        "subject": "designer",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Jsem konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Jsi konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Jste konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Budu konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Budeš konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Budete konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Pracuji jako konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Pracuješ jako konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Pracujete jako konstruktér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "konstruktér",
+        "subject": "designer",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Jsem designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Jsi designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Jste designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Budu designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Budeš designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Budete designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Pracuji jako designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Pracuješ jako designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Pracujete jako designér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "designér",
+        "subject": "designer",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Jsem děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I am a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsi děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You are a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jste děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You are a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budu děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I will be a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budeš děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budete děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuji jako děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I work as a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuješ jako děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracujete jako děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "tgt_prefix": "děln",
+        "subject": "laborer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsem pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Jsi pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Jste pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Budu pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Budeš pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Budete pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Pracuji jako pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Pracuješ jako pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Pracujete jako pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "tgt_prefix": "pracov",
+        "subject": "laborer",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Jsem manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Jsi manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Jste manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Budu manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Budeš manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Budete manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Pracuji jako manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Pracuješ jako manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Pracujete jako manažer",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "manažer",
+        "subject": "manager",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Jsem ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Jsi ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Jste ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Budu ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Budeš ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Budete ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Pracuji jako ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Pracuješ jako ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Pracujete jako ředitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "ředitel",
+        "subject": "manager",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Jsem pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Jsi pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Jste pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Budu pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Budeš pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Budete pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Pracuji jako pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Pracuješ jako pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Pracujete jako pasažér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a passenger.",
+        "tgt_prefix": "pasažér",
+        "subject": "passenger",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Jsem krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "I am a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Jsi krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "You are a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jste krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "You are a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Budu krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "I will be a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Budeš krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "You will be a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Budete krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "You will be a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Pracuji jako krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "I work as a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Pracuješ jako krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "You work as a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Pracujete jako krej",
+        "completions": [
+            "čí",
+            "č"
+        ],
+        "src_sentence": "You work as a tailor.",
+        "tgt_prefix": "krej",
+        "subject": "tailor",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Jsem děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I am a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsi děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jste děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budu děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I will be a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budeš děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budete děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuji jako děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I work as a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuješ jako děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracujete jako děln",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "tgt_prefix": "děln",
+        "subject": "construction worker",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsem pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Jsi pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Jste pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Budu pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Budeš pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Budete pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Pracuji jako pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Pracuješ jako pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Pracujete jako pracov",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "tgt_prefix": "pracov",
+        "subject": "construction worker",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Jsem zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Jsi zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Jste zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Budu zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Budeš zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Budete zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Pracuji jako zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Pracuješ jako zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "poplat"
+    },
+    {
+        "prompt": "Pracujete jako zákaz",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a customer.",
+        "tgt_prefix": "zákaz",
+        "subject": "customer",
+        "shuffled_prefix": "důstoj"
+    },
+    {
+        "prompt": "Jsem malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Jsi malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Jste malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Budu malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Budeš malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Budete malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Pracuji jako malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Pracuješ jako malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Pracujete jako malíř",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a painter.",
+        "tgt_prefix": "malíř",
+        "subject": "painter",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Jsem porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "I am an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Jsi porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "You are an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Jste porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "You are an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Budu porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "I will be an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budeš porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "You will be an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Budete porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "You will be an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Pracuji jako porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "I work as an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Pracuješ jako porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "You work as an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracujete jako porad",
+        "completions": [
+            "ce",
+            "k"
+        ],
+        "src_sentence": "You work as an advisor.",
+        "tgt_prefix": "porad",
+        "subject": "advisor",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Jsem diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "I am a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Jsi diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "You are a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Jste diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "You are a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budu diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "I will be a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Budeš diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "You will be a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Budete diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "You will be a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Pracuji jako diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "I work as a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Pracuješ jako diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "You work as a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Pracujete jako diet",
+        "completions": [
+            "olog",
+            "olo"
+        ],
+        "src_sentence": "You work as a dietitian.",
+        "tgt_prefix": "diet",
+        "subject": "dietitian",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Jsem dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Jsi dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Jste dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Budu dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Budeš dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Budete dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Pracuji jako dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Pracuješ jako dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Pracujete jako dietář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a dietitian.",
+        "tgt_prefix": "dietář",
+        "subject": "dietitian",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Jsem pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Jsi pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Jste pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Budu pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Budeš pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "instalatér"
+    },
+    {
+        "prompt": "Budete pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Pracuji jako pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Pracuješ jako pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Pracujete jako pacient",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a patient.",
+        "tgt_prefix": "pacient",
+        "subject": "patient",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Jsem majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Jsi majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Jste majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "pasažér"
+    },
+    {
+        "prompt": "Budu majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Budeš majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Budete majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "asistent"
+    },
+    {
+        "prompt": "Pracuji jako majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Pracuješ jako majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Pracujete jako majitel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a homeowner.",
+        "tgt_prefix": "majitel",
+        "subject": "homeowner",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Jsem me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Jsi me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Jste me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Budu me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Budeš me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Budete me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Pracuji jako me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuješ jako me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracujete jako me",
+        "completions": [
+            "chan",
+            "ch"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "me",
+        "subject": "mechanic",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Jsem obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "majitel"
+    },
+    {
+        "prompt": "Jsi obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "návrhář"
+    },
+    {
+        "prompt": "Jste obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Budu obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Budeš obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Budete obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Pracuji jako obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "pisatel"
+    },
+    {
+        "prompt": "Pracuješ jako obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Pracujete jako obyvatel",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a resident.",
+        "tgt_prefix": "obyvatel",
+        "subject": "resident",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Jsem důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Jsi důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Jste důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Budu důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Budeš důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Budete důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Pracuji jako důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Pracuješ jako důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Pracujete jako důstoj",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as an officer.",
+        "tgt_prefix": "důstoj",
+        "subject": "officer",
+        "shuffled_prefix": "stráž"
+    },
+    {
+        "prompt": "Jsem polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "I am an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Jsi polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "You are an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Jste polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "You are an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budu polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "I will be an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": "krej"
+    },
+    {
+        "prompt": "Budeš polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "You will be an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Budete polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "You will be an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Pracuji jako polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "I work as an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuješ jako polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "You work as an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracujete jako polic",
+        "completions": [
+            "ista",
+            "ist"
+        ],
+        "src_sentence": "You work as an officer.",
+        "tgt_prefix": "polic",
+        "subject": "officer",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Jsem stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Jsi stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "zákaz"
+    },
+    {
+        "prompt": "Jste stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Budu stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Budeš stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "zdravot"
+    },
+    {
+        "prompt": "Budete stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Pracuji jako stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "pomoc"
+    },
+    {
+        "prompt": "Pracuješ jako stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Pracujete jako stráž",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as an officer.",
+        "tgt_prefix": "stráž",
+        "subject": "officer",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Jsem redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "I am an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Jsi redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Jste redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Budu redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "I will be an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Budeš redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Budete redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Pracuji jako redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "I work as an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Pracuješ jako redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Pracujete jako redakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "redakt",
+        "subject": "editor",
+        "shuffled_prefix": "šéfredakt"
+    },
+    {
+        "prompt": "Jsem šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "I am an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Jsi šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Jste šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Budu šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "I will be an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Budeš šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Budete šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Pracuji jako šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "I work as an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Pracuješ jako šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Pracujete jako šéfredakt",
+        "completions": [
+            "or",
+            "ork"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "šéfredakt",
+        "subject": "editor",
+        "shuffled_prefix": "redakt"
+    },
+    {
+        "prompt": "Jsem ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "I am an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Jsi ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Jste ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Budu ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "I will be an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Budeš ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Budete ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "diet"
+    },
+    {
+        "prompt": "Pracuji jako ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "I work as an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "spr"
+    },
+    {
+        "prompt": "Pracuješ jako ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Pracujete jako ",
+        "completions": [
+            "editor",
+            "edit"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "",
+        "subject": "editor",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Jsem návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "I am a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Jsi návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "You are a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Jste návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "You are a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Budu návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "I will be a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Budeš návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "You will be a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Budete návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "You will be a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuji jako návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "I work as a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuješ jako návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "You work as a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Pracujete jako návště",
+        "completions": [
+            "vní",
+            "vn"
+        ],
+        "src_sentence": "You work as a visitor.",
+        "tgt_prefix": "návště",
+        "subject": "visitor",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Jsem chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I am a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Jsi chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You are a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Jste chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You are a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Budu chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I will be a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Budeš chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You will be a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Budete chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You will be a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Pracuji jako chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "I work as a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Pracuješ jako chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You work as a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "techn"
+    },
+    {
+        "prompt": "Pracujete jako chem",
+        "completions": [
+            "ik",
+            "ička"
+        ],
+        "src_sentence": "You work as a chemist.",
+        "tgt_prefix": "chem",
+        "subject": "chemist",
+        "shuffled_prefix": "prakt"
+    },
+    {
+        "prompt": "Jsem lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I am a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsi lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You are a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jste lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You are a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budu lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I will be a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budeš lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You will be a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Budete lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You will be a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuji jako lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "I work as a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracuješ jako lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You work as a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Pracujete jako lékárn",
+        "completions": [
+            "ík",
+            "ice"
+        ],
+        "src_sentence": "You work as a chemist.",
+        "tgt_prefix": "lékárn",
+        "subject": "chemist",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Jsem ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "I am a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Jsi ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "You are a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "instr"
+    },
+    {
+        "prompt": "Jste ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "You are a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Budu ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "I will be a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Budeš ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "You will be a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Budete ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "You will be a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Pracuji jako ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "I work as a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Pracuješ jako ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "You work as a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Pracujete jako ",
+        "completions": [
+            "ku",
+            "kup"
+        ],
+        "src_sentence": "You work as a buyer.",
+        "tgt_prefix": "",
+        "subject": "buyer",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Jsem elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Jsi elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Jste elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Budu elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "teenager"
+    },
+    {
+        "prompt": "Budeš elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Budete elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Pracuji jako elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Pracuješ jako elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Pracujete jako elektrikář",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as an electrician.",
+        "tgt_prefix": "elektrikář",
+        "subject": "electrician",
+        "shuffled_prefix": "spisovatel"
+    },
+    {
+        "prompt": "Jsem instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Jsi instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "dietář"
+    },
+    {
+        "prompt": "Jste instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Budu instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "terapeut"
+    },
+    {
+        "prompt": "Budeš instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "údržbář"
+    },
+    {
+        "prompt": "Budete instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Pracuji jako instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Pracuješ jako instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Pracujete jako instalatér",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a plumber.",
+        "tgt_prefix": "instalatér",
+        "subject": "plumber",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Jsem teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "konstruktér"
+    },
+    {
+        "prompt": "Jsi teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "učitel"
+    },
+    {
+        "prompt": "Jste teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Budu teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Budeš teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Budete teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Pracuji jako teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "manažer"
+    },
+    {
+        "prompt": "Pracuješ jako teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "malíř"
+    },
+    {
+        "prompt": "Pracujete jako teenager",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a teenager.",
+        "tgt_prefix": "teenager",
+        "subject": "teenager",
+        "shuffled_prefix": "designér"
+    },
+    {
+        "prompt": "Jsem analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "I am an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "vě"
+    },
+    {
+        "prompt": "Jsi analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "You are an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Jste analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "You are an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Budu analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "I will be an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "hosp"
+    },
+    {
+        "prompt": "Budeš analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "vrátn"
+    },
+    {
+        "prompt": "Budete analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Pracuji jako analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "I work as an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "d"
+    },
+    {
+        "prompt": "Pracuješ jako analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "pl"
+    },
+    {
+        "prompt": "Pracujete jako analy",
+        "completions": [
+            "tik",
+            "ti"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "tgt_prefix": "analy",
+        "subject": "analyst",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Jsem poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I am a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Jsi poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Jste poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You are a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Budu poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I will be a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "pracov"
+    },
+    {
+        "prompt": "Budeš poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Budete poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You will be a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Pracuji jako poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "I work as a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "domov"
+    },
+    {
+        "prompt": "Pracuješ jako poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "škol"
+    },
+    {
+        "prompt": "Pracujete jako poplat",
+        "completions": [
+            "ník",
+            "nice"
+        ],
+        "src_sentence": "You work as a taxpayer.",
+        "tgt_prefix": "poplat",
+        "subject": "taxpayer",
+        "shuffled_prefix": "stroj"
+    },
+    {
+        "prompt": "Jsem pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "I am a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "analy"
+    },
+    {
+        "prompt": "Jsi pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "You are a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Jste pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "You are a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "uklíze"
+    },
+    {
+        "prompt": "Budu pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "I will be a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Budeš pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "You will be a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "porad"
+    },
+    {
+        "prompt": "Budete pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "You will be a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "polic"
+    },
+    {
+        "prompt": "Pracuji jako pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "I work as a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Pracuješ jako pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "You work as a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "návště"
+    },
+    {
+        "prompt": "Pracujete jako pl",
+        "completions": [
+            "át",
+            "á"
+        ],
+        "src_sentence": "You work as a taxpayer.",
+        "tgt_prefix": "pl",
+        "subject": "taxpayer",
+        "shuffled_prefix": "me"
+    },
+    {
+        "prompt": "Jsem terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I am a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Jsi terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "elektrikář"
+    },
+    {
+        "prompt": "Jste terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You are a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "projektant"
+    },
+    {
+        "prompt": "Budu terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I will be a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "lékař"
+    },
+    {
+        "prompt": "Budeš terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "ředitel"
+    },
+    {
+        "prompt": "Budete terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You will be a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "záchranář"
+    },
+    {
+        "prompt": "Pracuji jako terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "I work as a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "obyvatel"
+    },
+    {
+        "prompt": "Pracuješ jako terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "pacient"
+    },
+    {
+        "prompt": "Pracujete jako terapeut",
+        "completions": [
+            ".",
+            "ka"
+        ],
+        "src_sentence": "You work as a therapist.",
+        "tgt_prefix": "terapeut",
+        "subject": "therapist",
+        "shuffled_prefix": "pasažér"
+    }
+]

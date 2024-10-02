@@ -1,0 +1,2576 @@
+[
+    {
+        "prompt": "Ich bin Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Du bist Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Sie sind Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Ich werde Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Du wirst Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Sie werden Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Ich arbeite als Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Du arbeitest als Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Sie arbeiten als Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a teacher.",
+        "tgt_prefix": "Lehrer",
+        "subject": "teacher",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Ich bin Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Du bist Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Sie sind Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Ich werde Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Du wirst Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Sie werden Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Ich arbeite als Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Du arbeitest als Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Sie arbeiten als Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an assistant.",
+        "tgt_prefix": "Assistent",
+        "subject": "assistant",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Ich bin Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Du bist Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Sie sind Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Ich werde Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Du wirst Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Sie werden Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Ich arbeite als Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Du arbeitest als Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Sie arbeiten als Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a housekeeper.",
+        "tgt_prefix": "Haushälter",
+        "subject": "housekeeper",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Ich bin Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Du bist Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Sie sind Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Ich werde Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Du wirst Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Sie werden Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Ich arbeite als Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Du arbeitest als Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Sie arbeiten als Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a janitor.",
+        "tgt_prefix": "Hausmeister",
+        "subject": "janitor",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Ich bin Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Du bist Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Sie sind Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Ich werde Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Du wirst Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Sie werden Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Ich arbeite als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Du arbeitest als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Sie arbeiten als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "CEO",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Ich bin Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "I am a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Du bist Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You are a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Sie sind Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You are a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Ich werde Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "I will be a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Du wirst Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Sie werden Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You will be a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Ich arbeite als Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "I work as a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Du arbeitest als Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Sie arbeiten als Vorstandsvors",
+        "completions": [
+            "itz",
+            "itzen"
+        ],
+        "src_sentence": "You work as a CEO.",
+        "tgt_prefix": "Vorstandsvors",
+        "subject": "CEO",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Ich bin Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Du bist Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Sie sind Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Ich werde Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Du wirst Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Sie werden Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Ich arbeite als Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Du arbeitest als Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Sie arbeiten als Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "Manager",
+        "subject": "manager",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Ich bin Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Du bist Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Sie sind Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Ich werde Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Du wirst Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Sie werden Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Ich arbeite als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Du arbeitest als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Sie arbeiten als Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "Geschäftsführer",
+        "subject": "manager",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Ich bin Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I am a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Du bist Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Sie sind Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You are a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Ich werde Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I will be a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Du wirst Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Sie werden Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You will be a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Ich arbeite als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I work as a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Du arbeitest als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Empfang"
+    },
+    {
+        "prompt": "Sie arbeiten als Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "You work as a manager.",
+        "tgt_prefix": "Che",
+        "subject": "manager",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Ich bin Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Du bist Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Sie sind Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Ich werde Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Du wirst Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Sie werden Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Ich arbeite als Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Du arbeitest als Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Sie arbeiten als Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a tailor.",
+        "tgt_prefix": "Schneider",
+        "subject": "tailor",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Ich bin Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Du bist Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Sie sind Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Ich werde Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Du wirst Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Sie werden Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Ich arbeite als Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Du arbeitest als Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Sie arbeiten als Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a laborer.",
+        "tgt_prefix": "Arbeiter",
+        "subject": "laborer",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Ich bin Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Du bist Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Sie sind Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Ich werde Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Du wirst Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Sie werden Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Ich arbeite als Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Du arbeitest als Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Sie arbeiten als Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "Designer",
+        "subject": "designer",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Ich bin Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Du bist Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Sie sind Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Ich werde Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Du wirst Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Sie werden Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Ich arbeite als Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Du arbeitest als Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Sie arbeiten als Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a designer.",
+        "tgt_prefix": "Gestalter",
+        "subject": "designer",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Ich bin Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Du bist Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Sie sind Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Ich werde Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Du wirst Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Sie werden Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Ich arbeite als Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Du arbeitest als Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Sie arbeiten als Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "Schriftsteller",
+        "subject": "writer",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Ich bin Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Du bist Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Sie sind Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Ich werde Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Du wirst Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Sie werden Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Ich arbeite als Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Du arbeitest als Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Sie arbeiten als Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a writer.",
+        "tgt_prefix": "Autor",
+        "subject": "writer",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Ich bin Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Du bist Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Sie sind Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Ich werde Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Du wirst Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Sie werden Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Ich arbeite als Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Du arbeitest als Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Sie arbeiten als Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a construction worker.",
+        "tgt_prefix": "Bauarbeiter",
+        "subject": "construction worker",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Ich bin Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Du bist Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Sie sind Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Ich werde Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Du wirst Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Sie werden Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Ich arbeite als Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Du arbeitest als Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Sie arbeiten als Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "Mechaniker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Ich bin Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Du bist Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Sie sind Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Ich werde Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Du wirst Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Sie werden Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Ich arbeite als Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Du arbeitest als Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Sie arbeiten als Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "Monteur",
+        "subject": "mechanic",
+        "shuffled_prefix": "Mechaniker"
+    },
+    {
+        "prompt": "Ich bin Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Du bist Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Sie sind Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Ich werde Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Du wirst Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Sie werden Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Ich arbeite als Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Du arbeitest als Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Sie arbeiten als Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a mechanic.",
+        "tgt_prefix": "Handwerker",
+        "subject": "mechanic",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Ich bin Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Du bist Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Sie sind Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Ich werde Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Du wirst Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Sie werden Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Ich arbeite als Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Du arbeitest als Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Sie arbeiten als Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "tgt_prefix": "Rezeptionist",
+        "subject": "receptionist",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Ich bin Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "I am a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Du bist Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Sie sind Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You are a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Ich werde Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "I will be a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Du wirst Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Sie werden Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You will be a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Ich arbeite als Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "I work as a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Du arbeitest als Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Vorstandsvors"
+    },
+    {
+        "prompt": "Sie arbeiten als Empfang",
+        "completions": [
+            "sp",
+            "sd"
+        ],
+        "src_sentence": "You work as a receptionist.",
+        "tgt_prefix": "Empfang",
+        "subject": "receptionist",
+        "shuffled_prefix": "Che"
+    },
+    {
+        "prompt": "Ich bin Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Du bist Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Sie sind Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Ich werde Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Du wirst Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Sie werden Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Ich arbeite als Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Du arbeitest als Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Sie arbeiten als Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "tgt_prefix": "Analyst",
+        "subject": "analyst",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Ich bin Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Du bist Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Lektor"
+    },
+    {
+        "prompt": "Sie sind Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Ich werde Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Monteur"
+    },
+    {
+        "prompt": "Du wirst Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Lehrer"
+    },
+    {
+        "prompt": "Sie werden Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Ich arbeite als Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Du arbeitest als Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Sie arbeiten als Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an analyst.",
+        "tgt_prefix": "Analytiker",
+        "subject": "analyst",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Ich bin Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Handwerker"
+    },
+    {
+        "prompt": "Du bist Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Sie sind Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Manager"
+    },
+    {
+        "prompt": "Ich werde Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Designer"
+    },
+    {
+        "prompt": "Du wirst Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Sie werden Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Schneider"
+    },
+    {
+        "prompt": "Ich arbeite als Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Gestalter"
+    },
+    {
+        "prompt": "Du arbeitest als Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Sie arbeiten als Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "Herausgeber",
+        "subject": "editor",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Ich bin Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Herausgeber"
+    },
+    {
+        "prompt": "Du bist Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Rezeptionist"
+    },
+    {
+        "prompt": "Sie sind Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Analyst"
+    },
+    {
+        "prompt": "Ich werde Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Assistent"
+    },
+    {
+        "prompt": "Du wirst Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Sie werden Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Haushälter"
+    },
+    {
+        "prompt": "Ich arbeite als Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Schriftsteller"
+    },
+    {
+        "prompt": "Du arbeitest als Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Sie arbeiten als Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "Redakteur",
+        "subject": "editor",
+        "shuffled_prefix": "Analytiker"
+    },
+    {
+        "prompt": "Ich bin Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Du bist Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Redakteur"
+    },
+    {
+        "prompt": "Sie sind Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You are an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Bauarbeiter"
+    },
+    {
+        "prompt": "Ich werde Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I will be an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Arbeiter"
+    },
+    {
+        "prompt": "Du wirst Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Hausmeister"
+    },
+    {
+        "prompt": "Sie werden Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You will be an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Ich arbeite als Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I work as an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Geschäftsführer"
+    },
+    {
+        "prompt": "Du arbeitest als Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Autor"
+    },
+    {
+        "prompt": "Sie arbeiten als Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "You work as an editor.",
+        "tgt_prefix": "Lektor",
+        "subject": "editor",
+        "shuffled_prefix": "Arbeiter"
+    }
+]

@@ -1,0 +1,2279 @@
+[
+    {
+        "prompt": "Soy secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "I am a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Eres secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You are a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Eres secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You are a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Seré secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "I will be a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Serás secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You will be a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Serás secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You will be a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Trabajo como secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "I work as a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Trabajas secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You work as a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Trabajas secret",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You work as a secretary.",
+        "tgt_prefix": "secret",
+        "subject": "secretary",
+        "shuffled_prefix": "bibliotec"
+    },
+    {
+        "prompt": "Soy cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I am a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Eres cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Eres cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Seré cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I will be a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Serás cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Serás cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Trabajo como cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I work as a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Trabajas cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Trabajas cocin",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a cook.",
+        "tgt_prefix": "cocin",
+        "subject": "cook",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Soy panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I am a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Eres panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Eres panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Seré panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I will be a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Serás panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Serás panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Trabajo como panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I work as a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Trabajas panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Trabajas panad",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a baker.",
+        "tgt_prefix": "panad",
+        "subject": "baker",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Soy granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I am a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Eres granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Eres granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Seré granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I will be a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Serás granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Serás granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Trabajo como granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I work as a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Trabajas granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Trabajas granj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a farmer.",
+        "tgt_prefix": "granj",
+        "subject": "farmer",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Soy consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I am a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Eres consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Eres consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Seré consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I will be a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Serás consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Serás consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Trabajo como consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I work as a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Trabajas consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Trabajas consej",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a counselor.",
+        "tgt_prefix": "consej",
+        "subject": "counselor",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Soy bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "I am a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Eres bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You are a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Eres bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You are a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Seré bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "I will be a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Serás bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You will be a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Serás bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You will be a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Trabajo como bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "I work as a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Trabajas bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You work as a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Trabajas bibliotec",
+        "completions": [
+            "ario",
+            "aria"
+        ],
+        "src_sentence": "You work as a librarian.",
+        "tgt_prefix": "bibliotec",
+        "subject": "librarian",
+        "shuffled_prefix": "secret"
+    },
+    {
+        "prompt": "Soy auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "I am an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Eres auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "You are an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Eres auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "You are an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Seré auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "I will be an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Serás auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Serás auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "You will be an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Trabajo como auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "I work as an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Trabajas auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Trabajas auditor",
+        "completions": [
+            ".",
+            "a"
+        ],
+        "src_sentence": "You work as an auditor.",
+        "tgt_prefix": "auditor",
+        "subject": "auditor",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Soy vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Eres vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You are a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Eres vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You are a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Seré vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "I will be a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Serás vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You will be a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Serás vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You will be a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Trabajo como vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "I work as a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Trabajas vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You work as a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Trabajas vended",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You work as a salesperson.",
+        "tgt_prefix": "vended",
+        "subject": "salesperson",
+        "shuffled_prefix": "conduct"
+    },
+    {
+        "prompt": "Soy peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I am a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Eres peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Eres peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Seré peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I will be a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Serás peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Serás peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Trabajo como peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I work as a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "caj"
+    },
+    {
+        "prompt": "Trabajas peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Trabajas peluqu",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a hairdresser.",
+        "tgt_prefix": "peluqu",
+        "subject": "hairdresser",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Soy super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Eres super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "You are a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Eres super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "You are a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Seré super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "I will be a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Serás super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "You will be a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Serás super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "You will be a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Trabajo como super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "I work as a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Trabajas super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "You work as a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Trabajas super",
+        "completions": [
+            "visor",
+            "vis"
+        ],
+        "src_sentence": "You work as a supervisor.",
+        "tgt_prefix": "super",
+        "subject": "supervisor",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Soy conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "I am a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Eres conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You are a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Eres conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You are a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Seré conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "I will be a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Serás conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You will be a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Serás conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You will be a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Trabajo como conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "I work as a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Trabajas conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You work as a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Trabajas conduct",
+        "completions": [
+            "or",
+            "ora"
+        ],
+        "src_sentence": "You work as a driver.",
+        "tgt_prefix": "conduct",
+        "subject": "driver",
+        "shuffled_prefix": "vended"
+    },
+    {
+        "prompt": "Soy enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "I am a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Eres enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You are a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Eres enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You are a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Seré enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "I will be a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Serás enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You will be a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Serás enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You will be a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Trabajo como enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "I work as a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Trabajas enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You work as a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Trabajas enfermer",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You work as a nurse.",
+        "tgt_prefix": "enfermer",
+        "subject": "nurse",
+        "shuffled_prefix": "carpinter"
+    },
+    {
+        "prompt": "Soy emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "I am a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Eres emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You are a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Eres emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You are a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Seré emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "I will be a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Serás emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You will be a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Serás emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You will be a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Trabajo como emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "I work as a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Trabajas emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You work as a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Trabajas emple",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You work as a clerk.",
+        "tgt_prefix": "emple",
+        "subject": "clerk",
+        "shuffled_prefix": "abog"
+    },
+    {
+        "prompt": "Soy asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "I am an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Eres asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "You are an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Eres asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "You are an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Seré asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "I will be an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Serás asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "You will be an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Serás asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "You will be an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Trabajo como asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "I work as an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Trabajas asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "You work as an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Trabajas asist",
+        "completions": [
+            "ente",
+            "enta"
+        ],
+        "src_sentence": "You work as an attendant.",
+        "tgt_prefix": "asist",
+        "subject": "attendant",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Soy ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "I am a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Eres ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "You are a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Eres ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "You are a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Seré ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "I will be a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Serás ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "You will be a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Serás ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "You will be a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Trabajo como ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "I work as a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Trabajas ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "You work as a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Trabajas ",
+        "completions": [
+            "doctor",
+            "do"
+        ],
+        "src_sentence": "You work as a physician.",
+        "tgt_prefix": "",
+        "subject": "physician",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Soy méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "I am a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Eres méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "You are a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Eres méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "You are a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Seré méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "I will be a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Serás méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "You will be a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Serás méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "You will be a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Trabajo como méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "I work as a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Trabajas méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "You work as a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Trabajas méd",
+        "completions": [
+            "ico",
+            "ica"
+        ],
+        "src_sentence": "You work as a physician.",
+        "tgt_prefix": "méd",
+        "subject": "physician",
+        "shuffled_prefix": "j"
+    },
+    {
+        "prompt": "Soy j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "I am a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Eres j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "You are a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": "auditor"
+    },
+    {
+        "prompt": "Eres j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "You are a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Seré j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "I will be a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Serás j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "You will be a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": "méd"
+    },
+    {
+        "prompt": "Serás j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "You will be a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": ""
+    },
+    {
+        "prompt": "Trabajo como j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "I work as a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": "super"
+    },
+    {
+        "prompt": "Trabajas j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "You work as a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Trabajas j",
+        "completions": [
+            "efe",
+            "ef"
+        ],
+        "src_sentence": "You work as a chief.",
+        "tgt_prefix": "j",
+        "subject": "chief",
+        "shuffled_prefix": "asist"
+    },
+    {
+        "prompt": "Soy abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "I am a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Eres abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You are a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Eres abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You are a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Seré abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "I will be a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Serás abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You will be a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Serás abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You will be a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Trabajo como abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "I work as a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Trabajas abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You work as a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Trabajas abog",
+        "completions": [
+            "ado",
+            "ada"
+        ],
+        "src_sentence": "You work as a lawyer.",
+        "tgt_prefix": "abog",
+        "subject": "lawyer",
+        "shuffled_prefix": "emple"
+    },
+    {
+        "prompt": "Soy caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I am a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "panad"
+    },
+    {
+        "prompt": "Eres caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "granj"
+    },
+    {
+        "prompt": "Eres caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You are a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Seré caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I will be a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Serás caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Serás caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You will be a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "cocin"
+    },
+    {
+        "prompt": "Trabajo como caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "I work as a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "consej"
+    },
+    {
+        "prompt": "Trabajas caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Trabajas caj",
+        "completions": [
+            "ero",
+            "era"
+        ],
+        "src_sentence": "You work as a cashier.",
+        "tgt_prefix": "caj",
+        "subject": "cashier",
+        "shuffled_prefix": "peluqu"
+    },
+    {
+        "prompt": "Soy limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I am a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Eres limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You are a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Eres limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You are a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Seré limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I will be a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Serás limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You will be a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Serás limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You will be a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Trabajo como limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I work as a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Trabajas limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You work as a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Trabajas limpi",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You work as a cleaner.",
+        "tgt_prefix": "limpi",
+        "subject": "cleaner",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Soy carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Eres carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Eres carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You are a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Seré carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "I will be a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Serás carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Serás carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You will be a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Trabajo como carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "I work as a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Trabajas carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Trabajas carpinter",
+        "completions": [
+            "o",
+            "a"
+        ],
+        "src_sentence": "You work as a carpenter.",
+        "tgt_prefix": "carpinter",
+        "subject": "carpenter",
+        "shuffled_prefix": "enfermer"
+    },
+    {
+        "prompt": "Soy desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I am a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Eres desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You are a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Eres desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You are a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Seré desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I will be a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Serás desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You will be a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Serás desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You will be a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Trabajo como desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I work as a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Trabajas desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You work as a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Trabajas desarroll",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You work as a developer.",
+        "tgt_prefix": "desarroll",
+        "subject": "developer",
+        "shuffled_prefix": "cont"
+    },
+    {
+        "prompt": "Soy cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I am an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Eres cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You are an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Eres cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You are an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Seré cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I will be an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Serás cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Serás cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You will be an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "desarroll"
+    },
+    {
+        "prompt": "Trabajo como cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "I work as an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Trabajas cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "limpi"
+    },
+    {
+        "prompt": "Trabajas cont",
+        "completions": [
+            "ador",
+            "adora"
+        ],
+        "src_sentence": "You work as an accountant.",
+        "tgt_prefix": "cont",
+        "subject": "accountant",
+        "shuffled_prefix": "limpi"
+    }
+]
