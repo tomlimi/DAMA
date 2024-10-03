@@ -36,6 +36,7 @@ MODEL_NAME_MAP = {
     "TowerInstruct_7B_v0.1": "tower_7B",
     "Meta_Llama_3_8B": "llama3_8B",
     "Meta_Llama_3.1_8B": "llama3.1_8B",
+    "Meta_Llama_3.1_70B": "llama3.1_70B",
     "Llama_3_Instruct_8B_CPO": "llama3cpo_8B"
 }
 
