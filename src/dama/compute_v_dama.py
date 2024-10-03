@@ -72,28 +72,29 @@ def compute_v_dama(
 
     lookup_idxs = []
     for rid, request in enumerate(request_batch):
+        
         r_p = [context.format(request["prompt"]) for context in context_templates]
-        kl_p = [tok.bos_token + " {} is a"]
-        kl_tgt_p = [tok.bos_token + " {}"] if target_kl_regularization and "shuffled_prefix" in request else []
-
         r_p_filled, r_p_lookup_idxs = populate_prompts(r_p, request["subject"], tok, hparams)
-        kl_p_filled, kl_p_lookup_idxs = populate_prompts(kl_p, request["subject"], tok, hparams)
-        if kl_tgt_p:
-            kl_tgt_p_filled, kl_tgt_p_lookup_idxs = populate_prompts(kl_tgt_p, request["shuffled_prefix"], tok, hparams)
+        
+        if target_kl_regularization and "shuffled_prefix" in request:
+            kl_p = [tok.bos_token + " {}"]
+            kl_p_filled, kl_p_lookup_idxs = populate_prompts(kl_p, request["shuffled_prefix"], tok, hparams)
         else:
-            kl_tgt_p_filled, kl_tgt_p_lookup_idxs = [], []
+            kl_p =  [tok.bos_token + " {} is a"]
+            kl_p_filled, kl_p_lookup_idxs = populate_prompts(kl_p, request["subject"], tok, hparams)
+            
 
         rewriting_prompts.extend(r_p)
-        kl_prompts.extend(kl_p + kl_tgt_p)
+        kl_prompts.extend(kl_p)
 
         rewriting_prompts_filled.extend(r_p_filled)
-        kl_prompts_filled.extend(kl_p_filled + kl_tgt_p_filled)
+        kl_prompts_filled.extend(kl_p_filled)
 
         rewriting_prompts_lookup_idxs.extend(r_p_lookup_idxs)
-        kl_prompts_lookup_idxs.extend(kl_p_lookup_idxs + kl_tgt_p_lookup_idxs)
+        kl_prompts_lookup_idxs.extend(kl_p_lookup_idxs)
 
         rewriting_prompts_ridxs.extend([rid] * len(r_p))
-        kl_prompts_ridxs.extend([rid] * len(kl_p + kl_tgt_p))
+        kl_prompts_ridxs.extend([rid] * len(kl_p))
         
         if "targets" in request:
             if '' in request["targets"].values():

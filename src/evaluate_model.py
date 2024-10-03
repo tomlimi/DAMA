@@ -59,6 +59,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--multilingual_training", type=bool, default=False)
     parser.add_argument("--tgt_kl_reg", type=bool, default=False)
+    parser.add_argument("--kl_constant", type=float, default=0.0625)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False)
     parser.add_argument("--mixed_update", type=bool, default=False)
@@ -91,6 +92,8 @@ if __name__ == "__main__":
             output_dir += "_multilingual"
         if args.tgt_kl_reg:
             output_dir += "_tgt_kl_reg"
+            if args.kl_constant != 0.0625:
+                output_dir += f"_{args.kl_constant}"
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
@@ -101,6 +104,8 @@ if __name__ == "__main__":
             output_dir += "_multilingual"
         if args.tgt_kl_reg:
             output_dir += "_tgt_kl_reg"
+            if args.kl_constant != 0.0625:
+                output_dir += f"_{args.kl_constant}"
         hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)

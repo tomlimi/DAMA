@@ -135,6 +135,7 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--tgt_kl_reg", type=bool, default=False)
+    parser.add_argument("--kl_constant", type=float, default=0.0625)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False) # legacy DAMA: False
     parser.add_argument("--mixed_update", type=bool, default=False) # legacy DAMA: True
@@ -174,6 +175,8 @@ if __name__ == "__main__":
         output_dir += "_multilingual"
     if args.tgt_kl_reg:
         output_dir += "_tgt_kl_reg"
+        if args.kl_constant != 0.0625:
+            output_dir += f"_{args.kl_constant}"
     os.makedirs(output_dir, exist_ok=True)
     
     request = []
@@ -218,7 +221,10 @@ if __name__ == "__main__":
         hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
         hparams = DAMAHyperParams.from_json(hparams_path)
     elif args.method == 'DAMA_L':
-        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L.json")
+        if args.tgt_kl_reg and args.kl_constant != 0.0625:
+            hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}_kl_{args.kl_constant}_{str(args.num_layers)}L.json")
+        else:
+            hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L.json")
         hparams = DAMALeaceHyperParams.from_json(hparams_path)
     elif args.method == 'MEMIT':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")
