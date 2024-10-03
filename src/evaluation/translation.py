@@ -41,15 +41,16 @@ class EvaluateTranslation(Evaluate):
         src_sentences = []
         tgt_sentences = []
 
-        if self.test_file.split("_")[0] == "mt-gender":
+        if self.test_file.split("_")[0] == "mt-gender" or self.test_file.split("_")[0] == "bug":
+            data_file_name = self.test_file.split("_")[0].replace("-", "_") + ".txt"
             src_lang = "en"
             tgt_lang = self.test_file.split("_")[1]
-            with open(os.path.join(DATA_DIR, "mt_gender.txt"), "r") as in_file :
+            with open(os.path.join(DATA_DIR, data_file_name), "r") as in_file :
                 lines = in_file.readlines()
                 for line in lines:
                     src_sent = line.split("\t")[2].strip()
                     src_sentences.append(src_sent)
-
+            
         else: # load dataset from Hugging Face
             language_pair = self.test_file.split("_")[1]
             src_lang, tgt_lang = language_pair.split("-")
