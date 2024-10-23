@@ -1,0 +1,2482 @@
+[
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the baker.",
+        "tgt_prefix": "",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the paralegal.",
+        "tgt_prefix": "",
+        "subject": "paralegal"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the owner.",
+        "tgt_prefix": "",
+        "subject": "owner"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the sheriff.",
+        "tgt_prefix": "",
+        "subject": "sheriff"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the clerk.",
+        "tgt_prefix": "",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the pathologist.",
+        "tgt_prefix": "",
+        "subject": "pathologist"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the investigator.",
+        "tgt_prefix": "",
+        "subject": "investigator"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the librarian.",
+        "tgt_prefix": "",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the administrator.",
+        "tgt_prefix": "",
+        "subject": "administrator"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the engineer.",
+        "tgt_prefix": "",
+        "subject": "engineer"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the chief.",
+        "tgt_prefix": "",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the nutritionist.",
+        "tgt_prefix": "",
+        "subject": "nutritionist"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the psychologist.",
+        "tgt_prefix": "",
+        "subject": "psychologist"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the hygienist.",
+        "tgt_prefix": "",
+        "subject": "hygienist"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the secretary.",
+        "tgt_prefix": "",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the salesperson.",
+        "tgt_prefix": "",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the carpenter.",
+        "tgt_prefix": "",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the nurse.",
+        "tgt_prefix": "",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the protester.",
+        "tgt_prefix": "",
+        "subject": "protester"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the onlooker.",
+        "tgt_prefix": "",
+        "subject": "onlooker"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the educator.",
+        "tgt_prefix": "",
+        "subject": "educator"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the surgeon.",
+        "tgt_prefix": "",
+        "subject": "surgeon"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the pharmacist.",
+        "tgt_prefix": "",
+        "subject": "pharmacist"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the mover.",
+        "tgt_prefix": "",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the pedestrian.",
+        "tgt_prefix": "",
+        "subject": "pedestrian"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the witness.",
+        "tgt_prefix": "",
+        "subject": "witness"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the veterinarian.",
+        "tgt_prefix": "",
+        "subject": "veterinarian"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the undergraduate.",
+        "tgt_prefix": "",
+        "subject": "undergraduate"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the employee.",
+        "tgt_prefix": "",
+        "subject": "employee"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the cleaner.",
+        "tgt_prefix": "",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the cashier.",
+        "tgt_prefix": "",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the firefighter.",
+        "tgt_prefix": "",
+        "subject": "firefighter"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the auditor.",
+        "tgt_prefix": "",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the accountant.",
+        "tgt_prefix": "",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the appraiser.",
+        "tgt_prefix": "",
+        "subject": "appraiser"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the bystander.",
+        "tgt_prefix": "",
+        "subject": "bystander"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the planner.",
+        "tgt_prefix": "",
+        "subject": "planner"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the someone.",
+        "tgt_prefix": "",
+        "subject": "someone"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the child.",
+        "tgt_prefix": "",
+        "subject": "child"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the farmer.",
+        "tgt_prefix": "",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the client.",
+        "tgt_prefix": "",
+        "subject": "client"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the counselor.",
+        "tgt_prefix": "",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the guest.",
+        "tgt_prefix": "",
+        "subject": "guest"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the worker.",
+        "tgt_prefix": "",
+        "subject": "worker"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the specialist.",
+        "tgt_prefix": "",
+        "subject": "specialist"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the programmer.",
+        "tgt_prefix": "",
+        "subject": "programmer"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the student.",
+        "tgt_prefix": "",
+        "subject": "student"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the guard.",
+        "tgt_prefix": "",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the developer.",
+        "tgt_prefix": "",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the driver.",
+        "tgt_prefix": "",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the hairdresser.",
+        "tgt_prefix": "",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the broker.",
+        "tgt_prefix": "",
+        "subject": "broker"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the dispatcher.",
+        "tgt_prefix": "",
+        "subject": "dispatcher"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the attendant.",
+        "tgt_prefix": "",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the physician.",
+        "tgt_prefix": "",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the cook.",
+        "tgt_prefix": "",
+        "subject": "cook"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the lawyer.",
+        "tgt_prefix": "",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the chef.",
+        "tgt_prefix": "",
+        "subject": "chef"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the examiner.",
+        "tgt_prefix": "",
+        "subject": "examiner"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the architect.",
+        "tgt_prefix": "",
+        "subject": "architect"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the supervisor.",
+        "tgt_prefix": "",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Das ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "This is the inspector.",
+        "tgt_prefix": "",
+        "subject": "inspector"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the baker.",
+        "tgt_prefix": "",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the paralegal.",
+        "tgt_prefix": "",
+        "subject": "paralegal"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the owner.",
+        "tgt_prefix": "",
+        "subject": "owner"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the sheriff.",
+        "tgt_prefix": "",
+        "subject": "sheriff"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the clerk.",
+        "tgt_prefix": "",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the pathologist.",
+        "tgt_prefix": "",
+        "subject": "pathologist"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the investigator.",
+        "tgt_prefix": "",
+        "subject": "investigator"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the librarian.",
+        "tgt_prefix": "",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the administrator.",
+        "tgt_prefix": "",
+        "subject": "administrator"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the engineer.",
+        "tgt_prefix": "",
+        "subject": "engineer"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the chief.",
+        "tgt_prefix": "",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the nutritionist.",
+        "tgt_prefix": "",
+        "subject": "nutritionist"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the psychologist.",
+        "tgt_prefix": "",
+        "subject": "psychologist"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the hygienist.",
+        "tgt_prefix": "",
+        "subject": "hygienist"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the secretary.",
+        "tgt_prefix": "",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the salesperson.",
+        "tgt_prefix": "",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the carpenter.",
+        "tgt_prefix": "",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the nurse.",
+        "tgt_prefix": "",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the protester.",
+        "tgt_prefix": "",
+        "subject": "protester"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the onlooker.",
+        "tgt_prefix": "",
+        "subject": "onlooker"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the educator.",
+        "tgt_prefix": "",
+        "subject": "educator"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the surgeon.",
+        "tgt_prefix": "",
+        "subject": "surgeon"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the pharmacist.",
+        "tgt_prefix": "",
+        "subject": "pharmacist"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the mover.",
+        "tgt_prefix": "",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the pedestrian.",
+        "tgt_prefix": "",
+        "subject": "pedestrian"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the witness.",
+        "tgt_prefix": "",
+        "subject": "witness"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the veterinarian.",
+        "tgt_prefix": "",
+        "subject": "veterinarian"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the undergraduate.",
+        "tgt_prefix": "",
+        "subject": "undergraduate"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the employee.",
+        "tgt_prefix": "",
+        "subject": "employee"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the cleaner.",
+        "tgt_prefix": "",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the cashier.",
+        "tgt_prefix": "",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the firefighter.",
+        "tgt_prefix": "",
+        "subject": "firefighter"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the auditor.",
+        "tgt_prefix": "",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the accountant.",
+        "tgt_prefix": "",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the appraiser.",
+        "tgt_prefix": "",
+        "subject": "appraiser"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the bystander.",
+        "tgt_prefix": "",
+        "subject": "bystander"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the planner.",
+        "tgt_prefix": "",
+        "subject": "planner"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the someone.",
+        "tgt_prefix": "",
+        "subject": "someone"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the child.",
+        "tgt_prefix": "",
+        "subject": "child"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the farmer.",
+        "tgt_prefix": "",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the client.",
+        "tgt_prefix": "",
+        "subject": "client"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the counselor.",
+        "tgt_prefix": "",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the guest.",
+        "tgt_prefix": "",
+        "subject": "guest"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the worker.",
+        "tgt_prefix": "",
+        "subject": "worker"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the specialist.",
+        "tgt_prefix": "",
+        "subject": "specialist"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the programmer.",
+        "tgt_prefix": "",
+        "subject": "programmer"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the student.",
+        "tgt_prefix": "",
+        "subject": "student"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the guard.",
+        "tgt_prefix": "",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the developer.",
+        "tgt_prefix": "",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the driver.",
+        "tgt_prefix": "",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the hairdresser.",
+        "tgt_prefix": "",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the broker.",
+        "tgt_prefix": "",
+        "subject": "broker"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the dispatcher.",
+        "tgt_prefix": "",
+        "subject": "dispatcher"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the attendant.",
+        "tgt_prefix": "",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the physician.",
+        "tgt_prefix": "",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the cook.",
+        "tgt_prefix": "",
+        "subject": "cook"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the lawyer.",
+        "tgt_prefix": "",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the chef.",
+        "tgt_prefix": "",
+        "subject": "chef"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the examiner.",
+        "tgt_prefix": "",
+        "subject": "examiner"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the architect.",
+        "tgt_prefix": "",
+        "subject": "architect"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the supervisor.",
+        "tgt_prefix": "",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Da ist",
+        "completions": [
+            "der",
+            "die"
+        ],
+        "src_sentence": "There is the inspector.",
+        "tgt_prefix": "",
+        "subject": "inspector"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The baker is not working today.",
+        "tgt_prefix": "",
+        "subject": "baker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The paralegal is not working today.",
+        "tgt_prefix": "",
+        "subject": "paralegal"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The owner is not working today.",
+        "tgt_prefix": "",
+        "subject": "owner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The sheriff is not working today.",
+        "tgt_prefix": "",
+        "subject": "sheriff"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The clerk is not working today.",
+        "tgt_prefix": "",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The pathologist is not working today.",
+        "tgt_prefix": "",
+        "subject": "pathologist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The investigator is not working today.",
+        "tgt_prefix": "",
+        "subject": "investigator"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The librarian is not working today.",
+        "tgt_prefix": "",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The administrator is not working today.",
+        "tgt_prefix": "",
+        "subject": "administrator"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The engineer is not working today.",
+        "tgt_prefix": "",
+        "subject": "engineer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The chief is not working today.",
+        "tgt_prefix": "",
+        "subject": "chief"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The nutritionist is not working today.",
+        "tgt_prefix": "",
+        "subject": "nutritionist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The psychologist is not working today.",
+        "tgt_prefix": "",
+        "subject": "psychologist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The hygienist is not working today.",
+        "tgt_prefix": "",
+        "subject": "hygienist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The secretary is not working today.",
+        "tgt_prefix": "",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The salesperson is not working today.",
+        "tgt_prefix": "",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The carpenter is not working today.",
+        "tgt_prefix": "",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The nurse is not working today.",
+        "tgt_prefix": "",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The protester is not working today.",
+        "tgt_prefix": "",
+        "subject": "protester"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The onlooker is not working today.",
+        "tgt_prefix": "",
+        "subject": "onlooker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The educator is not working today.",
+        "tgt_prefix": "",
+        "subject": "educator"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The surgeon is not working today.",
+        "tgt_prefix": "",
+        "subject": "surgeon"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The pharmacist is not working today.",
+        "tgt_prefix": "",
+        "subject": "pharmacist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The mover is not working today.",
+        "tgt_prefix": "",
+        "subject": "mover"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The pedestrian is not working today.",
+        "tgt_prefix": "",
+        "subject": "pedestrian"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The witness is not working today.",
+        "tgt_prefix": "",
+        "subject": "witness"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The veterinarian is not working today.",
+        "tgt_prefix": "",
+        "subject": "veterinarian"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The undergraduate is not working today.",
+        "tgt_prefix": "",
+        "subject": "undergraduate"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The employee is not working today.",
+        "tgt_prefix": "",
+        "subject": "employee"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The cleaner is not working today.",
+        "tgt_prefix": "",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The cashier is not working today.",
+        "tgt_prefix": "",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The firefighter is not working today.",
+        "tgt_prefix": "",
+        "subject": "firefighter"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The auditor is not working today.",
+        "tgt_prefix": "",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The accountant is not working today.",
+        "tgt_prefix": "",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The appraiser is not working today.",
+        "tgt_prefix": "",
+        "subject": "appraiser"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The bystander is not working today.",
+        "tgt_prefix": "",
+        "subject": "bystander"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The planner is not working today.",
+        "tgt_prefix": "",
+        "subject": "planner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The someone is not working today.",
+        "tgt_prefix": "",
+        "subject": "someone"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The child is not working today.",
+        "tgt_prefix": "",
+        "subject": "child"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The farmer is not working today.",
+        "tgt_prefix": "",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The client is not working today.",
+        "tgt_prefix": "",
+        "subject": "client"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The counselor is not working today.",
+        "tgt_prefix": "",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The guest is not working today.",
+        "tgt_prefix": "",
+        "subject": "guest"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The worker is not working today.",
+        "tgt_prefix": "",
+        "subject": "worker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The specialist is not working today.",
+        "tgt_prefix": "",
+        "subject": "specialist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The programmer is not working today.",
+        "tgt_prefix": "",
+        "subject": "programmer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The student is not working today.",
+        "tgt_prefix": "",
+        "subject": "student"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The guard is not working today.",
+        "tgt_prefix": "",
+        "subject": "guard"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The developer is not working today.",
+        "tgt_prefix": "",
+        "subject": "developer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The driver is not working today.",
+        "tgt_prefix": "",
+        "subject": "driver"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The hairdresser is not working today.",
+        "tgt_prefix": "",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The broker is not working today.",
+        "tgt_prefix": "",
+        "subject": "broker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The dispatcher is not working today.",
+        "tgt_prefix": "",
+        "subject": "dispatcher"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The attendant is not working today.",
+        "tgt_prefix": "",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The physician is not working today.",
+        "tgt_prefix": "",
+        "subject": "physician"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The cook is not working today.",
+        "tgt_prefix": "",
+        "subject": "cook"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The lawyer is not working today.",
+        "tgt_prefix": "",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The chef is not working today.",
+        "tgt_prefix": "",
+        "subject": "chef"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The examiner is not working today.",
+        "tgt_prefix": "",
+        "subject": "examiner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The architect is not working today.",
+        "tgt_prefix": "",
+        "subject": "architect"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The supervisor is not working today.",
+        "tgt_prefix": "",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The inspector is not working today.",
+        "tgt_prefix": "",
+        "subject": "inspector"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The baker was fired.",
+        "tgt_prefix": "",
+        "subject": "baker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The paralegal was fired.",
+        "tgt_prefix": "",
+        "subject": "paralegal"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The owner was fired.",
+        "tgt_prefix": "",
+        "subject": "owner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The sheriff was fired.",
+        "tgt_prefix": "",
+        "subject": "sheriff"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The clerk was fired.",
+        "tgt_prefix": "",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The pathologist was fired.",
+        "tgt_prefix": "",
+        "subject": "pathologist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The investigator was fired.",
+        "tgt_prefix": "",
+        "subject": "investigator"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The librarian was fired.",
+        "tgt_prefix": "",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The administrator was fired.",
+        "tgt_prefix": "",
+        "subject": "administrator"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The engineer was fired.",
+        "tgt_prefix": "",
+        "subject": "engineer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The chief was fired.",
+        "tgt_prefix": "",
+        "subject": "chief"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The nutritionist was fired.",
+        "tgt_prefix": "",
+        "subject": "nutritionist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The psychologist was fired.",
+        "tgt_prefix": "",
+        "subject": "psychologist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The hygienist was fired.",
+        "tgt_prefix": "",
+        "subject": "hygienist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The secretary was fired.",
+        "tgt_prefix": "",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The salesperson was fired.",
+        "tgt_prefix": "",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The carpenter was fired.",
+        "tgt_prefix": "",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The nurse was fired.",
+        "tgt_prefix": "",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The protester was fired.",
+        "tgt_prefix": "",
+        "subject": "protester"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The onlooker was fired.",
+        "tgt_prefix": "",
+        "subject": "onlooker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The educator was fired.",
+        "tgt_prefix": "",
+        "subject": "educator"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The surgeon was fired.",
+        "tgt_prefix": "",
+        "subject": "surgeon"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The pharmacist was fired.",
+        "tgt_prefix": "",
+        "subject": "pharmacist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The mover was fired.",
+        "tgt_prefix": "",
+        "subject": "mover"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The pedestrian was fired.",
+        "tgt_prefix": "",
+        "subject": "pedestrian"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The witness was fired.",
+        "tgt_prefix": "",
+        "subject": "witness"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The veterinarian was fired.",
+        "tgt_prefix": "",
+        "subject": "veterinarian"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The undergraduate was fired.",
+        "tgt_prefix": "",
+        "subject": "undergraduate"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The employee was fired.",
+        "tgt_prefix": "",
+        "subject": "employee"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The cleaner was fired.",
+        "tgt_prefix": "",
+        "subject": "cleaner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The cashier was fired.",
+        "tgt_prefix": "",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The firefighter was fired.",
+        "tgt_prefix": "",
+        "subject": "firefighter"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The auditor was fired.",
+        "tgt_prefix": "",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The accountant was fired.",
+        "tgt_prefix": "",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The appraiser was fired.",
+        "tgt_prefix": "",
+        "subject": "appraiser"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The bystander was fired.",
+        "tgt_prefix": "",
+        "subject": "bystander"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The planner was fired.",
+        "tgt_prefix": "",
+        "subject": "planner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The someone was fired.",
+        "tgt_prefix": "",
+        "subject": "someone"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The child was fired.",
+        "tgt_prefix": "",
+        "subject": "child"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The farmer was fired.",
+        "tgt_prefix": "",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The client was fired.",
+        "tgt_prefix": "",
+        "subject": "client"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The counselor was fired.",
+        "tgt_prefix": "",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The guest was fired.",
+        "tgt_prefix": "",
+        "subject": "guest"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The worker was fired.",
+        "tgt_prefix": "",
+        "subject": "worker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The specialist was fired.",
+        "tgt_prefix": "",
+        "subject": "specialist"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The programmer was fired.",
+        "tgt_prefix": "",
+        "subject": "programmer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The student was fired.",
+        "tgt_prefix": "",
+        "subject": "student"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The guard was fired.",
+        "tgt_prefix": "",
+        "subject": "guard"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The developer was fired.",
+        "tgt_prefix": "",
+        "subject": "developer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The driver was fired.",
+        "tgt_prefix": "",
+        "subject": "driver"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The hairdresser was fired.",
+        "tgt_prefix": "",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The broker was fired.",
+        "tgt_prefix": "",
+        "subject": "broker"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The dispatcher was fired.",
+        "tgt_prefix": "",
+        "subject": "dispatcher"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The attendant was fired.",
+        "tgt_prefix": "",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The physician was fired.",
+        "tgt_prefix": "",
+        "subject": "physician"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The cook was fired.",
+        "tgt_prefix": "",
+        "subject": "cook"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The lawyer was fired.",
+        "tgt_prefix": "",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The chef was fired.",
+        "tgt_prefix": "",
+        "subject": "chef"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The examiner was fired.",
+        "tgt_prefix": "",
+        "subject": "examiner"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The architect was fired.",
+        "tgt_prefix": "",
+        "subject": "architect"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The supervisor was fired.",
+        "tgt_prefix": "",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "",
+        "completions": [
+            "Der",
+            "Die"
+        ],
+        "src_sentence": "The inspector was fired.",
+        "tgt_prefix": "",
+        "subject": "inspector"
+    }
+]
