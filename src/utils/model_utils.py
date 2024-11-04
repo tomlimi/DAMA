@@ -101,6 +101,7 @@ def parse_multilingual_request_files(multilingual_request_files: str, model_name
                     req["prompt"] = translation_prompt(src_lang=langcodes.Language("en").language_name(),
                                                        tgt_lang=langcodes.Language(lang).language_name(),
                                                        src_sentence=req["src_sentence"]) + req["prompt"]
+                    req["prompt"] = req["prompt"].replace("  ", " ").strip()
                 req["targets"] ={polv: token for polv, token in zip(["pos", "neg"], req["completions"])}
         all_requests.extend(requests)
     np.random.shuffle(all_requests)
