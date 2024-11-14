@@ -19,10 +19,9 @@ from ft import FTHyperParams, apply_ft_to_model, execute_ft
 from utils.generate import generate_interactive, generate_fast
 from utils import nethook
 from utils.globals import *
-from utils.parse_experiment_name import *
+from utils.model_utils import *
 
-# from util import nethook
-# from util.generate import generate_interactive, generate_fast
+
 import argparse
 import sys
 
@@ -119,52 +118,6 @@ def model_editing(
     return model_new, orig_weights
 
 
-def get_model_tokenizer(model_name, param_number, compare_against=False):
-    if model_name.endswith("llama"):
-        model_name = "llama"
-        model_path = os.path.join(MODEL_DIR, "llama")
-        if param_number in {7, 13, 30, 65}:
-            model_name += f"_{param_number}B"
-            model_path += f"_{param_number}B"
-        tokenizer_path = model_path
-    elif model_name == "HuggingFaceM4/tiny-random-LlamaForCausalLM":
-        model_path = model_name
-        model_name = "llama_tiny"
-        # For debugging purposes
-        tokenizer_path = os.path.join(MODEL_DIR, "llama_7B")
-    else:
-        model_path = model_name
-        tokenizer_path = model_name
-        model_name = model_name.split("/")[-1]
-
-    model = AutoModelForCausalLM.from_pretrained(model_path,
-                                                 torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                                                 low_cpu_mem_usage=True, device_map='auto')
-
-    if torch.cuda.is_available() and torch.cuda.device_count() == 1:
-        model = model.eval().cuda()
-    elif torch.cuda.is_available() and torch.cuda.device_count() > 1:
-        model = model.eval()
-
-    if compare_against:
-        orig_model = AutoModelForCausalLM.from_pretrained(model_path,
-                                                          torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                                                          low_cpu_mem_usage=True, device_map='auto')
-        if torch.cuda.is_available():
-            orig_model = orig_model.eval().cuda()
-    else:
-        orig_model = None
-
-    tok = AutoTokenizer.from_pretrained(tokenizer_path, use_fast=True, return_token_type_ids=False, add_bos_token=False)
-    # set llama special tokens
-    tok.bos_token = "<s>"
-    tok.eos_token = "</s>"
-    tok.pad_token = "</s>"
-    tok.unk_token = "<unk>"
-    tok.padding_side = "right"
-
-    return model_name, model, orig_model,  tok
-
 
 if __name__ == "__main__":
     
@@ -173,6 +126,7 @@ if __name__ == "__main__":
     parser.add_argument("--param_number", type=int, default=None)
     parser.add_argument("--method", type=str, default="ROME")
     parser.add_argument("--request_file", type=str, default=None)
+    parser.add_argument("--multilingual_request_files", type=str, default=None, help="Dictionary of language to request file")
     parser.add_argument("--generation_file", type=str, default=None)
     parser.add_argument("--save_projections", type=bool, default=True)
     parser.add_argument("--load_projections", type=bool, default=False)
@@ -180,6 +134,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
+    # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False) # legacy DAMA: False
     parser.add_argument("--mixed_update", type=bool, default=False) # legacy DAMA: True
     parser.add_argument("--post_linear", type=bool, default=False)  # legacy DAMA: True
@@ -211,15 +166,21 @@ if __name__ == "__main__":
     experiment_name = f"{experiment_name_suffix}"
     if args.method == "DAMA":
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
+        print(f"Conducting experiment: {experiment_name}.")
     else:
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+    if args.multilingual_request_files is not None:
+        output_dir += "_multilingual"
     os.makedirs(output_dir, exist_ok=True)
-    print(f"Conducting experiment: {experiment_name}.")
+    
 
     request = []
     if args.request_file is not None:
         with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
             request = json.load(f)
+    if args.multilingual_request_files is not None:
+        request = parse_multilingual_request_files(args.multilingual_request_files, model_name)
+
 
     if args.generation_file is not None:
         with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:

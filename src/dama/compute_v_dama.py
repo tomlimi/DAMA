@@ -44,11 +44,7 @@ def compute_v_dama(
     if len(polarity_values) > 2:
         random.shuffle(polarity_values)
 
-    # TODO: this must be different for he and she pronouns
-    target_idss = [tok(LLAMA_PRONOUNS[val], return_tensors="pt").
-                   to(device)["input_ids"][0]
-                   for val in polarity_values]
-
+    target_idss = []
     rewriting_prompts = []
     kl_prompts = []
 
@@ -86,7 +82,20 @@ def compute_v_dama(
 
         rewriting_prompts_ridxs.extend([rid] * len(r_p))
         kl_prompts_ridxs.extend([rid] * len(kl_p))
-
+        
+        if "targets" in request:
+            if '' in request["targets"].values():
+                raise ValueError(f"Empty target value found in request: {request}")
+            
+            # unk_token is used to strip prefix_underline
+            target_idss.extend([[tok(tok.unk_token + request["targets"][val], return_tensors="pt").to(device)["input_ids"][0][1:]
+                               for val in polarity_values]] * len(r_p))
+            targets_dict = request["targets"]
+        else:
+            target_idss.extend([[tok(LLAMA_PRONOUNS[val], return_tensors="pt").to(device)["input_ids"][0]
+                                for val in polarity_values]] * len(r_p))
+            targets_dict = LLAMA_PRONOUNS
+            
     all_prompts = rewriting_prompts + kl_prompts
 
     input_tok= tok(
@@ -109,8 +118,10 @@ def compute_v_dama(
     for i in range(len(rewriting_prompts)):
         ex_len = input_tok["attention_mask"][i].sum()
         for j in range(len(polarity_values)):
-            rewriting_targetss[j][i, ex_len - len(target_idss[j]) : ex_len] = target_idss[j]
-
+            rewriting_targetss[j][i, ex_len - len(target_idss[i][j]) : ex_len] = target_idss[i][j]
+            
+    target_lens = [torch.tensor([len(target_idss[i][j]) for i in range(len(rewriting_prompts))], device=device) for j in range(len(polarity_values))]
+    
     loss_layer = max(hparams.v_loss_layer, layer)
     print(f"Trying optimization objective to {loss_layer}...")
 
@@ -166,7 +177,7 @@ def compute_v_dama(
         opt.zero_grad()
 
         # iterate over positive and negative examples
-        for target_ids, rewriting_targets, delta, g_val in zip(target_idss, rewriting_targetss, deltas, polarity_values):
+        for target_len, rewriting_targets, delta, g_val in zip(target_lens, rewriting_targetss, deltas, polarity_values):
             past_deltas = past_deltass[g_val] if past_deltass else None
             # Forward propagation
             with nethook.TraceDict(
@@ -204,7 +215,7 @@ def compute_v_dama(
             mask = (rewriting_targets != -100).float()
 
             # Aggregate total losses
-            nll_loss_each = -(loss * mask).sum(1) / target_ids.size(0)
+            nll_loss_each = -(loss * mask).sum(1) / target_len
             nll_loss = nll_loss_each.mean()
             kl_loss = hparams.kl_factor * torch.nn.functional.kl_div(
                 kl_distr_init, kl_log_probs, log_target=True, reduction="batchmean"
@@ -223,7 +234,7 @@ def compute_v_dama(
 
             print(
                 f"loss ({g_val}) {np.round(loss.item(), 3)} = {np.round(nll_loss.item(), 3)} + {np.round(kl_loss.item(), 3)} + {np.round(weight_decay.item(), 3)} + {np.round(orthogonal_loss.item(), 3)} "
-                f"avg prob of [{LLAMA_PRONOUNS[g_val]}] "
+                f"avg prob of [{targets_dict[g_val]}] "
                 f"{torch.exp(-nll_loss_each).mean().item()}"
             )
             if loss < 5e-2:

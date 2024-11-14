@@ -49,19 +49,21 @@ def compute_results(
 
 
 def compute_save_gender_effects(result_path, mt, knowns, noise_level=0.08, cap_examples=1000,
-                                disable_mlp=False, disable_attn=False,param_number=None, inlp_projection=None):
+                                disable_mlp=False, disable_attn=False,param_number=None, inlp_projection=None,
+                                model_identifier=None):
     
     param_str = f"_{param_number}B" if param_number is not None else ''
     disable_str = f"{'_disable_mlp' if disable_mlp else ''}{'_disable_attn' if disable_attn else ''}"
     inlp_str = f"_inlp" if inlp_projection else ""
-    
+    model_identifier = f"_{model_identifier}" if model_identifier is not None else ""
+
     if cap_examples == -1:
-        result_file = os.path.join(result_path,f"results_known{param_str}{disable_str}{inlp_str}_all.jsonl")
+        result_file = os.path.join(result_path,f"results_known{param_str}{disable_str}{inlp_str}{model_identifier}_all.jsonl")
         
     else:
         knowns.shuffle(seed=92)
         knowns = knowns[:cap_examples]
-        result_file = os.path.join(result_path,f"results_known{param_str}{disable_str}{inlp_str}_{cap_examples}.jsonl")
+        result_file = os.path.join(result_path,f"results_known{param_str}{disable_str}{inlp_str}{model_identifier}_{cap_examples}.jsonl")
 
     if inlp_projection:
         if not os.path.exists(os.path.join(result_path,inlp_projection)):
@@ -103,9 +105,13 @@ if __name__ == "__main__":
     args = argparse.parse_args()
 
     model_name = args.model_name_path
+    model_identifier = ""
     if model_name.endswith("llama"):
         if args.param_number in {7, 13, 30, 65}:
             model_name += f"_{args.param_number}B"
+            model_identifier = "llama"
+    else:
+        model_identifier = model_name.split('/')[-1].replace('-','_')
 
     # load model and split over multiple gpus if necessary
     mt = ModelAndTokenizer(model_name, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
@@ -113,7 +119,8 @@ if __name__ == "__main__":
     knowns, noise_level = load_data(mt, DATA_DIR, args.noise_level)
     
     compute_save_gender_effects(RESULTS_DIR, mt, knowns, noise_level, args.cap_examples, args.disable_mlp, args.disable_attn,
-                                param_number=args.param_number, inlp_projection=args.inlp_projection)
+                                param_number=args.param_number, inlp_projection=args.inlp_projection,
+                                model_identifier=model_identifier)
     
     
     

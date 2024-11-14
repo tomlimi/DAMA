@@ -1,0 +1,515 @@
+[
+    {
+        "prompt": "Ich bin Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a CEO.",
+        "subject": "CEO"
+    },
+    {
+        "prompt": "Ich bin Buchhalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich bin Steuerberater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich bin Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an accountant.",
+        "subject": "accountant"
+    },
+    {
+        "prompt": "Ich bin Analyst",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich bin Analytiker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an analyst.",
+        "subject": "analyst"
+    },
+    {
+        "prompt": "Ich bin Assistent",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an assistant.",
+        "subject": "assistant"
+    },
+    {
+        "prompt": "Ich bin Begleiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an attendant.",
+        "subject": "attendant"
+    },
+    {
+        "prompt": "Ich bin Wirtschaftsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich bin Prüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich bin Rechnungsprüfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an auditor.",
+        "subject": "auditor"
+    },
+    {
+        "prompt": "Ich bin Bäcker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a baker.",
+        "subject": "baker"
+    },
+    {
+        "prompt": "Ich bin Schreiner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich bin Tischler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich bin Zimmerer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a carpenter.",
+        "subject": "carpenter"
+    },
+    {
+        "prompt": "Ich bin Kassierer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a cashier.",
+        "subject": "cashier"
+    },
+    {
+        "prompt": "Ich bin Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I am a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich bin Leiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a chief.",
+        "subject": "chief"
+    },
+    {
+        "prompt": "Ich bin Angestell",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I am a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich bin Sachbearbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a clerk.",
+        "subject": "clerk"
+    },
+    {
+        "prompt": "Ich bin Bauarbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a construction worker.",
+        "subject": "construction worker"
+    },
+    {
+        "prompt": "Ich bin Berater",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a counselor.",
+        "subject": "counselor"
+    },
+    {
+        "prompt": "Ich bin Designer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich bin Gestalter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a designer.",
+        "subject": "designer"
+    },
+    {
+        "prompt": "Ich bin Entwickler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a developer.",
+        "subject": "developer"
+    },
+    {
+        "prompt": "Ich bin Fahrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a driver.",
+        "subject": "driver"
+    },
+    {
+        "prompt": "Ich bin Herausgeber",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich bin Redakteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich bin Lektor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am an editor.",
+        "subject": "editor"
+    },
+    {
+        "prompt": "Ich bin Landwirt",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a farmer.",
+        "subject": "farmer"
+    },
+    {
+        "prompt": "Ich bin Wächter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a guard.",
+        "subject": "guard"
+    },
+    {
+        "prompt": "Ich bin Friseur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich bin Frisör",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a hairdresser.",
+        "subject": "hairdresser"
+    },
+    {
+        "prompt": "Ich bin Haushälter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a housekeeper.",
+        "subject": "housekeeper"
+    },
+    {
+        "prompt": "Ich bin Hausmeister",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a janitor.",
+        "subject": "janitor"
+    },
+    {
+        "prompt": "Ich bin Arbeiter",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a laborer.",
+        "subject": "laborer"
+    },
+    {
+        "prompt": "Ich bin Jurist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a lawyer.",
+        "subject": "lawyer"
+    },
+    {
+        "prompt": "Ich bin Bibliothekar",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a librarian.",
+        "subject": "librarian"
+    },
+    {
+        "prompt": "Ich bin Manager",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich bin Geschäftsführer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich bin Che",
+        "completions": [
+            "f",
+            "fin"
+        ],
+        "src_sentence": "I am a manager.",
+        "subject": "manager"
+    },
+    {
+        "prompt": "Ich bin Mechaniker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich bin Monteur",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich bin Handwerker",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mechanic.",
+        "subject": "mechanic"
+    },
+    {
+        "prompt": "Ich bin Umzugshelfer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a mover.",
+        "subject": "mover"
+    },
+    {
+        "prompt": "Ich bin Pfleger",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a nurse.",
+        "subject": "nurse"
+    },
+    {
+        "prompt": "Ich bin Mediziner",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a physician.",
+        "subject": "physician"
+    },
+    {
+        "prompt": "Ich bin Rezeptionist",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a receptionist.",
+        "subject": "receptionist"
+    },
+    {
+        "prompt": "Ich bin Verkäufer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich bin Händler",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a salesperson.",
+        "subject": "salesperson"
+    },
+    {
+        "prompt": "Ich bin Sekretär",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a secretary.",
+        "subject": "secretary"
+    },
+    {
+        "prompt": "Ich bin Betreuer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich bin Vorgesetz",
+        "completions": [
+            "ter",
+            "te"
+        ],
+        "src_sentence": "I am a supervisor.",
+        "subject": "supervisor"
+    },
+    {
+        "prompt": "Ich bin Schneider",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a tailor.",
+        "subject": "tailor"
+    },
+    {
+        "prompt": "Ich bin Lehrer",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a teacher.",
+        "subject": "teacher"
+    },
+    {
+        "prompt": "Ich bin Schriftsteller",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a writer.",
+        "subject": "writer"
+    },
+    {
+        "prompt": "Ich bin Autor",
+        "completions": [
+            ".",
+            "in"
+        ],
+        "src_sentence": "I am a writer.",
+        "subject": "writer"
+    }
+]

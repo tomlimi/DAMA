@@ -12,57 +12,33 @@ from dama_l.dama_l_hparams import DAMALeaceHyperParams
 from memit.memit_main import MEMITHyperParams
 from ft.ft_main import FTHyperParams
 from utils.globals import *
+from utils.model_utils import *
 from utils.generate import generate_interactive, generate_fast
 from adapt_model import get_model_tokenizer, parse_experiment_name
 
-from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM
+from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateQA,\
+    EvaluateStereoset, EvaluateTranslation
 
 
-def load_dama_model(model, hparams, projection_file):
-    layers = dict(model.named_modules())
-    devices = [layers["model.layers.{}.mlp".format(i)].down_proj.weight.device for i in hparams.layers]
-    print(f"Loading projections from {projection_file}")
-    loaded_projections = np.load(projection_file, allow_pickle=True).item()
-    if torch.cuda.is_available():
-        projections = {m_name: (torch.tensor(values['M'], device=dev, dtype=torch.float16),
-                                torch.tensor(values['mu_in'], device=dev, dtype=torch.float16),
-                                torch.tensor(values['mu_out'], device=dev, dtype=torch.float16))
-                       for dev, (m_name, values) in zip(devices, loaded_projections.items())}
-    else:
-        projections = {m_name: (torch.tensor(values['M'], device='cpu', dtype=torch.float32),
-                                torch.tensor(values['mu_in'], device='cpu', dtype=torch.float32),
-                                torch.tensor(values['mu_out'], device='cpu', dtype=torch.float32))
-                       for m_name, values in loaded_projections.items()}
-
-    with torch.no_grad():
-        for m_name, (P, mu_in, mu_out) in projections.items():
-            if int(m_name.split('.')[2]) not in hparams.layers:
-                continue
-
-            orig_module = nethook.get_module(model, m_name)
-            new_module = apply_dama_on_module(orig_module, P, mu_in, mu_out,
-                                              hparams.projection_location if hasattr(hparams, "projection_location") else "after")
-
-            nethook.replace_module(model, m_name, new_module)
-
-        print(f"New weights successfully inserted into layers: {hparams.layers}")
-
-    return model
-
-
-def run_evaluation_on_task(model, tokenizer, task, test_file, output_dir):
+def run_evaluation_on_task(model, tokenizer, model_name, task, test_file, output_dir):
     if task == "gen":
         evaluator = EvaluateGeneration(model, tokenizer, os.path.join(DATA_DIR, test_file), task)
     elif task == "coref":
         evaluator = EvaluateCoreference(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
     elif task == "causal_lm":
         evaluator = EvaluateCausalLM(model, tokenizer, test_file, task)
+    elif task == "stereoset":
+        evaluator = EvaluateStereoset(model, tokenizer, os.path.join(DATA_DIR, test_file), task)
     elif task == "interactive":
         generate_interactive(model, tokenizer, max_out_len=100, use_logit_lens=True,
                         layer_module_tmp= "model.layers.{}",
                         ln_f_module= "model.norm",
                         lm_head_module= "lm_head",
                         compare_against=None)
+    elif task == "qa":
+        evaluator = EvaluateQA(model, tokenizer, os.path.join(DATA_DIR, args.test_file), task)
+    elif task == "translation":
+        evaluator = EvaluateTranslation(model, tokenizer, args.test_file, task, model_name)
     else:
         raise ValueError(f"Unknown task {task}")
 
@@ -82,6 +58,8 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
+    parser.add_argument("--multilingual_training", type=bool, default=False)
+    # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False)
     parser.add_argument("--mixed_update", type=bool, default=False)
     parser.add_argument("--post_linear", type=bool, default=False)
@@ -109,12 +87,17 @@ if __name__ == "__main__":
     if args.method == "DAMA":
         print(f"Evaluating DAMA model {experiment_name}")
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
+        if args.multilingual_training:
+            output_dir += "_multilingual"
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
     elif args.method == "DAMA_L":
-        print(f"Evaluating DAMA Leace model {experiment_name}")
+        print(f"Evaluating DAMA Leace model")
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+        if args.multilingual_training:
+            output_dir += "_multilingual"
+
         hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
@@ -148,5 +131,5 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown method {args.method}")
 
-    run_evaluation_on_task(model, tok, args.test_task, args.test_file, output_dir)
+    run_evaluation_on_task(model, tok, model_name, args.test_task, args.test_file, output_dir)
 

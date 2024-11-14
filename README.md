@@ -71,4 +71,11 @@ For coreference resolution change the last two lines with:
 --test_task coref
 ```
 
+For the evaluation on StereoSet change the last two lines with:
+
+```bash
+--test_file stereoset_dev.json \
+--test_task stereoset
+```
+
 The test data are available at https://github.com/uclanlp/corefBias/tree/master/WinoBias/wino/data.
