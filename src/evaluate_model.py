@@ -19,7 +19,6 @@ from adapt_model import get_model_tokenizer, parse_experiment_name
 from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateQA,\
     EvaluateStereoset, EvaluateTranslation
 
-
 def run_evaluation_on_task(model, tokenizer, model_name, task, test_file, output_dir):
     if task == "gen":
         evaluator = EvaluateGeneration(model, tokenizer, os.path.join(DATA_DIR, test_file), task)

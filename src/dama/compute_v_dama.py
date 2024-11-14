@@ -88,7 +88,7 @@ def compute_v_dama(
                 raise ValueError(f"Empty target value found in request: {request}")
             
             # unk_token is used to strip prefix_underline
-            target_idss.extend([[tok(tok.unk_token + request["targets"][val], return_tensors="pt").to(device)["input_ids"][0][1:]
+            target_idss.extend([[tok(tok.bos_token + request["targets"][val], return_tensors="pt").to(device)["input_ids"][0][1:]
                                for val in polarity_values]] * len(r_p))
             targets_dict = request["targets"]
         else:
@@ -154,7 +154,7 @@ def compute_v_dama(
                 # cur_out[i, idx, :] += delta
         elif cur_layer == hparams.layer_module_tmp.format(layer) and not value_at_mlp:
             
-            cur_out = (cur_out[0].to(device), tuple(co.to(device) for co  in cur_out[1]))
+            cur_out = (cur_out[0].to(device), cur_out[1])
             # Store initial value of the vector of interest
             if target_init is None:
                 print("Recording initial value of v*")

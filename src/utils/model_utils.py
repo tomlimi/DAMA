@@ -7,30 +7,8 @@ import langcodes
 
 from utils import nethook
 from utils.globals import *
+from utils.constants import MODEL_NAME_MAP, TRANSLATION_PROMPTS
 from dama.dama_main import apply_dama_on_module
-
-
-TRANSLATION_PROMPTS = {
-    "almar": "Translate this from {src_lang} to {tgt_lang}:\n{src_lang}: {src_sentence} \n{tgt_lang}: ".format,
-    "tower": "<|im_start|>user\n"
-             "Translate the following text from {src_lang} into {tgt_lang}.\n"
-             "{src_lang}: {src_sentence}.\n"
-             "{tgt_lang}:<|im_end|>\n"
-             "<|im_start|>assistant\n".format,
-    "llama": "{src_lang}: {src_sentence} {tgt_lang}: ".format,  # although LLaMA wasn't fine-tuned for translation
-    "llama2": "{src_lang}: {src_sentence} {tgt_lang}: ".format
-}
-
-MODEL_NAME_MAP = {
-    "Llama_2_13b_hf": "llama2_13B",
-    "Llama_2_7b_hf": "llama2_7B",
-    "ALMA_13B_R": "almar_13B",
-    "ALMA_7B_R": "almar_7B",
-    "ALMA_13B": "alma_13B",
-    "ALMA_7B": "alma_7B",
-    "TowerInstruct_13B_v0.1": "tower_13B",
-    "TowerInstruct_7B_v0.1": "tower_7B"
-}
 
 
 def parse_experiment_name(num_layers: int = 9,
@@ -122,6 +100,7 @@ def parse_multilingual_request_files(multilingual_request_files: str, model_name
                     req["prompt"] = translation_prompt(src_lang=langcodes.Language("en").language_name(),
                                                        tgt_lang=langcodes.Language(lang).language_name(),
                                                        src_sentence=req["src_sentence"]) + req["prompt"]
+                    req["prompt"] = req["prompt"].replace("  ", " ").strip()
                 req["targets"] ={polv: token for polv, token in zip(["pos", "neg"], req["completions"])}
         all_requests.extend(requests)
     np.random.shuffle(all_requests)
@@ -203,8 +182,9 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
     # set llama special tokens
     tok.bos_token = "<s>"
     tok.eos_token = "</s>"
-    tok.pad_token = "</s>"
     tok.unk_token = "<unk>"
+
+    tok.pad_token = tok.eos_token
     tok.padding_side = "right"
 
     return model_name, model, orig_model,  tok
