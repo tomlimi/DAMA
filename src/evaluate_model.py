@@ -19,6 +19,7 @@ from adapt_model import get_model_tokenizer, parse_experiment_name
 from evaluation import EvaluateGeneration, EvaluateCoreference, EvaluateCausalLM, EvaluateQA,\
     EvaluateStereoset, EvaluateTranslation
 
+
 def run_evaluation_on_task(model, tokenizer, model_name, task, test_file, output_dir):
     if task == "gen":
         evaluator = EvaluateGeneration(model, tokenizer, os.path.join(DATA_DIR, test_file), task)
@@ -96,6 +97,7 @@ if __name__ == "__main__":
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
         if args.multilingual_training:
             output_dir += "_multilingual"
+
         hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)

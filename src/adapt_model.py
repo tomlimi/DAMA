@@ -21,6 +21,7 @@ from utils import nethook
 from utils.globals import *
 from utils.model_utils import *
 
+
 import argparse
 import sys
 
@@ -172,13 +173,14 @@ if __name__ == "__main__":
         output_dir += "_multilingual"
     os.makedirs(output_dir, exist_ok=True)
     
+
     request = []
     if args.request_file is not None:
         with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
             request = json.load(f)
-            
     if args.multilingual_request_files is not None:
         request = parse_multilingual_request_files(args.multilingual_request_files, model_name)
+
 
     if args.generation_file is not None:
         with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:
