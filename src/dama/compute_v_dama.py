@@ -153,7 +153,7 @@ def compute_v_dama(
                 cur_out[i, idx, :] += (delta + delta_shared)
                 # cur_out[i, idx, :] += delta
         elif cur_layer == hparams.layer_module_tmp.format(layer) and not value_at_mlp:
-            
+
             cur_out = (cur_out[0].to(device), cur_out[1])
             # Store initial value of the vector of interest
             if target_init is None:
