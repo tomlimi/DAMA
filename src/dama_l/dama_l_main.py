@@ -24,6 +24,7 @@ from tqdm import tqdm
 import json
 
 from concept_erasure import LeaceEraser
+from concept_erasure_dual import LeaceEraserDual
 
 CONTEXT_TEMPLATES_CACHE = None
 COV_CACHE = {}
@@ -67,16 +68,89 @@ def save_projections(projections, projections_saveto):
     np.save(projections_saveto, serializable_projections)
 
 
+def save_latent(latents, latent_saveto):
+    print(f"Saving latent variables to {latent_saveto}")
+    serializable_latent = {
+        layer: {"U_stereo": H_left.cpu().numpy(), "V_stereo": H_right.cpu().numpy(),
+                "U_factual": H_left_fact.cpu().numpy(), "V_factual": H_right_fact.cpu().numpy()}
+        for layer, (H_left, H_right, H_left_fact, H_right_fact) in latents.items()}
+    np.save(latent_saveto, serializable_latent)
+
+
+def batch_requests(requests: List[Dict], batch_size: int) -> List[List[Dict]]:
+    if batch_size > 1:
+        return [requests[i:i + batch_size] for i in range(0, len(requests), batch_size)]
+    elif batch_size == 1:
+        return [[request] for request in requests]
+    else:
+        raise ValueError("Batch size must be positive")
+
+
+def get_vs_from_requests(model, tok, requests, hparams, context_templates, weights, cur_device):
+
+    if "targets" in requests[0][0]:
+        gender_values = list(requests[0][0]["targets"].keys())
+    else:
+        gender_values = ['pos', 'neg', 'neut']
+
+    target_list = {g_val: [] for g_val in gender_values}
+    v_layer = hparams.v_loss_layer
+
+    v_dim = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].shape[0]
+
+    past_deltas = {g_val: torch.zeros((len(requests), v_dim), device=cur_device) for g_val in gender_values}
+    past_deltas_normed = {g_val: torch.zeros((len(requests), v_dim), device=cur_device) for g_val in
+                          gender_values}
+    for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
+        taregets, deltas = compute_v_dama(
+            model,
+            tok,
+            request,
+            hparams,
+            v_layer,
+            context_templates,
+            gender_values,
+            compute_right_vector=False,
+            device=cur_device,
+            batch_id=bidx,
+            past_deltass=None,
+            value_at_mlp=False
+        )
+        for g_val in gender_values:
+            target_list[g_val].append(taregets[g_val])
+            past_deltas_normed[g_val][bidx, :] = (deltas[g_val] / torch.norm(deltas[g_val])).detach().clone()
+            past_deltas[g_val][bidx, :] = deltas[g_val].detach().clone()
+
+    req_contexts = [context_templates[0].format(request["prompt"]) for request_batch in requests for request in
+                    request_batch]
+
+    req_words = [request["subject"] for request_batch in requests for request in request_batch]
+
+    cur_vs = get_module_input_output_at_words(
+        model, tok, req_contexts, req_words, v_layer, hparams.layer_module_tmp, hparams.fact_token)[1]
+    if torch.cuda.is_available():
+        cur_vs = cur_vs.to(cur_device).half()
+        targetss = {g_val: past_delta.to(cur_device).half() + cur_vs for g_val, past_delta in
+                    past_deltas.items()}
+    else:
+        targetss = {g_val: past_delta + cur_vs for g_val, past_delta in past_deltas.items()}
+    print_vs_stats(targetss, cur_vs)
+
+    return past_deltas
+
+
 def apply_dama_l_to_model(
         model: AutoModelForCausalLM,
         tok: AutoTokenizer,
         requests: List[Dict],
         hparams: DAMALeaceHyperParams,
+        requests_fact: List[Dict] = None,
         copy=False,
         return_orig_module=False,
         projections_saveto=None,
         projections_loadfrom=None,
-        output_dir=None,
+        latent_saveto=None,
+        output_dir=None
 ) -> tuple[AutoModelForCausalLM | AutoModelForCausalLM, dict[str, Any]]:
     """
     Returns a model with the desired changes.
@@ -120,8 +194,9 @@ def apply_dama_l_to_model(
 
     if len(projections) < len(hparams.layers) or projections_loadfrom is None:
         projections = execute_dama_l(model, tok, requests, hparams,
-                                   projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
-                                   old_projections=projections)
+                                     requests_fact=requests_fact, projections_saveto=projections_saveto,
+                                     projections_loadfrom=projections_loadfrom, latent_saveto=latent_saveto,
+                                     old_projections=projections)
 
     if output_dir is not None:
         with open(sys.argv[0], 'r') as this_code, open(os.path.join(output_dir, 'dama_main.py'), 'w') as source_out:
@@ -138,15 +213,13 @@ def execute_dama_l(
         tok: AutoTokenizer,
         requests: List[Dict],
         hparams: DAMALeaceHyperParams,
+        requests_fact: List[Dict] = None,
         projections_loadfrom: str = None,
         projections_saveto: str = None,
+        latent_saveto: str = None,
         old_projections: Dict = None
 ) -> Dict[str, Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]]:
-    if "targets" in requests[0]:
-        gender_values = list(requests[0]["targets"].keys())
-    else:
-        gender_values = ['pos', 'neg', 'neut']
-    
+
     context_templates = get_context_templates(model, tok, hparams.context_template_length_params)
 
     # # Retrieve weights that user desires to change
@@ -161,15 +234,13 @@ def execute_dama_l(
         model, f"{hparams.rewrite_module_tmp.format(hparams.v_loss_layer)}.weight"
     )
 
+    latents = {}
     projections = {}
 
     # compute v targets for each request
-    if hparams.batch_size > 1:
-        requests = [requests[i:i + hparams.batch_size] for i in range(0, len(requests), hparams.batch_size)]
-    elif hparams.batch_size == 1:
-        requests = [[request] for request in requests]
-    else:
-        raise ValueError("Batch size must be positive")
+    requests = batch_requests(requests, hparams.batch_size)
+    if requests_fact is not None:
+        requests_fact = batch_requests(requests_fact, hparams.batch_size)
 
     cur_device = next(model.parameters()).device
 
@@ -177,62 +248,27 @@ def execute_dama_l(
     if projections_loadfrom is not None:
         Vs = load_vs(projections_loadfrom, 'cpu')
     if Vs is None:
-        target_list = {g_val: [] for g_val in gender_values}
-        v_layer = hparams.v_loss_layer
-
-        v_dim = weights[f"{hparams.rewrite_module_tmp.format(v_layer)}"].shape[0]
-
-        past_deltas = {g_val: torch.zeros((len(requests), v_dim), device=cur_device) for g_val in gender_values}
-        past_deltas_normed = {g_val: torch.zeros((len(requests), v_dim), device=cur_device) for g_val in
-                              gender_values}
-        for bidx, request in enumerate(tqdm(requests, desc="Gathering targets from requests")):
-            taregets, deltas = compute_v_dama(
-                model,
-                tok,
-                request,
-                hparams,
-                v_layer,
-                context_templates,
-                gender_values,
-                compute_right_vector=False,
-                device=cur_device,
-                batch_id=bidx,
-                past_deltass=None,
-                value_at_mlp=False
-            )
-            for g_val in gender_values:
-                target_list[g_val].append(taregets[g_val])
-                past_deltas_normed[g_val][bidx, :] = (deltas[g_val] / torch.norm(deltas[g_val])).detach().clone()
-                past_deltas[g_val][bidx, :] = deltas[g_val].detach().clone()
-
-        req_contexts = [context_templates[0].format(request["prompt"]) for request_batch in requests for request in
-                        request_batch]
-        req_words = [request["subject"] for request_batch in requests for request in request_batch]
-
-        cur_vs = get_module_input_output_at_words(
-            model, tok, req_contexts, req_words, v_layer, hparams.layer_module_tmp, hparams.fact_token)[1]
-        if torch.cuda.is_available():
-            cur_vs = cur_vs.to(cur_device).half()
-            targetss = {g_val: past_delta.to(cur_device).half() + cur_vs for g_val, past_delta in
-                        past_deltas.items()}
-        else:
-            targetss = {g_val: past_delta + cur_vs for g_val, past_delta in past_deltas.items()}
-        print_vs_stats(targetss, cur_vs)
-
-        Vs = past_deltas
+        Vs = get_vs_from_requests(model, tok, requests, hparams, context_templates, weights, cur_device)
         if projections_saveto is not None:
             save_vs(Vs, projections_saveto)
+
+    Vs_fact = None
+    if requests_fact is not None:
+        Vs_fact = get_vs_from_requests(model, tok, requests_fact, hparams, context_templates, weights, cur_device)
 
     for layer in sorted(hparams.layers):
         print(f"\n\nLAYER {layer}\n")
         module_name = f"{hparams.rewrite_module_tmp.format(layer)}"
-        cur_device = weights[module_name].device
         if module_name in old_projections:
             projections[module_name] = old_projections[module_name]
         else:
             cur_device = weights[f"{hparams.rewrite_module_tmp.format(layer)}"].device
 
             U = compute_us(model, tok, requests, hparams, layer, context_templates, device='cpu')
+            if requests_fact is not None:
+                U_fact = compute_us(model, tok, requests_fact, hparams, layer, context_templates, device='cpu')
+            else:
+                U_fact = None
 
             if torch.cuda.is_available():
                 torch.cuda.synchronize()
@@ -251,8 +287,24 @@ def execute_dama_l(
             H_left = U @ W.T
             H_right = V
 
-            # LEACE for computing pseudo-projection
-            eraser = LeaceEraser.fit(H_left, H_right)
+            if Vs_fact is not None and U_fact is not None:
+                print("Computing factual keys and values for signal preservation... [TODO: FIX ERASURE CODE]")
+                V_fact = torch.cat(list(Vs_fact.values()), dim=0)
+                U_fact = torch.cat([U_fact] * len(Vs_fact), dim=0)
+
+                if torch.cuda.is_available():
+                    U_fact = U_fact.float()
+
+                H_left_fact = U_fact @ W.T
+                H_right_fact = V_fact
+                eraser = LeaceEraserDual.fit(H_left, H_left_fact, H_right, H_right_fact)
+            else:
+                H_left_fact = None
+                H_right_fact = None
+                eraser = LeaceEraser.fit(H_left, H_right)
+
+            latents[layer] = (H_left, H_right, H_left_fact, H_right_fact)
+
             M = eraser.P
 
             mu_in = np.zeros(U.shape[1])
@@ -281,6 +333,10 @@ def execute_dama_l(
             if projections_saveto is not None:
                 print(f"Saving projections after LAYER {layer} to {projections_saveto}")
                 save_projections(projections, projections_saveto)
+
+            if latent_saveto is not None:
+                print(f"Saving latents after LAYER {layer} to {latent_saveto}")
+                save_latent(latents, latent_saveto)
 
         M, mu_in, mu_out = projections[module_name]
         with torch.no_grad():

@@ -51,8 +51,10 @@ def model_editing(
     generation_prompts: List[str],
     hparams: ROMEHyperParams | DAMAHyperParams,
     method: str,
+    requests_fact: List[Dict] = None,
     projections_saveto: Path = None,
     projections_loadfrom: Path = None,
+    latent_saveto: Path = None,
     output_dir: Path = None,
     ncv: bool = False,
     val: bool = False,
@@ -87,8 +89,8 @@ def model_editing(
             output_dir=output_dir, ncv=ncv, val=val, use_neutral=use_neutral)
     elif method == 'DAMA_L':
         model_new, orig_weights = apply_dama_l_to_model(
-            model, tok, requests, hparams, copy=False, return_orig_module=True,
-            projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
+            model, tok, requests, hparams,  copy=False, return_orig_module=True, requests_fact=requests_fact,
+            projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom, latent_saveto=latent_saveto,
             output_dir=output_dir)
     else:
         raise ValueError(f"Unknown method {method}. Choose from: ROME, DAMA")
@@ -124,6 +126,7 @@ if __name__ == "__main__":
     parser.add_argument("--param_number", type=int, default=None)
     parser.add_argument("--method", type=str, default="ROME")
     parser.add_argument("--request_file", type=str, default=None)
+    parser.add_argument("--request_fact_file", type=str, default=None)
     parser.add_argument("--multilingual_request_files", type=str, default=None, help="Dictionary of language to request file")
     parser.add_argument("--generation_file", type=str, default=None)
     parser.add_argument("--save_projections", type=bool, default=True)
@@ -167,18 +170,24 @@ if __name__ == "__main__":
         print(f"Conducting experiment: {experiment_name}.")
     else:
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+    if args.request_fact_file is not None:
+        output_dir += "_factual"
     if args.multilingual_request_files is not None:
         output_dir += "_multilingual"
     os.makedirs(output_dir, exist_ok=True)
 
     request = []
+    request_fact = None
     if args.request_file is not None:
         with open(os.path.join(DATA_DIR, args.request_file), "r") as f:
             request = json.load(f)
 
+    if args.request_fact_file is not None:
+        with open(os.path.join(DATA_DIR, args.request_fact_file), "r") as f:
+            request_fact = json.load(f)
+
     if args.multilingual_request_files is not None:
         request = parse_multilingual_request_files(args.multilingual_request_files, model_name)
-
 
     if args.generation_file is not None:
         with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:
@@ -200,6 +209,7 @@ if __name__ == "__main__":
             projections_loadfrom = os.path.join(output_dir, "projections.npy")
         if args.save_projections:
             projections_saveto = os.path.join(output_dir, "projections.npy")
+        latent_saveto = os.path.join(output_dir, "latent.npy")
 
     elif args.method in ("MEMIT", "FT"):
         if args.load_projections:
@@ -232,7 +242,9 @@ if __name__ == "__main__":
 
     model_new, orig_weights = model_editing(
         model, tok, request, generation_prompts, hparams, args.method,
-        projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom, output_dir=output_dir,
+        requests_fact=request_fact,
+        projections_saveto=projections_saveto, projections_loadfrom=projections_loadfrom,
+        latent_saveto=latent_saveto, output_dir=output_dir,
         ncv=args.no_colinear_vs, val=args.vs_at_last, use_neutral=args.use_neutral)
 
     print(f"Dumping parameters and code to: {output_dir}")

@@ -57,6 +57,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
+    parser.add_argument("--factual_training", type=bool, default=False)
     parser.add_argument("--multilingual_training", type=bool, default=False)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False)
@@ -86,6 +87,8 @@ if __name__ == "__main__":
     if args.method == "DAMA":
         print(f"Evaluating DAMA model {experiment_name}")
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
+        if args.factual_training:
+            output_dir += "_factual"
         if args.multilingual_training:
             output_dir += "_multilingual"
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
@@ -94,6 +97,8 @@ if __name__ == "__main__":
     elif args.method == "DAMA_L":
         print(f"Evaluating DAMA Leace model")
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+        if args.factual_training:
+            output_dir += "_factual"
         if args.multilingual_training:
             output_dir += "_multilingual"
 
