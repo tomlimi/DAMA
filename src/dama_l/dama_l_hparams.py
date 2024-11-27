@@ -25,3 +25,6 @@ class DAMALeaceHyperParams(HyperParams):
     ln_f_module: str
     lm_head_module: str
 
+    # Factual Preservation
+    b_to_f_ratio_thr: float
+

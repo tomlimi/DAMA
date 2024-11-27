@@ -135,6 +135,8 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
+    # DAMA Dual Leace
+    parser.add_argument("--factual_thr", type=float, default=1.0)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False) # legacy DAMA: False
     parser.add_argument("--mixed_update", type=bool, default=False) # legacy DAMA: True
@@ -171,7 +173,7 @@ if __name__ == "__main__":
     else:
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
     if args.request_fact_file is not None:
-        output_dir += "_factual"
+        output_dir += f"_factual_{args.factual_thr}"
     if args.multilingual_request_files is not None:
         output_dir += "_multilingual"
     os.makedirs(output_dir, exist_ok=True)
@@ -217,14 +219,16 @@ if __name__ == "__main__":
         if args.save_projections:
             projections_saveto = output_dir
 
-    
     print(f"Retrieving {args.method} hyperparameters")
 
     if args.method == 'DAMA':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, model_name, f"{experiment_name}.json")
         hparams = DAMAHyperParams.from_json(hparams_path)
     elif args.method == 'DAMA_L':
-        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L.json")
+        hparams_name = f"{model_name}_{str(args.num_layers)}L"
+        if args.request_fact_file is not None:
+            hparams_name += f"_factual_{args.factual_thr}"
+        hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{hparams_name}.json")
         hparams = DAMALeaceHyperParams.from_json(hparams_path)
     elif args.method == 'MEMIT':
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{model_name}.json")

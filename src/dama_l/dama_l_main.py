@@ -297,7 +297,8 @@ def execute_dama_l(
 
                 H_left_fact = U_fact @ W.T
                 H_right_fact = V_fact
-                eraser = LeaceEraserDual.fit(H_left, H_left_fact, H_right, H_right_fact)
+                eraser = LeaceEraserDual.fit(H_left, H_left_fact, H_right, H_right_fact,
+                                             b_to_f_ratio_thr=hparams.b_to_f_ratio_thr)
             else:
                 H_left_fact = None
                 H_right_fact = None

@@ -176,7 +176,7 @@ class LeaceFitterDual:
             dtype: torch.dtype | None = None,
             shrinkage: bool = True,
             svd_tol: float = 0.01,
-            b_to_f_ratio_tol: float = None,
+            b_to_f_ratio_thr: float = None
     ):
         """Initialize a `LeaceFitter`.
 
@@ -199,7 +199,7 @@ class LeaceFitterDual:
                 phase where we compute the pseudoinverse of the projected covariance
                 matrix. Higher values are more numerically stable and result in less
                 damage to the representation, but may leave trace correlations intact.
-            b_to_f_ratio_tol: The ratio of bias to feature variance above which the
+            b_to_f_ratio_thr: The ratio of bias to feature variance above which the
                 dimension is nullified. If None, b_dim / f_dim is assumed.
         """
         super().__init__()
@@ -214,11 +214,11 @@ class LeaceFitterDual:
 
         assert svd_tol > 0.0, "`svd_tol` must be positive for numerical stability."
         self.svd_tol = svd_tol
-        if b_to_f_ratio_tol is None:
-            self.b_to_f_ratio_tol = b_dim / f_dim
+        if b_to_f_ratio_thr is None:
+            self.b_to_f_ratio_thr = b_dim / f_dim
         else:
-            assert b_to_f_ratio_tol > 0.0, "The ratio must be positive."
-            self.b_to_f_ratio_tol = b_to_f_ratio_tol
+            assert b_to_f_ratio_thr > 0.0, "The ratio must be positive."
+            self.b_to_f_ratio_thr = b_to_f_ratio_thr
 
         self.mean_x = torch.zeros(x_dim, device=device, dtype=dtype)
         self.mean_b = torch.zeros(b_dim, device=device, dtype=dtype)
@@ -229,7 +229,6 @@ class LeaceFitterDual:
         self.sigma_xb_ = torch.zeros(x_dim, b_dim, device=device, dtype=dtype)
         self.sigma_xf_ = torch.zeros(x_dim, f_dim, device=device, dtype=dtype)
         self.sigma_xx_ = torch.zeros(x_dim, x_dim, device=device, dtype=dtype)
-
 
     @torch.no_grad()
     def update(self, x: Tensor, z: Tensor, update_type: str) -> "LeaceFitterDual":
@@ -300,17 +299,16 @@ class LeaceFitterDual:
         b_var_part = vh[:,:self.b_dim].square().sum(dim=1, keepdim=False)
         f_var_part = vh[:,-self.f_dim:].square().sum(dim=1, keepdim=False)
 
+        b_var = b_var_part * s
 
         # Throw away singular values that are too small
-        u *= s > self.svd_tol
+        u *= b_var > self.svd_tol
 
         # Nullify the bias dimension only if it is too large relative to the feature dimension
-        u *= ( b_var_part / f_var_part > self.b_to_f_ratio_tol )
-
+        u *= (b_var_part / f_var_part > self.b_to_f_ratio_thr)
 
         proj_left = W_inv @ u
         proj_right = u.mH @ W
-
 
         if self.constrain_cov_trace:
             P = eye - proj_left @ proj_right

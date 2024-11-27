@@ -196,7 +196,7 @@ def get_module_input_output_at_words(
             idxs= last_tok_idxs,
             **word_repr_args,
         )
-        print("Selected u projection token with last token")
+        # print("Selected u projection token with last token")
     else:
         raise ValueError(f"fact_token={fact_token_strategy} not recognized")
     return l_in, l_out
