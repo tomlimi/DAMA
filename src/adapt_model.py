@@ -131,6 +131,7 @@ if __name__ == "__main__":
     parser.add_argument("--generation_file", type=str, default=None)
     parser.add_argument("--save_projections", type=bool, default=True)
     parser.add_argument("--load_projections", type=bool, default=False)
+    parser.add_argument("--save_latent", type=bool, default=False)
     parser.add_argument("--compare_against", type=bool, default=False)
     parser.add_argument("--num_layers", type=int, default=9)
     parser.add_argument("--task", type=str, default="gen")
@@ -206,12 +207,14 @@ if __name__ == "__main__":
 
     projections_saveto = None
     projections_loadfrom = None
+    latent_saveto = None
     if args.method in ("DAMA", "DAMA_L"):
         if args.load_projections:
             projections_loadfrom = os.path.join(output_dir, "projections.npy")
         if args.save_projections:
             projections_saveto = os.path.join(output_dir, "projections.npy")
-        latent_saveto = os.path.join(output_dir, "latent.npy")
+        if args.save_latent:
+            latent_saveto = os.path.join(output_dir, "latent.npy")
 
     elif args.method in ("MEMIT", "FT"):
         if args.load_projections:

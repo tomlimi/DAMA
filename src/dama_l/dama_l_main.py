@@ -72,7 +72,8 @@ def save_latent(latents, latent_saveto):
     print(f"Saving latent variables to {latent_saveto}")
     serializable_latent = {
         layer: {"U_stereo": H_left.cpu().numpy(), "V_stereo": H_right.cpu().numpy(),
-                "U_factual": H_left_fact.cpu().numpy(), "V_factual": H_right_fact.cpu().numpy()}
+                "U_factual": H_left_fact.cpu().numpy() if H_left_fact is not None else None,
+                "V_factual": H_right_fact.cpu().numpy() if H_right_fact is not None else None}
         for layer, (H_left, H_right, H_left_fact, H_right_fact) in latents.items()}
     np.save(latent_saveto, serializable_latent)
 
