@@ -90,23 +90,39 @@ def parse_experiment_name(num_layers: int = 9,
 def parse_multilingual_request_files(multilingual_request_files: str, model_name: str):
     multilingual_requests = json.loads(multilingual_request_files)
     
-    all_requests = []
+    requests = []
+    requests_fact = []
     translation_prompt = TRANSLATION_PROMPTS.get(model_name, "{src_lang}: {src_sentence} {tgt_lang}: ".format)
     
-    for lang, req_file in multilingual_requests.items():
+    for lang_fact, req_file in multilingual_requests.items():
+        factual = False
+        if len(lang_fact.split("_")) > 1:
+            lang, fact = lang_fact.split("_")
+            if fact.startswith("fact"):
+                factual = True
+        else:
+            lang = lang_fact
+
         with open(os.path.join(DATA_DIR, req_file), 'r') as f:
-            requests = json.load(f)
-            for req in requests:
+            new_requests = json.load(f)
+            for req in new_requests:
                 if lang != "en":
                     req["prompt"] = translation_prompt(src_lang=langcodes.Language("en").language_name(),
                                                        tgt_lang=langcodes.Language(lang).language_name(),
                                                        src_sentence=req["src_sentence"]) + req["prompt"]
                     req["prompt"] = req["prompt"].replace("  ", " ").strip()
                 req["targets"] ={polv: token for polv, token in zip(["pos", "neg"], req["completions"])}
-        all_requests.extend(requests)
-    np.random.shuffle(all_requests)
-    
-    return all_requests
+        if factual:
+            requests_fact.extend(new_requests)
+        else:
+            requests.extend(new_requests)
+
+    np.random.shuffle(requests)
+    if len(requests_fact) == 0:
+        return requests, None
+
+    np.random.shuffle(requests_fact)
+    return requests, requests_fact
 
 
 def load_dama_model(model, hparams, projection_file):

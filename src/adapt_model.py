@@ -160,25 +160,6 @@ if __name__ == "__main__":
     print(f"Load original model to compare: {args.compare_against}")
     model_name, model, orig_model, tok = get_model_tokenizer(args.model_name, args.param_number, args.compare_against)
 
-    experiment_name_suffix = parse_experiment_name(
-        num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
-        task=args.task,
-        post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
-        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral,
-        delta_only=args.delta_only, nw=args.no_whitening, seed=args.random_seed
-    )
-    experiment_name = f"{experiment_name_suffix}"
-    if args.method == "DAMA":
-        output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
-        print(f"Conducting experiment: {experiment_name}.")
-    else:
-        output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
-    if args.request_fact_file is not None:
-        output_dir += f"_factual_{args.factual_thr}"
-    if args.multilingual_request_files is not None:
-        output_dir += "_multilingual"
-    os.makedirs(output_dir, exist_ok=True)
-
     request = []
     request_fact = None
     if args.request_file is not None:
@@ -190,7 +171,7 @@ if __name__ == "__main__":
             request_fact = json.load(f)
 
     if args.multilingual_request_files is not None:
-        request = parse_multilingual_request_files(args.multilingual_request_files, model_name)
+        request, request_fact = parse_multilingual_request_files(args.multilingual_request_files, model_name)
 
     if args.generation_file is not None:
         with open(os.path.join(DATA_DIR, args.generation_file), "r") as f:
@@ -204,6 +185,29 @@ if __name__ == "__main__":
             "A secretary was tired because",
             "A secretary whispered because",
         ]
+
+    experiment_name_suffix = parse_experiment_name(
+        num_layers=args.num_layers, iterative_update=args.iterative_update, mixed_update=args.mixed_update,
+        task=args.task,
+        post_linear=args.post_linear, batch_size=args.batch_size, orthogonal_constraint=args.orthogonal_constraint,
+        no_colinear_vs=args.no_colinear_vs, vs_at_last=args.vs_at_last, null_dim=args.null_dim, use_neutral=args.use_neutral,
+        delta_only=args.delta_only, nw=args.no_whitening, seed=args.random_seed
+    )
+    experiment_name = f"{experiment_name_suffix}"
+    if args.method == "DAMA":
+        output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
+        print(f"Conducting experiment: {experiment_name}.")
+    else:
+        output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
+    if request_fact is not None:
+        output_dir += f"_factual_{args.factual_thr}"
+
+    # get languages from multilingual request files
+    if args.multilingual_request_files is not None:
+        languages = [k for k in json.loads(args.multilingual_request_files).keys() if len(k.split("_")) == 1]
+        languages = sorted(languages)
+        output_dir += "_" + "_".join(languages)
+    os.makedirs(output_dir, exist_ok=True)
 
     projections_saveto = None
     projections_loadfrom = None
@@ -229,7 +233,7 @@ if __name__ == "__main__":
         hparams = DAMAHyperParams.from_json(hparams_path)
     elif args.method == 'DAMA_L':
         hparams_name = f"{model_name}_{str(args.num_layers)}L"
-        if args.request_fact_file is not None:
+        if request_fact is not None:
             hparams_name += f"_factual_{args.factual_thr}"
         hparams_path = os.path.join(HPARAMS_DIR, args.method, f"{hparams_name}.json")
         hparams = DAMALeaceHyperParams.from_json(hparams_path)

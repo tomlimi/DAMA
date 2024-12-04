@@ -1,8 +1,11 @@
 import os
 
 import torch
+import numpy as np
 from datasets import load_dataset
 from sacrebleu import corpus_bleu, corpus_chrf
+from comet import download_model, load_from_checkpoint
+
 from tqdm import tqdm
 import re
 from typing import List
@@ -24,11 +27,10 @@ class EvaluateTranslation(Evaluate):
         self.model_name = model_name.split("_")[0]
         if self.model_name not in TRANSLATION_PROMPTS:
             raise ValueError(f"Model {self.model_name} is not supported for translation evaluation.")
-        elif self.model_name.startswith("llama"):
-            print(f"Model {self.model_name} is not fine-tuned for translation. Results may be poor.")
-        self.tok.padding_side = "left"
-        self.tok.add_bos_token = True
 
+        self.tok.padding_side = "left"
+        # TODO: Unfortunatelly it won't work for Llama3 tokenzier, where add_bos_token currently has no effect
+        self.tok.add_bos_token = True
         self.dataset = {"src": [], "tgt": [], "src_lang": None, "tgt_lang": None}
         self.results = {"chrf": 0., "bleu": 0., "blaser": 0.}
         self.partial_results = []
@@ -39,10 +41,11 @@ class EvaluateTranslation(Evaluate):
         src_sentences = []
         tgt_sentences = []
 
-        if self.test_file.split("_")[0] == "mt-gender":
+        if self.test_file.split("_")[0] == "mt-gender" or self.test_file.split("_")[0] == "bug":
+            data_file_name = self.test_file.split("_")[0].replace("-", "_") + ".txt"
             src_lang = "en"
             tgt_lang = self.test_file.split("_")[1]
-            with open(os.path.join(DATA_DIR, "mt_gender.txt"), "r") as in_file :
+            with open(os.path.join(DATA_DIR, data_file_name), "r") as in_file :
                 lines = in_file.readlines()
                 for line in lines:
                     src_sent = line.split("\t")[2].strip()
@@ -76,6 +79,15 @@ class EvaluateTranslation(Evaluate):
     def compute_bleu(translated_sentences: List[str], tgt_sentences: List[str]):
         return corpus_bleu(translated_sentences, [tgt_sentences]).score
 
+    @staticmethod
+    def compute_comet(translated_sentences: List[str], src_sentences: List[str], tgt_sentences: List[str]):
+        comet_model = load_from_checkpoint(download_model("Unbabel/wmt22-comet-da"))
+        comet_out = comet_model.predict([{"mt": trans, "src": src, "ref": tgt}
+                                    for src, tgt, trans in zip(src_sentences, tgt_sentences, translated_sentences)]
+                                   )
+        return np.average(comet_out["scores"])
+
+
     def translate_sentences(self, src_sentences, src_lang, tgt_lang):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         translated_sentences = []
@@ -83,13 +95,22 @@ class EvaluateTranslation(Evaluate):
         prompts = [translation_prompt(src_lang=langcodes.Language(src_lang).language_name(),
                                       tgt_lang=langcodes.Language(tgt_lang).language_name(),
                                       src_sentence=sentence) for sentence in src_sentences]
-
+        if "alma" in self.model_name:
+            print("Translating with ALMA model")
         for prompt in tqdm(prompts, desc=f"Translating {src_lang} to {tgt_lang}"):
 
             inputs = self.tok(prompt, return_tensors="pt", padding=True, truncation=True, max_length=256).input_ids.to(device)
-            with torch.no_grad():
-                generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=256)
-            translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").strip()
+            # only fine-tuned model we use is ALMA
+            if "alma" in self.model_name:
+                with torch.no_grad():
+                    generated = self.model.generate(input_ids=inputs, num_beams=5, max_new_tokens=256)
+                translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").strip()
+            # For faster inference for non-fine-tuned models (translates jut till the new line marker / no
+            else:
+                with torch.no_grad():
+                    generated = self.model.generate(input_ids=inputs, max_new_tokens=256, stop_strings=["\n"], tokenizer=self.tok)
+                translated = self.tok.batch_decode(generated, skip_special_tokens=True)[0].replace(prompt, "").split("\n")[0].strip()
+
 
             translated_sentences.append(translated)
             del inputs, generated, prompt
@@ -104,6 +125,7 @@ class EvaluateTranslation(Evaluate):
         if self.dataset["tgt"]:
             self.results["chrf"] = self.compute_chrf(translated_sentences, self.dataset["tgt"])
             self.results["bleu"] = self.compute_bleu(translated_sentences, self.dataset["tgt"])
+            self.results["comet"] = self.compute_comet(translated_sentences, self.dataset["src"], self.dataset["tgt"])
             self.partial_results = [{"src": src, "tgt": tgt, "pred": pred} for src, tgt, pred in zip(self.dataset["src"], self.dataset["tgt"], translated_sentences)]
 
         else:

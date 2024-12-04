@@ -58,7 +58,7 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, default="gen")
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--factual_thr", type=float, default=None)
-    parser.add_argument("--multilingual_training", type=bool, default=False)
+    parser.add_argument("--multilingual_training", type=str, nargs='*', default=None)
     # legacy DAMA arguments
     parser.add_argument("--iterative_update", type=bool, default=False)
     parser.add_argument("--mixed_update", type=bool, default=False)
@@ -84,11 +84,13 @@ if __name__ == "__main__":
         delta_only=args.delta_only, nw=args.no_whitening, seed=args.random_seed
     )
     experiment_name = f"{experiment_name_suffix}"
+
     if args.method == "DAMA":
         print(f"Evaluating DAMA model {experiment_name}")
         output_dir = os.path.join(RESULTS_DIR, args.method, model_name, experiment_name)
-        if args.multilingual_training:
-            output_dir += "_multilingual"
+        if args.multilingual_training is not None and len(args.multilingual_training) > 0:
+            languages = sorted(args.multilingual_training)
+            output_dir += "_".join(languages)
         hparams = DAMAHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
         model = load_dama_model(model, hparams, projection_file)
@@ -97,8 +99,9 @@ if __name__ == "__main__":
         output_dir = os.path.join(RESULTS_DIR, args.method, f"{model_name}_{str(args.num_layers)}L")
         if args.factual_thr is not None:
             output_dir += f"_factual_{args.factual_thr}"
-        if args.multilingual_training:
-            output_dir += "_multilingual"
+        if args.multilingual_training is not None and len(args.multilingual_training) > 0:
+            languages = sorted(args.multilingual_training)
+            output_dir += "_" + "_".join(languages)
 
         hparams = DAMALeaceHyperParams.from_json(os.path.join(output_dir, "hparams.json"))
         projection_file = os.path.join(output_dir, "projections.npy")
