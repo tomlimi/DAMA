@@ -52,9 +52,9 @@ class EvaluateGeneration(Evaluate):
 
     def evaluate(self):
 
-        he_token_id = self.tok.encode("he")[0]
-        she_token_id = self.tok.encode("she")[0]
-        they_token_id = self.tok.encode("they")[0]
+        he_token_id = self.tok.encode(self.tok.bos_token + " he")[1]
+        she_token_id = self.tok.encode(self.tok.bos_token + " she")[1]
+        they_token_id = self.tok.encode(self.tok.bos_token + " they")[1]
 
         for prompt in tqdm(self.generation_prompts, desc="Evaluating generation prompts"):
             # raw way to get subject

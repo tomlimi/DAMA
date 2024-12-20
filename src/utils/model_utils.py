@@ -111,12 +111,12 @@ def parse_multilingual_request_files(multilingual_request_files: str, model_name
                                                        tgt_lang=langcodes.Language(lang).language_name(),
                                                        src_sentence=req["src_sentence"]) + req["prompt"]
                     req["prompt"] = req["prompt"].replace("  ", " ").strip()
-                req["targets"] ={polv: token for polv, token in zip(["pos", "neg"], req["completions"])}
+                req["targets"] = {polv: token for polv, token in zip(["pos", "neg"], req["completions"])}
+                assert len(req["targets"]) >= 2, f"Need at least 2 completions for each request. Got {req['targets']} in request: {req}"
         if factual:
             requests_fact.extend(new_requests)
         else:
             requests.extend(new_requests)
-
     np.random.shuffle(requests)
     if len(requests_fact) == 0:
         return requests, None
@@ -194,6 +194,10 @@ def get_model_tokenizer(model_name, param_number, compare_against=False):
             orig_model = orig_model.eval().cuda()
     else:
         orig_model = None
+
+    # a hack to overcome the legacy issue with the tokenizer for llama2
+    if "llama2" in model_name:
+        tokenizer_path = "haoranxu/ALMA-13B-R"
 
     tok = AutoTokenizer.from_pretrained(tokenizer_path, use_fast=True, return_token_type_ids=False, add_bos_token=False)
     # set llama special tokens

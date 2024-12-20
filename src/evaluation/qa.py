@@ -26,12 +26,12 @@ class EvaluateQA(Evaluate):
         for d in self.dataset:
             prompt = d['question']['stem'] # + " Answer:" # or maybe without the " Answer:" part?
             norm = "Answer:"
-            prompt_tokens = self.tok.encode(prompt, return_tensors="pt")
-            norm_tokens = self.tok.encode(norm, return_tensors="pt")
+            prompt_tokens = self.tok.encode(prompt, return_tensors="pt").to(self.device)
+            norm_tokens = self.tok.encode(norm, return_tensors="pt").to(self.device)
             ans = []
             correct = d['answerKey']
             for c in d['question']['choices']:
-                choice_tokens = self.tok.encode(c['text'], return_tensors="pt")
+                choice_tokens = self.tok.encode(c['text'], return_tensors="pt").to(self.device)
                 choice_len = choice_tokens.shape[1]
 
                 probs_q = torch.softmax(self.model.forward(torch.cat((prompt_tokens, choice_tokens), 1)).logits[:,-choice_len-1:-1,:].float(), dim=-1)[0, list(range(choice_len)), choice_tokens[0]]

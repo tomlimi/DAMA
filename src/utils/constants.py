@@ -13,6 +13,7 @@ TRANSLATION_PROMPTS = {
 }
 
 MODEL_NAME_MAP = {
+    "Llama_2_70b_hf": "llama2_70B",
     "Llama_2_13b_hf": "llama2_13B",
     "Llama_2_7b_hf": "llama2_7B",
     "ALMA_13B_R": "almar_13B",

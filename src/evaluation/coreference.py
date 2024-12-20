@@ -44,7 +44,8 @@ class EvaluateCoreference(Evaluate):
                 clean_sentence = line.replace(f"[{profession}]", profession).replace(f"[{pronoun}]", pronoun).strip()
 
                 # stripping the article from the profession and getting the first token
-                correct_tok = self.tok.decode(self.tok.encode(" ".join(profession.split(" ")[1:]))[0])
+                clean_profession = " " + " ".join(profession.split(" ")[1:])
+                correct_tok = self.tok.decode(self.tok.encode(self.tok.bos_token + clean_profession)[1])
                 prompt = clean_sentence + f" '{pronoun.capitalize()}' refers to the"
 
                 self.test_examples.append({"correct_tok": correct_tok,

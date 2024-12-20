@@ -1,5 +1,6 @@
 import os
 import json
+import torch
 
 from abc import abstractmethod
 
@@ -11,6 +12,8 @@ class Evaluate:
         self.tok = tok
         self.test_file = test_file
         self.task = task
+
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         self.results = {}
         self.partial_results = {}
@@ -25,7 +28,7 @@ class Evaluate:
 
     def get_prediction_probability(self, prompt):
 
-        input_ids = self.tok.encode(prompt, return_tensors="pt")
+        input_ids = self.tok.encode(prompt, return_tensors="pt").to(self.device)
         logits = self.model(input_ids)[0].float()
         probabilities = logits.softmax(dim=2)[:,-1,:].squeeze()
         return probabilities.tolist()

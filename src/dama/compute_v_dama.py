@@ -15,9 +15,14 @@ from utils.repr_tools import get_module_input_output_at_words, find_fact_lookup_
 
 # The signe of a pronoun was decided to be consistent with existing bias annotations
 # e.g., positive values for male skewed words and negative for female ones.
-LLAMA_PRONOUNS = {"pos": "he",
-                 "neg": "she",
-                 "neut": "they"}
+LLAMA_PRONOUNS = {"pos": " he",
+                 "neg": " she",
+                 "neut": " they"}
+
+
+LLAMA_PRONOUNS_OLD = {"pos": "he",
+                    "neg": "she",
+                    "neut": "they"}
 
 
 def compute_v_dama(
@@ -175,6 +180,11 @@ def compute_v_dama(
 
     for it in range(hparams.v_num_grad_steps):
         opt.zero_grad()
+
+        assert len(target_lens) >= 2, f"Need 2 target lens for each request. Got {len(target_lens)}"
+        assert len(rewriting_targetss) >= 2, f"Need 2 rewriting targets for each request. Got {len(rewriting_targetss)}"
+        assert len(deltas) >= 2, f"Need 2 deltas for each request. Got {len(deltas)}"
+        assert len(polarity_values) >= 2, f"Need 2 polarity values for each request. Got {len(polarity_values)}: {polarity_values}"
 
         # iterate over positive and negative examples
         for target_len, rewriting_targets, delta, g_val in zip(target_lens, rewriting_targetss, deltas, polarity_values):
