@@ -461,6 +461,12 @@ def execute_dama(
             
             pls = PLSRegression(n_components=hparams.nullspace_dimension, scale=False, tol=1e-4, max_iter=500, copy=False)
             start_t = time.time()
+
+            if isinstance(H_left, torch.Tensor):
+                H_left = H_left.cpu().numpy()
+            if isinstance(H_right, torch.Tensor):
+                H_right = H_right.cpu().numpy()
+
             pls.fit(H_left, H_right)
             print(f"PLS took {(time.time()- start_t)/60.:.2f} minutes")
             print("Computing nullspace projection...")
